@@ -1,0 +1,22 @@
+What it is: Icon Extractor  v3.1
+
+Made By: ???
+         
+.BAS File used: Not Aplicable
+
+.OCX Files used: Not Aplicable
+
+VB that this was built on: ???
+
+Comments: This extracts icons from programs.
+ ___________________________________________
+/                                           \
+\___________________________________________/
+  Y                 KnK 4.o               Y
+  |    http://knk.tierranet.com/knk4o     |
+ /           E-MAIL Questons to          /
+|          Bill@knk.tierranet.com       |   
+|               KnK 4.o '98             |    
+ \_______________________________________\_
+/                                          \
+\__________________________________________/
