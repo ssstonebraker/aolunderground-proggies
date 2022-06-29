@@ -1,0 +1,300 @@
+{\rtf1\ansi\ansicpg1252\deff0\deflang1033{\fonttbl{\f0\froman\fprq2\fcharset0 Times New Roman;}{\f1\fswiss\fprq2\fcharset0 Arial Narrow;}}
+{\colortbl ;\red0\green0\blue255;\red128\green0\blue128;\red0\green128\blue0;\red128\green0\blue0;\red255\green0\blue0;\red0\green0\blue0;}
+\viewkind4\uc1\pard\ul\b\f0\fs24 Psyfects tutorial on small code\ulnone :\b0\par
+\par
+This tutorial is based on America Online 8.0 Add-On programming, since I'm sure it's the style most are familiar with.\par
+\par
+In this tutorial you will learn the basics of small code, and how your approx 1.3 mb api program can become a 600 kb\par
+download, while executing faster code and remain just as reliable, if not more.\par
+\par
+\ul Here is a function I wrote, which we will base our 'bas' file on later in the tutorial (don't worry about it for now):\par
+\ulnone\par
+\cf1\f1 Public Function \cf2 ManipChild(ParentHwnd \cf1 As Long\cf2 , ChildClass \cf1 As String\cf2 , Instance \cf1 As Long\cf2 ) \cf1 As Long\cf2\par
+\cf3 'Created by psyfect\cf2\par
+\cf1 Dim\cf2  Child \cf1 As Long\cf2 , i \cf1 As Long\cf2 , Store \cf1 As Long\cf2\par
+    Store& = ParentHwnd&\par
+\cf1 For\cf2  i = 1 \cf1 To\cf2  Instance\par
+    Child& = FindWindowEx(Store&, Child&, ChildClass, vbNullString)\par
+\cf1 If\cf2  i = 1 \cf1 Then\cf2  Child& = FindWindowEx(Store&, 0&, ChildClass, vbNullString)\par
+\cf1 If\cf2  Child& = 0& \cf1 Then Exit Function\cf2\par
+\cf1 Next \cf4 i&\cf2\par
+\cf1 If\cf2  Child& <> 0& \cf1 Then\cf4  \cf2 ManipChild& = Child&\par
+\cf1 End Function\cf0\f0\par
+\par
+\ul Terminology for those new:\ulnone\par
+Object - The actual window you are looking at, like a button, or combo box\par
+Class   - The 'ethnicity' of the object.\par
+\par
+\ul\b Introduction to small coding:\ulnone\b0\par
+First off let me explain the basics of a find window function:\par
+\par
+  The idea behind this is to find a window based on every child it holds.  This is a great tool to have when manipulating\par
+windows with api.  Sometimes, however, you come across a window that you know only has a certain combination\par
+of objects.  A classic example of this is the AOL chatroom.  We know that the chatroom is the only window in AOL\par
+that has a class combination of a combo box, and a listbox.  This means we can extrude all the other objects that the\par
+function generates and save quite a few lines of code on the 'chat find' alone, and still gauruntee a find for the window\par
+we want.\par
+\par
+\ul Enter the find window extended(ex) function:\ulnone\par
+\par
+  The idea behind my new generator is to let the user define the controls he or she wants to define his or her window with.\par
+Let's examine the chatroom example mentioned above on a "Write Mail" window (I'm offline right now, heh.)\par
+\par
+\ul Lines generated when using the methods mentioned above to define the AOL "Write Mail" utilizing the following programs:\b\par
+\cf3\ulnone   \b0 Find Window Function \b     \b0 : 56 \par
+\b   \b0 Find Window Function Ex: 14 (Using the FONT combo box, and the "return receipt" checkbox)\par
+\b   \b0 Bofens                             : 74 (Un Dimmed and uses for/next loops)\par
+\pard\qc\cf5 Why not the richcntl?  because having a FONT combo box implies there is one of those anyway, so essentially you're\par
+searching for that class as well, and it leaves it open to be found later when we really need it.  Pretty tricky eh?\par
+\pard\cf0 Now that's a pretty considerable difference, wouldn't you say?\par
+\cf3\b   \b0 Bas file size before Ex: 4.10 kb\par
+\b   \b0 Bas file size after Ex\b    \b0 : 837 \ul\b bytes\ulnone\b0\par
+  Bofens                       : 5.32 kb\par
+\cf0 Wowzers Penny!\par
+\pard\qc\cf5 (Update: (ex) uses for/next loops)\par
+\cf0\par
+\pard   Think about how many lines of code you waste on other windows, the instant message window has just about every control\par
+the chatroom has, so before 'ex,' your safest and fastest bet was to just create a normal window function that finds \b every\b0  'non-\par
+defining' control and be on your merry way.  But that's like sending your grandmother to the store for milk, without a car, in the\par
+pouring rain, knowing damn well you already have two gallons.  It's just plain unnecessary, you jerk.\par
+\par
+  Now with the new 'invert' option you can define your IM with the controls that really seperate it from other windows, like the\par
+richtnlreadonly, and the richcntl, then check the 'invert' option and select the listbox on a chatroom.  When your code is ran, it\par
+searches the window for the richtnlreadonly, richcntl, and makes sure there is \ul\b\i no\ulnone\b0\i0  listbox.  Now you've defined your IM\par
+window with just 3 classes and saved yourself a crap load of code.\par
+\par
+\ul\b Generating small code then putting it all together:\par
+\par
+\ulnone\b0   Now sure you save code and file size, but is that all you save?  Nay I say, nay!  Let's say you've defined your "Sign On"\par
+screen with Bofen's \cf6\b and\cf0\b0  my generator, and you want to click the "SIGN ON" button.  Your find window function returns\par
+the handle for your buttons parent, and you don't want to edit it to return the handle of the button, because then you'd\par
+have to create a new function to return the handle for any other child of the "Sign On" screen you want to use.  Common\par
+sense right?  So what do we do?  We generate code for the function (Still not the best way, read on...).\par
+\par
+\ul Let's take a look at a 'gen code for function' generated by Bofens program:\par
+\ulnone\par
+\cf2\i\f1 AOLIcon& = FindWindowEx(SignOn(), 0&, "_AOL_Icon", vbNullString)\par
+\cf1 For \cf2 i& = 1& \cf1 To\cf2  3&\par
+    AOLIcon& = FindWindowEx(SignOn(), AOLIcon&, "_AOL_Icon", vbNullString)\par
+\cf1 Next \cf2 i&\i0\f0\par
+\cf0\par
+  Not to shabby right?  He incorporates for/next loops, saves a few lines of code by doing so, maybe 400 \b bytes\b0  of size.\par
+However, there is something wrong with this code.  Notice anything unusual?  How many times does the word "SignOn()"\par
+come up?  If you said 4, you're thinking like a programmer.\par
+\par
+\ul Before I explain more, take a look at the same function, generated by my program (I added for/next loops for file size sake):\par
+\ulnone (update:  The current gen 4 function does not look like this, it uses the manip child function)\par
+\cf1\i\f1\par
+Public Function \cf2 SignOnButton() \cf1 As Long\par
+Dim \cf2 aolicon\cf1  As Long, \cf2 stored \cf1 as long\par
+\cf2   Stored& = SignOn()\par
+  aolicon& = FindWindowEx(Stored&, 0&, "_aol_icon", vbNullString)\par
+\cf1 For \cf2 i& = 1 \cf1 To \cf2 3\par
+  aolicon& = FindWindowEx(Stored&, aolicon&, "_aol_icon", vbNullString)\par
+Next \cf1 i&\par
+\cf2 If \cf1 aolicon& <> 0& \cf2 Then\cf1\par
+\cf3   'What to do once the window has been found.\par
+\cf2   SignOnButton& = aolicon&\par
+\cf1 End if\par
+End Function\par
+\cf0\i0\f0\par
+  First off, I make mine a function so you can call it wherever you want, but you can always select the middle if you don't want\par
+it as a function.  Second, you may notice that I store the hWnd of the SignOn screen, try putting a message box at the \b top\b0  of your SignOn() functions, make sure the "Sign On" window is the only window open, then use Bofen's code to find the button.\par
+Notice you get 4 message box's?  Now try mine, just one right?\par
+\par
+  Sure we want small code, but what do we want even more than that?  \i FAST\i0  code!  We all know that api is really fast, but\par
+lets assume you used Bofens find window function on the sign on screen, then you use his 'generate for window' function to find\par
+the sign on button.\par
+\par
+\ul Here is a basic break down of what his generated code will do when you run the 'button' code:\ulnone\par
+\par
+  1. Search every open window for every object that the Sign On screen has and if found, find the first icon.\par
+\cf5      (remember we used every icon to define our parent, so this will be the second time we search this window for an icon)\par
+\cf0   2. Search every open window for every object that the Sign On screen has and if found, find the second icon \cf5 (another time)\cf6 .\cf0\par
+  3. Search every open window for every object that the Sign On screen has and if found, find the third icon \cf5 (another time)\cf0 .\par
+  4. Search every open window for every object that the Sign On screen has and if found, find the fourth icon \cf5 (another time)\cf0 .\par
+\par
+\ul I'm sure you can guess how mine works by now, but here it is anyway:\par
+\par
+\ulnone   1. Search every open window for two combo box's and a glyph (glyph for safe measure) and if found, save it's hWnd.\par
+  2. Find the first icon of the \b saved\b0  parents hWnd.\par
+\cf5       (for the first time, remember we used the combo box to define our parent, and not the icons)\par
+\cf0   3. Find the second icon of the \b saved\b0  parents hwnd. \cf5 (for the first time)\cf0\par
+  4. Find the third icon of the \b saved\b0  parents hwnd. \cf5 (for the first time)\cf0\par
+  5. Find the fourth icon of the \b saved\b0  parents hwnd. \cf5 (for the first time)\cf0\par
+\par
+  While there is a 5th step, you'll notice there is actually less code, and the function is essentially ran \ul\b\i 4 times faster\ulnone\b0\i0 .  Like I said,\par
+we all know api to be fast, but why not make it faster?  Not only does my function parse the find window function only once,\par
+compared to Bofens four, but the find window function itself is quicker as well.\par
+\par
+  Keep in mind that with Bofens find window function you're searching for all the static's (label's), and other objects that don't\par
+necessarily define your window, so that brings the speed down even more.  Especially if you have 21 windows open and you're\par
+searching all 21 for every object a "Write Mail" window has, plus 18 icons, 18 times per window, in a "SendMailButton"\par
+function.  Follow that?  Good, heh.\par
+\par
+  Remember if the code doesn't find 1 icon, and you're searching the window for 20, it will still try to find the other 19 unless\par
+you add an "if object& = 0& then try next," line.  While that is feasible, that would add up quick and you'd have to put it on the\par
+rarest windows you're searching for.  If you put "if icon& = 0&," then chances are it will still search that window, since most\par
+windows on AOL have icons.\par
+\par
+  Conversely, you might think about putting an "if listbox& = 0&" in your chatroom function, because it's rare, but since you'd\par
+be using my ex to define the window using the rare classes, it wouldn't matter much.\par
+\par
+\ul Remember our last example with the msgbox?  Try this one out:\par
+\par
+\ulnone   Put 'Msgbox aolchild&' after each instance of "aolchild& = " in your SignOn() functions (Based on \b my\b0  structure that would\par
+be directly after "Do: Doevents", study the code and you'll see what I mean).   Now run the 'gen code for function' that finds the\par
+"SIGN ON" button.  How many msgbox's come up based on how many windows are \b above\b0  the one we're searching for?  With mine, only one per window, not so with Bofen's however.  Test it out and see for yourself.\par
+\par
+\ul\b The ManipChild function explained:\par
+\b0\par
+\ulnone   The function at top is one I wrote to keep bas files small and clean, with this one function you can stop worrying about finding\par
+the objects, and get on with manipulating them.\par
+\ul\par
+\ulnone   The beauty behind this function lies in the fact that, regardless of your bas file, you \b have\b0  to find the window you want, then\par
+find the child, and finally you get to have some manipulating fun.\par
+\par
+\ul Let's take a look at some example code:\par
+\cf3\ulnone  Manip Codes like "ClickIcon" and "HideIt" can be found in my Codes.txt file.\par
+ All code is assuming the parent windows have already been defined in your module.\par
+\cf0\ul\par
+\ulnone   If we want to click, say, the 'Write Mail' icon on AOL's tool bar we would call the following line:\par
+\cf1     ClickIcon (ManipChild(AolToolBar(), "_aol_icon", 3))\par
+\cf0   If we want to click the 24th icon we would simply change it to this:\par
+\cf1     ClickIcon (ManipChild(AolToolBar(), "_aol_icon", 24))\par
+\cf0   Or let's say we want to hide the second combo box on the "Sign On" screen\par
+\cf1     HideIt ManipChild(SignOn(), "_aol_combobox", 2), False\par
+\cf0\par
+  Now lets say you want to hide icons 1 through 12 on the "Write Mail" window, that would get interesting wouldn't it?\par
+Well like I said, this is a tutorial on \b small\b0  efficient code, so I wouldn't have you do anything crazy like that, instead turn it\par
+into a function like this:\par
+\par
+\cf1\i\f1 Public Function \cf2 CloseMailIcons(StartWith \cf1 as Long, \cf2 EndWith\cf1  as Long\cf2 )\cf1  As Long\par
+Dim \cf2 Stored\cf1  As Long, \cf2 i \cf1 As Long\par
+\cf2   Stored& = WriteMail()\par
+\cf1 For \cf2 i& = StartWith \cf1 to \cf2 EndWith\cf1\par
+\cf2   HideIt ManipChild(Stored&, "_aol_icon", i&), False\par
+\cf1 Next \cf2 i&\par
+\cf1 End Function\par
+\cf0\i0\f0\par
+  Even something that's only two lines long, like a chatsend would become alot of code, so instead, make that a function as well.\par
+If you call \cf2\i\f1 SetText (ManipChild(ChatRoom(), "richcntl", 1), "What to say")\cf1\i0\f0  \cf6 and\cf0  \cf2\i\f1 ClickIcon (ManipChild(ChatRoom(), "_aol_icon\fs20 ", 6\fs24 ))\par
+\cf6\i0\f0 every time you wanted to send text that could get hefty (by the way, I suggest using vk_enter instead of the icon).\cf2\ul\i\f1\par
+\par
+\cf1\ulnone Public Function \cf2 ChatSend(What \cf1 as string) As Long\par
+Dim \cf2 Where\cf1  as Long\par
+\cf2   Stored& = ChatRoom()\par
+  SetText (ManipChild(Stored&, "\fs20 richcntl\fs24 ", 1), What$)\i0\f0\par
+\i\f1   ClickIcon (ManipChild(Stored&, "_aol_icon", \fs20 6\fs24 ))\i0\f0  \par
+\cf1\i\f1 End Function\par
+\cf6\par
+\i0\f0   Now ChatSend "Hi" is all you need to call whenever you want to.  Remember, we didn't define our chatroom with the edit\par
+box or the icon, and notice we stored our parents hWnd again, so our code is still as small and fast as possible.  You might be\par
+thinking "Why did we store the chatroom handle?  The manipchild stores it."  Good question.  Notice how we have Stored&\par
+twice after we define it?  Replace that with ChatRoom().  Now you're running your chat room function twice.  There's no sense\par
+in searching for the window if you've already found it, right?\par
+\par
+Let me explain in more depth how this ManipChild function really helps us out.  Take a look at this code to click the "SIGN\par
+ON" button on the "Sign On" screen, then another function to click the "Send Later" button on the "Write Mail" (Like I said,\par
+I'm offline, heh.).\par
+\par
+  Both are generated with my 'gen code for function' tool (Added for/next loops for size), and assume you have already found\par
+the parent window.\par
+(Update:  the gen 4 function tool uses the manip function so your code \b will\b0  look like the code below)\par
+\par
+\cf1\i\f1\fs20 Public Function \cf2 SendLater() \cf1 As Long\par
+Dim \cf2 aolicon\cf1  As Long, \cf2 stored \cf1 As Long\par
+\cf2   stored& = WriteMail()\par
+  aolicon& = FindWindowEx(Stored&, 0&, "_aol_icon", vbNullString)\par
+\cf1 For\cf2  i = 1 \cf1 to \cf2\ul\b 17\ulnone\b0\par
+  aolicon& = FindWindowEx(Stored&, aolicon&, "_aol_icon", vbNullString)\par
+\cf1 Next \cf2 i&\par
+\cf1 If \cf2 aolicon& <> 0& \cf1 Then\par
+\cf2 ClickIcon(aolicon)\par
+\cf1 End if\par
+End Function\par
+\par
+Public Function \cf2 ClickSignOn() \cf1 As Long\par
+Dim \cf2 aolicon\cf1  As Long, \cf2 stored \cf1 As Long\par
+\cf2   stored& = SignOn()\par
+  aolicon& = FindWindowEx(Stored&, 0&, "_aol_icon", vbNullString)\par
+\cf1 For \cf2 i = 1 \cf1 to\cf2  \ul\b 3\ulnone\b0\par
+  aolicon& = FindWindowEx(Stored&, aolicon&, "_aol_icon", vbNullString)\par
+\cf1 Next \cf2 i&\par
+\cf1 If \cf2 aolicon& <> 0& \cf1 Then\par
+\cf2 ClickIcon(aolicon)\par
+\cf1 End if\par
+End Function\par
+\par
+Public Function \cf2 ClickIcon(hWnd \cf1 as Long\cf2 ) \cf1 As Long\cf3\par
+  \cf1 Call \cf2 PostMessage(hWnd&, WM_LBUTTONDOWN, 0&, 0&)\cf3\par
+  \cf1 Call \cf2 PostMessage(hWnd&, WM_KEYUP, VK_SPACE, 0&)\cf3\par
+\cf1 End Function\cf3\par
+\cf5 - 26 lines of code. -\par
+\cf6\par
+\ul\i0\f0\fs24 Now the same code with the ManipChild function:\par
+\par
+\cf1\ulnone\i\f1\fs20 Public Function \cf2 SendLater() \cf1 As Long\par
+\cf2   ClickIcon (ManipChild(WriteMail(), "_aol_icon", \ul\b 18\ulnone\b0 ))\par
+\cf1 End Function\par
+\par
+Public Function \cf2 ClickSignOn() \cf1 As Long\par
+\cf2   ClickIcon (ManipChild(SignOn(), "_aol_icon", \ul\b 4\ulnone\b0 ))\par
+\cf1 End Function\par
+\par
+Public Function \cf2 ClickIcon(hWnd \cf1 as Long\cf2 ) \cf1 As Long\cf3\par
+  \cf1 Call \cf2 PostMessage(hWnd&, WM_LBUTTONDOWN, 0&, 0&)\cf3\par
+  \cf1 Call \cf2 PostMessage(hWnd&, WM_KEYUP, VK_SPACE, 0&)\cf3\par
+\cf1 End Function\cf3\par
+\cf5 - 10 lines of code (21 if you count the actual function, but because it can be used over and over again I consider it 'reusable' code since it doesn't lay dorment). -\par
+\cf3\par
+\cf6\i0\f0\fs24   Not only is it less lines of code, but it looks cleaner as well.\par
+\par
+ The trick is to keep your code seperate, then bring it all together when you're ready to use it.  Think how easy updating\par
+code becomes, the send button's instance on an IM only went up one number from AOL 7.0 to AOL 8.0.  Since we never\par
+used the icons to define the IM and what we did use will practically \b never\b0  change, we will still guarantee a find, and the\par
+only code we will have to change is:\cf2\i\f1\fs20   ClickIcon (ManipChild(IM(), "_aol_icon", \b 13\b0 ))\cf6\i0\f0\fs24  to: \cf2\i\f1\fs20 ClickIcon (ManipChild(IM(), "_aol_icon", \b 14\b0 ))\cf6\i0\f0\fs24 , thus\par
+keeping alive alot of classic progs, like pepsi, or server toolz.\par
+\par
+  I hope this helps alot of people out, if you don't want to count the objects out, or sometimes they are not in correct order\par
+(like aol 8's spell check button on the "Write Mail" window), use my api spy.  It will tell you the instance of the object in its\par
+class on the main screen when you 'mouseover' it as part of the spy.\par
+\par
+  I'm surprised I have not seen more functions like this one.  The point of making a function is to create something you can\par
+call with one line of code rather than call over and over again.\par
+\par
+  Essentially this function could be utilized in your 'FindWindow' Functions as well, check this out:\par
+\par
+\i\f1\fs20 Public Function WriteMail() As Long\par
+Dim aolframe As Long, mdiclient As Long, aolchild As Long, aolglyph As Long, aolstaticx As Long, aoledit As Long, aolfontcombo As Long, aolcombobox As Long, aolicon As Long, richcntl As Long, aolcheckbox As Long, aolview As Long, \cf1 cnt As Long\cf6\par
+\cf1 cnt& = 1\par
+\cf6   aolframe& = FindWindow("aol frame25", vbNullString)\par
+\cf1   mdiclient& = ManipChild(aolframe&, "mdiclient", 1)\par
+  aolchild& = ManipChild(mdiclient&, "aol child", cnt&)\par
+\cf6 Do: DoEvents\par
+\cf1 cnt& = cnt& + 1\par
+    aolglyph& = ManipChild(aolchild&, "_aol_glyph", \ul\b 5\ulnone\b0 )\par
+    aolstaticx& = ManipChild(aolchild&, "_aol_static", \ul\b 7\ulnone\b0 )\par
+    aoledit& = ManipChild(aolchild&, "_aol_edit", \ul\b 3\ulnone\b0 )\par
+    aolfontcombo& = ManipChild(aolchild&, "_aol_fontcombo", 1)\par
+    aolcombobox& = ManipChild(aolchild&, "_aol_combobox", 1)\par
+    aolicon& = ManipChild(aolchild&, "_aol_icon", \ul\b 21\ulnone\b0 )\par
+    richcntl& = ManipChild(aolchild&, "richcntl", 1)\par
+    aolcheckbox& = ManipChild(aolchild&, "_aol_checkbox", 1)\par
+    aolview& = ManipChild(aolchild&, "_aol_view", 1)\par
+\cf6 If aolchild& <> 0& And aolglyph& <> 0& And aolstaticx& <> 0& And aoledit& <> 0& And aolfontcombo& <> 0& And aolcombobox& <> 0& And aolicon& <> 0& And richcntl& <> 0& And aolcheckbox& <> 0& And aolview& <> 0& Then\par
+  SignOn& = aolchild&\par
+Exit Function: End If\par
+If aolchild& <> 0& Then aolchild& = ManipChild(mdiclient&, "aol child", cnt&)\par
+Loop Until aolchild& = 0&\par
+End Function\par
+\i0\f0\fs24\par
+  Take a look at that and you'll realize you just defined the "WriteMail" window with 23 lines of code, and you're searching it\par
+for every object it has. Now compare \b that\b0  to Bofen's 74!\par
+\par
+\ul\b Updates\ulnone :\ul\par
+\par
+\ulnone\b0   Currently I am creating an example bas file for aol 8.0.  As of now it has functions encompasing everything from a perfect\par
+ChatRoom sub to an actual ChatScan using Multi Threading, so no more hefty ocx's having to be shipped with your program.\cf5\ul\b\i\par
+}
+ 
