@@ -1,0 +1,13 @@
+===========================================================
+   Shapeaform 1.0 by PAT or JK for 32 bit versions of VB
+===========================================================
+
+ok I saw you already had a form shaper program in you d/l
+section but this program is a little different.  It lets
+you draw the shape of the form you want (oval or custom) on
+a picture of the form, and then will generate the api code 
+(which goes in the form_load event) to make a form that shape.
+
+You can also create holes in the form so you can see through
+to the other side.  The api functions that need to be declared 
+for the generated code to work are in the help section.
