@@ -1,0 +1,33 @@
+'-- Manip Codes --
+
+Public Sub SetText(hWnd As Long, Text As String)
+    Call SendMessageByString(hWnd&, WM_SETTEXT, 0&, Text$)
+End Sub
+
+Public Function ClickIcon(hWnd As Long)
+'- Click icons/buttons/whatever
+  Call PostMessage(hWnd, WM_LBUTTONDOWN, 0&, 0&)
+  Call PostMessage(hWnd, WM_KEYUP, VK_SPACE, 0&)
+  Call PostMessage(hWnd, WM_LBUTTONUP, 0&, 0&)
+' Last line is needed for some buttons on aol.
+End Function
+
+Public Function CloseIt(hWnd As Long)
+  Call PostMessage(hWnd&, WM_CLOSE, 0&, 0&)
+End Function
+
+Public Function HideShow(hWnd As Long, Visible As Boolean)
+If Visible = True Then
+  Call ShowWindow(hWnd&, SW_SHOW)
+Else
+  Call ShowWindow(hWnd&, SW_HIDE)
+End If
+End Function
+
+Public Function GetCaption(hWnd As Long) As String
+Dim l As Long, x As String
+  l& = SendMessage(hWnd&, WM_GETTEXTLENGTH, 0&, 0&)
+  x$ = String(l&, 0&)
+Call SendMessageByString(hWnd&, WM_GETTEXT, l& + 1&, x$)
+  GetCaption$ = x$
+End Function
