@@ -1,0 +1,25 @@
+:Base VBSFC.hlp
+1 Overview=Overview
+1 Registration=Registration
+1 Contacting the Author=Contacting_the_Author
+1 The Editor=Editor
+1 Buttons
+2 Drawing Tools=Drawing_Tools
+2 Combination Methods=Combination_Methods
+1 Menus
+2 File Menu
+3 File Menu Overview=File_Menu
+3 New=New
+3 Open Form=Open_Form
+3 Save Form=Save_Form
+3 Export Bitmap=Export_Bitmap
+3 Exit=Exit
+2 Draw Menu
+3 Draw Menu Overview=Draw_Menu
+3 Edge Tracer=Edge_Tracer
+3 Drawing Methods=Drawing_Methods
+3 Polygon Fill Method=Polygon_Fill_Method
+3 Circles drawn from Center=Circles_drawn_from_Center
+3 Set Draw Colour=Set_Draw_Colour
+3 Filled Shapes=Filled_Shapes
+3 Background Bitmap=Background_Bitmap
