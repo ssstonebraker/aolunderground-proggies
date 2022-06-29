@@ -1,0 +1,20 @@
+§uP??
+ This is Jaws2000 you may not know me cuz i've never released my progs
+but here i am. to use JawsChat.ocx you have to type JawsChat1. plus
+the cmnds. all the cmnds are:
+
+JawsChat.SendChat (Text) = Sends the Text to the chat (chat donr have
+to be ontop)
+
+JawsChat.WhatUserSaid() = Gets only what the user said
+
+JawsChat.LastLine() = Gets the last line from any person
+
+JawsChat.SNFromLastLine() = Gets the last line's Screen Name
+
+JawsChat.LastLineWithSN() = Gets the Last line with its Screen Name
+
+  if u need more help Mail me at Jaws2005@yahoo.com
+  or IM me at lProGGerl at AiM (AoL Instant Messager)
+
+More ocx coming soon......

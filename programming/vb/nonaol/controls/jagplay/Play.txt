@@ -1,0 +1,6 @@
+-Play.ocx
+By Jaguar and Clash
+
+This ocx plays sound files such as wav files, midi files, cda files, and mp3 files (if you have new msmedia player). This ocx file is distributed as FREEWARE! I have made a tutorial which is included in this zip that shows the syntax for every method in the ocx. The tutorial was written in VB6 Pro, so you will need the VB6 Runtime files to load the program. I am not including these because the runtimes take up a lot of space. If you have any questions please email me. Do NOT seperate this or the tutorial from the OCX file. Please keep this in a zip file.
+
+-Jaguar (jaguar32x@hotmail.com)

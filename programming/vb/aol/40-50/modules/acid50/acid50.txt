@@ -1,0 +1,23 @@
+Acid 5.0 Module
+
+I created this file because
+the others didn't have the
+things I want. I was also
+getting tired of editing them
+to work for what I wanted.
+So I made my own from API
+Handler and a few tries with
+codes I thought would work.
+The only thing I didn't
+include in this file is Mail
+Box functions. Most of them
+wouldn't work. Well, this 
+is about all I have to say.
+My site will be up soon
+so check at www.moreeinc.com
+everynow and then to see
+if it is up. It should be
+soon. Thanks for Downloading
+my file.
+
+                     Acid

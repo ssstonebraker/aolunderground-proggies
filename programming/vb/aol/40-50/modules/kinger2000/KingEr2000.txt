@@ -1,0 +1,11 @@
+File Name.......:	KingEr2000.bas
+Maker...........:	søpøn
+Files Used......:	none
+VB Used.........:	32-bit visual basic
+Additional Info.:	compatible with both 4.0 & 2.5
+
+KingEr2000.bas by søpøn
+
+ok, this module took me about 3 weeks to write, so i hope you like it.  first of all, any and all (except 2) of the subs/functions will work on either aol 2.5 or aol 4.0. that includes the fwdnew & fwdflash functions.  What you have to worry about is not whether to call the 4.0 function or the 2.5 function, but WHAT function to call.  for example: you want to call forward a new mail, all you'd have to do is call fwdnew with the correct parameters. the bas will decide which of the 2 possible "fwdnew" functions to call.  easy huh? just don't try to hard or you might hurt yourself.
+
+	hello to yaq,ozzy,numb,farf,faf and all the other iEeT0 people. ;P

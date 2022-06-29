@@ -1,0 +1,32 @@
+Hey guys
+This is Naïve
+
+About
+----------------------------------------------------------------
+1. BasName: NaïveFader (Wave fading bas)
+2. Made By: Naïve
+3. What Visual Basic it was made on: VB6
+----------------------------------------------------------------
+
+The difference between this fade and most 
+is subtle but watch it fade, it
+goes really fast because it uses API not frm.line 
+and does a cool subtle wavy effect.
+
+Example Uses:
+
+Wavefade Me
+CrazyColors Me
+
+Note: The wave fade does blue, but you
+      are all smart, you can easily change it
+
+
+Later
+Naïve
+
+* if you use this code
+* give me credit
+
+PS 
+My website (www.vbexcess.com) should be open in early August

@@ -1,0 +1,61 @@
+
+
+These are 256-color Animated Cursors: Be sure to have your Settings at
+"HIGH COLOR(16-bit)" or Greater, and your Icons set at "Large".
+
+For "HIGH-COLOR":  Be sure your Monitor can display SVGA FIRST! (over 256 colors). 
+(You should already know this.  I can't tell you.  Odds are good that if you
+bought a Pentium computer (with a new monitor), you can, but you never know.)
+
+Click the "START"(Button), pick "SETTINGS", "CONTROL PANEL",
+ choose "Display Properties".  
+Pick the "Settings" Tab.
+Use the dropdown menu under the words "Color Palette" to select 
+"High Color (16 bit).
+Now hit the "Apply" button.  If prompted to, "ShutDown" and "Restart" the computer.
+
+* (Always use the "ShutDown" Menu!! NEVER just turn a Windows95 Computer Off!!!!)
+
+
+
+For "LARGE ICONS":
+
+Click the "START"(Button), pick "SETTINGS", "CONTROL PANEL", choose "Display Properties".
+Pick the "PLUS!" Tab.  Check the box that says "USE LARGE ICONS". If prompted to, "ShutDown" 
+and restart the computer.
+
+(Note that if you're changing BOTH of the above Settings, you can do Both of them, and 
+then do the "Shutdown/Restart" thing Once.)
+
+
+
+
+Quick instructions for putting 'South Park' Animated Cursors into your Desktop:
+
+
+To Change a Pointer, Adjustment Cursor, or the "Wait/Busy" Animation do the following...
+
+Click the "START"(Button), pick "SETTINGS", "CONTROL PANEL", "MOUSE", 
+then the "POINTERS" Tab. 
+
+Double-click on the Cursor you want to REPLACE and 'Browse' your files for the one 
+you want to use as its replacement. (It's in whatever folder you put my 'South
+Park' ANI files in.)
+
+Select the one you want, then hit "Apply".
+
+Repeat as needed.
+
+You can then save your choices by clicking "SAVE AS" (Scheme) and picking 
+a name for it.
+
+
+*  Note that the "Preview" of the Animation that Windows shows is running a bit 
+   slower than the actual Animation will on your Desktop, once "Applied".
+
+A quick way to check each Animation (assuming you don't have MicroAngelo)
+is to RIGHT-CLICK on the ANI file and select "PROPERTIES".
+(Again the "Preview" will run much more slowly than the actual "Applied" Animation,
+but at least you get to see it without having to actually Apply each one!)
+
+Good Luck!  Any Questions?  Well, read the Win95 Manual!!!!! (Really!)

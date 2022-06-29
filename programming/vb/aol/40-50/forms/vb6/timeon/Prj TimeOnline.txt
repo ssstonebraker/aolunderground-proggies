@@ -1,0 +1,10 @@
+Project Name= TimeOnline
+
+What it does= AOL4.0 only. gets the time the user has been on aol
+for that current session. 
+
+Made by= Chron__x
+
+.Bas used= Subs taken from Chronx.bas v3.0 BETA
+
+VB Version= 6.0 Pro

@@ -1,0 +1,9 @@
+Well this is my mp3 ocx file.  This ocx plays mp3s and
+gets info from the mp3s.  For example you can get the 
+tile of the mp3.  You can write on the mp3s.  For example
+you can let the user type The title of the mp3 and use 
+a function on this ocx.  Like what winamp can do.  If you
+have any questions email me at magic@proggz.8m.com
+
+-¤(\/)aGiC¤
+www.proggz.8m.com

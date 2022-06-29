@@ -1,0 +1,32 @@
+A couple codes/hints about the .ocx...
+to send chat simply type Salem1.ChatSend(chat)..
+to get the last line of chat use Salem1.lastchatline..
+to send mail is Salem1.Mail_Send(variables)...
+ims are Salem1.IM_Send(var)..
+ims on/off Salem1.ImsOn/Salem1.ImsOff
+running the AI bot is Salem1.ChatWatch..
+other commands:
+
+Salem1.ChangeAOLCaption
+Salem1.Fade
+Salem1.HideAOL
+Salem1.ShowAOL
+Salem1.Keyword
+Salem1.KillWelcome           Note:Put () after these for variables..
+Salem1.PrivateBust
+Salem1.PrivateChat
+Salem1.StayOnTop
+Salem1.StayOnLine(idle)
+Salem1.SNFromlastchatline  (thanks jolt!)
+Salem1.timeout
+Salem1.Usersn
+Salem1.waitforok
+
+
+
+That should be enough to help you out..thanks alot for using 
+SalemTools.ocx....
+
+
+
+Salem

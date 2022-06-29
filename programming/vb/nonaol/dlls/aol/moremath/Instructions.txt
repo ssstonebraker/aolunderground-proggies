@@ -1,0 +1,14 @@
+Instructions:
+    To use MoreMath.dll simply add it to your project.  Here's how:
+
+  1.  Place MoreMath.dll into your Windows\System Directory.
+  2.  Click Project > References
+  3.  Scroll down the list and find MoreMath
+  4.  Double click MoreMath and press Apply.
+
+That's it, your done.  Now just open your Object Manager, and find the MoreMath file in the list.
+
+Hope this helps somebody out.
+
+Jonathan Gray
+Jon00agent@aol.com

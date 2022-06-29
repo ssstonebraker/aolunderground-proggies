@@ -1,0 +1,4 @@
+CHP12A.FRM
+CHP12B.FRM
+ProjWinSize=137,753,248,215
+ProjWinShow=2

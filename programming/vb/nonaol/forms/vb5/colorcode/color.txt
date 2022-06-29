@@ -1,0 +1,6 @@
+File = HTML Color Coder
+Programmer = Melon
+Made with VB5 pro
+No bas is needed.  One sub from Mon-K-Fade is added to the form
+
+It's a good idea, I hope you like it...enjoy!

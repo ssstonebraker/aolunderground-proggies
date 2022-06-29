@@ -1,0 +1,6 @@
+Dragon Zombie,D,SF,I,15,5,10,3,10,4,Big bad dragon zombie,4000,2800,13000
+Behemoth,D,SF,N,20,10,20,5,20,10,The Behemoth,7000,2200,7000
+Bomb,L,F,I,4,10,10,4,7,5,Bomb guy,200,200,500
+Snow,W,I,F,3,3,3,3,3,3,Snowman,10,100,1000
+God,N,A,N,90,90,90,90,200,90,God himself,100000,300000,1000000
+Chocobo,N,N,N,10,10,10,10,5,90,A chocobo,100,1000,1200

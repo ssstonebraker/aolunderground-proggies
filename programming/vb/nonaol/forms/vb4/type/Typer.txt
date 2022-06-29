@@ -1,0 +1,4 @@
+1. What it is:                                                    It Makes It look Like Someone Is Typing What it                                                                       Says In a Text Box
+2. Made By:                                                     Pyro
+3. What .ocx's .bas's used (If applies):              Included jolt232.bas
+4. What Visual Basic it was made on:                Vb 4 Regular

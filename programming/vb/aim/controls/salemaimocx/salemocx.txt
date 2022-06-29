@@ -1,0 +1,12 @@
+thank you for choosing my .ocx.
+i believe i have included enough methods to make a pretty good aim add-on program. 
+
+note:
+
+	the auto repond method should be used in a timer. it will find all open IM windows and insert your response. 
+
+		please email me at sab345@psu.edu if you have any questions/comments. i would be glad to add any methods you can think of , as well. 
+
+
+
+							- salem

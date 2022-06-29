@@ -1,0 +1,22 @@
+[OPTIONS]
+Auto Index=Yes
+Compatibility=1.1 or later
+Compiled file=yahtzee.chm
+Contents file=Table of Contents.hhc
+Default topic=webpages\yahtzee_deluxe.htm
+Display compile progress=No
+Full text search stop list file=stoplist.stp
+Index file=Index.hhk
+Language=0x409 English (United States)
+Title=Yahtzee Deluxe Help
+
+
+[FILES]
+webpages\yahtzee_deluxe.htm
+webpages\instructions.htm
+webpages\scoring.htm
+webpages\hints.htm
+webpages\credits.htm
+
+[INFOTYPES]
+

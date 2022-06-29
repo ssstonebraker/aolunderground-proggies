@@ -1,0 +1,20 @@
+test's chat ignorer ocx
+
+
+to ignore a person with a long name
+say the persons screen name is bob123
+do this:
+
+chatx1.person = "bob"
+chatx1.ignore=true
+
+to unx
+
+chatx1.person = "bob"
+chatx1.ignore=false
+
+made with vb5
+should work with all vb5s higher then vb4
+have fun
+=)
+-test

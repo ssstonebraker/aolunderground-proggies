@@ -1,0 +1,4 @@
+That you can view the generated code in a larger window by double clicking on the "Text Appears Here" textbox?
+That you can see if you've generated the code to find the right window by checking the value of the variable that holds the handle of the window with a messagebox? (exampe: Msgbox CStr(The_WndHandle&))
+That windows can share class names, but they cannot share handles?
+That API stands for "Application Programming Interface?"

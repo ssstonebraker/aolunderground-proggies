@@ -1,0 +1,5 @@
+Betrayed Spy 
+A simple Window's spy made in vb6.  Shows info on the child window
+and upto two parent windows.  Uses a timer that also works off of the
+f1 and f2 keys.
+Created by betrayed god (odin77@hotmail.com)

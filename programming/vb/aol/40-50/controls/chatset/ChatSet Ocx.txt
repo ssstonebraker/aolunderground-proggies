@@ -1,0 +1,26 @@
+Ocx Name: ChatSet Ocx
+Author: Gerald Cole aka myst
+Made in: Visual Basic 5.0 Professional Edition
+
+Example of how to use:
+Private Sub Form_Load()
+ChatSet1.ChangeCaption "ChatSet by: myst" 'this line is optional
+ChatSet1.AddtoChat
+End Sub
+
+Private Sub Form_Resize()
+ChatSet1.ResizeChat
+End Sub
+
+Private Sub Form_Unload(Cancel As Integer)
+ChatSet1.RemovefromChat
+End Sub
+
+* Note - If you take the line where it says ChatSet1.ChangeCaption "ChatSet by: myst" out and don't put a different changecaption in, then it will just set the caption to the room's caption.
+
+Additional Info:
+This will take what you put inside the ocx and add it to the chatroom.  At first I made this for my friend and myself for a program we are going to put out.  I thought about and decided to make it into an ocx.  Hope you enjoy it.
+
+Contact:
+e-mail - mystiphire@aol.com
+website - http://members.xoom.com/vbmyst

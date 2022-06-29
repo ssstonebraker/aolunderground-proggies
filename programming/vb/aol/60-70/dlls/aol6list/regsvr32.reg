@@ -1,0 +1,39 @@
+REGEDIT4
+
+;  This adds the ability to Right-Click on a .dll or .ocx
+;  and get the Register / UnRegister options.
+
+; ==========
+; .DLL files
+; ==========
+
+[HKEY_CLASSES_ROOT\.dll]
+"Content Type"="application/x-msdownload"
+@="dllfile"
+
+[HKEY_CLASSES_ROOT\dllfile]
+@="Application Extension"
+
+[HKEY_CLASSES_ROOT\dllfile\Shell\Register\command]
+@="regsvr32.exe \"%1\""
+
+[HKEY_CLASSES_ROOT\dllfile\Shell\UnRegister\command]
+@="regsvr32.exe /u \"%1\""
+
+; ==========
+; .OCX files
+; ==========
+
+[HKEY_CLASSES_ROOT\.ocx]
+@="ocxfile"
+
+[HKEY_CLASSES_ROOT\ocxfile]
+@="OCX"
+
+[HKEY_CLASSES_ROOT\ocxfile\Shell\Register\command]
+@="regsvr32.exe \"%1\""
+
+[HKEY_CLASSES_ROOT\ocxfile\Shell\UnRegister\command]
+@="regsvr32.exe /u \"%1\""
+
+; End

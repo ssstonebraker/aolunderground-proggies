@@ -1,0 +1,36 @@
+     name: winass.bas
+assembler: assman
+
+ This module contains the ultimate in windows api and windows programming.
+It is made specifically to manipulate files and do things that normal
+modules would never even come close to doing.
+Examples:
+
+1.  ChangeWallpaper
+2.  CheckForSoundCard
+3.  DeleteFile
+4.  Recycle file
+5.  SetReadOnly
+6.  SetNormal
+7.  SetHidden
+8.  PrintTextFile
+9.  SaveTextBox
+10. SaveComboBox
+11. SaveListBox
+
+These are only 11 of the 130+ Procedure on this module.
+
+ Along with the windows api,
+this module also is a GREAT source for your project's iface. Just to list
+a couple:
+
+1. makes forms 3d
+2. makes objects pannel in and out
+3. makes 3d objects
+4. special color effects
+5. fade the backround color of a form to almost any color
+
+and much much more.
+
+-new versions of the bas file come out regurly
+-old procedures from previous versions will work

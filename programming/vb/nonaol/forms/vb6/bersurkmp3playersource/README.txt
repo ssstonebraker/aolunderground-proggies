@@ -1,0 +1,3 @@
+Hey this is Renegade.  I'm a beginner and I'm willing to help other beginners, so I'm gunna give everybody my mp3 player.  It's a pretty tight one at that, nice i-face and everything.  You probably downloaded this from KnK 4 Life.  I'd give out my site url, but it isn't done.   Oh and you hafto have Visual Basic 6.0.  you can modify, fuck with, take credit for, do whatever I don't care.     
+
+                                                                    - Renegade

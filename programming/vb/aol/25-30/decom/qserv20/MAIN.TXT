@@ -1,0 +1,350 @@
+' main.txt - global definitions
+Global gv0014 As Integer
+Global Const gc0092 = "AOL Insanity Could not find AOL"
+Global Const gc0096 = "You must be signed on to use this feature!"
+Global Const gc009A = "You must be in a chat room to use this feature."
+Global gv00CC As Integer
+Type T00CE
+  M2ECF As Integer
+  M2ED8 As Integer
+  M2EE1 As Integer
+  M2EEA As Integer
+End Type
+
+Global gv00F6(7000) As Variant
+Global gv010C(17) As Variant
+Global gv0122(20) As Variant
+Global gv0138(9999) As String
+Global gv014E(20) As Variant
+Global gv0164(20) As Variant
+Global gv017A(25) As Variant
+Type T0190
+  M2F41 As Integer
+  M2F49 As Integer
+  M2F50 As Integer
+  M2F59 As Integer
+End Type
+
+Type T01B8
+  M2F6F As Integer
+  M2F74 As Integer
+End Type
+
+Type T01D0
+  M2F8B As Integer
+  M2F96 As Long
+  M2FA3 As Long
+  M2FB0 As Long
+End Type
+
+Type T01F8
+  M2FCA As String * 1
+  M2FD4 As String * 1
+  M2FE2 As Integer
+  M2FEE As String * 4
+  M2FFA As String * 128
+End Type
+
+Type T04D4
+  M445B As Integer
+  M4465 As Integer
+  M4470 As Integer
+  M447C As Integer
+  M448C As String * 1
+  M4498 As String * 1
+  M44A7 As Long
+End Type
+
+Type T0518
+  M44BE As String * 1
+  M44CA As String * 1
+  M44D7 As String * 1
+End Type
+
+Type T053E
+  M44ED As String * 1
+  M44F8 As String * 1
+  M4504 As String * 1
+  M450E As String * 1
+End Type
+
+Type T056E
+  M4531 As Long
+  M453B As Integer
+  M4546 As Integer
+  M4552 As Integer
+  M455E As Integer
+End Type
+
+Type T059E
+  M4580 As Long
+  M458A As Long
+  M4595 As Long
+  M45A1 As Integer
+  M45AD As Integer
+  M45BB As Long
+  M45CC As Long
+  M45DB As Long
+  M45EE As Long
+  M4601 As Long
+  M460E As Long
+End Type
+
+Type T060A
+  M464E As T059E
+  M465B As String * 128
+End Type
+
+Type T0624
+  M467A As T056E
+  M4688 As String * 96
+End Type
+
+Type T063E
+  M46AA As Integer
+  M46B4 As Long
+  M46BE As Integer
+  M46CD As Integer
+  M46DC As Long
+End Type
+
+Type T066E
+  M46F8 As String * 512
+End Type
+
+Type T0680
+  M4716 As Long
+  M4720 As Integer
+  M472E As String * 512
+End Type
+
+Type T06A2
+  M4748 As Integer
+  M474E As Integer
+  M4756 As Integer
+  M475E As Integer
+End Type
+
+Type T06CA
+  M4773 As Integer
+  M477D As Integer
+  M478D As Integer
+  M479A As Long
+  M47A4 As Integer
+  M47B3 As Long
+  M47C2 As Integer
+End Type
+
+Type T070A
+  M47E2 As Integer
+  M47EE As Integer
+  M47FA As Integer
+  M4807 As Integer
+  M481C As Integer
+  M4831 As Integer
+  M4843 As Integer
+  M4855 As Integer
+  M4861 As String * 1
+  M486D As String * 1
+  M487D As String * 1
+  M488C As String * 1
+  M489B As String * 1
+  M48A9 As String * 1
+  M48BA As String * 1
+  M48C9 As String * 1
+  M48DD As String * 1
+  M48EA As Integer
+  M48F8 As Integer
+  M490E As Integer
+End Type
+
+Type T07C4
+  M4930 As Integer
+  M493C As Integer
+  M4948 As Integer
+  M4952 As Integer
+  M495C As Integer
+End Type
+
+Type T07F4
+  M4972 As Integer
+  M497D As Long
+  M4988 As Integer
+End Type
+
+Type T0814
+  M499D As Integer
+  M49AA As T01B8
+  M49B7 As Long
+End Type
+
+Type T0834
+  M49D4 As String * 1
+  M49DD As String * 1
+  M49E8 As String * 1
+  M49F2 As String * 1
+End Type
+
+Type T0864
+  M4A0B As Integer
+  M4A19 As Integer
+  M4A2A As String * 252
+End Type
+
+Type T0888
+  M4A53 As Integer
+  M4A5F As Integer
+  M4A6A As Integer
+  M4A7A As Integer
+  M4A8B As Integer
+  M4A97 As String * 1
+  M4AA3 As String * 1
+  M4AB2 As String * 1
+  M4AC1 As String * 1
+  M4ACE As String * 1
+  M4AE0 As String * 1
+  M4AF3 As String * 1
+  M4B00 As String * 1
+  M4B14 As String * 32
+End Type
+
+Type T0BC6
+  M5EA3 As Integer
+  M5EAE As Integer
+  M5EB8 As Integer
+  M5EC2 As Long
+End Type
+
+Type T0BEE
+  M5ED1 As Integer
+  M5EA3 As Integer
+  M5ED9 As Integer
+  M5EE3 As Long
+  M5EC2 As Long
+  M5EED As T01B8
+End Type
+
+Type T0E42
+  M6E10 As Integer
+  M6E17 As Integer
+  M6E21 As T0190
+  M6E2C As Integer
+  M6E38 As Integer
+  M450E As String * 16
+End Type
+
+Type T0E7C
+  M6E56 As Long
+  M6E68 As Integer
+  M6E75 As Integer
+  M6E7E As Integer
+  M6E8C As Integer
+  M6E92 As Integer
+  M2F74 As Integer
+  M2F6F As Integer
+  M6E98 As Long
+  M6EA1 As Long
+  M6EAD As Long
+  M6EBA As Long
+End Type
+
+Type T0EFC
+  M6F8A As Integer
+  M6F95 As Integer
+  M6F9E As Integer
+  M6FA8 As Integer
+  M6FB5 As Integer
+  M6FC3 As Long
+End Type
+
+Type T0F34
+  M6F8A As Integer
+  M6F95 As Integer
+  M6F9E As Integer
+  M6FE1 As Integer
+  M6FEF As Integer
+  M6FFC As Integer
+  M6E10 As Integer
+  M7008 As T0190
+  M6FC3 As Long
+End Type
+
+Type T0F84
+  M6F8A As Integer
+  M6F95 As Integer
+  M6F9E As Integer
+  M6FFC As Integer
+  M6FC3 As Long
+End Type
+
+Type T0FB4
+  M6F8A As Integer
+  M6F95 As Integer
+  M6FFC As Integer
+  M703B As Integer
+  M7046 As Long
+  M7053 As Integer
+  M705E As Long
+End Type
+
+Type T1114
+  M79A8 As Integer
+  M79B9 As Integer
+End Type
+
+Type T112C
+  M79D7 As Integer
+  M79E3 As Integer
+  M79EB As Long
+End Type
+
+Type T1492
+  M8D60 As String * 1
+  M8D66 As Integer
+  M8D72 As String * 1
+  M8D7E As String * 1
+  M8D88 As String * 1
+  M8D94 As Integer
+  M8DA2 As Integer
+  M8DB0 As Integer
+  M8DBE As String * 1
+  M8DC7 As String * 1
+  M8DD0 As String * 1
+  M8DDB As String * 1
+  M8DE7 As Integer
+  M8DF1 As Integer
+  M8DFC As String * 1
+  M8E06 As String * 1
+  M8E11 As String * 1
+  M8E1C As Integer
+End Type
+
+Type T1540
+  M8E32 As String * 1
+  M8E3A As Integer
+  M8E45 As Integer
+End Type
+
+Type T1562
+  M8E64 As Long
+  M8E6F As Long
+  M8E7A As Integer
+  M2F6F As Integer
+  M2F74 As Integer
+  M6E92 As Integer
+  M6E8C As Integer
+  M6E98 As Long
+  M5EE3 As Long
+End Type
+
+Type T15B2
+  M8E9A As Integer
+  M8EA9 As Integer
+End Type
+
+Type T15D8
+  M8F35 As Integer
+  M8F3F As String * 1
+  M8F4C As String * 253
+End Type
+

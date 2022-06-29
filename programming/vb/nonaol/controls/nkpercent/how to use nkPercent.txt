@@ -1,0 +1,5 @@
+in the help form, it already teaches you how to use the .ocx, so its really simple.  but here are the 2 subs for the .ocx
+
+nkPercent.DrawPercent - this will draw the percent in the picture box (look at the help form, because it actually takes more then just saying that to get it to work properly.)
+
+nkPercent.Pause - slows down the percent bar.

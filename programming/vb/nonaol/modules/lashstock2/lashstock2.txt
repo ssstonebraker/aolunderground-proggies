@@ -1,0 +1,11 @@
+lashstock2.bas
+
+well,here it is,the final release...lashstock2.bas
+this version dont have as many features as lashstock1,
+but this bas file is mainly based on getting ip's and
+hostnames.
+
+examples of how to use the functions are in the
+bas file.
+
+tb_lash@juno.com

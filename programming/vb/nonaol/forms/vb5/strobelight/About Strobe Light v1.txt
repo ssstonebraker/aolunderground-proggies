@@ -1,0 +1,27 @@
+
+                   FORM INFO
+
+1. What it is: A Strobe Light ( Simulator ) Form.. 
+2. Made By: ßiohazard
+3. What .ocx's .bas's used (If applies): None
+4. What Visual Basic it was made on: VB5
+
+
+                   About FORM
+
+This Form is made To Show Peepz Who To Use a Couple Things..
+
+1. How To Raise a number Up one.. on a Label's Caption
+2. How to Flash Colors Randomly
+3. How to change Speed of Flashing and Dot Movement By Changing 
+the Timers Interval.
+4. How To Make Dots Move in a circle on the Screen
+
+
+                   About ßiohazard
+
+Thiz Is my First Form Out So Far. But I will Have plenty Coming Soon!
+Have any Request or Feedback E-Mail Me at DryIceTM@hotMail.com
+L8er
+
+- ßiohazard

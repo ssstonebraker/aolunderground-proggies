@@ -1,0 +1,86 @@
+The following example creates a mini-browser: 
+ 
+NOTE THIS IS NOT A COMPLETE BROWSER BUT GIVES A GOOD IDEA ON HOW TO USE WEBBROWSER CONTROL.
+
+Email comments to stevensp@bright.net or visit my Web Site www.bright.net/~stevensp 
+
+Create a new Standard .exe project in Microsoft Visual Basic 5.0. Form1 is added automatically. 
+
+On the Project menu, click Components. 
+
+Select the Microsoft Internet Controls component. Click OK. 
+
+Add the following controls to Form1: 
+
+   Control           Name
+   --------------    ---------
+   Text Box          Text1      'This will be THE URL Window 
+   Command Button    Command1   'Set its Visable Property to FALSE
+   WebBrowser        WebBrowser1'This will be the area where the Site will                                  appear so size it accordingly.
+
+In Form1's code window, add the following code: 
+
+
+   Option Explicit
+
+
+
+
+
+     Private Sub Command1_Click()
+         If Text1.Text <> "" Then
+             WebBrowser1.Navigate Text1.Text
+             If WebBrowser1.Visible = False Then
+                 WebBrowser1.Visible = True
+             End If
+         End If
+     End Sub
+
+    
+
+
+
+Private Sub Text1_KeyPress(KeyAscii As Integer) 
+If KeyAscii = 13 Then
+   Command1_Click
+End If
+End Sub
+
+Private Sub Toolbar1_ButtonClick(ByVal Button As ComctlLib.Button)
+Select Case Button.Key
+Case "back"
+WebBrowser1.GoBack
+Case "forward"
+WebBrowser1.GoForward
+Case "home"
+text1.text = "http://www.bright.net/~stevensp
+command1_click
+Case "refresh"
+WebBrowser1.Refresh
+Case "stop"
+WebBrowser1.Stop
+End Select
+
+
+
+End Sub
+
+Private Sub WebBrowser1_DownloadBegin()
+StatusBar1.Panels(1).Text = " Getting Page..."
+End Sub
+
+Private Sub WebBrowser1_DownloadComplete()
+StatusBar1.Panels(1).Text = "Got It"
+End Sub
+
+
+On the File menu, click Save Project1. 
+
+On the Run menu, click Start. 
+
+When you hit "enter", the WebBrowser appears and automatically loads the URL displayed in the TextBox. 
+NOTE: Distribution of a Microsoft Visual Basic 5.0 application that uses the WebBrowser control requires that Microsoft Internet Explorer 3.0 (or later) be installed on the target system prior to installation. 
+
+
+
+

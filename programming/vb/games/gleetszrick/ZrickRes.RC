@@ -1,0 +1,25 @@
+///////////////////////////////////////////////////////////////////////
+// This counts as a comment in a Resource Template (*.RC) when the line
+// starts with two forward slashes (//)
+//
+// Resource Script for Zricks.exe written by Pranay Uppuluri on
+// Microsoft Visual Basic 5.0 that uses DirectX 3.0 or higher.
+///////////////////////////////////////////////////////////////////////
+
+1                      ZRICKS_SOUND   MOVEABLE PURE   "Paddle.wav"
+2                      ZRICKS_SOUND   MOVEABLE PURE   "Missed.wav"
+3                      ZRICKS_SOUND   MOVEABLE PURE   "Move.wav"
+4                      ZRICKS_SOUND   MOVEABLE PURE   "NewLevel.wav"
+5                      ZRICKS_SOUND   MOVEABLE PURE   "Setup.wav"
+6                      ZRICKS_SOUND   MOVEABLE PURE   "Wallhit.wav"
+7                      ZRICKS_SOUND   MOVEABLE PURE   "Zrickhit.wav"
+
+10                     BMP            MOVEABLE PURE   "Splash.bmp"
+11                     BMP            MOVEABLE PURE   "Num.bmp"
+12                     BMP            MOVEABLE PURE   "Paddle1.bmp"
+13                     BMP            MOVEABLE PURE   "Zrick1.bmp"
+14                     BMP            MOVEABLE PURE   "Ball1.bmp"
+15                     BMP            MOVEABLE PURE   "Over.bmp"
+
+21                     ICON           MOVEABLE PURE   "Zrick1.ico"
+22                     CURSOR         MOVEABLE PURE   "Normal08.cur"

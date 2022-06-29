@@ -1,0 +1,94 @@
+[Root]
+Most Recent Package=Besurk Mp3 Player SETUP
+
+
+[Package|Besurk Mp3 Player SETUP|Root]
+SubWizProgID=PDWizard.SetupPkgSubWiz
+BuildFolder=C:\WINDOWS\Desktop\An%20mp3%20Pla195885132001[1].zip\Package
+
+[Package|Besurk Mp3 Player SETUP|Configure DAO ISAMs]
+Applicable=No
+
+[Package|Besurk Mp3 Player SETUP|Configure DAO ODBC]
+JetWorkspace=
+ODBCDirect=
+
+[Package|Besurk Mp3 Player SETUP|Files Found]
+
+[Package|Besurk Mp3 Player SETUP|Files Released]
+
+[Package|Besurk Mp3 Player SETUP|Missing Dependency Information]
+C:\WINDOWS\SYSTEM\INETCOMM.DLL=
+
+[Package|Besurk Mp3 Player SETUP|Out-of-Date Dependency Information]
+C:\WINDOWS\SYSTEM\MSCOMCTL.OCX=
+
+[Package|Besurk Mp3 Player SETUP|Files Added]
+
+[Package|Besurk Mp3 Player SETUP|Files Removed]
+
+[Package|Besurk Mp3 Player SETUP|Files In Project]
+C:\WINDOWS\Desktop\An%20mp3%20Pla195885132001[1].zip\Bersurk Mp3 Player.exe=Yes
+C:\WINDOWS\SYSTEM\MSVBVM60.DLL=Yes
+C:\WINDOWS\SYSTEM\OLEAUT32.DLL=Yes
+C:\WINDOWS\SYSTEM\OLEPRO32.DLL=Yes
+C:\WINDOWS\SYSTEM\ASYCFILT.DLL=Yes
+C:\WINDOWS\SYSTEM\STDOLE2.TLB=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=Yes
+C:\WINDOWS\SYSTEM\INETCOMM.DLL=Yes
+C:\WINDOWS\SYSTEM\MSCOMCTL.OCX=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP.EXE=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP1.EXE=Yes
+C:\WINDOWS\SYSTEM\VB6STKIT.DLL=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\ST6UNST.EXE=Yes
+
+[Package|Besurk Mp3 Player SETUP|Configure Registry Files]
+Applicable=No
+
+[Package|Besurk Mp3 Player SETUP|Configure Remote Servers]
+Applicable=No
+
+[Package|Besurk Mp3 Player SETUP|Install Locations]
+C:\WINDOWS\Desktop\An%20mp3%20Pla195885132001[1].zip\Bersurk Mp3 Player.exe=$(AppPath)
+C:\WINDOWS\SYSTEM\MSVBVM60.DLL=$(WinSysPathSysFile)
+C:\WINDOWS\SYSTEM\OLEAUT32.DLL=$(WinSysPathSysFile)
+C:\WINDOWS\SYSTEM\OLEPRO32.DLL=$(WinSysPathSysFile)
+C:\WINDOWS\SYSTEM\ASYCFILT.DLL=$(WinSysPathSysFile)
+C:\WINDOWS\SYSTEM\STDOLE2.TLB=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=$(WinSysPathSysFile)
+C:\WINDOWS\SYSTEM\INETCOMM.DLL=$(WinSysPath)
+C:\WINDOWS\SYSTEM\MSCOMCTL.OCX=$(WinSysPath)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP.EXE=$(AppPath)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP1.EXE=$(WinPath)
+C:\WINDOWS\SYSTEM\VB6STKIT.DLL=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\ST6UNST.EXE=$(WinPath)
+
+[Package|Besurk Mp3 Player SETUP|Configure Shared Files]
+Applicable=Yes
+C:\WINDOWS\Desktop\An%20mp3%20Pla195885132001[1].zip\Bersurk Mp3 Player.exe=Yes
+
+[Package|Besurk Mp3 Player SETUP|Distribution]
+Type=single
+Size=1.44 MB
+Title=Bersurk Mp3 Player
+
+[Package|Besurk Mp3 Player SETUP|IconGroups]
+Group0=Bersurk Mp3 Player
+PrivateGroup0=True
+Parent0=$(Programs)
+
+[Package|Besurk Mp3 Player SETUP|Bersurk Mp3 Player]
+Icon1="Bersurk Mp3 Player.exe"
+Title1=Bersurk Mp3 Player
+StartIn1=$(AppPath)
+Key1=Icon1
+
+[Package|Besurk Mp3 Player SETUP|Package]
+PackageFolder=C:\WINDOWS\Desktop\An%20mp3%20Pla195885132001[1].zip\Package
+ProjectFolder=C:\WINDOWS\Desktop\An%20mp3%20Pla195885132001[1].zip
+ServerSideCab=
+File1=C:\WINDOWS\Desktop\An%20mp3%20Pla195885132001[1].zip\Package\setup.exe
+File2=C:\WINDOWS\Desktop\An%20mp3%20Pla195885132001[1].zip\Package\Setup.Lst
+File3=C:\WINDOWS\Desktop\An%20mp3%20Pla195885132001[1].zip\Package\Bersurk Mp3 Player.CAB
+Handler1=PDWizard.FolderDplySubWiz
+Handler2=PDWizard.WebPostDplySubWiz

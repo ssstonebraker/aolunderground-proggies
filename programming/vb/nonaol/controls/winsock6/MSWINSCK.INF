@@ -1,0 +1,26 @@
+; INF file for MSWINSCK.ocx
+
+[DefaultInstall]
+CopyFiles=install.files
+RegisterOCXs=RegisterFiles
+
+[DestinationDirs]
+install.files=11
+
+[install.files]
+MSWINSCK.OCX=MSWINSCK.OCX
+
+[RegisterFiles]
+%11%\MSWINSCK.OCX
+
+[MSWINSCK.OCX]
+file-win32-x86=thiscab
+RegisterServer=Yes
+FileVersion=6,0,81,69
+
+[version]
+signature="$CHICAGO$"
+AdvancedINF=2.0
+
+[SourceDisksNames]
+1="default",,1

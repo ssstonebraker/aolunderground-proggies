@@ -1,0 +1,7 @@
+Written By G man
+' IHSDOGG@excite.com
+' Made on vb5.  WORKS WITH 4 & 5
+ Example of how to put an icon in the system tray of 
+ win95 and have it be able to show your form after it 
+ has been hidden and minimized.  Also add a personal 
+ popup message with textbox

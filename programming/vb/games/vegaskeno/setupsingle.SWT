@@ -1,0 +1,62 @@
+[Setup Wizard Template]
+TemplateDate=2/16/99 10:35:04 PM
+
+[Select Project and Options]
+txtProjFile=M:\Final Keno\Realkeno.vbp
+chkProjRebuild=1
+optBldSetup=True
+chkIncludeDEP=1
+optInternet=False
+optDEPOnly=False
+
+[Distribution Method]
+optFloppyTarg=False
+optSingleDirTarg=False
+optMultDirTarg=True
+
+[Multiple Directories]
+cboFloppyDrives=0
+cboFloppyDriveSize=0
+txtDirTarget=K:\distributiondisks\
+
+[Internet Package]
+optRemoteSite=True
+optLocalSite=False
+txtLocalSite=
+
+[Data Access]
+chkUseJet=1
+chkUseODBC=0
+Isam0=
+
+[ActiveX Server Components]
+File1=
+
+[Confirm Dependencies]
+File1="D:\WINDOWS\SYSTEM\COMDLG32.OCX",True,32764
+File2="D:\WINDOWS\SYSTEM\DBGRID32.OCX",True,32764
+File3=
+
+[Shared ActiveX Application]
+optDeployApplication=True
+optDeployShared=False
+optRemoteServer1=True
+optRemoteServer0=False
+
+[File Summary]
+File1="D:\WINDOWS\SYSTEM\MSVBVM50.dll",True,"$(WinSysPathSysFile)",$(DLLSelfRegister),False
+File2="D:\Program Files\DevStudio\VB\SETUPKIT\KITFIL32\SYS32\StdOle2.tlb",True,"$(WinSysPathSysFile)",$(TLBRegister),False
+File3="D:\Program Files\DevStudio\VB\SETUPKIT\KITFIL32\SYS32\OleAut32.dll",True,"$(WinSysPathSysFile)",$(DLLSelfRegister),False
+File4="D:\Program Files\DevStudio\VB\SETUPKIT\KITFIL32\SYS32\OlePro32.dll",True,"$(WinSysPathSysFile)",$(DLLSelfRegister),False
+File5="D:\Program Files\DevStudio\VB\SETUPKIT\KITFIL32\SYS32\AsycFilt.dll",True,"$(WinSysPathSysFile)",,False
+File6="D:\Program Files\DevStudio\VB\SETUPKIT\KITFIL32\SYS32\Ctl3d32.dll",True,"$(WinSysPathSysFile)",,False
+File7="D:\Program Files\DevStudio\VB\SETUPKIT\KITFIL32\SYS32\ComCat.dll",True,"$(WinSysPathSysFile)",$(DLLSelfRegister),False
+File8="D:\WINDOWS\SYSTEM\COMDLG32.OCX",True,"$(WinSysPath)",$(DLLSelfRegister),True
+File9="D:\WINDOWS\SYSTEM\DBGRID32.OCX",True,"$(WinSysPath)",$(DLLSelfRegister),True
+File10="M:\Final Keno\Compiled Betas\VVKeno.exe",True,"$(AppPath)",,False
+File11="M:\Final Keno\Compiled Betas\VVKeno.DEP",True,"$(AppPath)",,False
+File12="M:\Final Keno\Compiled Betas\money.wav",True,"$(AppPath)",,False
+File13="M:\Final Keno\Compiled Betas\deal.wav",True,"$(AppPath)",,False
+File14="M:\Final Keno\Compiled Betas\hit.wav",True,"$(AppPath)",,False
+File15="M:\Final Keno\Compiled Betas\check.wav",True,"$(AppPath)",,False
+File16="M:\Final Keno\Compiled Betas\open.wav",True,"$(AppPath)",,False

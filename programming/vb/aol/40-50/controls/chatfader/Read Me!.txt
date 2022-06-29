@@ -1,0 +1,183 @@
+-----------------(How to use ChatFader.ocx by Azazel)------------------
+	   126 different fades (unless I miscounted :D)
+
+(*1*)   If you are using Visual Basic 4.0, then you will not be able to 
+see the fades this has I believe.  In Visual Basic 5.0 and 6.0, a list 
+drops down to let you see all the subs & functions certain things 
+contain.  No need to werry now...  Read at the bottom for all the fades 
+this has and how you can use them.  (This was programmed in VB6).
+
+(*2*)   This is fairly easy to use.  Since it werks for both AIM and
+AOL Chat rooms, I made AIM as a boolean, which means, if you want to 
+send to AIM, you put "True", if you want to send to AOL you put "False".
+
+ex:  Call Fader1.BlackBlue("Message!", True)
+     ' That will send to AIM
+
+ex:  Call Fader1.BlackBlue('Message!", False)
+     ' That will send to AOL
+
+(*3*)   This will only werk in chat rooms, but please, don't werry!  
+There will soon be an IMFader.ocx that werks for AIM and AOL, and there
+will also be a MailFader.ocx which will only be able to werk for AOL 
+since there is no mail on AIM.  I will be upgrading these to higher 
+version with more fades and less bugs.  I really don't think there are
+any bugs in this ocx because I have tested it out, maybe I mis-typed
+something by accident, but that's the most that would happen.  if you 
+find any problems, ways of contacting me are:
+
+			Email:  Azazel_666@juno.com
+			IM   :  Azazel 6X9 (on AIM)
+
+-------------------------------(Fades)---------------------------------
+Note:
+L  = Light
+LL = Light-Light
+D  = Dark       
+-----------------
+
+Black
+BlackBlue
+BlackBlueBlack
+BlackGreen
+BlackGreenBlack
+BlackGrey
+BlackGreyBlack
+BlackLBlue
+BlackPurple
+BlackPurpleBlack
+BlackRed
+BlackRedBlack
+BlackYellow
+BlackYellowBlack
+
+Blue
+BlueBlack
+BlueBlackBlue
+BlueGreen
+BlueGreenBlue
+BluePurple
+BluePurpleBlue
+BlueRed
+BlueRedBlue
+BlueYellow
+BlueYellowBlue
+DBlue
+LBlue
+LBlueDBlue
+LBlueDBlueLBlue
+LBlueGreen
+LBlueGreenLBlue
+LBlueOrange
+LBlueOrangeLBlue
+LBlueYellow
+LBlueYellowLBlue
+LLBlue
+
+Brown
+
+Green
+GreenBlack
+GreenBlackGreen
+GreenBlue
+GreenBlueGreen
+GreenPurple
+GreenPurpleGreen
+GreenRed
+GreenRedGreen
+GreenYellow
+GreenYellowGreen
+LGreen
+LGreenDGreen
+LGreenDGreenLGreen
+DGreen
+
+Grey
+GreyBlack
+GreyBlackGrey
+GreyBlue
+GreyBlueGrey
+GreyGreen
+GreyGreenGrey
+GreyPurple
+GreyPurpleGrey
+GreyRed
+GreyRedGrey
+GreyYellow
+GreyYellowGrey
+DGrey
+LGrey
+
+Orange
+DOrange
+LOrange
+
+Pink
+PinkOrange
+PinkOrangePink
+DPink
+LPink
+
+Purple
+PurpleBlack
+PurpleBlackPurple
+PurpleBlue
+PurpleBluePurple
+PurpleGreen
+PurpleGreenPurple
+PurpleRed
+PurpleRedPurple
+PurpleWhite
+PurpleWhitePurple
+PurpleYellow
+PurpleYellowPurple
+PurpleLBlue
+PurpleLBluePurple
+DPurple
+LPurple
+
+Red
+RedBlack
+RedBlackRed
+RedBlue
+RedBlueRed
+RedGreen
+RedGreenRed
+RedPurple
+RedPurpleRed
+RedYellow
+RedYellowRed
+LRed
+DRed
+
+Yellow
+YellowBlack
+YellowBlackYellow
+YellowBlue
+YellowBlueYellow
+YellowGreen
+YellowGreenYellow
+YellowPink
+YellowPinkYellow
+YellowPurple
+YellowPurpleYellow
+YellowRed
+YellowRedYellow
+YellowLBlue
+YellowLBlueYellow
+
+White
+WhitePurple
+WhitePurpleWhite
+-----------------------------(Greets)----------------------------------
+I'd like to say what's up to:
+	
+	Stubbs, Beav, Dim, Shinji, XTC, Fairylucy, Popz
+	Menace, Rizz0, Criz, Mase, Copycat, Boogyman
+	     Pengwn, Jesus, Prone, Quirk, Essay
+	   	 
+		 Sorry if I forgot you =)
+
+And I'd like to give some credit to the guy who made Cyrofade.bas, I 
+guess his handle is Cyro...
+

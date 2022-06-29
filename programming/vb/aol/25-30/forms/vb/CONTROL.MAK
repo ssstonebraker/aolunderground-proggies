@@ -1,0 +1,6 @@
+MAINFRM.FRM
+C:\WINDOWS\SYSTEM\CMDIALOG.VBX
+GENERAL.BAS
+ProjWinSize=127,0,248,215
+ProjWinShow=2
+IconForm="frmMainForm"

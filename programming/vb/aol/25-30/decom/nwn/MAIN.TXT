@@ -1,0 +1,81 @@
+' main.txt - global definitions
+Global Const gc0008 = 16 ' &H10%
+Global gv000A As Integer
+Global gv000C As Integer
+Global Const gc000E = 2048 ' &H800%
+Global Const gc0014 = 393 ' &H189%
+Global Const gc001A = 2 ' &H2%
+Global Const gc0024 = 16 ' &H10%
+Global Const gc0026 = 1031 ' &H407%
+Global Const gc0030 = 1 ' &H1%
+Global Const gc0032 = 2 ' &H2%
+Global Const gc0034 = 3 ' &H3%
+Global Const gc0036 = 4 ' &H4%
+Global Const gc0038 = 5 ' &H5%
+Global Const gc003A = 68 ' &H44%
+Global Const gc003C = 71 ' &H47%
+Global Const gc0046 = 57 ' &H39%
+Global Const gc004A = 64 ' &H40%
+Global Const gc004C = 52 ' &H34%
+Global Const gc0050 = 76 ' &H4C%
+Global Const gc0052 = 54 ' &H36%
+Global Const gc0054 = 55 ' &H37%
+Global Const gc0056 = 62 ' &H3E%
+Global Const gc0058 = 48 ' &H30%
+Global Const gc0060 = 1036 ' &H40C%
+Global gv0064 As Integer
+Global Const gc0068 = 5 ' &H5%
+Type T0082
+  M1AAA As Integer
+  M1AB2 As Integer
+  M1AB9 As Integer
+  M1AC2 As Integer
+End Type
+
+Type T00AA
+  M1AD5 As Integer
+  M1AE2 As Long
+  M1AE8 As Long
+  M1AF4 As Integer
+  M1B04 As Long
+  M1B12 As Integer
+  M1B20 As Integer
+  M1B30 As Integer
+  M1B42 As Integer
+  M1B53 As Integer
+  M1B6A As Integer
+  M1B78 As Integer
+  M1B87 As String * 1
+  M1B93 As String * 1
+  M1BA0 As String * 1
+  M1BAE As Integer
+End Type
+
+Type T0138
+  M1BCD As Integer
+  M1BDC As Integer
+  M1BE1 As Integer
+  M1BE6 As Integer
+  M1BEC As Integer
+  M1BF2 As Integer
+  M1BFA As String * 2
+End Type
+
+Global Const gc017A = 1025 ' &H401%
+Global gv01EE As Integer
+Global Const gc01F0 = 1 ' &H1%
+Global Const gc01F2 = 2 ' &H2%
+Global Const gc01F6 = 2 ' &H2%
+Global Const gc01F8 = 4 ' &H4%
+Global Const gc01FA = 8 ' &H8%
+Global Const gc05C2 = 513 ' &H201%
+Global Const gc05C4 = 514 ' &H202%
+Global Const gc05CA = 2 ' &H2%
+Global Const gc05CC = 14 ' &HE%
+Global Const gc05CE = 1024 ' &H400%
+Global Const gc05D0 = 273 ' &H111%
+Global Const gc05D2 = 258 ' &H102%
+Global Const gc05D4 = 13 ' &HD%
+Global Const gc05D6 = 12 ' &HC%
+Global Const gc05DC = 3 ' &H3%
+Global Const gc05DE =-1 ' &HFFFF%

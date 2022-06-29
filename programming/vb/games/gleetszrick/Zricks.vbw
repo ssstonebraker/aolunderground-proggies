@@ -1,0 +1,10 @@
+frmMain = 132, 132, 774, 478, C, 110, 110, 752, 456, 
+modDirectX3 = 110, 110, 752, 456, C
+dixuSprite = 132, 132, 774, 478, C
+modSound = 110, 110, 752, 456, C
+modMain = 84, 36, 726, 382, C
+frmSplash = 44, 44, 686, 390, C, 22, 22, 664, 368, C
+frmScore = 22, 22, 664, 368, C, 64, 27, 706, 379, C
+CRegSettings = 66, 66, 708, 412, CI
+modScore = 0, 0, 0, 0, C
+frmNewScore = 0, 0, 0, 0, C, 154, 154, 796, 500, C

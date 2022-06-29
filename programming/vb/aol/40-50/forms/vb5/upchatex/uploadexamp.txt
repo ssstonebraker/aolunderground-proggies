@@ -1,0 +1,5 @@
+sup! this is sonic.
+i wrote this upload example because so many people have been asking me how to make an upchat like 'up dat encode'. like any other person, i got pretty annoyed over all the questions.  so i decided to write a bas that will make it as easy as 1, 2, 3.
+
+-sonic
+sonic@asianx.net

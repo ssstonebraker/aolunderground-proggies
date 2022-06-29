@@ -1,0 +1,4 @@
+frmMain = 35, 103, 485, 511, C, 0, 0, 0, 0, 
+basSubclass = 5, 78, 607, 572, C
+basGlobal = 0, 0, 0, 0, C
+clsTaskBar = 35, 103, 599, 572, C

@@ -1,0 +1,81 @@
+     ,0,A,0,0,0,0,0,0,0,2,Empty,0,0
+Cabin,1,A,1,0,100,0,100,0,2,3,Restore all allies to full HP & MP,1000,0
+Tent,1,A,1,0,70,0,70,0,1,3,Restore all allies HP & MP by 70%,200,0
+Heal,1,A,0,0,0,0,0,P|U|s|M|,1,2,Heal abnormal status,100,0
+Life,1,A,0,0,50,0,0,0,0,2,Restore life with 50% HP,150,0
+Life2,1,A,0,0,100,0,0,0,0,2,Restore full HP of swoon,1000,0
+Elixir,1,A,0,0,100,0,100,0,0,2,Restore all HP & MP to single target,100000,0
+Ether2,1,A,0,0,0,0,70,0,1,2,Restore magic to target,50000,0
+Ether1,1,A,0,0,0,0,30,0,1,2,Restore magic to target,10000,0
+Cure3,1,A,2,1200,0,0,0,0,1,2,Restore large amount of HP,3000,0
+Cure2,1,A,2,400,0,0,0,0,1,2,Restore HP,150,0
+Cure1,1,A,2,50,0,0,0,0,1,2,Restore some HP,30,0
+Shadow,2,K,D|,N|,10,30,0,Shadow Sword,700,0
+Darkness,2,K,D|,N|,20,35,0,Darkness Sword,1200,0
+Black,2,K,D|,N|,30,40,0,Black Sword,2000,WILL-5|WIS+5|
+Legend,2,K,S|,N|,40,50,0,Legend Sword,0,WILL+3|
+Ancient,2,KD,N|,N|,35,27,0,Ancient Sword,19000,0
+Silver,2,KD,N|,Z|,50,30,0,Silver sword,6000,0
+Fire,2,KD,F|,N|,65,30,0,Sword of Fire,14000,0
+IceBrand,2,KD,I|,N|,65,30,0,Ice sword,26000,0
+Slumber,2,KD,N|,N|,55,27,0,Cast sleep,26000,MG{9:20}|
+Avenger,2,K,S|,N|,80,50,2,The Avenger,10000,ALL+5|STR+10|
+Excalibur,2,K,S|,N|,200,50,0,The big guy,80000,STR+10|
+Spear,3,D,A|,N|,9,50,0,A spear,60,0
+Wind,3,D,A|,N|,55,30,0,Good spear,7000,0
+Flame,3,D,F|A|,N|,55,30,0,Flaming spear,11000,MG{2:STR*4}|
+Blizzard,3,D,I|A|,N|,77,30,0,Ice spear,21000,MG{3:STR*4}|
+Gungnir,3,D,A|S|,N|,92,30,0,Gungnir spear,100000,VIT+5|
+Dragoon,3,D,A|S|,N|,109,40,0,Best Spear,74000,0
+Short,4,N,N|,N|,25,40,0,Short Blade,4000,0
+Ninja,4,N,N|,N|,48,40,0,Ninja Blade,22000,0
+Masamune,4,N,N|,N|,65,50,0,Secret Blade,23000,ALL+5|
+Fire Claws,5,TN,F|,N|,0,30,0,Fire Claws,350,0
+Ice Claws,5,TN,I|,N|,0,30,0,Cold Steal,450,0
+Cat Claw,5,TN,N|,N|,0,50,0,Cat's Meow,700,0
+Whip,6,C,N|,N|,20,0,0,Rope,3000,0
+Chain,6,C,N|,N|,30,5,0,Chain Rope,6000,0
+Dragon,6,C,N|,D|,45,20,0,Draigon tail,100000,0
+Wooden,7,E,N|,N|,45,25,0,Wood,80,0
+Earth,7,E,F|,Z|,55,25,0,Finest wrench,12000,0
+ShortBow,8,CWELBK,N|,N|,5,0,0,Bow,220,0
+Elven Bow,8,CWELBK,N|,N|,25,25,0,Elvin Box,5000,0
+Artemis,8,CWELBK,N|,N|,75,40,0,Best bow,50000,STR+10|
+Iron,9,CWELBK,A|,N|,5,0,0,Arrow,10,0
+Samurai,9,CWELBK,A|,N|,50,0,0,Another arrow,200,0
+Artemis,9,CWELBK,A|,N|,75,0,0,Best arrows,400,0
+Dreamer,10,B,N|,N|,5,10,0,Cheap harp,50,0
+Charm,10,B,N|,N|,100,60,0,Great harp,100000,0
+Rod,11,CSZL,N|,N|,3,10,0,Cheap rod,100,0
+StarDust,11,CSZL,N|,N|,20,40,0,Good rod,11000,0
+Staff,12,SWL,N|,N|,5,10,0,Like a stick,160,0
+Lunar,12,SWL,N|,N|,36,20,0,A stick from the moon,7000,0
+Cloth,13,A,N|,N|,1,0,0,0,0,A shirt,50,0
+Prisoner,13,A,N|,N|,1,0,1,0,0,A thick shirt,70,0
+Leather,13,A,N|,N|,2,0,1,1,0,Thick leather,200,0
+Ninja,13,NT,N|,N|,24,16,50,8,0,Ninja jump suit,64000,0
+Power,13,CWNLS,N|,N|,5,0,0,0,0,Power suit,4000,0
+Heroine,13,WC,N|,N|,20,30,5,5,0,Great,40000,WIS+10|WILL+10|
+Iron,14,KDEN,N|,N|,2,10,0,0,0,Iron chest,130,0
+Silver,14,KDEN,N|,N|,6,10,2,2,0,Silver chest,2000,0
+Diamond,14,KD,N|,N|,19,10,4,2,0,Real diamond,40000,0
+Dragoon,14,D,X|,N|,23,10,10,6,0,Best for Dragoon,100000,WILL+3|
+Crystal,14,K,X|,N|,24,10,10,7,0,Best for knight,100000,WILL+3|
+Iron,15,KDE,N|,N|,1,20,0,0,0,Iron shield,100,0
+Silver,15,KDE,N|,N|,3,26,2,2,0,Silver shield,1000,0
+Diamond,15,KD,N|,N|,4,32,2,3,0,Diamond shield,15000,0
+Aegis,15,KD,N|,N|,4,34,5,4,0,Aegis Shield,20000,WIS+3|
+Dragoon,15,D,X|,N|,6,38,3,5,0,Best shield for dragoon,100000,0
+Crystal,15,K,X|,N|,7,40,4,6,0,Best for knight,100000,0
+Cap,16,A,N|,N|,1,5,1,1,0,Indians hat,100,0
+Leather,16,A,N|,N|,3,10,0,0,0,Leater cap,330,0
+Gaea,16,CWZSK,N|,N|,3,3,5,5,0,Gaea helmet,700,WIS+1|
+Ninja,16,NT,N|,N|,9,8,5,5,0,Ninja gear,20000,STR+10|
+Ribbon,16,A,X|,N|,9,2,12,12,0,Ribbon,15000,WIS+10|
+Dragoon,16,D,X|,N|,11,10,7,4,0,Best for dragoon,100000,0
+Glass,16,K,X|,N|,14,10,10,7,0,Best for knight,100000,0
+Iron,17,CSWZTNB,F|I|,N|,2,0,2,1,0,Iron ring,100,0
+Ruby,17,A,N|,N|,0,0,3,2,0,Ruby ring,1000,0
+Rune,17,CTNWL,N|,N|,5,0,8,8,0,Rune ring,2000,WIS+5|WILL+5|
+Diamond,17,KCTNDE,X|,N|,6,0,8,6,0,Diamond ring,4000,0
+Protect,17,KDNWC,X|,N|,10,5,12,10,0,Protect ring,40000,VIT+10|

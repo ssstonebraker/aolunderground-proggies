@@ -1,0 +1,20 @@
+thank you for downloading blikeScan for AOL7.0. This chatScan was designed specifically ONLY for AOL7.0(XP). There are a few features that will help you overcome the annoying tags AOL7 places on the end of chat lines.
+
+Description of Features:
+
+.chatSend - Sends chat (obviously)
+.startScan - Begins scanning
+.stopScan - Stops the scanning
+
+
+***************************CUSTOM TRIMMING
+
+.enableTrimNulls - This turns on the character trimming built into the OCX. It will automatically trim any of the following from the chatline: "Link  lÛ ô     ÷ Ò vÀ % À  ". BY DEFAULT THIS IS ACTIVE! To deactivate, simply run the disableTrimNulls sub: blikeScan.disableTrimNulls
+ 
+.dimCustomNulls(words As String) - This is for setting your own custom trim characters. Chrs you specify will be trimmed from the back of the chatline. Use a space between each chr you want to trim. Example: blikeScan.dimcustomnulls ("v À  %"). Be sure you ENABLE custom trims by using the following sub:
+
+.enableCustomTrimNulls - enables custom trims.
+
+*******************************************
+
+Be sure to check out e2AOL7 at http://www.blike.com/e2mod/

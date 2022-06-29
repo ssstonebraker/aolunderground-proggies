@@ -1,0 +1,15 @@
+
+					
+			Visual Basic 5.0 by Walter S. Jr.
+_____________________________________________________________________________________________
+			All-Rights Reserved 1998-1999
+_____________________________________________________________________________________________
+
+This is an example on how to make the picture move round the screen when you drag it.
+
+Just run the program and hold the mouse button down and then drag the mouse around.
+
+made in Visual Basic 5.0
+
+any questions or comments e-mail me at burn_meth@yahoo.com
+

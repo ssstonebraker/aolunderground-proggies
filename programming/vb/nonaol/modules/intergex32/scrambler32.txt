@@ -1,0 +1,66 @@
+=======================================================================
+===============================[integerx]==============================
+=======================================================================
+
+====[name: scrambler32.bas]============================================
+====[release date: 07/17/00]===========================================
+====[needs: visual basic 6.0]==========================================
+====[description: i made this module because i see a lot of scores
+==================being stored and kept wrong. the downside about this
+==================is that you have to follow a certian format of
+==================keeping score. i will discuss this later on.
+
+=======================================================================
+================================[codes]================================
+=======================================================================
+*assumes the listbox is named lstMain*
+
+<adding a winner and score to a listbox>
+Parameters: Winner, Points, List
+	Call AddWinner("winnername", "3", lstMain)
+
+<sorting a list according to score>
+Parameters: List
+	Call SortWinners(lstMain)
+
+<shuffle a listbox>
+Parameters: List
+	Call ShuffleList(lstMain)
+
+<scrambling a list>
+Parameters: txt
+	Dim strScrambled As String
+	strScrambled$ = ScrambleIt("scramble this string")
+
+<checking a list to see if a certian item is on it>
+Parameters: Item, List
+	If isItemOn("bob", lstMain) = True Then
+		'the item is on the list
+	else
+		'the item isn't on the list
+	end if
+
+
+once you got these down the rest should be pretty self-explainatory.
+
+now, like i mentioned above, a downside to these routines is that we
+have to follow a certian format, which is this:
+
+WinnerName - Score
+
+now, with a little editing you can change the delimiter "-" to
+something else, such as "*".
+
+once you think you got a good understanding of all the coding in this
+module i have some 'challenges' for you.
+
+1.) edit the function isItemOn so it is not case-sensitive.
+2.) change the delimiter "-" to something else.
+3.) edit all the routines so it will work in a combobox instead.
+	then edit it so it can work on a combobox or a listbox.
+
+that is all i have to say and offer for now, if you need help, just
+drop me a email.
+
+take care, & happy programmin' =)
+-integerx (integerx@mediaone.net)

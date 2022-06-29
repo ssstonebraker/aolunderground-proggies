@@ -1,0 +1,16 @@
+Form=mci.Frm
+Reference=*\G{BEF6E001-A874-101A-8BBA-00AA00300CAB}#2.0#0#C:\WINDOWS\SYSTEM\OLEPRO32.DLL#Standard OLE Types
+Reference=*\G{00025E01-0000-0000-C000-000000000046}#3.0#0#C:\PROGRAM FILES\COMMON FILES\MICROSOFT SHARED\DC:\PROGRAM FIL#Microsoft DAO 3.0 Object Library
+ProjWinSize=47,690,194,128
+ProjWinShow=2
+IconForm="Form1"
+Name="Project1"
+HelpContextID="0"
+StartMode=0
+VersionCompatible32="0"
+MajorVer=1
+MinorVer=0
+RevisionVer=0
+AutoIncrementVer=0
+ServerSupportFiles=0
+VersionCompanyName=""

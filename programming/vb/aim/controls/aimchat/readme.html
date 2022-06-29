@@ -1,0 +1,222 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type"
+content="text/html; charset=iso-8859-1">
+<meta name="GENERATOR" content="Microsoft FrontPage Express 2.0">
+<title>About</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+    <tr>
+        <td width="15%"><table border="0" width="15%">
+            <tr>
+                <td bgcolor="#000000"><font color="#FFFFFF"
+                size="1" face="Tahoma">About</font></td>
+            </tr>
+        </table>
+        </td>
+    </tr>
+    <tr>
+        <td width="100%"><table border="0" width="100%">
+            <tr>
+                <td><font size="1" face="Tahoma">Almost a year
+                ago I, Quirk, wrote the first AIM ChatScan
+                Control. It was the best until recently. Several
+                people have made ChatScan Controls that are
+                better than mine. I have found a new method of
+                getting the chat lines which allows the control
+                to get everyline. This ChatScan is also <strong>only</strong>
+                for AOL Instant Messenger 3.5+.</font></td>
+            </tr>
+        </table>
+        </td>
+    </tr>
+</table>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+    <tr>
+        <td width="15%"><table border="0" width="15%">
+            <tr>
+                <td bgcolor="#000000"><font color="#FFFFFF"
+                size="1" face="Tahoma">Commands</font></td>
+            </tr>
+        </table>
+        </td>
+    </tr>
+    <tr>
+        <td width="100%"><table border="0" width="100%">
+            <tr>
+                <td><font size="1" face="Tahoma">A major
+                difference between my old controls and this one
+                is that this control is purely a chatscan whereis
+                my old one was a pretty much a module compiled
+                into a control. Here are the commands you will
+                need to know.<br>
+                <br>
+                </font><table border="0" width="100%">
+                    <tr>
+                        <td width="25%"><font size="1"
+                        face="Tahoma"><u>Command</u></font></td>
+                        <td width="75%"><font size="1"
+                        face="Tahoma"><u>Description</u></font></td>
+                    </tr>
+                    <tr>
+                        <td width="25%"><font size="1"
+                        face="Tahoma">ChatScan1.Enabled = True</font></td>
+                        <td width="75%"><font size="1"
+                        face="Tahoma">Actives the scanning of the
+                        chat room for changes.</font></td>
+                    </tr>
+                    <tr>
+                        <td width="25%"><font size="1"
+                        face="Tahoma">ChatScan1.Enabled = False</font></td>
+                        <td width="75%"><font size="1"
+                        face="Tahoma">Deactivates the scanning of
+                        the chat room for changes.</font></td>
+                    </tr>
+                    <tr>
+                        <td width="25%"><font size="1"
+                        face="Tahoma">Call
+                        ChatScan1.ChatSend(&quot;Text&quot;)</font></td>
+                        <td width="75%"><font size="1"
+                        face="Tahoma">Sends &quot;Text&quot; to
+                        the current chat room.</font></td>
+                    </tr>
+                    <tr>
+                        <td width="25%"><font size="1"
+                        face="Tahoma">X = ChatScan1.ChatName</font></td>
+                        <td width="75%"><font size="1"
+                        face="Tahoma">Sets X to the name of the
+                        current chat room.</font></td>
+                    </tr>
+                    <tr>
+                        <td width="25%"><font size="1"
+                        face="Tahoma">X = ChatScan1.UserSN</font></td>
+                        <td width="75%"><font size="1"
+                        face="Tahoma">Sets X to the user's screen
+                        name.</font></td>
+                    </tr>
+                </table>
+                </td>
+            </tr>
+        </table>
+        </td>
+    </tr>
+</table>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+    <tr>
+        <td width="15%"><table border="0" width="15%">
+            <tr>
+                <td bgcolor="#000000"><font color="#FFFFFF"
+                size="1" face="Tahoma">Events</font></td>
+            </tr>
+        </table>
+        </td>
+    </tr>
+    <tr>
+        <td width="100%"><table border="0" width="100%">
+            <tr>
+                <td><font size="1" face="Tahoma">The best part
+                about this control is that is is easy to get the
+                last screen name and messgae from the chat.<br>
+                When double clicking on the control the code
+                window with the following appears:<br>
+                <br>
+                </font><font color="#000080" size="1"
+                face="Tahoma">Private Sub</font><font size="1"
+                face="Tahoma"> ChatScan1_Changed(Who </font><font
+                color="#000080" size="1" face="Tahoma">As String</font><font
+                size="1" face="Tahoma">, What </font><font
+                color="#000080" size="1" face="Tahoma">As String</font><font
+                size="1" face="Tahoma">)<br>
+                <br>
+                </font><font color="#000080" size="1"
+                face="Tahoma">End Sub<br>
+                <br>
+                </font><font color="#000000" size="1"
+                face="Tahoma">The variable Who is the screen name
+                of the person who last said something in the chat
+                room, and What is the variable that holds what
+                that person said. If a message is sent my the
+                server (So and So has entered the room, So and So
+                has left the room, etc) Who is set to
+                &quot;OnlineHost&quot;. Here is an example of how
+                to greet people when they enter the room.<br>
+                <br>
+                </font><font color="#000080" size="1"
+                face="Tahoma">Private Sub</font><font size="1"
+                face="Tahoma"> ChatScan1_Changed(Who </font><font
+                color="#000080" size="1" face="Tahoma">As String</font><font
+                size="1" face="Tahoma">, What </font><font
+                color="#000080" size="1" face="Tahoma">As String</font><font
+                size="1" face="Tahoma">)<br>
+                </font><font color="#000080" size="1"
+                face="Tahoma">If</font><font size="1"
+                face="Tahoma"> InStr(1, What, &quot; has entered
+                the room.&quot;) and Who = &quot;OnlineHost&quot;
+                </font><font color="#000080" size="1"
+                face="Tahoma">Then</font><font size="1"
+                face="Tahoma"><br>
+                TheSN = Mid(What,1, InStr(1,What,&quot; has
+                entered the room.&quot;) - 1)<br>
+                ChatScan1.ChatSend &quot;Welcome &quot; &amp;
+                TheSN &amp; &quot; to chat room &quot; &amp;
+                ChatScan1.ChatName<br>
+                </font><font color="#000080" size="1"
+                face="Tahoma">End If</font><font size="1"
+                face="Tahoma"><br>
+                </font><font color="#000080" size="1"
+                face="Tahoma">End Sub<br>
+                <br>
+                </font><font color="#000000" size="1"
+                face="Tahoma">I have included the entire project
+                for the above example, sorry but the example is
+                for Visual Basic 6 only.</font></td>
+            </tr>
+        </table>
+        </td>
+    </tr>
+</table>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+    <tr>
+        <td width="15%"><table border="0" width="15%">
+            <tr>
+                <td bgcolor="#000000"><font color="#FFFFFF"
+                size="1" face="Tahoma">Contact</font></td>
+            </tr>
+        </table>
+        </td>
+    </tr>
+    <tr>
+        <td width="100%"><table border="0" width="100%">
+            <tr>
+                <td><font size="1" face="Tahoma">You can contact
+                me at the following email addresses: </font><a
+                href="mailto:quirk@dajoker.net"><font size="1"
+                face="Tahoma">quirk@dajoker.net</font></a><font
+                size="1" face="Tahoma">, </font><a
+                href="mailto:quirk@nkillaz.com"><font size="1"
+                face="Tahoma">quirk@nkillaz.com</font></a><font
+                size="1" face="Tahoma">,and </font><a
+                href="mailto:quirk@netzero.net"><font size="1"
+                face="Tahoma">quirk@netzero.net</font></a><font
+                size="1" face="Tahoma">.<br>
+                My website is </font><a href="http://i.am/quirk"><font
+                size="1" face="Tahoma">http://i.am/quirk</font></a><font
+                size="1" face="Tahoma">.<br>
+                The degree site is </font><a
+                href="http://nkillaz.com/degree"><font size="1"
+                face="Tahoma">http://nkillaz.com/degree</font></a><font
+                size="1" face="Tahoma">. </font></td>
+            </tr>
+        </table>
+        </td>
+    </tr>
+</table>
+</body>
+</html>

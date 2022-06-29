@@ -1,0 +1,144 @@
+put this in the monkEFade bas
+
+
+Function FadesixColor(R1%, G1%, B1%, R2%, G2%, B2%, R3%, G3%, B3%, R4%, G4%, B4%, R5%, G5%, B5%, R6%, G6%, B6%, thetext$, Wavy As Boolean)
+
+    Dim WaveState%
+    Dim WaveHTML$
+    WaveState = 0
+    
+    textlen% = Len(thetext)
+    
+    Do: DoEvents
+    fstlen% = fstlen% + 1: textlen% = textlen% - 1
+    If textlen% < 1 Then Exit Do
+    seclen% = seclen% + 1: textlen% = textlen% - 1
+    If textlen% < 1 Then Exit Do
+    thrdlen% = thrdlen% + 1: textlen% = textlen% - 1
+    If textlen% < 1 Then Exit Do
+    frthlen% = frthlen% + 1: textlen% = textlen% - 1
+    If textlen% < 1 Then Exit Do
+    fvthlen% = fvthlen% + 1: textlen% = textlen% - 1
+    If textlen% < 1 Then Exit Do
+    
+    Loop Until textlen% < 1
+    
+    
+    
+    part1$ = Left(thetext, fstlen%)
+    part2$ = Mid(thetext, fstlen% + 1, seclen%)
+    part3$ = Mid(thetext, fstlen% + seclen% + 1, thrdlen%)
+    part4$ = Mid(thetext, fstlen% + seclen% + thrdlen% + 1, frthlen%)
+    part5$ = Right(thetext, fvthlen%)
+    
+    
+    'part1
+    textlen% = Len(part1$)
+    For i = 1 To textlen%
+        TextDone$ = Left(part1$, i)
+        LastChr$ = Right(TextDone$, 1)
+        ColorX = RGB(((B2 - B1) / textlen% * i) + B1, ((G2 - G1) / textlen% * i) + G1, ((R2 - R1) / textlen% * i) + R1)
+        colorx2 = RGBtoHEX(ColorX)
+        
+        If Wavy = True Then
+        WaveState = WaveState + 1
+        If WaveState > 4 Then WaveState = 1
+        If WaveState = 1 Then WaveHTML = "<sup>"
+        If WaveState = 2 Then WaveHTML = "</sup>"
+        If WaveState = 3 Then WaveHTML = "<sub>"
+        If WaveState = 4 Then WaveHTML = "</sub>"
+        Else
+        WaveHTML = ""
+        End If
+        
+        Faded1$ = Faded1$ + "<Font Color=#" & colorx2 & ">" + WaveHTML + LastChr$
+    Next i
+    'part2
+    textlen% = Len(part2$)
+    For i = 1 To textlen%
+        TextDone$ = Left(part2$, i)
+        LastChr$ = Right(TextDone$, 1)
+        ColorX = RGB(((B3 - B2) / textlen% * i) + B2, ((G3 - G2) / textlen% * i) + G2, ((R3 - R2) / textlen% * i) + R2)
+        colorx2 = RGBtoHEX(ColorX)
+        
+        If Wavy = True Then
+        WaveState = WaveState + 1
+        If WaveState > 4 Then WaveState = 1
+        If WaveState = 1 Then WaveHTML = "<sup>"
+        If WaveState = 2 Then WaveHTML = "</sup>"
+        If WaveState = 3 Then WaveHTML = "<sub>"
+        If WaveState = 4 Then WaveHTML = "</sub>"
+        Else
+        WaveHTML = ""
+        End If
+        
+        Faded2$ = Faded2$ + "<Font Color=#" & colorx2 & ">" + WaveHTML + LastChr$
+    Next i
+    
+    'part3
+    textlen% = Len(part3$)
+    For i = 1 To textlen%
+        TextDone$ = Left(part3$, i)
+        LastChr$ = Right(TextDone$, 1)
+        ColorX = RGB(((B4 - B3) / textlen% * i) + B3, ((G4 - G3) / textlen% * i) + G3, ((R4 - R3) / textlen% * i) + R3)
+        colorx2 = RGBtoHEX(ColorX)
+        
+        If Wavy = True Then
+        WaveState = WaveState + 1
+        If WaveState > 4 Then WaveState = 1
+        If WaveState = 1 Then WaveHTML = "<sup>"
+        If WaveState = 2 Then WaveHTML = "</sup>"
+        If WaveState = 3 Then WaveHTML = "<sub>"
+        If WaveState = 4 Then WaveHTML = "</sub>"
+        Else
+        WaveHTML = ""
+        End If
+        
+        Faded3$ = Faded3$ + "<Font Color=#" & colorx2 & ">" + WaveHTML + LastChr$
+    Next i
+    
+    'part4
+    textlen% = Len(part4$)
+    For i = 1 To textlen%
+        TextDone$ = Left(part4$, i)
+        LastChr$ = Right(TextDone$, 1)
+        ColorX = RGB(((B5 - B4) / textlen% * i) + B4, ((G5 - G4) / textlen% * i) + G4, ((R5 - R4) / textlen% * i) + R4)
+        colorx2 = RGBtoHEX(ColorX)
+        
+        If Wavy = True Then
+        WaveState = WaveState + 1
+        If WaveState > 4 Then WaveState = 1
+        If WaveState = 1 Then WaveHTML = "<sup>"
+        If WaveState = 2 Then WaveHTML = "</sup>"
+        If WaveState = 3 Then WaveHTML = "<sub>"
+        If WaveState = 4 Then WaveHTML = "</sub>"
+        Else
+        WaveHTML = ""
+        End If
+        
+        Faded4$ = Faded4$ + "<Font Color=#" & colorx2 & ">" + WaveHTML + LastChr$
+     Next i
+    'part5
+    textlen% = Len(part5$)
+    For i = 1 To textlen%
+        TextDone$ = Left(part5$, i)
+        LastChr$ = Right(TextDone$, 1)
+        ColorX = RGB(((B6 - B5) / textlen% * i) + B5, ((G6 - G5) / textlen% * i) + G5, ((R6 - R5) / textlen% * i) + R5)
+        colorx2 = RGBtoHEX(ColorX)
+        
+        If Wavy = True Then
+        WaveState = WaveState + 1
+        If WaveState > 4 Then WaveState = 1
+        If WaveState = 1 Then WaveHTML = "<sup>"
+        If WaveState = 2 Then WaveHTML = "</sup>"
+        If WaveState = 3 Then WaveHTML = "<sub>"
+        If WaveState = 4 Then WaveHTML = "</sub>"
+        Else
+        WaveHTML = ""
+        End If
+        
+        Faded5$ = Faded5$ + "<Font Color=#" & colorx2 & ">" + TheHTML + LastChr$
+    Next i
+    
+    FadesixColor = Faded1$ + Faded2$ + Faded3$ + Faded4$ + Faded5$
+End Function

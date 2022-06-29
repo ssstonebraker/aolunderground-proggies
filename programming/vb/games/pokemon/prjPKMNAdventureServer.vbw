@@ -1,0 +1,6 @@
+frmMain = 44, 44, 384, 364, C, 22, 22, 362, 342, C
+basUtilities = 110, 110, 450, 430, C
+frmReboot = 132, 132, 472, 452, C, 110, 110, 450, 430, C
+frmTrayIcon = 22, 22, 362, 342, C, 0, 0, 340, 320, C
+basFunctions = 66, 66, 405, 386, C
+basRegister = 154, 154, 493, 474, C

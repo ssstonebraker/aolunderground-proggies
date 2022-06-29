@@ -1,0 +1,6 @@
+Hello this is DeViL(who is me the maker obiously)
+This example show how to lock a mouse to a form and then release it
+I had fun with this and I think you will to
+made with Vb5
+No .Bas or .ocxs needed...
+Later

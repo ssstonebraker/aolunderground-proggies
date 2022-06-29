@@ -1,0 +1,85 @@
+***************************************************************************
+*  SuP everyone, it's me again; RiP.  Thanx for using Ripchat v≥.  This   *
+*  is by far the BEST chat scanner ever made.  It has many functions that * 
+*  other chat scanners haven't even touched!!!  It is 200% defect free,   *
+*  and now has NEW re-written coding that works all of the time,          *   
+*  compensating where previous versions have sadlfully fell short, which  *
+*  reasures the Visual Basic 5 and aol 4.0 programmers that there program *
+*  is being used with the BEST chat scanner ever!                         * 
+***************************************************************************
+
+The functions in this control are as following:
+
+ScanOn - Turns the scanner on
+ScanOff - Turns the scanner off
+
+About - Tells you about the chat scanner
+Advertise - Advertises the scanner
+Attention - Get attention in the chat room
+ChatSend - Sends a string to the Chat room
+Example - Gives you an example of how to use the control 
+IgnorePerson - Ignores a person in a chat room.  To Un-Ignore them 
+               call this function again.
+Keyword - Calls a keyword.
+LinkSend - Sends a hyper link to the Chat room
+RoomBust - Busts into a Private Room
+ScrollProfile - Scroll an AOL members profile
+SendEliteText - SÈNDs ÀLÕTÈ TÈXT
+
+***************************- EXAMPLES -******************************
+
+This Chat Control/Scanner is very simple to use.  To turn it on, 
+type: Chat1.ScanOn in either Form_Load or in a command button.
+From there you put your codeing in the Chat scanner.  It works 
+like this; every time the the last chat line in the chat room 
+appears, the chat scanner fires.  Who = the Screen name from the
+last person to talk in the chat room, and What = what they said
+(Last Chat Line).  It's that easy!!!
+
+ 
+Example1:
+
+  Sub Chat1_ChatMsg(Who as String, What as String)
+  If LCase(What) = LCase("Hi") Then
+  Chat1.ChatSend "Hello " & Who & "!"
+  End If
+  End Sub
+
+Example2:
+
+  Sub Chat1_ChatMsg(Who as String, What as String)
+  If LCase(What) = LCase(".imoff") And Who = UserSN() Then
+  Call InstantMessage("$IM_OFF", "Turn IMz off")
+  End If
+  End Sub
+
+Example3:
+
+  Sub Chat1_ChatMsg(Who as String, What as String)
+  Dim Person As String
+  If Who = GetUser() And InStr(LCase(What), LCase(".x")) Then
+  Person = Right(What, Len(What) - 2)
+  Chat1.IgnorePerson Person&
+  Timeout 0.3
+  Chat1.ChatSend "- --|[ " + Person& + " - IGNORED!"
+  Exit Sub
+  End If
+  End Sub
+
+Example4(Server):
+
+  Sub Chat1_ChatMsg(Who as String, What as String)
+  If LCase(What) = LCase("/" & UserSN & " Send List") Then
+  List1.Additem "" & Who
+  Chat1.ChatSend Who & ", request received!"
+  End If
+  End Sub 
+*********************************************************************
+
+http://www.angelfire.com/pe/RiP
+
+E-Mail RiP at:
+    - VBPuFF@aol.com
+    - V RiP B@aol.com
+
+"It's time to RiP shit up!!!..."

@@ -1,0 +1,13 @@
+CoreAOL.dll
+By:  Sub°
+For Visual Basic 5 and 6 /  America Online 4.0 (32 bit) only.
+Help files and sample project included.
+
+
+Double click on the executable.  It is a installer program for your dll and help files.
+It installs the dll into your Windows\System directory and registers the dll in your
+Windows Registry.
+
+Have fun!
+
+Sub°

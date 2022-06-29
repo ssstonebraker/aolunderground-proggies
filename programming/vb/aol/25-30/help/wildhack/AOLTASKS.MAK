@@ -1,0 +1,12 @@
+C:\ROOMBUST.FRM
+AOL_16.BAS
+FORM1.FRM
+FORM2.FRM
+FORM3.FRM
+FORM4.FRM
+ProjWinSize=81,533,248,215
+ProjWinShow=2
+IconForm="TEST1"
+Title="AOL VB Programmer's Guide Eamples"
+ExeName="AOLTASKS.EXE"
+Path="C:"

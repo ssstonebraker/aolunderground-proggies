@@ -1,0 +1,9 @@
+nkPercent.ocx
+made by: nk
+http://www.nkillaz.com
+
+about:	
+	This is really a neat ocx.  Im sure you heard of the common controls replacement percent bar, and other percent bar .ocx files, but i honestly think this one surpasses them.  You can set the values of the percent, for example, if you dont want it to go all the way to 100%, but just maybe like 70%, it will stop at the 70% location on the picture box.  even if you wanted it to goto 1000%, it would, but im not sure you need it to goto 1000%.  also, im not sure if any percent bar .ocx can do this, but if you have a faded pic in the pic box, the percent bar can find automatically with the fade box.  it can also automatically fade with the pic box if there is a .bmp, .jpg, .gif, or any other readable vb art file in it.
+
+help: this .ocx comes with a help file form to teach you how to use the .ocx in really neat ways.  please take the time to look at it so you can learn how to use the .ocx in very many ways.
+

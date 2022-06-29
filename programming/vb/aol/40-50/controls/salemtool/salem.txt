@@ -1,0 +1,3 @@
+This is my first .ocx for AOL 4...It includes enough stuff to program
+for aol 4 including ChatSend, IM_Send, Mail_Send, etc...most of the
+subs/functions are located in my .bas Salem32..

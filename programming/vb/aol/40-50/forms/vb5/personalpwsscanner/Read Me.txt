@@ -1,0 +1,11 @@
+OK here is an example of a personal scanner.It is not like a normal pwsd or a deltree detector, this Example allows you to type in your own string to Scan for for. For Example:
+if you wanted to scan a program for a cuss word or an email address...all you would do is type in
+the text box the string...Push Scan....and it will tell you if your string is in the program that you scanned.
+it is very simple bu susprisingly I have seen no one do it before.
+
+well i am happy to submit this form to knk...
+
+Any Questions please e-mail me at Mysteryman32@juno.com
+
+
+		-=FoRBiDon=-

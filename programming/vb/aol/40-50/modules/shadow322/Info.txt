@@ -1,0 +1,3 @@
+All errors that were in v1 of my BAS (which I have knowledge of) have
+been fixed.  Also my old BAS has a few big mistakes and I would
+appreciate it if you would remove it from the site.

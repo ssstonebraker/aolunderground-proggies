@@ -1,0 +1,5 @@
+This is my unlimited color fader example.
+This was made to help all of you people who want to add a fader to your programs. I know that faders are old and noone uses them anymore, but it couldn't hurt to learn to make one? I will most likely come out with version 2 of this with more options (load, save, etc.... maybe make it usable on AOL?) well that's all for now...
+
+dandan
+dandanunkn0wn@ign.com

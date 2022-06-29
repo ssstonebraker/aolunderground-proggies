@@ -1,0 +1,22 @@
+--TEST.VBP
+--By eDiT
+--http://w3.to/wer420inc
+
+--This is just a VERY basic example of some AOL coding.
+--I made this for a friend who got VB and wanted to
+  know some code. Well I made this for him and I decided
+  to send it to KnK. It shows how to send chat, send an
+  IM, and how to send mail. It also has an example of 
+  how to make a mail bomber and a punter. Inside each of
+  the command buttons it tells you what the coding does.
+--It shows how to use Dos32.bas
+--Made in VB4
+--Hope you all find this useful. I know a lot of very 
+  very newbies will and maybe some begginers who know
+  some stuff.
+--I will prob make a more complex version later with:
+    1. mass imer
+    2. mass mailer
+    3. server
+    And all the basics of a prog.
+--eDiT 

@@ -1,0 +1,150 @@
+I. This Document
+
+I made this document for those of you who would like to learn the
+basics of 3D programming, but don't have the mathematical know-how...yet.
+I remember my days of downloading 3D rotation code simply to find that I
+couldn't comprehend a word of it.  I have finally gained the knowledge for
+simple 3D graphics, and felt I must share it with those in the position
+that I once experienced.  This document assumes NO trigonometry background,
+so those more advanced in math, try not to fall asleep on us.  I hope that
+this aids you in your 3D endeavors.  E-mail any questions or comments to
+alan_buzbee@hotmail.com
+
+
+II.  Concept
+
+These programs all use a Rotation Matrix to find a new, rotated point from
+the original one.  A matrix is simply the mathematical term for an array,
+or a 2 dimensional table of numerical values.  The three angles are entered
+for x, y, and z rotation, and the Rotation Matrix is built from these values.
+Once the matrix is complete, any 3D point can be multiplied by the matrix
+to get its new x, y and z location after it has been rotated.  In fact, if
+you store the new x, y and z values and multiply by the matrix again, it
+will rotate the point once more, and can produce animated effects as seen
+in the 3D line model example.  The matrix only needs to be built once to
+rotate every single point in the picture or mesh, but when an angle is changed,
+that is when it must be rebuilt.
+
+
+III.  Obtaining the Data
+
+Before the actual matrix can be built, the data must be retrieved (from a text
+box, etc).  The data consists of three angles, which must be used in the matrix
+construction.  So why do we need a section on this?  When the matrix is built,
+it uses the trigonometric functions sine and cosine.  For both of these, you
+enter an angle and it returns a ratio of y or x to a radius of 1.  You really
+don't need to know this, but you do need to know that sine and cosine functions
+require an angle for their parameter.  Normally, one would think of an angle
+as degrees.  Unfortunately, there is another unit of angle measure that is
+more preferred amongst mathematicians, called Radians.  Because it is a more used
+and precise measurement of angles, Visual Basic (and any other programming 
+language) requires that you enter your angles for sine and cosine functions
+in radians.  You could just ask the user in radian rotation, but nobody is
+really familiar enough with radians to be able to give the angle that they
+want.  The distance around a circle in radians is 2*pi, while for degrees
+it is 360.  If you forget to convert, it can mess up the program pretty bad.
+To convert the degree data to radians, simply use:
+
+Radians = degrees / 180 * pi
+
+the more exact the definition of pi, the better.  Visual Basic only lets you use
+3.14159265358979 or so before it cuts it off automatically.  Also, because the
+radian angles are almost always floating point, remember not to use integers
+to store them.
+
+
+IV.  Building the Matrix
+
+After you have obtained the data and converted it to radians, it's time to build the
+preliminary matrix.  For our matrix, we simply use an array of 4 x 4 elements:
+
+dim RM(0 to 3, 0 to 3) as double
+
+Sines and Cosines are rarely integers, so make sure it is defined as a floating
+point variable.  For this rotation matrix, fill it out like this (X, Y, and Z are
+for X, Y and Z angles in radians):
+
+RM(0, 0) = (Cos(Z) * Cos(Y))
+RM(0, 1) = (Cos(Z) * -Sin(Y) * -Sin(X) + Sin(Z) * Cos(X))
+RM(0, 2) = (Cos(Z) * -Sin(Y) * Cos(X) + Sin(Z) * Sin(X))
+RM(1, 0) = (-Sin(Z) * Cos(Y))
+RM(1, 1) = (-Sin(Z) * -Sin(Y) * -Sin(X) + Cos(Z) * Cos(X))
+RM(1, 2) = (-Sin(Z) * -Sin(Y) * Cos(X) + Cos(Z) * Sin(X))
+RM(2, 0) = Sin(Y)
+RM(2, 1) = Cos(Y) * -Sin(X)
+RM(2, 2) = Cos(Y) * Cos(X)
+
+Yikes!  Pretty hairy, eh?  Don't worry about it.  Once you've filled out this matrix
+like this, you can multiply any three-dimensional point by it and it will return
+the new x, y and z coordinates.
+
+
+V.  Multiplying by the Matrix
+
+The ability to multiply a matrix isn't programmed into the computer like it is on
+most graphic calculators, but don't worry!  Although we have to multiply manually,
+it isn't very complex at all.  To properly multiply a matrix by the x, y and z
+coordinates, we go through these lines of code:
+
+NewX = (OldX * RM(0, 0)) + (OldY * RM(0, 1)) + (OldZ * RM(0, 2)) + RM(0, 3)
+NewY = (OldX * RM(1, 0)) + (OldY * RM(1, 1)) + (OldZ * RM(1, 2)) + RM(1, 3)
+NewZ = (OldX * RM(2, 0)) + (OldY * RM(2, 1)) + (OldZ * RM(2, 2)) + RM(2, 3)
+
+Remeber, these x's, y's and z's are coordinates, not angles.  Once you've gotten
+these new values, you can simply draw it on the form with the x and y values.  You
+don't need to worry about the Z coordinate when drawing unless you need perspective.
+In that case you would draw the point closer and closer to a vanishing point depending
+on how small Z is.  But for our purposes, orthographic (the opposite of perspective)
+works just fine.  You may want to save the NewZ value anyway, just in case you want to
+rotate the NewX, NewY and NewZ point again.  The Rotation Matrix I listed above isn't
+the only matrix you can multiply by.  At the bottom of this document, I listed several
+more matrices you can build for various 3D effects.  See the example programs for
+application of using these matrices.
+
+VI.  Other Matrices
+
+The matrix included above is but one of several matrices you can use.  I included
+several more right here that have different effects.
+
+X Rotation:  This Matrix rotates only around the x axis, making the picture look
+as if it is shrinking vertically.  If you only plan on rotating around this
+one axis, this matrix is a little more efficient than the full rotation version.
+
+[1	0	0	0]
+[0	cosX	sinX	0]
+[0	-sinX	cosX	0]
+[0	0	0	1]
+
+Y Rotation:  This Matrix rotates around the Y axis, which looks like the picture
+is shrinking horizontally.
+
+[cosY	0	-sinY	0]
+[0	1	0	0]
+[sinY	0	cosY	0]
+[0	0	0	1]
+
+Z Rotation:  Rotates around the Z Axis, which gives the appearance of a 2D rotation.
+This is excellent if all you want to do is rotate a bitmap in two dimensions, around
+in a circle.
+
+[cosZ	sinZ	0	0]
+[-sinZ	cosZ	0	0]
+[0	0	1	0]
+[0	0	0	1]
+
+Translation:  This matrix moves the point to another point by whatever amount you enter.
+TX, TY and TZ are how far the point is moved in the x, y and z planes.
+
+[1	0	0	0]
+[0	1	0	0]
+[0	0	1	0]
+[TX	TY	TZ	1]
+
+Scaling:  This matrix scales the model to a new x, y and z size.  By changing only one
+or two of these will stretch the model along different planes.
+
+[SX	0	0	0]
+[0	SY	0	0]
+[0	0	SZ	0]
+[0	0	0	1]
+

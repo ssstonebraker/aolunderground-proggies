@@ -1,0 +1,14 @@
+Ocx Name: Aol Button (look alike)
+Author: Patrick Gillespie (aka PAT or JK)
+Made in: VB6
+Version: 2.2
+Codes on how to use:
+You don't need any really. All you have to do to make it work
+is add it to your form and put code in the click event.
+
+About:
+This is a custom control button that looks just like some of the 
+buttons aol uses. It even reacts the same when you click it or when 
+it has the focus (modeled after the help button on the aol keyword 
+window). It can even be resized (with both height and width) and
+you can mess with the font face and font color.

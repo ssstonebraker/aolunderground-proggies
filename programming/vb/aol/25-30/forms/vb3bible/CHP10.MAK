@@ -1,0 +1,3 @@
+CHP10.FRM
+ProjWinSize=161,887,248,215
+ProjWinShow=2

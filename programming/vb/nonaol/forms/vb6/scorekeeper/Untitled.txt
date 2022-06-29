@@ -1,0 +1,6 @@
+This is simply a example, that shows you how to keep track of
+scores for a game such as Scrambler in a listbox.
+
+Made By: OXygen
+
+Made on VB6

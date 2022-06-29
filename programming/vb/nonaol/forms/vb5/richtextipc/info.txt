@@ -1,0 +1,10 @@
+---------------------------------------
+Name:        IP Chat
+Date:        October 6, 1999
+Author:      Joseph Huntley
+Level:       Intermediate/Advanced
+VB Version:  5.0
+IRC:         Joseph_H or Joseph (EFnet)
+E-mail:      joseph_huntley@email.com
+Webpage:     http://joseph.vr9.com
+---------------------------------------

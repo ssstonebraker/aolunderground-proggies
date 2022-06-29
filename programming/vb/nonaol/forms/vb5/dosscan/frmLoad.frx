@@ -1,0 +1,3 @@
+ÿithis is an example of how to load a bas file into your program, seperating procedures into an array. if you open a bas file in a text editor, you will see that it is nothing more than text. if we open that file to a string, with some string manipulation, we can easily seperate these procedures. by calling to the array with the combobox click event, we can display those procedures individually.
+
+note: this will not open older bas files made in vb3 or earlier. also, sorting these procedures takes some time, and depending on the speed of your pc, you may have to wait a few seconds for the process to complete.

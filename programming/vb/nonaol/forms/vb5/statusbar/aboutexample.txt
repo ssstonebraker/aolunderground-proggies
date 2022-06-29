@@ -1,0 +1,1 @@
+This is an exaple on how to make those status bars that tell the use what each button is. Look on the objects code  under mousemove to figure out how to do this. Every thing has  An Explanation. Also my advice if you want to learn vb is get a book thats what i did!

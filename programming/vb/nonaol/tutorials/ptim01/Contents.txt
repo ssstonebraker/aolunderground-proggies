@@ -1,0 +1,372 @@
+Directory of \\Code\ASN Composer
+
+  ASNComposer.vbp
+
+	Allows a user to create an ASN.1 encoded string by specifying
+	each of the components.  ASN.1 is only used by LDAP in these
+	examples.  This program allows the user to look at ASN.1 
+	isolated from LDAP.
+
+        The Depth refers to the nesting level of an entry with respect
+	to the others.  Typically this will start at 0 and subentries
+        would be incremented by one.  The Depth is used for constructing
+	the ASN.1 string but is not stored in the string.
+
+	The Tag refers to the ASN.1 tag of this entry. The values of ASN.1
+	tags can be found in the ITU specifications X.208 and X.209
+
+	The Value type can be Composite, Numeric or Text.  It tells the 
+	program how the entered value should be encoded in the ASN.1
+	string. The Value Type is used for constructing	the ASN.1 string
+	but is not stored in the string.
+
+	The Value is the actual value which should be stored in the string.
+
+	It is possible to Add, Delete or Update entries in the ASN.1 string.
+	The structure will be displayed in the ASN pane.  The ASN.1 encoded
+	string will be shown in the Binary pane.
+
+	It is possible to Save the encoded string to a file.
+
+
+Directory of \\Code\ASN Reader
+
+  ASNReader.vbp
+
+	Allows a user to view the value and structure of an ASN.1 encoded
+	string stored in a file.  You can use the ASNComposer to generate
+	such a file.
+
+Directory of \\Code\Common
+
+	A set of modules and forms used by the more than one of the applications
+	in this toolkit.
+
+
+Directory of \\Code\DNS Client
+
+  DNSClient.vbp
+
+	The user can perform a DNS lookup of an MX record.  The user should 
+	specify the fully-qualified domain name of the DNS server (Server) as
+	well as the domain name for which the MX record is requested (Domain).
+	Then press the Lookup button.  The matching MX resource records will
+	be displayed under Resource Records.
+
+
+Directory of \\Code\Generic Asynchronous Server
+
+  GenericAsynchronousServer.vbp
+
+	The user specifies a port on which the application should listen (Port)
+	and then presses the Listen button.  It will then be necessary to 
+	initiate a connection from a client (e.g. using Telnet, the Generic Client
+	or by pointing an application such as Outlook Express or Netscape to the
+	generic server).
+
+	The user can see incoming client requests in the text pane and can reply
+	to them there.
+
+Directory of \\Code\Generic Client
+  GenericClient.vbp
+
+	The user can select a server and port to Connect to. After connecting it
+	is possible to Send any string by filling in the Text field and pressing
+	the button.  If data is expected from the server then the user can press
+	Receive to obtain it.  The information received is not displayed in this
+	form however the entire dialog is displayed in a separate form.  Take care
+	not to Receive when the server has not yet sent anything or it will hang
+	the program as this client operates only synchronously.
+
+Directory of \\Code\Generic Interceptor
+
+  GenericInterceptor.vbp
+
+	This program will allow an incoming connection on a specified port.  When
+	it receives the connection request it will create a second connection outgoing
+	to a server.  It will then relay data from either connection to the other.
+	The user can monitor the dialog and capture it in a file.
+
+	The user can specify a port on which to listen for incoming client connections.
+	The server FQDN and port should also be specified.  The Log file will capture
+	the entire dialog.  If the protocol is binary (e.g. LDAP or DNS) then the
+	box should be checked.  If it is ASCII (SMTP, POP, IMAP) then it should not be
+	checked.
+
+	In order to run this you need:
+	
+		- Machine on which to run the program (Interceptor Host)
+		- Free port on which to listen (Interceptor Port)
+			(must be the same as the client below)
+
+		- Client program (e.g. Outlook Express)
+			- Choose protocol (e.g. SMTP)
+			- Configure protocol to point to Interceptor Host and 
+				Interceptor Port
+
+		- Server program (e.g. Microsoft Exchange)
+			- Note FQDN and port of protocol (probably the same as client port)
+
+
+		Start Server
+		Start Interceptor
+			- Specify incoming port, server FQDN and server port
+			- Press Listen
+		Start Client and initiate protocol (e.g. send mail)
+
+
+Directory of \\Code\Generic Server
+
+  GenericServer.vbp
+
+	The user can emulate a TCP server by specifying a port on which to listen
+	and then pressing Listen.  At this point a client connection must be initiated
+	pointing to this server port.  The user presses Accept.
+
+	At this point the user must know when the client is sending data and press 
+	Receive in order to receive the data.  As necessary, the user can also send
+	data to the client by typing in the Text and pressing Send.
+
+Directory of \\Code\IMAP Client
+
+  ViewIMAPMessages.vbp
+
+	The user can connect to an IMAP server (e.g. Microsoft Exchange, Lotus Notes
+	Domino), browse through and manipulate folders, and messages.
+
+	To initiate the connection the user must specify the server FQDN, as well as
+	a valid username and password.  Note that Microsoft Exchange typically uses
+	a username format of Domain\NTaccount\ExchangeAlias and that IMAP requires
+	backslashes to be doubled.  With these fields complete the user can Connect.
+
+	A list of folders will appear.  If the box is checked then this list will include
+	all folders in the mailbox.  Otherwise only the subscribed folders will appear.
+	It is possible to Subscribe, Unsubscribe, Create and Delete folders.  In order
+	to select a folder double-click on the folder.
+
+	The messages in the folder will then appear.  It is possible to Show (in a new
+	window), Extract (to a file), Delete a message or Copy (to another folder)
+
+Directory of \\Code\IMAP Server
+
+  IMAPServer.vbp
+
+	The IMAP server will accept incoming connections from an IMAP client (e.g
+	Outlook Express).  The IMAP server will look  into a hard-coded directory
+	for messages for the user.  Each user has a separate directory and each
+	folder is implemented as a subdirectory. It is possible to see user,
+	and selected folder on the form.  When a user has authenticated the list of
+	folders, and their flags will be displayed.  Once a folder has been selected
+	the list of messages and their flags will also be displayed.
+
+Directory of \\Code\Integrated Client
+  InternetMailClient.vbp
+
+	When started the program will prompt the user for IMAP, LDAP and SMTP server
+	as well as user information.  Ideally these preferences would probably be
+	stored in the registry or some form of database.
+
+	The user can connect to an IMAP server (e.g. Microsoft Exchange, Lotus Notes
+	Domino), browse through and manipulate folders, and messages.
+
+	To initiate the connection the user must specify the server FQDN, as well as
+	a valid username and password.  Note that Microsoft Exchange typically uses
+	a username format of Domain\NTaccount\ExchangeAlias and that IMAP requires
+	backslashes to be doubled.  With these fields complete the user can Connect.
+
+	A list of folders will appear.  If the box is checked then this list will include
+	all folders in the mailbox.  Otherwise only the subscribed folders will appear.
+	It is possible to Subscribe, Unsubscribe, Create and Delete folders.  In order
+	to select a folder double-click on the folder.
+
+	The messages in the folder will then appear.  It is possible to Show (in a new
+	window), Extract (to a file), Delete a message or Copy (to another folder)
+
+	If the user selects the menu option Create | Message then the form to create
+	a new SMTP message is displayed.
+
+	The user can compose a MIME message.  The only header fields which
+	may be 	included are: To, CC and Subject.  The From and To fields used for
+	message transfer (SMTP) will also be used for message composition (RFC822).
+	The message text is included thereunder. It is also possible to specify up to
+	two attachments.  The filename should be entered and also the encoding which
+	may be Text, Base64 or Quoted-Printable. The Send will initiate the connection
+	and message transfer.
+
+	If the user presses the To or CC button then another form will appear to
+	select addresses from a directory. It lets the user specify a search string.
+	It will query the LDAP server to return all entries where
+	the cn attribute contain this substring.  These entries will appear
+	in the Matches.  If the user selects one of the matches the cn and mail
+	attributes will be displayed for that user.
+
+	The user can opt to Add one of the matches to either the TO or CC list by
+	pressing the appropriate button.
+
+
+Directory of \\Code\LDAP Client
+
+  LDAPClient.vbp  
+
+	The LDAP client application lets the user specify an LDAP server (FQDN) and
+	a search string.  It will query the LDAP server to return all entries where
+	the cn attribute contain this substring.  These entries will appear
+	in the Matches.  If the user selects one of the matches the cn and mail
+	attributes will be displayed for that user.
+
+	All of the ASN.1 encoded requests and responses are displayed in a text format
+	in the right pane of the form.
+
+
+Directory of \\Code\LDAP Server
+
+  LDAPServer.vbp
+
+	The LDAP server waits for LDAP client connection requests.  It only responds
+	to search requests whereby it looks up the request in an Excel spreadsheet.
+	In this spreadsheed the users are represented by rows and the attributes by
+	columns.  The first row designates the names of all the supported attributes.
+
+	When a request comes in all entries are checked whether they match the search
+	criteria.  For those that match all requested attributes are returned.
+
+
+Directory of \\Code\MIME Composer
+
+  ComposeMIMEMessage.vbp
+
+	The user can compose a MIME message.  The only header fields which may be included
+	are: Date, From, To, CC and Subject.  The message text is included thereunder.
+	It is also possible to specify up to two attachments.  The filename should be
+	entered and also the encoding which may be Text, Base64 or Quoted-Printable.  Once
+	the message is complete the user can Save it to a file.
+
+
+Directory of \\Code\MIME Reader
+
+  ReadMIMEMessage.vbp
+
+	The MIME reader will prompt the user for a filename of a mime message (unless
+	one is already specified in the command line).  The full message is displayed
+	in the right pane for debugging.  The message is parsed and some of the known
+	RFC822 header fields are displayed (Date, From, To, CC, Subject).  Below the
+	message body is included.  If there are attachments then these are displayed
+	by filename in the bottom list.  The user can double-click on the attachments
+	to invoke them.
+
+Directory of \\Code\POP Client
+
+  DownloadPOPMessages.vbp
+
+	The user enters the FQDN of a POP server as well as the username and password
+	of the mailbox on the server.  The Path specified should already exist and not
+	be used for anything else.  It will receive all of the downloaded messages.
+	Optionally the user can select to Delete the messages on the server once they
+	have been downloaded.
+
+	When the user selects Download all the messages will be retrieved from the server.
+	They will received unique filenames based on a timestamp and an extension of .MIME
+	and will be deposited int he Path specified above.
+
+  GetPOPMessages.vbp
+
+	The user enters the FQDN of a POP server as well as the username and password
+	of the mailbox on the server.  When the user Connects to the server it will
+	display a summary of the message count and size on the server as well as a
+	list of each message including the message size.  The user can highlight any
+	of the messages and Show (display with the MIME reader), Extract (to a file) or
+	Delete (mark for deletion on the server).  In order to commit any deletions the
+	user should press the Update button.
+	
+
+Directory of \\Code\POP Server
+
+  POPServer.vbp
+
+	The POP server waits for connections from a POP client. Each connection displays
+	the associated state.  It also indicates the identity of the user connected.
+	Only trivial authentication of users is performed. (Password must equal username)
+	Once the user has been identified the server selects the Windows directory
+	associated with that user. The number of files and their sizes are totalled and
+	each message and message size is displayed on the form.  When the client requests
+	a deletion Delete flag is entered on the for next to the message.  These files
+	are deleted upon receipt of the QUIT
+
+
+
+Directory of \\Code\RFC822 Composer
+
+  ComposeRFC822Message.vbp
+
+	The user can compose an RFC822 message. The only header fields which may be included
+	are: Date, From, To, CC and Subject.  The message text is included thereunder.
+	Once the message is complete the user can Save it to a file.
+
+Directory of \\Code\RFC822 Reader
+
+  ReadRFC822Message.vbp
+
+	The RFC822 reader will prompt the user for a filename of a RFC822 message (unless
+	one is already specified in the command line).  The full message is displayed
+	in the right pane for debugging.  The message is parsed and some of the known
+	RFC822 header fields are displayed (Date, From, To, CC, Subject).  Below the
+	message body is included.
+
+Directory of \\Code\SMTP Client
+
+  SendSMTPFile.vbp
+
+	The user can specify the FQDN of an SMTP server.  The server must accept 
+	unauthenticated requests without any security constraints.  The user can
+	specify from whom the message is and to whom the message should be routed.
+
+	The filename should be a fully RFC822 (or MIME) compliant message.  It can
+	be Displayed before sending for verification.  The Send will initiate the
+	connection and message transfer.
+	
+  SendSMTPMessage.vbp
+
+	The user can specify the FQDN of an SMTP server.  The server must accept 
+	unauthenticated requests without any security constraints.  The user can
+	specify from whom the message is and to whom the message should be routed.
+
+	Below, the user can compose a MIME message.  The only header fields which
+	may be 	included are: Date, CC and Subject.  The From and To fields used for
+	message transfer (SMTP) will also be used for message composition (RFC822).
+	The message text is included thereunder. It is also possible to specify up to
+	two attachments.  The filename should be entered and also the encoding which
+	may be Text, Base64 or Quoted-Printable. The Send will initiate the connection
+	and message transfer.
+
+
+Directory of \\Code\SMTP Relay
+
+  SMTPRelay.vbp
+	
+	The SMTP relay will wait for connection requests from SMTP clients.  For each
+	incoming connection it will display the Socket number, the Sender's IP address
+	and the From as specified in the HELO command as well as the To for the
+	destination.
+	
+	From the destination it will extract the Domain and perform and DNS lookup
+	of the MX records associated.  These are displayed in the Resource Record list.
+
+	It selects the MX record with the lowest cost, makes a connection to the 
+	associated host and relays the message.  The message is displayed in the bottom
+	pane.
+
+
+Directory of \\Code\SMTP Server
+
+  SMTPServer.vbp
+
+	The SMTP relay will wait for connection requests from SMTP clients.  For each
+	incoming connection it will display the Socket number, the Sender's IP address
+	and the From as specified in the HELO command as well as the To for the
+	destination.
+	
+	It will identify the destination user and will attempt to find a corresponding
+	mailbox (i.e. folder in the PostOffice directory).  It will then accept the
+	message from the client and store it in the mailbox.
+
+	The message is displayed in the bottom pane.

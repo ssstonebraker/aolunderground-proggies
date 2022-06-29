@@ -1,0 +1,8 @@
+' main.txt - global definitions
+Type T000A
+  M2A3E As Integer
+  M2A46 As Integer
+  M2A4D As Integer
+  M2A56 As Integer
+End Type
+

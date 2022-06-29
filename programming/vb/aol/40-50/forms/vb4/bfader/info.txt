@@ -1,0 +1,16 @@
+			No Scroll Bar Fader Example
+				 by burden
+
+This is just  another fader example. but i don't use scroll bars i use the common dialog ocx (included in 
+
+VB) it can be made with any 32 bit Visual Basic. i used VB4, with Monk-e-Fade3.bas. this example just 
+
+shows you how to fade the text normally and wavy. but if you got creative and wanted to use it to send 
+
+faded IMs it would be easy. add another .bas with an IM send function, put in a new textbox (for the screen 
+
+name), and in another button simply put Call sendIM (" + Text3.Text + ", " + Text2.Text + ")    if you have 
+
+any further questions please feel free to E-mail me at BuRDeN_99@hotmail.com and also please visit 
+
+my website at   http://welcome.to/BuRDeNs_DoMiCiLe

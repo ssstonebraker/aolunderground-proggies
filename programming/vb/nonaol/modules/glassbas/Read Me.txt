@@ -1,0 +1,26 @@
+THE FOLLING INFO AND MORE CAN BE FOUND AT THE BEGINING OF THE .BAS File
+
+Please Click Edit And Make Sure That Word Wrap Is CHecked If Not Please Click On Word Wrap For Maxamum Prefomance
+
+
+
+
+
+
+
+
+
+' Glass.bas
+' By Tracy Blanton
+' AKA "Pikode"
+' Id Like To Thank TokyoMagnm@aol.com For This Great Code
+' And Thanx TO KNK 2000 (www.knk2000.com/knk) Cause That Is Where I Found The Form With This Great Codeing In It
+'
+'
+'
+'How To Use Glass.bas
+'
+' TO Make The From Transparent Enter "GlassifyForm Me"
+' To Make Non Transparent Enter "UnglassifyForm Me"
+
+

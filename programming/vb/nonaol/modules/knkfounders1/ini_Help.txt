@@ -1,0 +1,47 @@
+To read info from an ini file here use the following syntax 
+and below that is an example of an INI file to show how they corrolate:
+
+String$ = GetFromINI(Main INI Section name, Secondary name, Path$)
+                               |                 |                            |                                |
+[Options]    <------------------                 |
+Sound=On                                         |
+Punter=AOL95                                     |
+    ^---------------------------------------------
+
+OK here's an example:  if your INI looks like this:
+
+[Options]
+Sound=on
+fun=off
+lamer=true
+
+Thenyou would retrieve the current option by using:
+
+Sound$ = GetFromINI("Options", "Sound", Path$)
+fun$ = GetFromINI("Options", "fun", Path$)
+lamer$ = GetFromINI("Options", "lamer", Path$)
+
+ok, your strings now have these configs.
+Sound$ = on
+fun$ = off
+lamer$ = true
+
+Now to write to an INI it's quite the same   
+NOTE:  Entry:  is what you want that subtitle to be set to in 
+your ini for example, the on part or true or off:
+
+
+r% = WritePrivateProfileString(Main INI Section name, Secondary name, entry$, Path$)
+
+OK this following example should help:
+
+
+r% = WritePrivateProfileString("Options", "lamer", "true", Path$)
+
+this line will produce the following in the specified INI file:
+
+[Options]
+lamer=true
+
+By: PooK
+http://knk.tierranet.com/PooK

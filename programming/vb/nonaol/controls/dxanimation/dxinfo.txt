@@ -1,0 +1,8 @@
+Uploaded: By Jaguar
+Type: Custom Control
+
+Description:
+Basically it lets you put an animated gif in your form.
+Unlike anigif.ocx this is freeware and has no gay popup.
+
+Enjoy

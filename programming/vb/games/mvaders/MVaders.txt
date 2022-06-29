@@ -1,0 +1,112 @@
+
+			MVaders
+			~~~~~~~
+
+			    A game by Mark Meany (mmeany@www.geocities.com)
+			    Written using Visual Basic v3
+                            (VB4 & VB5 users see notes below)
+
+ MVaders
+ ~~~~~~~
+ This is a repoduction of that classic game 'Space Invaders'.  Most of the original contents are here including; Invaders get faster as you shoot them, bonus ships appear, invaders shoot back, invaders get lower on each level and high score is recorded.  Just to spice things up a little the game is fully customisable, using a simple 'Options' screen you can make the game as easy or hard as you wish.
+
+ Introduction
+ ============
+
+ Thanks for taking the time to look at this game.  Do not expect state of the art effects, it was written in Visual Basic to test some programming techniques.  The game is freeware, but may only be distributed if all the following files are included:
+
+ MVaders.exe
+ MVaders.txt
+ dead1.wav to dead10.wav
+ landed.wav
+ hitship.wav
+ invaders.bmp
+ bgrnd.bmp
+
+ The source code to this game (and others as they are produced) is available from my home page at: 
+
+	The Visual Basic Games Programming Studio
+
+	http://www.geocities.com/SiliconValley/Bay/9520
+
+ This game is the first of many I hope to develop in VB.  All source, programming tips and methods will be documented on my home page which I hope will grow into a Windows games programming collection point.  The effort was started in August 1997 (a little late I know, but not everyone grew up with PC's!!).  If you are interested in games programming then give the site a visit.
+
+ Controls
+ ~~~~~~~~
+ Keyboard only I'm afraid:
+
+ Left	Cursor Left
+ Right	Cursor Right
+ Fire	Space Bar
+
+ Abort	A
+ Pause	P (Press fire to resume)
+ Quit	Q
+
+ Options
+ ~~~~~~~
+ The following aspects of the game can be configured by selecting the Game/Options menu item:
+
+Timer Setting:		This determines the overall speed of the game, lower
+			values equate to a faster game.
+
+Invader Spacing:	This is the separation between invaders.  The more
+			spaced out they are, the quicker they reach the edge
+			of the screen and drop down and the further you must 
+			travel to get them.
+
+Invader Speed:		This is the speed the aliens start off at, the larger
+			the value the quicker they move.
+
+Invader Fire Freq:	This determines how often the invaders attempt to
+			shoot at the player. The higher the value, the less
+			frequently they will fire.
+
+Invader Fire Speed:	This determines how fast the invaders bullets move.
+			The higher the value, the quicker the bullets go.
+
+Invader Down Step:	This determines how far the invaders will drop down
+			when they reach the edge of the screen.  The bigger
+			the value, the closer they get.
+
+Player Speed:		Determines how fast the players ship moves. The
+			bigger the value, the faster you move.
+
+Player Fire Speed:	Determines how fast the players bullet moves, the
+			bigger the value the faster the bullet moves.
+
+ Comments
+ ~~~~~~~~
+ I'd like your comments! If you have looked at the game then spare a few moments and mail me at:
+
+	mmeany@www.geocities.com
+
+Is games writting in Visual Basic viable?  With the arrival of VB5 things may improve dramatically, but I haven't got that yet (maybe later this year).
+
+ Credits
+ ~~~~~~~
+ The graphics used in the game were taken from Ari Feldmans 'SpriteLib'
+collection.  For more info on 'SpriteLib' visit:
+
+	http://www.walrus.com/~ari/spritelib
+
+ All programming is my own, though various techniques were learned by browsing the Web and collecting snippets from too many sources to mention .... thanks guys!
+
+ Comming Soon
+ ~~~~~~~~~~~~
+ This version of the game uses a very crude Sprite Engine. At my web site, listed above, there is a far superior one being developed and will be used for the next version of the game that will include:
+
+	Customisable Invader formations
+	Customisable Sound effects
+	Customisable graphics
+	Controlled animation speed
+	Background saves
+	Barriers at the bottom;)
+
+ Want to know when it arrives, visit the site or e-mail me (be sure to include MVaders in the subject field of your message).
+
+ VB 4 & VB 5 Users
+ ~~~~~~~~~~~~~~~~~
+ You have not been forgotten! See the file 'SprEng.BAS', comment out the 16 Bit API declarations and uncomment the 32 Bit ones and compile away. the source is yours to abuse as you will!
+
+ Thanks for your time and I hope you enjoy the game, Mark Meany.

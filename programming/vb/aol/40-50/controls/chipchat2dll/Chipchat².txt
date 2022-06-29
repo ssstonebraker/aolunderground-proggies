@@ -1,0 +1,42 @@
+Chipchat² for aol4.o
+by chip
+	start date:   april 4, 1999
+	finish date:  april 14, 1999
+	release date: 
+mail:  chips_ahoy@email.com
+
+Sup?  this is chip again whith v2 of my chat ocx, chipchat.
+in this version i re-wrote the entire chatscan code for
+optimal performance.  i also altered the chatsend because
+the replacer was making it lagg quite a bit.  the usersn
+stayed the same.  i was gonna add a new function, but ideas
+don't come that easy to me.  if you have any ideas,
+questions or comments, mail me at chips_ahoy@email.com
+				       'a thousand chips delicious
+
+-ChiP
+
+
+New->     Screen name is now in the variable "Who"
+New->     What the person said is now in the variable "What"
+
+ ____________________________________
+| Functions                          |
+ ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯	
+Chat1.ChatON---------------------Turns on the chat scanner
+Chat1.ChatOFF--------------------Turns off the chat scanner
+Chat1.ChatSend "What_To_Say"-----Sends chat to the chat room
+Name$ = Chat1.UserSN-------------Returns the aol users screen name
+
+
+ ____________________________________
+| Examples                           |
+ ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+Examples can be found in the directory that you specify in the
+setup program.  Extract the Example.zip using WinZip or a different
+extraction utility.  The examples are written in Visual Basic 5.0.
+_______________________________________________________________________
+
+Remember, if you have any questions or comments, email me at..
+
+			chips_ahoy@email.com

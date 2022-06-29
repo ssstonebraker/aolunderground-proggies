@@ -1,0 +1,1 @@
+On new computers just Double click the .reg file and it will sort its way into everything (keep clicking yes) on old computers put the ocx.reg file into you C:\Windows\temp Folder (windows temp folder)  Thanks for downloading - Come to    www.geocities.com/ilulg  for more vb codes you can use and thanks for D/l This  -   Intricate

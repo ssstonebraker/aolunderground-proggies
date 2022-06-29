@@ -1,0 +1,16 @@
+
+1. What it is: A scanchat class for aol4
+
+2. Made By: Chris (Crisis)
+
+3. What .ocx's .bas's used (If applies): None
+
+4. What Visual Basic it was made on:  Visual Basic Learning Editon ;)
+
+5. Email: MemorexChris@hotmail.com
+
+This just allows you to scan the chat without a ocx.
+The timer is only used to trigger the sub. You can 
+set the timer to something fast, but i recommend a 
+interval of around 500 - 1000. The example uses 5000
+to show how it adds recursively. Just head to pr: scroll :)

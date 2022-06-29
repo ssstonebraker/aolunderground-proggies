@@ -1,0 +1,14 @@
+Form=Form1.Frm
+Module=trubas; ..\tru.bas
+ProjWinSize=87,532,248,215
+ProjWinShow=2
+HelpFile=""
+Name="Project1"
+HelpContextID="0"
+StartMode=0
+VersionCompatible32="0"
+MajorVer=1
+MinorVer=0
+RevisionVer=0
+AutoIncrementVer=0
+ServerSupportFiles=0

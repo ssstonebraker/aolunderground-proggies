@@ -1,0 +1,8 @@
+to fade by six colors you need to add both of the texts 
+do this by 
+opening the bas in vb / click view code  
+scroll to the bottum 
+then paste what i have in both texts
+later "VanzRD"
+if ur made MonkEFade im terribly  sorry ........I luv yer bas but i wanted to fade six     ?
+bye all

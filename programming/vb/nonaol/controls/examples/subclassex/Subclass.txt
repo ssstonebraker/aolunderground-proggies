@@ -1,0 +1,43 @@
+Subclass - Visual Basic Subclass Control
+Copyright (c) 1997 SoftCircuits Programming (R)
+Redistributed by Permission
+
+This code demonstrates how to write a subclassing control in Visual Basic
+(version 5 or later). The code takes advantage of the new AddressOf
+keyword, which can only be used from a BAS module. A common BAS module
+keeps track of all the current control instances within the current
+process and then intercepts Windows messages, calling specific control
+instances as appropriate.
+
+WARNING: This software is copyrighted. You may only use this software in
+compliance with the following conditions. By using this software, you
+indicate your acceptance of these conditions.
+
+ 1.    You may freely use and distribute the supplied Subclass.ocx with your
+       own programs as long as you assume responsibility for such programs
+       and hold the original author(s) harmless from any resulting
+       liabilities.
+
+ 2.    You may use this source code within your own programs (embedded within
+       the resulting EXE or DLL file) as long as you assume responsibility
+       for such programs and hold the original author(s) harmless from any
+       resulting liabilities.
+
+ 3.    You may NOT distribute this source code, regardless of the extent of
+       modifications, except as part of the original, unmodified
+       Subclass.zip.
+
+ 4.    You may NOT recompile this source code and distribute the resulting
+       Subclass.ocx, regardless of the extent of modifications.
+
+The reason for these conditions is to prevent the distribution of different
+versions of Subclass.ocx. Multiple versions would prevent enforcement of
+backwards compatibility and increase problems encountered by programs that
+are distributed with Subclass.ocx. Please respect these conditions. If you
+find a problem or would like an enhancement, please contact SoftCircuits.
+
+This example program was provided by:
+ SoftCircuits Programming
+ http://www.softcircuits.com
+ P.O. Box 16262
+ Irvine, CA 92623

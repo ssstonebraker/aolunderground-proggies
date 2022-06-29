@@ -1,0 +1,265 @@
+<HTML>
+<HEAD><TITLE>Information about CGI.BAS</TITLE></HEAD>
+<BODY BGCOLOR=#FFFFFF> <!-- Old bgcolor B8D5F3 -->
+
+<FONT FACE="Arial" SIZE=+1>Information about CGI.BAS</FONT>
+
+<FONT FACE="Arial">
+
+<BLOCKQUOTE>
+
+
+
+</BLOCKQUOTE>
+
+<HR NOSHADE>
+
+<P>
+
+<P>
+<P>
+<TABLE CELLSPACING=2 CELLPADDING=2 BORDER=0>
+<TR><TD>Filename<TD>CGI.BAS
+<TR><TD>Size<TD>30693
+<TR><TD>Date<TD>05.09.97 12:56:34
+<TR><TD>Name<TD>----------------------------------------------------------------------
+<TR><TD>Copyright<TD>***********
+<TR VALIGN=top><TD>Uses<TD>
+DEVELOPMENT<BR>
+Windows httpd requires any Windows back-end program to be an<BR>
+executable image. This means that you must convert your VB<BR>
+application into an executable (.EXE) before it can be tested<BR>
+with the server.<BR>
+ENVIRONMENT<BR>
+The Windows httpd server executes script requests by doing a<BR>
+WinExec with a command line in the following form:<BR>
+prog-name cgi-profile input-file output-file url-args<BR>
+Assuming you are familiar with the CGI specification, the above<BR>
+should be "intuitively obvious" except for the cgi-profile, which<BR>
+is described in the next section.<BR>
+THE CGI PROFILE FILE<BR>
+The Unix CGI passes data to the back end by defining environment<BR>
+variables which can be used by shell scripts. The Windows httpd<BR>
+server passes data to its back end via the profile file. The<BR>
+format of the profile is that of a Windows ".INI" file. The keyword<BR>
+names have been changed cosmetically.<BR>
+There are 7 sections in a CGI profile file, [CGI], [Accept],<BR>
+[System], [Extra Headers], and [Form Literal], [Form External],<BR>
+and [Form huge]. They are described below:<BR>
+[CGI]                <== The standard CGI variables<BR>
+CGI Version=         The version of CGI spoken by the server<BR>
+Request Protocol=    The server's info protocol (e.g. HTTP/1.0)<BR>
+Request Method=      The method specified in the request (e.g., "GET")<BR>
+Executable Path=     Physical pathname of the back-end (this program)<BR>
+Logical Path=        Extra path info in logical space<BR>
+Physical Path=       Extra path info in local physical space<BR>
+Query String=        String following the "?" in the request URL<BR>
+Content Type=        MIME content type of info supplied with request<BR>
+Content Length=      Length, bytes, of info supplied with request<BR>
+Server Software=     Version/revision of the info (HTTP) server<BR>
+Server Name=         Server's network hostname (or alias from config)<BR>
+Server Port=         Server's network port number<BR>
+Server Admin=        E-Mail address of server's admin. (config)<BR>
+Referer=             URL of referring document (HTTP/1.0 draft 12/94)<BR>
+From=                E-Mail of client user  (HTTP/1.0 draft 12/94)<BR>
+Remote Host=         Remote client's network hostname<BR>
+Remote Address=      Remote client's network address<BR>
+Authenticated Username=Username if present in request<BR>
+Authenticated Password=Password if present in request<BR>
+Authentication Method=Method used for authentication (e.g., "Basic")<BR>
+Authentication Realm=Name of realm for users/groups<BR>
+RFC-931 Identity=    (deprecated, removed from code)<BR>
+[Accept]             <== What the client says it can take<BR>
+The MIME types found in the request header as<BR>
+Accept: xxx/yyy; zzzz...<BR>
+are entered in this section as<BR>
+xxx/yyy=zzzz...<BR>
+If only the MIME type appears, the form is<BR>
+xxx/yyy=Yes<BR>
+[System]             <== Windows interface specifics<BR>
+GMT Offset=          Offset of local timezone from GMT, seconds (LONG!)<BR>
+Output File=         Pathname of file to receive results<BR>
+Content File=        Pathname of file containing request content (raw)<BR>
+Debug Mode=          If server's back-end debug flag is set (Yes/No)<BR>
+[Extra Headers]<BR>
+Any "extra" headers found in the request that activated this<BR>
+program. They are listed in "key=value" form. Usually, you'll see<BR>
+at least the name of the browser here.<BR>
+[Form Literal]<BR>
+If the request was a POST from a Mosaic form (with content type of<BR>
+"application/x-www-form-urlencoded"), the server will decode the<BR>
+form data. Raw form input is of the form "key=value&key=value&...",<BR>
+with the value parts "URL-encoded". The server splits the key=value<BR>
+pairs at the '&', then spilts the key and value at the '=',<BR>
+URL-decodes the value string and puts the result into key=value<BR>
+(decoded) form in the [Form Literal] section of the INI.<BR>
+[Form External]<BR>
+If the decoded value string is more than 254 characters long,<BR>
+or if the decoded value string contains any control characters,<BR>
+the server puts the decoded value into an external tempfile and<BR>
+lists the field in this section as:<BR>
+key=<pathname> <length><BR>
+where <pathname> is the path and name of the tempfile containing<BR>
+the decoded value string, and <length> is the length in bytes<BR>
+of the decoded value string.<BR>
+NOTE: BE SURE TO OPEN THIS FILE IN BINARY MODE UNLESS YOU ARE<BR>
+CERTAIN THAT THE FORM DATA IS TEXT!<BR>
+[Form Huge]<BR>
+If the raw value string is more than 65,536 bytes long, the server<BR>
+does no decoding. In this case, the server lists the field in this<BR>
+section as:<BR>
+key=<offset> <length><BR>
+where <offset> is the offset from the beginning of the Content File<BR>
+at which the raw value string for this key is located, and <length><BR>
+is the length in bytes of the raw value string. You can use the<BR>
+<offset> to perform a "Seek" to the start of the raw value string,<BR>
+and use the length to know when you have read the entire raw string<BR>
+into your decoder. Note that VB has a limit of 64K for strings, so<BR>
+Examples:<BR>
+[Form Literal]<BR>
+smallfield=123 Main St. #122<BR>
+[Form External]<BR>
+field300chars=C:\TEMP\HS19AF6C.000 300<BR>
+fieldwithlinebreaks=C:\TEMP\HS19AF6C.001 43<BR>
+[Form Huge]<BR>
+field230K=C:\TEMP\HS19AF6C.002 276920<BR>
+=====<BR>
+USAGE<BR>
+=====<BR>
+Include CGI.BAS in your VB project. Set the project options for<BR>
+"Sub Main" startup. The Main() procedure is in this module, and it<BR>
+handles all of the setup of the VB CGI environment, as described<BR>
+above. Once all of this is done, the Main() calls YOUR main procedure<BR>
+which must be called CGI_Main(). The output file is open, use Send()<BR>
+to write to it. The input file is NOT open, and "huge" form fields<BR>
+have not been decoded.<BR>
+(New in V1.3) If your program is started without command-line args,<BR>
+the code assumes you want to run it interactively. This is useful<BR>
+for providing a setup screen, etc. Instead of calling CGI_Main(),<BR>
+it calls Inter_Main(). Your module must also implement this<BR>
+function. If you don't need an interactive mode, just create<BR>
+Inter_Main() and put a 1-line call to MsgBox alerting the<BR>
+user that the program is not meant to be run interactively.<BR>
+The samples furnished with the server do this.<BR>
+If a Visual Basic runtime error occurs, it will be trapped and result<BR>
+in an HTTP error response being sent to the client. Check out the<BR>
+Error Handler() sub. When your program finishes, be sure to RETURN<BR>
+TO MAIN(). Don't just do an "End".<BR>
+Have a look at the stuff below to see what's what.<BR>
+----------------------------------------------------------------------<BR>
+Author:   Robert B. Denny <rdenny@netcom.com><BR>
+June 7, 1994<BR>
+Revision History:<BR>
+26-May-94 rbd   Initial experimental release<BR>
+07-Jun-94 rbd   Revised keyword names and form decoding per<BR>
+httpd 1.2b8, fixed section name of Output File.<BR>
+13-Dec-94 rbd   Move FreeFile calls to just before opening files.<BR>
+04-Feb-94 rbd   Fix Authenticated User -> Username, added new<BR>
+variables Referer, From and Authentication Realm.<BR>
+Removed RFC931 stuff (deprecated)<BR>
+11-Feb-95 rbd   Added Inter_Main() support and stub.<BR>
+01-Mar-95 rbd   Add support for password pass-through, clean<BR>
+up HTML in error handler. Add SendNoOp().<BR>
+Add Server: header to error handler msg.<BR>
+17-Mar-95 rbd   Fix error handler to remove deprecated<BR>
+MIME-Version header. Add GMT offset, new CGI var.<BR>
+Add WebDate() function for producing HTTP/1.0<BR>
+compliant date/time. Add Date: header to error<BR>
+messages.<BR>
+18-Mar-95 rbd   Add CGI_ERR_START for catching CGI.BAS defined<BR>
+errors in user code. Decode our "user defined:<BR>
+errors in handler instead of saying "User<BR>
+defined error".<BR>
+----------------------------------------------------------------------<BR>
+<TR VALIGN=top><TD>Exposes<TD>
+<TR VALIGN=top><TD>Comments<TD>
+</TABLE>
+<P>
+<A HREF="ftp://ftp.sol.no/user/balchen/vbi/source/Common/Internet/CGI/CGI.BAS"><IMG BORDER=0 SRC="../../../../Images/dwnld1.gif"> Download</A>
+<P>
+<NOSCRIPT>
+
+<!-- This is for those browsers that do not have Javascript support.
+     For non-dynamic pages, we default to frame-look -->
+
+<P>
+<HR NOSHADE SIZE=1>
+<P>
+
+<TABLE BGCOLOR=#EEEEEE WIDTH="100%" BORDER=0 CELLSPACING=0 CELLPADDING=4>
+
+<TR><TD>
+
+<FONT SIZE=-1 FACE="Arial">Editor: <FONT SIZE=-1 FACE="Arial"><A HREF="mailto:balchen@sn.no">Jens Balchen</A><BR>
+<FONT SIZE=-1 FACE="Arial">Last update: <FONT SIZE=-1 FACE="Arial">1998-03-13<BR>
+<FONT SIZE=-1 FACE="Arial">Copyright &copy; <A HREF="mailto:vbi@vbi.org">Visual Basic Instinct</A>, 1995-1998<BR>
+</TABLE>
+
+
+Editor: <A HREF="mailto:balchen@sn.no">Jens Balchen</A><BR>
+Copyright &copy; <A HREF="mailto:vbi@vbi.org">Visual Basic Instinct</A>, 1995-1998<BR>
+
+</FONT>
+
+</NOSCRIPT>
+
+<SCRIPT LANGUAGE="JavaScript">
+
+if (top.frames.length == 0) {
+	// This page is not contained within a frame. We must include a footer
+
+	//window.document.writeln("<P>");
+	//window.document.writeln("<HR NOSHADE SIZE=1>");
+	window.document.writeln("<P>");
+
+	window.document.writeln("<TABLE BGCOLOR=#EEEEEE WIDTH=\"100%\" BORDER=0 CELLSPACING=0 CELLPADDING=4>");
+
+	window.document.writeln("<TR><TD>");
+
+	window.document.writeln("<FONT COLOR=#000000 SIZE=-1 FACE=\"Arial\">Editor: <FONT COLOR=#FF0000 SIZE=-1 FACE=\"Arial\"><A HREF=\"mailto:balchen@sn.no\">Jens Balchen</A><BR>");
+	window.document.writeln("<FONT COLOR=#000000 SIZE=-1 FACE=\"Arial\">Last update: <FONT COLOR=#000000 SIZE=-1 FACE=\"Arial\">1998-03-13<BR>");
+	window.document.writeln("<FONT COLOR=#000000 SIZE=-1 FACE=\"Arial\">Copyright &copy; <A HREF=\"mailto:vbi@vbi.org\">Visual Basic Instinct</A>, 1995-1998<BR>");
+	window.document.writeln("</TABLE>");
+
+	window.document.writeln("</FONT>");
+
+	window.document.writeln("<CENTER>");
+
+	window.document.writeln("<P><FONT SIZE=-1 FACE=\"Arial\">");
+
+	window.document.writeln("<IMG SRC=\"../../../../Images/ddpleft.gif\">&nbsp;<A HREF=\"index.html\"><STRONG>Up&nbsp;one&nbsp;level</STRONG></A> ");
+	window.document.writeln("<IMG SRC=\"../../../../Images/ddp.gif\">&nbsp;<A HREF=\"../../../../index.html\">Main&nbsp;page</A> ");
+	window.document.writeln("<IMG SRC=\"../../../../Images/ddp.gif\">&nbsp;<A HREF=\"../../../../Second%20Hand/index.html\">Download</A>");
+	window.document.writeln("<IMG SRC=\"../../../../Images/ddp.gif\">&nbsp;<A HREF=\"../../../../Bookstore/index.html\">The&nbsp;Bookstore</A>");
+	window.document.writeln("<IMG SRC=\"../../../../Images/ddp.gif\">&nbsp;<A HREF=\"../../../../Library/index.html\">The&nbsp;Library</A>");
+	window.document.writeln("<IMG SRC=\"../../../../Images/ddp.gif\">&nbsp;<A HREF=\"../../../../Consultants/index.html\">Consultants&nbsp;Alley</A>");
+	window.document.writeln("<IMG SRC=\"../../../../Images/ddp.gif\">&nbsp;<A HREF=\"../../../../News%20Stand/index.html\">The&nbsp;News&nbsp;stand</A>");
+	window.document.writeln("<IMG SRC=\"../../../../Images/ddp.gif\">&nbsp;<A HREF=\"../../../../Marketplace/index.html\">Marketplace</A>");
+	window.document.writeln("<IMG SRC=\"../../../../Images/ddp.gif\">&nbsp;<A HREF=\"../../../../The%20Highway/index.html\">The&nbsp;Highway</A>");
+
+	window.document.writeln("</CENTER>");
+
+}
+else {
+	// It is contained within a frame. This is simple :)
+
+	//window.document.writeln("<P>");
+	//window.document.writeln("<HR NOSHADE SIZE=1>");
+	window.document.writeln("<P>");
+
+	window.document.writeln("<TABLE BGCOLOR=#EEEEEE WIDTH=\"100%\" BORDER=0 CELLSPACING=0 CELLPADDING=4>");
+
+	window.document.writeln("<TR><TD>");
+
+	window.document.writeln("<FONT SIZE=-1 FACE=\"Arial\">Editor: <FONT SIZE=-1 FACE=\"Arial\"><A HREF=\"mailto:balchen@sn.no\">Jens Balchen</A><BR>");
+	window.document.writeln("<FONT SIZE=-1 FACE=\"Arial\">Last update: <FONT SIZE=-1 FACE=\"Arial\">1998-03-13<BR>");
+	window.document.writeln("<FONT SIZE=-1 FACE=\"Arial\">Copyright &copy; <A HREF=\"mailto:vbi@vbi.org\">Visual Basic Instinct</A>, 1995-1998<BR>");
+	window.document.writeln("</TABLE>");
+
+	window.document.writeln("</FONT>");
+}
+
+</SCRIPT>
+
+</BODY>
+</HTML>

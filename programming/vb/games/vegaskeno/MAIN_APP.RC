@@ -1,0 +1,187 @@
+STRINGTABLE DISCARDABLE
+BEGIN
+        1000		"&Game Menu"
+        2000		"&New Game"
+	3000		"&Speed"
+	3001		"&Slow"
+	3002		"&Medium"
+	3003		"&Fast"
+	1001		"&New Game"
+        1002		"&Open"
+        1003		"&Close"
+        1004		"&Save"
+        1005		"Save &As..."
+        1006		"Save A&ll"
+        1007		"Propert&ies"
+        1008		"Page Set&up..."
+        1009		"Print Pre&view"
+        1010		"&Print..."
+        1011		"Sen&d..."
+        1012		"E&xit"
+        1013		"&Edit"
+        1014		"&Undo"
+        1015		"Cu&t"
+        1016		"&Copy"
+        1017		"&Paste"
+        1018		"Paste &Special..."
+        1019		"&View"
+        1020		"&Toolbar"
+        1021		"Status &Bar"
+        1022		"&Refresh"
+        1023		"&Options..."
+        1024		"&Help"
+        1025		"&Contents"
+        1026		"&Search For Help On..."
+        1027		"&About LiveKeno..."
+        1028		"New"
+        1029		"Open"
+        1030		"Save"
+        1031		"Print"
+        1032		"Cut"
+        1033		"Copy"
+        1034		"Paste"
+        1035		"Bold"
+        1036		"Italic"
+        1037		"Underline"
+        1038		"Left Justify"
+        1039		"Center"
+        1040		"Right Justify"
+        1041		""
+        1042		""
+        1043		"Copyright"
+        1044		"Company"
+        1045		"Warning"
+        1046		"Version"
+        1047		"Platform"
+        1048		"CompanyProduct"
+        1049		"Product"
+        1050		"LicenseTo"
+        1051		"Options"
+        1052		"Sample 1"
+        1053		"Sample 2"
+        1054		"Sample 3"
+        1055		"Sample 4"
+        1056		"Apply"
+        1057		"Cancel"
+        1058		"OK"
+        1059		"About LiveKeno"
+        1060		"&System Info..."
+        1061		"OK"
+        1062		"Warning: ..."
+        1063		"Version"
+        1064		"Application Title"
+        1065		"App Description"
+	4000		"Money Left "
+END
+board	BITMAP	board.bmp
+change_button_up bitmap	change_button_up.bmp
+change_button_down	bitmap	change_button_down.bmp
+board2	BITMAP	board2.bmp
+check_mark	BITMAP	check.bmp
+erase_lit	BITMAP	erase_lit.bmp
+erase_dim	BITMAP	erase_dim.bmp
+betone_lit	bitmap	betone_lit.bmp
+betone_dim	bitmap	betone_dim.bmp
+start_dim	bitmap	start_dim.bmp
+start_lit	bitmap	start_lit.bmp
+play4_lit	bitmap	play4_lit.bmp
+play4_dim	bitmap	play4_dim.bmp
+erase_lit_down	BITMAP	erase_lit_down.bmp
+betone_lit_down	bitmap	betone_lit_down.bmp
+start_lit_down	bitmap	start_lit_down.bmp
+play4_lit_down	bitmap	play4_lit_down.bmp
+hit	BITMAP	hit.bmp
+c1	BITMAP	c1.bmp
+c2	BITMAP	c2.bmp
+c3	BITMAP	c3.bmp
+c4	BITMAP	c4.bmp
+c5	BITMAP	c5.bmp
+c6	BITMAP	c6.bmp
+c7	BITMAP	c7.bmp
+c8	BITMAP	c8.bmp
+c9	BITMAP	c9.bmp
+c10	BITMAP	c10.bmp
+c11	BITMAP	c11.bmp
+c12	BITMAP	c12.bmp
+c13	BITMAP	c13.bmp
+c14	BITMAP	c14.bmp
+c15	BITMAP	c15.bmp
+c16	BITMAP	c16.bmp
+c17	BITMAP	c17.bmp
+c18	BITMAP	c18.bmp
+c19	BITMAP	c19.bmp
+c20	BITMAP	c20.bmp
+c21	BITMAP	c21.bmp
+c22	BITMAP	c22.bmp
+c23	BITMAP	c23.bmp
+c24	BITMAP	c24.bmp
+c25	BITMAP	c25.bmp
+c26	BITMAP	c26.bmp
+c27	BITMAP	c27.bmp
+c28	BITMAP	c28.bmp
+c29	BITMAP	c29.bmp
+c30	BITMAP	c30.bmp
+c31	BITMAP	c31.bmp
+c32	BITMAP	c32.bmp
+c33	BITMAP	c33.bmp
+c34	BITMAP	c34.bmp
+c35	BITMAP	c35.bmp
+c36	BITMAP	c36.bmp
+c37	BITMAP	c37.bmp
+c38	BITMAP	c38.bmp
+c39	BITMAP	c39.bmp
+c40	BITMAP	c40.bmp
+c41	BITMAP	c41.bmp
+c42	BITMAP	c42.bmp
+c43	BITMAP	c43.bmp
+c44	BITMAP	c44.bmp
+c45	BITMAP	c45.bmp
+c46	BITMAP	c46.bmp
+c47	BITMAP	c47.bmp
+c48	BITMAP	c48.bmp
+c49	BITMAP	c49.bmp
+c50	BITMAP	c50.bmp
+c51	BITMAP	c51.bmp
+c52	BITMAP	c52.bmp
+c53	BITMAP	c53.bmp
+c54	BITMAP	c54.bmp
+c55	BITMAP	c55.bmp
+c56	BITMAP	c56.bmp
+c57	BITMAP	c57.bmp
+c58	BITMAP	c58.bmp
+c59	BITMAP	c59.bmp
+c60	BITMAP	c60.bmp
+c61	BITMAP	c61.bmp
+c62	BITMAP	c62.bmp
+c63	BITMAP	c63.bmp
+c64	BITMAP	c64.bmp
+c65	BITMAP	c65.bmp
+c66	BITMAP	c66.bmp
+c67	BITMAP	c67.bmp
+c68	BITMAP	c68.bmp
+c69	BITMAP	c69.bmp
+c70	BITMAP	c70.bmp
+c71	BITMAP	c71.bmp
+c72	BITMAP	c72.bmp
+c73	BITMAP	c73.bmp
+c74	BITMAP	c74.bmp
+c75	BITMAP	c75.bmp
+c76	BITMAP	c76.bmp
+c77	BITMAP	c77.bmp
+c78	BITMAP	c78.bmp
+c79	BITMAP	c79.bmp
+c80	BITMAP	c80.bmp
+pay1	BITMAP	pay1.bmp
+pay2	BITMAP	pay2.bmp
+pay3	BITMAP	pay3.bmp
+pay4	BITMAP	pay4.bmp
+insert_coins	BITMAP	insert_coins.bmp
+play4coins	BITMAP	play4coins.bmp
+winner_paid	BITMAP	winner_paid.bmp
+checkicon	icon	Check.ico
+handpay	bitmap	handpay.bmp
+hopperempty	bitmap	hopperempty.bmp
+jackpot	bitmap	jackpot.bmp
+600coins	bitmap	600coins.bmp
+optionback	bitmap	optionback.bmp
+

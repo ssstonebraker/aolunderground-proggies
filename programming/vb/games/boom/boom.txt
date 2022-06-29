@@ -1,0 +1,74 @@
+Boom! Particle Explosion Simulation -- written by Jason Merlo
+jmerlo@austin.rr.com
+jason.merlo@frco.com
+http://home.austin.rr.com/smozzie
+
+NOTE:  You may need to turn 'Word Wrap' on (in the Edit menu) if you are reading this with Microsoft Notepad.
+
+Table of Contents
+1.0 What is Boom!?
+2.0 How to use Boom!
+3.0 Fun things to try
+4.0 Future enhancements
+--------------------------
+
+
+
+1.0 What is Boom!?
+
+Boom! is a particle explosion simulation.  It simulates explosions composed of many individual elastic pieces.  Remember those super-bounce balls that you used to get out of the 25 cent gum machines when you were a kid?  Well, imagine that you have hundreds of them in a little tiny box, and then you blow up that box.  THAT'S what this program does.  :)
+
+Seriously, Boom! is a fun little side project that I devised while looking for a quick way to put explosions into another game I'm writing.  It turned out well enough to warrant a GUI so that the user can tweak the ball properties.  I also added a 'multi' feature, so that you can start up several explosions at once!
+
+On a technical note, each particle in each explosion is an instance of the 'Ball' class.  I used this approach to show how easy it is to create an array of similar objects, each with dynamic property values.  It makes for very concise and understandable code!
+
+
+
+2.0 How to use Boom!
+
+Boom! is ridiculously easy to use.  Just run it, and click on the map.  Presto!  Instant carnage.  You can have several explosions on the screen at once.
+
+Once you've nuked Texas once or twice, you'll probably get bored.  That's why there's sliders to play with on the right side of the screen.  Just slide them around and see their effect on the next explosion you make.  Some of the settings are global and will affect balls already onscreen.  Just experiment and have fun!
+
+The configurable settings are:
+
+Particle count:
+This is this the number of particles present in each explosion.  Valid values are 1-200.  Note that based on the speed of your computer, larger numbers here might cause the explosions to move slower and look crappy.  Experiment to find the best sized explosion for your particular purpose.  Note that there is a hard-coded 500 ball limit for the entire screen.  This means that you can have only two maxed-out 200 ball explosions onscreen at once, or five 100-ball explosions, or ... well, you get the idea.
+
+Particle Elasticity:
+This is the elasticity of each and every ball on the screen.  Note that it is a global setting, and all balls will feel its effect as soon as you change it.  Balls with low elasticity will not bounce very high.  Balls with a high elasticity will bounce virtually forever (it's not a perfect simulation, after all).  Drag the slider to 0 to keep balls from bouncing at all.
+
+Gravity:
+This is the acceleration of each ball due to gravity.  It is global, so changing it will affect all balls onscreen.  Low gravity will make the balls 'float' in midair for much longer than a high gravity setting.  A gravity of zero will launch all the balls into outer space, never to return.
+
+Spread:
+This is how far each ball travels across the map.  Small spread will localize the explosion to a small area, while large spread will take out more civilians over a greater surface area.
+
+Intensity:
+How much TNT you use.  A large intensity will blow the balls clean off the map straight up (only to drop back again much, much later).  A small intensity will hardly lift them.
+
+Speed:
+How fast everything runs.  This is a global setting and is tied directly to the main timer that moves the balls.  Sliding it left will speed things up.  Sliding it right will slow things down and prolong the agony of your victims.
+
+Clear Screen:
+The panic button.  This button will erase all particles from the screen and allow you to start over.  This is good in case you set your elasticity too high or the gravity too low and you're never going to get your balls down again.
+
+
+
+3.0 Fun things to try
+
+*Set the number of particles to 1, elasticity to the max, and spread to 0.  Now you can 'place' single bouncing balls all over the map!  When you get bored, just drag the elasticity to 0.
+
+*You can make red rain!  Max out particle count and intensity.  Set elasticity to 0, and give it low gravity and low spread.  Now play weatherman: click wherever you want a storm to ravage the land.  Red balls will rain down for several minutes!
+
+*Give your mouse twinkle-trails:  Make intensity about 20.  Choose medium spread, medium gravity, and middle-to-low elasticity.  Choose a small particle count.  Now roll your mouse over the map and click the mouse button quickly and repeatedly.  Magic!
+
+*Make a volcano!  Use the default settings and change the particle count to low (between 5 and 10).  Now hold the mouse still over the map and click the mouse button repeatedly at a rate of about one click per second.  Spurting lava!
+
+
+
+4.0 Future enhancements
+
+This will be incorporated into my Risk-type strategy game eventually.  I needed a way to make a country look like it has been attacked or taken over, and I think this will just about do it.  The more people that are in the country you take over, the bigger the explosion will be.  And I can change the color of the balls to match the color of the player who just lost the country.
+
+I'm also considering changing the balls into little people.  If you kill an enemy army, why shouldn't you get to see their writhing bodies flung through the air?    :)

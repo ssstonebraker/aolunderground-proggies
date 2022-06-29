@@ -1,0 +1,39 @@
+dbread.dll  © 1998 RazzInc / Stan Malcolm  
+
+dbread.dll is a C++ written DLL to retrieve various AOL information
+from the AOL MAIN.IDX that you can use with your programs  =)
+
+You can use this DLL anyway you like, give it to as many people
+as you want, use it in any program you want, but don't as for the
+source code or how I did any of these functions.  Those are some of
+my secrets!  =)
+---------------------------------------------------------------------
+These are the decs for dbread.dll
+
+-=Retrieves the current AOL path=-
+Declare Function db_readGetPathFromProcID Lib "dbread.dll" (ByVal _
+hWnd As Long) As String
+
+-=Retrieves the current AOL versions number (3.0, 4.0, etc)=-
+Declare Function db_readAOLGetVersion Lib "dbread.dll" () As String
+
+-=Retrieves the current AOL revision number (148.4, 148.10, etc)=-
+Declare Function db_readAOLGetRevision Lib "dbread.dll" () As String
+
+-=Retrieves the screen name currently in use=-
+Declare Function db_readAOLGetCurrentScreenName Lib "dbread.dll" () _
+As String
+
+-=Retrives all the AOL screen names on the account=-
+Declare Function db_readAOLGetScreenNames Lib "dbread.dll" (ByVal _
+s1 As String, ByVal s2 As String, ByVal s3 As String, ByVal _
+s4 As String, ByVal s5 As String) As Long
+
+-=Retrieves the Rich text from an AOL rich text window in HTML format=-
+Declare Function db_readAOLRichTextFromHwnd Lib "dbread.dll" (hWnd _
+As Long) As String
+
+Have fun!  =D
+
+~Razz
+razzinc@hotmail.com

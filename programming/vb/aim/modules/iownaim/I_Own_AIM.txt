@@ -1,0 +1,8 @@
+Basic Codes:
+Call AIM_Close (this will close your AIM)
+Call AIM_Show_Ad (this will show the ad)
+Call AIM_Hide_Ad (this will hide the ad)
+Call Chat_Clear (this will clear the chat)
+Call Chat_Link (address, txt)  (this will send a link to the chat
+ChatSend (this will send txt to the chat)
+Call Mass_IM (person, txt)  (this will send Im's to everyone you list)

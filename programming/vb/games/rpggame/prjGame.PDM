@@ -1,0 +1,210 @@
+[Root]
+Most Recent Package=Dep File 1
+
+
+[Package|Standard Setup Package 1|Root]
+SubWizProgID=PDWizard.SetupPkgSubWiz
+BuildFolder=C:\WINDOWS\Desktop\Game\Package
+
+[Package|Standard Setup Package 1|Configure DAO ISAMs]
+Applicable=No
+
+[Package|Standard Setup Package 1|Configure DAO ODBC]
+JetWorkspace=
+ODBCDirect=
+
+[Package|Standard Setup Package 1|Files Found]
+
+[Package|Standard Setup Package 1|Files Released]
+
+[Package|Standard Setup Package 1|Missing Dependency Information]
+C:\WINDOWS\Desktop\Game\Exe Files\editor.exe=
+
+[Package|Standard Setup Package 1|Out-of-Date Dependency Information]
+
+[Package|Standard Setup Package 1|Files Added]
+C:\WINDOWS\Desktop\Game\Exe Files\0a0.map=
+C:\WINDOWS\Desktop\Game\Exe Files\0a1.map=
+C:\WINDOWS\Desktop\Game\Exe Files\1a0.map=
+C:\WINDOWS\Desktop\Game\Exe Files\0a2.map=
+C:\WINDOWS\Desktop\Game\Exe Files\1a1.map=
+C:\WINDOWS\Desktop\Game\Exe Files\1a2.map=
+C:\WINDOWS\Desktop\Game\Exe Files\2a1.map=
+C:\WINDOWS\Desktop\Game\Exe Files\2a2.map=
+C:\WINDOWS\Desktop\Game\Exe Files\2a3.map=
+C:\WINDOWS\Desktop\Game\Exe Files\3a2.map=
+C:\WINDOWS\Desktop\Game\Exe Files\editor.exe=
+C:\WINDOWS\Desktop\Game\README.txt=
+
+[Package|Standard Setup Package 1|Files Removed]
+
+[Package|Standard Setup Package 1|Files In Project]
+C:\WINDOWS\Desktop\DragonLore.exe=Yes
+C:\WINDOWS\SYSTEM\MSVBVM60.DLL=Yes
+C:\WINDOWS\SYSTEM\OLEAUT32.DLL=Yes
+C:\WINDOWS\SYSTEM\OLEPRO32.DLL=Yes
+C:\WINDOWS\SYSTEM\ASYCFILT.DLL=Yes
+C:\WINDOWS\SYSTEM\STDOLE2.TLB=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP.EXE=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP1.EXE=Yes
+C:\WINDOWS\SYSTEM\VB6STKIT.DLL=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\ST6UNST.EXE=Yes
+C:\WINDOWS\Desktop\Game\Exe Files\0a0.map=Yes
+C:\WINDOWS\Desktop\Game\Exe Files\0a1.map=Yes
+C:\WINDOWS\Desktop\Game\Exe Files\1a0.map=Yes
+C:\WINDOWS\Desktop\Game\Exe Files\0a2.map=Yes
+C:\WINDOWS\Desktop\Game\Exe Files\1a1.map=Yes
+C:\WINDOWS\Desktop\Game\Exe Files\1a2.map=Yes
+C:\WINDOWS\Desktop\Game\Exe Files\2a1.map=Yes
+C:\WINDOWS\Desktop\Game\Exe Files\2a2.map=Yes
+C:\WINDOWS\Desktop\Game\Exe Files\2a3.map=Yes
+C:\WINDOWS\Desktop\Game\Exe Files\3a2.map=Yes
+C:\WINDOWS\Desktop\Game\Exe Files\editor.exe=Yes
+C:\WINDOWS\Desktop\Game\README.txt=Yes
+
+[Package|Standard Setup Package 1|Configure Registry Files]
+Applicable=No
+
+[Package|Standard Setup Package 1|Configure Remote Servers]
+Applicable=No
+
+[Package|Standard Setup Package 1|Install Locations]
+C:\WINDOWS\Desktop\DragonLore.exe=$(AppPath)
+C:\WINDOWS\SYSTEM\MSVBVM60.DLL=$(WinSysPathSysFile)
+C:\WINDOWS\SYSTEM\OLEAUT32.DLL=$(WinSysPathSysFile)
+C:\WINDOWS\SYSTEM\OLEPRO32.DLL=$(WinSysPathSysFile)
+C:\WINDOWS\SYSTEM\ASYCFILT.DLL=$(WinSysPathSysFile)
+C:\WINDOWS\SYSTEM\STDOLE2.TLB=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP.EXE=$(AppPath)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP1.EXE=$(WinPath)
+C:\WINDOWS\SYSTEM\VB6STKIT.DLL=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\ST6UNST.EXE=$(WinPath)
+C:\WINDOWS\Desktop\Game\Exe Files\0a0.map=$(AppPath)
+C:\WINDOWS\Desktop\Game\Exe Files\0a1.map=$(AppPath)
+C:\WINDOWS\Desktop\Game\Exe Files\1a0.map=$(AppPath)
+C:\WINDOWS\Desktop\Game\Exe Files\0a2.map=$(AppPath)
+C:\WINDOWS\Desktop\Game\Exe Files\1a1.map=$(AppPath)
+C:\WINDOWS\Desktop\Game\Exe Files\1a2.map=$(AppPath)
+C:\WINDOWS\Desktop\Game\Exe Files\2a1.map=$(AppPath)
+C:\WINDOWS\Desktop\Game\Exe Files\2a2.map=$(AppPath)
+C:\WINDOWS\Desktop\Game\Exe Files\2a3.map=$(AppPath)
+C:\WINDOWS\Desktop\Game\Exe Files\3a2.map=$(AppPath)
+C:\WINDOWS\Desktop\Game\Exe Files\editor.exe=$(AppPath)
+C:\WINDOWS\Desktop\Game\README.txt=$(AppPath)
+
+[Package|Standard Setup Package 1|Configure Shared Files]
+Applicable=Yes
+C:\WINDOWS\Desktop\DragonLore.exe=No
+C:\WINDOWS\Desktop\Game\Exe Files\0a0.map=No
+C:\WINDOWS\Desktop\Game\Exe Files\0a1.map=No
+C:\WINDOWS\Desktop\Game\Exe Files\1a0.map=No
+C:\WINDOWS\Desktop\Game\Exe Files\0a2.map=No
+C:\WINDOWS\Desktop\Game\Exe Files\1a1.map=No
+C:\WINDOWS\Desktop\Game\Exe Files\1a2.map=No
+C:\WINDOWS\Desktop\Game\Exe Files\2a1.map=No
+C:\WINDOWS\Desktop\Game\Exe Files\2a2.map=No
+C:\WINDOWS\Desktop\Game\Exe Files\2a3.map=No
+C:\WINDOWS\Desktop\Game\Exe Files\3a2.map=No
+C:\WINDOWS\Desktop\Game\Exe Files\editor.exe=No
+C:\WINDOWS\Desktop\Game\README.txt=No
+
+[Package|Standard Setup Package 1|Distribution]
+Type=multi
+Size=1.44 MB
+Title=Dragon Lore - BETA Test Release
+
+[Package|Standard Setup Package 1|IconGroups]
+Group0=Dragon Lore
+PrivateGroup0=True
+Parent0=$(Programs)
+
+[Package|Standard Setup Package 1|Dragon Lore]
+Icon1=DragonLore.exe
+Title1=Dragon Lore - BETA Test Release
+StartIn1=$(AppPath)
+Key1=Icon1
+Icon2=editor.exe
+Title2=Dragon Lore Map Editor
+StartIn2=$(AppPath)
+Key2=Icon3
+Icon3=README.txt
+Title3=README.txt
+StartIn3=$(AppPath)
+Key3=Icon12
+
+[Package|Standard Setup Package 1|Package]
+PackageFolder=C:\WINDOWS\Desktop\Game\Package
+ProjectFolder=C:\WINDOWS\Desktop\Game\Game
+ServerSideCab=
+File1=C:\WINDOWS\Desktop\Game\Package\setup.exe
+File2=C:\WINDOWS\Desktop\Game\Package\Setup.Lst
+File3=C:\WINDOWS\Desktop\Game\Package\Dragon1.CAB
+File4=C:\WINDOWS\Desktop\Game\Package\Dragon2.CAB
+Handler1=PDWizard.FloppyDplySubWiz
+Handler2=PDWizard.FolderDplySubWiz
+Handler3=PDWizard.WebPostDplySubWiz
+
+
+[Package|Dep File 1|Root]
+SubWizProgID=PDWizard.DepPkgSubWiz
+BuildFolder=C:\WINDOWS\Desktop\game\New Folder
+
+[Package|Dep File 1|Configure DAO ISAMs]
+Applicable=No
+
+[Package|Dep File 1|Configure DAO ODBC]
+JetWorkspace=
+ODBCDirect=
+
+[Package|Dep File 1|Files Found]
+
+[Package|Dep File 1|Files Released]
+
+[Package|Dep File 1|Missing Dependency Information]
+
+[Package|Dep File 1|Out-of-Date Dependency Information]
+
+[Package|Dep File 1|Files Added]
+
+[Package|Dep File 1|Files Removed]
+
+[Package|Dep File 1|Files In Project]
+C:\WINDOWS\Desktop\game\game\dragonlore.exe=Yes
+C:\WINDOWS\SYSTEM\MSVBVM60.DLL=Yes
+C:\WINDOWS\SYSTEM\OLEAUT32.DLL=Yes
+C:\WINDOWS\SYSTEM\OLEPRO32.DLL=Yes
+C:\WINDOWS\SYSTEM\ASYCFILT.DLL=Yes
+C:\WINDOWS\SYSTEM\STDOLE2.TLB=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=Yes
+
+[Package|Dep File 1|Configure Registry Files]
+Applicable=
+
+[Package|Dep File 1|Configure Remote Servers]
+Applicable=
+
+[Package|Dep File 1|Install Locations]
+C:\WINDOWS\Desktop\game\game\dragonlore.exe=$(AppPath)
+C:\WINDOWS\SYSTEM\MSVBVM60.DLL=$(WinSysPathSysFile)
+C:\WINDOWS\SYSTEM\OLEAUT32.DLL=$(WinSysPathSysFile)
+C:\WINDOWS\SYSTEM\OLEPRO32.DLL=$(WinSysPathSysFile)
+C:\WINDOWS\SYSTEM\ASYCFILT.DLL=$(WinSysPathSysFile)
+C:\WINDOWS\SYSTEM\STDOLE2.TLB=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=$(WinSysPathSysFile)
+
+[Package|Dep File 1|Configure Shared Files]
+Applicable=
+
+[Package|Dep File 1|DepFile]
+DepCabFile=dragonlore.CAB
+DepCabRun=dragonlore.INF
+
+[Package|Dep File 1|Package]
+PackageFolder=C:\WINDOWS\Desktop\game\New Folder
+ProjectFolder=C:\WINDOWS\Desktop\game\game
+ServerSideCab=
+File1=C:\WINDOWS\Desktop\game\New Folder\dragonlore.DEP
+Handler1=PDWizard.FolderDplySubWiz
+Handler2=PDWizard.WebPostDplySubWiz

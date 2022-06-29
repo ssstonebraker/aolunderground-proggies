@@ -1,0 +1,27 @@
+ÿ[for this example, i used a copied sub i found, only i replaced the comments in order not to display this "author's" email address. He changed the sub from "ChatSend" to "SendChat", "Room" to "ChatRoom", "AORich" to "Rich", "AORich2" to "Rich2", "Chat" to "TextStr", removed the structure for the sub (ie, tabs. i have no idea why), and he also removed my Dim statments. no program actually "thinks", so by just using a straight compare, this would not turn up as copied code, even though it obviously is. so, we have to level the playing field, remove a few things and use some wildcards.
+
+for those of you who don't know what a wildcard is, look up "wildcard" and "like" in your help file. the wildcard we're using here is "*". this with the like statement can be used to compare two strings. when the "*" symbol is used, you are telling vb that anything can take the place of the "*" symbol. windows and dos work the same way. try going to find in your start menu and search for "*.zip". you'll get a list of all files with the zip file extension. try searching for "x*.zip". you'll then get a list of all 
+files that have a filename starting with the letter "x" and have the zip file extension. the like statement works in the same way. so by replacing these variables, arguments, etc, we could create a reliable compare between two procedures.
+
+note: notice that when formating the procedures for a good compare, things must be processed in a certain order. locate the code in the "do all" button to see how this should be done. doing this in the wrong order can cause a copied procedure to scan as not being copied.
+ÿÒPublic Sub ChatSend(Chat As String)
+    'chatsend sub taken from dos32.bas
+    'email: xdosx@hotmail.com
+    'aim: xdosx
+    Dim Room As Long, AORich As Long, AORich2 As Long
+    Room& = FindRoom&
+    AORich& = FindWindowEx(Room, 0&, "RICHCNTL", vbNullString)
+    AORich2& = FindWindowEx(Room, AORich, "RICHCNTL", vbNullString)
+    Call SendMessageByString(AORich2, WM_SETTEXT, 0&, Chat$)
+    Call SendMessageLong(AORich2, WM_CHAR, ENTER_KEY, 0&)
+End Sub
+ÿ–Public Sub StolenSendChat(TextStr As String)
+'i stole this sub from dos
+'and i changed a bunch of stuff
+'so i could call it my own
+ChatRoom& = FindRoom&
+Rich& = FindWindowEx(ChatRoom, 0&, "RICHCNTL", vbNullString)
+Rich2& = FindWindowEx(ChatRoom, Rich, "RICHCNTL", vbNullString)
+Call SendMessageByString(Rich2, WM_SETTEXT, 0&, TextStr$)
+Call SendMessageLong(Rich2, WM_CHAR, ENTER_KEY, 0&)
+End Sub

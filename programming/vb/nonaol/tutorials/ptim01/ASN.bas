@@ -1,0 +1,18 @@
+Attribute VB_Name = "ASN"
+
+Public Const ASN_SCOPE_MASK = 192
+
+Public Const ASN_UNIVERSAL_MASK = 0
+Public Const ASN_APPLICATION = 64
+Public Const ASN_CONTEXT_SPECIFIC = 128
+Public Const ASN_PRIVATE = 192
+
+Public Const ASN_COMPOSITE = 32
+
+Public Const ASN_BOOLEAN_TAG = 1
+Public Const ASN_INTEGER_TAG = 2
+Public Const ASN_OCTETSTRING_TAG = 4
+Public Const ASN_ENUMERATED_TAG = 10
+Public Const ASN_SEQUENCE_TAG = 16 + ASN_COMPOSITE
+Public Const ASN_SET_TAG = 17 + ASN_COMPOSITE
+

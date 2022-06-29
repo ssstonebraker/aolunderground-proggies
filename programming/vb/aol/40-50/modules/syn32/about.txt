@@ -1,0 +1,20 @@
+file: Syn32.bas (vb4+ module)
+completion: 0.27
+reliability: ??
+
+okay i figured that i should make a module, but then i got to thinking... "what am i 
+going to put in this module?". and to answer that question, i'm going to ask that all
+of you who download this module send me your ideas, no matter how stupid they are, i 
+will post anything you request as long as it can be done with vb and i know how to. ;c)
+so this module will not be for me, it will be for all of you who want a module with subs
+and functions that you find useful. and with that said i have not gone thru and thoroughly
+checked this module, kuz i'm only a little over a quarter of a way done with it, but that
+could all change, depending on how many people send requests...
+
+electronic mail: kaosdemon2@hotmail.com
+instant message: i be martyr
+
+ps: if you would like to make a complaint about copying, you had better be izekial or shut
+the fuck up. ;c)
+
+nice huh?

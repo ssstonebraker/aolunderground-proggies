@@ -1,0 +1,3 @@
+Made in VB5 by PAT or JK
+This is an example on how to zoom in on pictures. Sort of like how 
+paint brush does with that little box.

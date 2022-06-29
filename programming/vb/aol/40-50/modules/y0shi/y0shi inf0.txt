@@ -1,0 +1,22 @@
+yiz0 guys,
+
+	this is my bas that i've been workin' on for quite a while. it has aol codes, aim codes, api
+codes, internet gaming zone codes, regular string codes, and a whole bunch of weird computer stuff. the
+best part about it is that all the codes are explained VERY thouroughly with at least 1 line of 
+explanation for every line of code. there is also an example for each sub just in case someone is new
+and doesn't know how to use bas functions. this bas was made for all the new vb users who are kicked
+around by experienced vb users, just like i was in the beggining. aight, hope you like this 1 guys
+
+cya,
+y0shi
+
+note: for all you experienced proggers, i'll be releasing a y0shi bas with more complex stuff, but
+      most of this is for everyone in general. if you lookin' for experienced stuff, go look at dos's
+      bas and go copy his aol codes. also note that this bas wasn't intended for aol proggin', i just
+      added some aol codes so that people could learn how to use the different api's.
+
+note: this was tried in vb6 so if there are any probz in vb 5, 4, or 3, don't bug me about it
+
+note: the zone codes might not work, i made em a while ago so i don't know if the windows are diff. now
+
+email me at: yoshiii@aol.com

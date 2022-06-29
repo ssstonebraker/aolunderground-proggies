@@ -1,0 +1,59 @@
+:BASE cdwrite.hlp
+:TITLE VFCDwriter Help
+1 Introduction
+2 Introduction=Topic13
+1 Property Reference
+2 SCSI Related
+3 Lun=Topic10
+3 Target=Topic11
+3 SCSIController=Topic12
+3 Driver=Topic15
+2 ISO Related
+3 Abstract=Topic16
+3 Bibliography=Topic17
+3 Copyright=Topic18
+3 PreparedBy=Topic19
+3 PublisherName=Topic20
+3 VolumeName=Topic21
+3 Joliet=Topic22
+2 Writing Related
+3 BlankType=Topic24
+3 SessionType=SessionType
+3 Speed=Speed
+3 TestMode=Topic9
+1 Method Reference
+2 Audio Related
+3 AddWaveToCue=AddWaveToCue
+3 ClearWaveCue=ClearWaveCue
+3 IsWaveInCue=IsWaveInCue
+2 ISO Related
+3 AddFileOrPathToISOcue=AddFileOrPathToISOcue
+3 AddCompletePathToISO=Topic29
+3 AddFileToISO=Topic32
+3 ClearISOCue=ClearISOCue
+3 CreateISOFromCue=CreateISOFromCue
+3 CreateMultiISO=CreateMultiISO
+3 FinalizeISO=Topic30
+3 OpenISO=Topic31
+2 SCSI Related
+3 GetDeviceType=Topic34
+3 GetHostAdapterName=Topic35
+3 GetNumOfAdapters=Topic36
+3 ResetDrive=ResetDrive
+3 ScanSCSIBus=ScanSCSIBus
+3 SCSIscan=Topic37
+2 Writer Related
+3 BlankDisk=Blank
+3 IsTaskRunning=IsTaskRunning
+3 WriteISOtoCDR=Topic38
+3 WriteWavecueToCDR=WriteWavecueToCDR
+1 Event Reference
+2 CommandDone=CommandDone
+2 OnError=Topic28
+2 OnScsiScan=Topic39
+2 OnStatus=OnStatus
+2 OnWritingProcess=OnWritingProcess
+1 About Vision Factory
+2 About Vision Factory=Topic3
+1 License Information
+2 License Information=Topic40

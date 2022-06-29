@@ -1,0 +1,5 @@
+	
+	Hey hows it going? This is the first thing ive submited to you even though i have a thousand thinks if made just to submit to your site because people need to learn how to program. This is an example I wrote to show how to use the proprtie let function in Visual basic. I think it is pretty useful. This particular example uses the propertie let example to add a timeout property to the form. It is very useful. It requires no bas file. And would work for any version of aol if used for aol. It was made In Microsoft Visual Basic 6.0. I hope this goes on your site.
+Contact:
+Email-Tonytwirp@hotmail.com
+Aim-Tmat989

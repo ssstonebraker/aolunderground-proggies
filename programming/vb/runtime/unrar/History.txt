@@ -1,0 +1,12 @@
+UnRAR VB BAS Module Revision History
+
+Version 1.01 (19/JUN/1999)
+
+	o Small bug fix (possible overflow problem)
+	o Zip archive now includes UnRAR.Dll
+
+Version 1.0 (16/APR/1999)
+
+	o First Release
+	o Optional password parameter on "RARExtract" function
+	o *Basic* error handling implemented

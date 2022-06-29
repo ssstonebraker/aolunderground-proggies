@@ -1,0 +1,114 @@
+[Root]
+Most Recent Package=Standard Setup Package 1
+Most Recent Deploy=Web Deployment 1
+
+[Deploy|Web Deployment 1|Root]
+Package=Standard Setup Package 1
+Handler=PDWizard.WebPostDplySubWiz
+
+[Deploy|Web Deployment 1|Package Files]
+C:\My Documents\asteroids\CAB\setup.exe=Yes
+C:\My Documents\asteroids\CAB\SETUP.LST=Yes
+C:\My Documents\asteroids\CAB\asteroids.CAB=Yes
+
+[Deploy|Web Deployment 1|Other Files and Folders]
+c:\my documents\asteroids\rockboom.wav=
+c:\my documents\asteroids\shipboom.wav=
+
+[Deploy|Web Deployment 1|WebPost Site]
+URL=ftp://jwilson:kerstin@eltlab.dalton.peachnet.edu/html/wilsonj/vb
+Provider={02B5E1D1-8B7C-11D0-AD45-00AA00A219AA}
+Explode=No
+
+[Package|Standard Setup Package 1|Root]
+SubWizProgID=PDWizard.SetupPkgSubWiz
+BuildFolder=C:\My Documents\asteroids\CAB
+
+[Package|Standard Setup Package 1|Configure DAO ISAMs]
+Applicable=No
+
+[Package|Standard Setup Package 1|Configure DAO ODBC]
+JetWorkspace=
+ODBCDirect=
+
+[Package|Standard Setup Package 1|Files Found]
+
+[Package|Standard Setup Package 1|Files Released]
+
+[Package|Standard Setup Package 1|Missing Dependency Information]
+
+[Package|Standard Setup Package 1|Out-of-Date Dependency Information]
+
+[Package|Standard Setup Package 1|Files Added]
+C:\My Documents\asteroids\rockboom.wav=
+C:\My Documents\asteroids\shipboom.wav=
+
+[Package|Standard Setup Package 1|Files Removed]
+
+[Package|Standard Setup Package 1|Files In Project]
+C:\My Documents\asteroids\asteroids.exe=Yes
+C:\WINDOWS\SYSTEM\MSVBVM60.DLL=Yes
+C:\WINDOWS\SYSTEM\OLEAUT32.DLL=Yes
+C:\WINDOWS\SYSTEM\OLEPRO32.DLL=Yes
+C:\WINDOWS\SYSTEM\ASYCFILT.DLL=Yes
+C:\WINDOWS\SYSTEM\STDOLE2.TLB=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP.EXE=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP1.EXE=Yes
+C:\WINDOWS\SYSTEM\VB6STKIT.DLL=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\ST6UNST.EXE=Yes
+C:\My Documents\asteroids\rockboom.wav=Yes
+C:\My Documents\asteroids\shipboom.wav=Yes
+
+[Package|Standard Setup Package 1|Configure Registry Files]
+Applicable=No
+
+[Package|Standard Setup Package 1|Configure Remote Servers]
+Applicable=No
+
+[Package|Standard Setup Package 1|Install Locations]
+C:\My Documents\asteroids\asteroids.exe=$(AppPath)
+C:\WINDOWS\SYSTEM\MSVBVM60.DLL=$(WinSysPathSysFile)
+C:\WINDOWS\SYSTEM\OLEAUT32.DLL=$(WinSysPathSysFile)
+C:\WINDOWS\SYSTEM\OLEPRO32.DLL=$(WinSysPathSysFile)
+C:\WINDOWS\SYSTEM\ASYCFILT.DLL=$(WinSysPathSysFile)
+C:\WINDOWS\SYSTEM\STDOLE2.TLB=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP.EXE=$(AppPath)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP1.EXE=$(WinPath)
+C:\WINDOWS\SYSTEM\VB6STKIT.DLL=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\ST6UNST.EXE=$(WinPath)
+C:\My Documents\asteroids\rockboom.wav=$(AppPath)
+C:\My Documents\asteroids\shipboom.wav=$(AppPath)
+
+[Package|Standard Setup Package 1|Configure Shared Files]
+Applicable=Yes
+C:\My Documents\asteroids\asteroids.exe=No
+C:\My Documents\asteroids\rockboom.wav=No
+C:\My Documents\asteroids\shipboom.wav=No
+
+[Package|Standard Setup Package 1|Distribution]
+Type=single
+Size=
+Title=aStErOiDs
+
+[Package|Standard Setup Package 1|Package]
+PackageFolder=C:\My Documents\asteroids\CAB
+ProjectFolder=C:\My Documents\asteroids
+ServerSideCab=
+File1=C:\My Documents\asteroids\CAB\setup.exe
+File2=C:\My Documents\asteroids\CAB\Setup.Lst
+File3=C:\My Documents\asteroids\CAB\asteroids.CAB
+Handler1=PDWizard.FolderDplySubWiz
+Handler2=PDWizard.WebPostDplySubWiz
+
+[Package|Standard Setup Package 1|IconGroups]
+Group0=aStErOiDs
+PrivateGroup0=True
+Parent0=$(Programs)
+
+[Package|Standard Setup Package 1|aStErOiDs]
+Icon1=asteroids.exe
+Title1=aStErOiDs
+StartIn1=$(AppPath)
+Key1=Icon1

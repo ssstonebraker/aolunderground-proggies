@@ -1,0 +1,3 @@
+PRINTFUN.FRM
+ProjWinSize=219,78,252,122
+ProjWinShow=2

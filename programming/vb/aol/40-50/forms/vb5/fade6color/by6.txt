@@ -1,0 +1,35 @@
+put this in the monkEFade bas  
+
+
+Function FadeByColor6(Colr1, Colr2, Colr3, Colr4, Colr5, Colr6, thetext$, Wavy As Boolean)
+
+dacolor1$ = RGBtoHEX(Colr1)
+dacolor2$ = RGBtoHEX(Colr2)
+dacolor3$ = RGBtoHEX(Colr3)
+dacolor4$ = RGBtoHEX(Colr4)
+dacolor5$ = RGBtoHEX(Colr5)
+dacolor6$ = RGBtoHEX(Colr6)
+
+rednum1% = Val("&H" + Right(dacolor1$, 2))
+greennum1% = Val("&H" + Mid(dacolor1$, 3, 2))
+bluenum1% = Val("&H" + Left(dacolor1$, 2))
+rednum2% = Val("&H" + Right(dacolor2$, 2))
+greennum2% = Val("&H" + Mid(dacolor2$, 3, 2))
+bluenum2% = Val("&H" + Left(dacolor2$, 2))
+rednum3% = Val("&H" + Right(dacolor3$, 2))
+greennum3% = Val("&H" + Mid(dacolor3$, 3, 2))
+bluenum3% = Val("&H" + Left(dacolor3$, 2))
+rednum4% = Val("&H" + Right(dacolor4$, 2))
+greennum4% = Val("&H" + Mid(dacolor4$, 3, 2))
+bluenum4% = Val("&H" + Left(dacolor4$, 2))
+rednum5% = Val("&H" + Right(dacolor5$, 2))
+greennum5% = Val("&H" + Mid(dacolor5$, 3, 2))
+bluenum5% = Val("&H" + Left(dacolor5$, 2))
+rednum6% = Val("&H" + Right(dacolor6$, 2))
+greennum6% = Val("&H" + Mid(dacolor6$, 3, 2))
+bluenum6% = Val("&H" + Left(dacolor6$, 2))
+
+FadeByColor6 = FadesixColor(rednum1%, greennum1%, bluenum1%, rednum2%, greennum2%, bluenum2%, rednum3%, greennum3%, bluenum3%, rednum4%, greennum4%, bluenum4%, rednum5%, greennum5%, bluenum5%, rednum6%, greennum6%, bluenum6%, thetext, Wavy)
+
+End Function
+

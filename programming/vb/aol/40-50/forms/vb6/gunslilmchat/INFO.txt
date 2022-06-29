@@ -1,0 +1,10 @@
+FILE INFO
+
+What it is: guns lil mchat example(M-Chat Example)
+Made by: gun
+.OCX/.BAS Files Used: DoS's AOL 4 Chat.OCX 2, and an edited DoS32.bas
+Other Info: This was made in Visual Basic 6.0, for AOL 4.0. It gets the
+room name + room count. Version 2 will contain more options and a list
+of the people currently in the chat room.
+
+-gun 

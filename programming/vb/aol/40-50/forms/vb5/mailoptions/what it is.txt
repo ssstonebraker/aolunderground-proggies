@@ -1,0 +1,8 @@
+sup everyone
+this is my first help file to help u people out
+it's very simple and doesn't require a .bas
+n if u can see what i do in the code u can add more options 
+to this form with simple api codes ranging from 1 to 6 lines of code
+don't u feel special?
+
+this was made in vb5  by=======THEMAN=========

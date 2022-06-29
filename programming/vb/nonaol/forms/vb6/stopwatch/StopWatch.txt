@@ -1,0 +1,16 @@
+Sup all,
+
+1. What it is:    Digital Stop Watch
+2. Made By:       NightShade    
+3. What bas used: StopWatch.bas (included)
+4. VB Version:    Visual Basic 6.0
+
+	This is a small example of how to make a digital stopwatch. 
+It's nothing special. But its worth adding the sub to your project 
+to save time.  
+
+ Questions or comments can be sent to me at NightMare_36@hotmail.com
+
+  
+                  
+                   NightShade   04/25/1999

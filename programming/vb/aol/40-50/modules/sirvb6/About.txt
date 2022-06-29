@@ -1,0 +1,15 @@
+Title:  SiRvb6.bas
+Version:  Public Release 1.00
+Compatible:  Most Compatible with vb6, but corrections are added so it will work with vb4 & 5
+AOL Version:  Aol 4.0
+AIM Version:  AIM 2+
+mIRC Version:  mIRC32 bit
+Tetrinet Version:  Tnet v1.13
+Total Subs/Functions:  144
+
+Sample Forms are included
+
+I'd appreciate it if you would put my bas up on your page, the main reason i made this was to help others learn, most of the code is commented on, giving instructions on what it is doing and how it works.  
+
+Thanks,
+SiR

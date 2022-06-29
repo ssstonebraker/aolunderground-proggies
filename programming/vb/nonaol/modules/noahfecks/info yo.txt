@@ -1,0 +1,11 @@
+noahfecks.bas
+-This .bas will hide your app from the Ctrl+Alt+Delete task list
+-Codes
+*To hide your app
+Call MakeMeService
+
+*To unhide your app (remeber to do this so it doesn't use up all system resources)
+Call UnMakeMeService
+
+That's it. Feel free to change whatever the hell you want. Just email a copy! latez!
+_noah fecks

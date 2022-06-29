@@ -1,0 +1,18 @@
+Release date 9-9-98
+
+Thank you for downloading the Voltron Kru's BAS PACK V.1
+These files were all written in VB5. Alot of work went 
+into these files. Most of  the VK's programs were made 
+using portions of these codes. Voltorn.bas is the core
+and is required to be included with any of the others.
+
+example: i want to use VK_AOL.bas 
+     (voltron.bas is needed to work VK_Aol.bas they both must 
+      be included in the program)
+
+if you have any problems please mail the voltron kru
+voltronkru@juno.com
+
+
+join or mailing list, or just stop by for updates or our other files
+www.voltronkru.com

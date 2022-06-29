@@ -1,0 +1,115 @@
+----------Visual Basic SuperBible, Second Edition Project Disk ------------
+
+
+This disk contains all of the source code for the Visual Basic SuperBible, 
+2nd Edition projects.  The actual forms and project files (.FRM, .FRX, .BAS,
+.MAK, etc.) are provided for each chapter project.
+
+COPYING FILES TO A HARD DISK
+
+You can copy these files onto your hard drive or just leave them on the disk. 
+If you want to copy them to your hard drive, make a directory to hold them
+all first:
+
+     md c:\vbsb2e
+
+Then insert the disk in the floppy drive and copy the project disk:
+
+     copy a:*.* c:\vbsb2e     - or -     copy b:*.* c:\vbsb2e
+
+The files have been saved as ASCII, so you can view or edit them with using 
+any text editor (such as the Notepad application in Windows.)
+
+IF YOU ENCOUNTER DIFFICULTIES
+
+*****************************  N O T E  **********************************
+
+           These projects REQUIRE Visual Basic 3.0 to run! 
+
+**************************************************************************
+
+If you don't have Visual Basic 3.0 yet, you'll find that many projects will 
+run with just the Visual Basic DLL (VBRUN300.DLL) which is widely available
+on almost any bulletin board. 
+
+Many projects REQUIRE other DLL's and VBX's that come with Visual Basic 3.0, 
+and you'll find these difficult or impossible to run if you don't already
+have the full package.
+
+Some of the projects are designed to work with other applications. For
+example, the project in Chapter 27 demonstrates the Access engine and 
+is designed to run with Microsoft Access. If you don't have the secondary 
+software, you may receive an error message when trying to use these programs. 
+Nonetheless, you should be able to open these projects and view the forms.
+
+Due to Visual Basic's use of hard-coded paths, some users might encounter
+linking related errors. If you get an error message, go into Visual Basic's 
+File menu. From there, select the Add File... option, point to the files in
+their new location, and double click. This re-links the files in their new
+positions. Remember to save the project after re-linking it.
+
+SPECIAL NOTES: CHAPTER 26 
+
+As a result of changes between late beta versions of Excel 5.0, some last
+minute additions to the chapter project became necessary after the book
+went to print. These additions are required in the "Assembling the Project:
+formInfo" section that begins on page 1062.
+
+The changes are provided here:
+
+i.  Addition to Table 26-43 (page 1063)
+
+    In addition to the information already provided in Table 26-43, add:
+
+    Control     Property     Value 
+    ------------------------------------------
+    Picture     Name         pictContainer
+    Picture     Name         pictInfo
+    VScroll     Name         scrl
+
+ii. Additional steps to "Assembling the Project: formInfo" (page 1062)
+    
+    Assembling the formInfo project requires two additional steps. In
+    addition to Steps 1 and 2 that already appear on page 1063, add:
+
+    3.   Type the following code into the Form_Load event. This sets up
+         the two picture boxes and the scroll bar.
+
+     Sub Form_Load ()
+
+         pictInfo.Left = 0
+         pictInfo.Top = 0
+         pictInfo.Width = pictContainer.ScaleWidth
+         pictInfo.Height = 3 * pictContainer.ScaleHeight
+         scrl.Min = 0
+         scrl.Max = pictInfo.Height
+         scrl.LargeChange = scrl.Max \ 20
+         scrl.SmallChange = scrl.Max \ 100
+
+     End Sub
+
+    4.   Type the following code into the scrl_Change event, which occurs
+         anytime the user scrolls the scroll bar. This moves pictInfo
+         inside of pictContainer.
+
+     Sub scrl_Change ()
+         
+         pictInfo.Top = -scrl.Value
+
+     End Sub
+
+These additions correspond to the latest version of the source code and
+is provide included on this Project Disk.
+
+This project was tested using the retail version of Winword 6.0 and
+a late-beta of Excel 5.0, and was found to work properly. As with any beta,
+however, changes to the release version of Excel 5.0 might create some
+problems for other programs (like CHP26.EXE !).
+
+You may find that OLE 2.0 can be VERY SLOW once you get a couple of big 
+applications like Winword and Excel in memory, and you start going through
+your system resources very quickly. Make sure that you close most other 
+applications before trying this project, or you may get "out of memory"
+errors.
+
+ - Bill Potter, January 1994

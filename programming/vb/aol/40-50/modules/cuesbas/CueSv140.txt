@@ -1,0 +1,37 @@
+Yo this Is ÇùéS and thanks fo going to Knk's site to get my bas file.
+
+With this bas file you can learn how to do the basics of programming.  It is so easy that even i can make stuff with it!!!
+
+O well heres some codes that you can make stuff with it
+
+•Get Member Profile  
+ Call Aol40_GetMemberProfile
+
+•Locate a Member
+Call Aol40_LocateMember
+
+•Open MailBox(New)
+Call Aol40_OpenMail
+
+•Write Mail
+Call Aol40_WriteMail
+
+•Change AOL's Caption
+Call AOLChangeCaption ("New Caption here")
+
+•Turn Instant Messages Off
+Call IM_Off
+
+•Turn Instant Messages On
+Call IM_On
+
+•Mass Instant Message
+Call MassIM
+
+•Kill Welcome
+Call KillWelcome
+
+•Sign Off
+Call SignOff
+
+As You can see this is the easist Bas file ever so learn from it ok!!!!

@@ -1,0 +1,442 @@
+[Root]
+Most Recent Package=Standard Setup Package 3
+
+
+[Package|Standard Setup Package 1|Vegas Video Keno]
+Icon1=VVKeno.exe
+Title1=Vegas Video Keno
+StartIn1=$(AppPath)
+Key1=Icon1
+
+[Package|Standard Setup Package 1|Root]
+SubWizProgID=PDWizard.SetupPkgSubWiz
+BuildFolder=l:\distributiondisks
+
+[Package|Standard Setup Package 1|Configure DAO ISAMs]
+Applicable=No
+
+[Package|Standard Setup Package 1|Configure DAO ODBC]
+JetWorkspace=
+ODBCDirect=
+
+[Package|Standard Setup Package 1|Files Found]
+check.wav=N:\Final Keno\Compiled Betas\check.wav
+deal.wav=N:\Final Keno\Compiled Betas\deal.wav
+hit.wav=N:\Final Keno\Compiled Betas\hit.wav
+money.wav=N:\Final Keno\Compiled Betas\money.wav
+open.wav=N:\Final Keno\Compiled Betas\open.wav
+
+[Package|Standard Setup Package 1|Files Released]
+
+[Package|Standard Setup Package 1|Missing Dependency Information]
+
+[Package|Standard Setup Package 1|Out-of-Date Dependency Information]
+
+[Package|Standard Setup Package 1|Files Added]
+check.wav=
+deal.wav=
+hit.wav=
+money.wav=
+open.wav=
+
+[Package|Standard Setup Package 1|Files Removed]
+
+[Package|Standard Setup Package 1|Files In Project]
+N:\Final Keno\Compiled Betas\VVKeno.exe=Yes
+F:\WINNT\system32\MSVBVM60.DLL=Yes
+F:\WINNT\system32\OLEAUT32.DLL=Yes
+F:\WINNT\system32\OLEPRO32.DLL=Yes
+F:\WINNT\system32\ASYCFILT.DLL=Yes
+F:\WINNT\system32\STDOLE2.TLB=Yes
+F:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=Yes
+F:\WINNT\system32\COMDLG32.OCX=Yes
+F:\WINNT\system32\MSCOMCTL.OCX=Yes
+F:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP.EXE=Yes
+F:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP1.EXE=Yes
+F:\WINNT\system32\VB6STKIT.DLL=Yes
+F:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\ST6UNST.EXE=Yes
+N:\Final Keno\Compiled Betas\check.wav=Yes
+N:\Final Keno\Compiled Betas\deal.wav=Yes
+N:\Final Keno\Compiled Betas\hit.wav=Yes
+N:\Final Keno\Compiled Betas\money.wav=Yes
+N:\Final Keno\Compiled Betas\open.wav=Yes
+
+[Package|Standard Setup Package 1|Configure Registry Files]
+Applicable=No
+
+[Package|Standard Setup Package 1|Configure Remote Servers]
+Applicable=No
+
+[Package|Standard Setup Package 1|Install Locations]
+N:\Final Keno\Compiled Betas\VVKeno.exe=$(AppPath)
+F:\WINNT\system32\MSVBVM60.DLL=$(WinSysPathSysFile)
+F:\WINNT\system32\OLEAUT32.DLL=$(WinSysPathSysFile)
+F:\WINNT\system32\OLEPRO32.DLL=$(WinSysPathSysFile)
+F:\WINNT\system32\ASYCFILT.DLL=$(WinSysPathSysFile)
+F:\WINNT\system32\STDOLE2.TLB=$(WinSysPathSysFile)
+F:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=$(WinSysPathSysFile)
+F:\WINNT\system32\COMDLG32.OCX=$(WinSysPath)
+F:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP.EXE=$(AppPath)
+F:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP1.EXE=$(WinPath)
+F:\WINNT\system32\VB6STKIT.DLL=$(WinSysPathSysFile)
+F:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\ST6UNST.EXE=$(WinPath)
+N:\Final Keno\Compiled Betas\check.wav=$(AppPath)
+N:\Final Keno\Compiled Betas\deal.wav=$(AppPath)
+N:\Final Keno\Compiled Betas\hit.wav=$(AppPath)
+N:\Final Keno\Compiled Betas\money.wav=$(AppPath)
+N:\Final Keno\Compiled Betas\open.wav=$(AppPath)
+F:\WINNT\system32\MSCOMCTL.OCX=$(WinSysPath)
+M:\Final Keno\Compiled Betas\VVKeno.exe=$(AppPath)
+D:\WINDOWS\SYSTEM\MSVBVM60.DLL=$(WinSysPathSysFile)
+D:\WINDOWS\SYSTEM\OLEAUT32.DLL=$(WinSysPathSysFile)
+D:\WINDOWS\SYSTEM\OLEPRO32.DLL=$(WinSysPathSysFile)
+D:\WINDOWS\SYSTEM\ASYCFILT.DLL=$(WinSysPathSysFile)
+D:\WINDOWS\SYSTEM\STDOLE2.TLB=$(WinSysPathSysFile)
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=$(WinSysPathSysFile)
+D:\WINDOWS\SYSTEM\COMDLG32.OCX=$(WinSysPath)
+D:\WINDOWS\SYSTEM\MSCOMCTL.OCX=$(WinSysPath)
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP.EXE=$(AppPath)
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP1.EXE=$(WinPath)
+D:\WINDOWS\SYSTEM\VB6STKIT.DLL=$(WinSysPathSysFile)
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\ST6UNST.EXE=$(WinPath)
+M:\Final Keno\Compiled Betas\check.wav=$(AppPath)
+M:\Final Keno\Compiled Betas\deal.wav=$(AppPath)
+M:\Final Keno\Compiled Betas\hit.wav=$(AppPath)
+M:\Final Keno\Compiled Betas\money.wav=$(AppPath)
+M:\Final Keno\Compiled Betas\open.wav=$(AppPath)
+
+[Package|Standard Setup Package 1|Configure Shared Files]
+Applicable=Yes
+N:\Final Keno\Compiled Betas\VVKeno.exe=No
+N:\Final Keno\Compiled Betas\check.wav=No
+N:\Final Keno\Compiled Betas\deal.wav=No
+N:\Final Keno\Compiled Betas\hit.wav=No
+N:\Final Keno\Compiled Betas\money.wav=No
+N:\Final Keno\Compiled Betas\open.wav=No
+M:\Final Keno\Compiled Betas\VVKeno.exe=No
+M:\Final Keno\Compiled Betas\check.wav=No
+M:\Final Keno\Compiled Betas\deal.wav=No
+M:\Final Keno\Compiled Betas\hit.wav=No
+M:\Final Keno\Compiled Betas\money.wav=No
+M:\Final Keno\Compiled Betas\open.wav=No
+
+[Package|Standard Setup Package 1|Distribution]
+Type=multi
+Size=1.44 MB
+Title=Vegas Video Keno
+
+[Package|Standard Setup Package 1|Package]
+PackageFolder=l:\distributiondisks
+ProjectFolder=N:\Final Keno
+ServerSideCab=
+File1=l:\distributiondisks\setup.exe
+File2=l:\distributiondisks\Setup.Lst
+File3=l:\distributiondisks\VVKeno1.CAB
+File4=l:\distributiondisks\VVKeno2.CAB
+Handler1=PDWizard.FloppyDplySubWiz
+Handler2=PDWizard.FolderDplySubWiz
+Handler3=PDWizard.WebPostDplySubWiz
+
+[Package|Standard Setup Package 1|IconGroups]
+Group0=Mike Rules
+PrivateGroup0=True
+Parent0=$(Programs)
+
+[Package|Standard Setup Package 1|Mike Rules]
+Icon1=VVKeno.exe
+Title1=Vegas Video Keno
+StartIn1=$(AppPath)
+Key1=Icon1
+
+
+[Package|Standard Setup Package 2|Vegas Video Keno]
+Icon1=VVKeno.exe
+Title1=Vegas Video Keno
+StartIn1=$(AppPath)
+Key1=Icon1
+
+[Package|Standard Setup Package 2|Root]
+SubWizProgID=PDWizard.SetupPkgSubWiz
+BuildFolder=h:\distributions
+
+[Package|Standard Setup Package 2|Configure DAO ISAMs]
+Applicable=No
+
+[Package|Standard Setup Package 2|Configure DAO ODBC]
+JetWorkspace=
+ODBCDirect=
+
+[Package|Standard Setup Package 2|Files Found]
+CHECK.WAV=G:\Final Keno\Compiled Betas\CHECK.WAV
+
+[Package|Standard Setup Package 2|Files Released]
+
+[Package|Standard Setup Package 2|Missing Dependency Information]
+
+[Package|Standard Setup Package 2|Out-of-Date Dependency Information]
+
+[Package|Standard Setup Package 2|Files Added]
+check.wav=
+deal.wav=
+hit.wav=
+money.wav=
+open.wav=
+
+[Package|Standard Setup Package 2|Files Removed]
+
+[Package|Standard Setup Package 2|Files In Project]
+D:\WINDOWS\SYSTEM\MSVBVM60.DLL=Yes
+D:\WINDOWS\SYSTEM\OLEAUT32.DLL=Yes
+D:\WINDOWS\SYSTEM\OLEPRO32.DLL=Yes
+D:\WINDOWS\SYSTEM\ASYCFILT.DLL=Yes
+D:\WINDOWS\SYSTEM\STDOLE2.TLB=Yes
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=Yes
+D:\WINDOWS\SYSTEM\COMDLG32.OCX=Yes
+D:\WINDOWS\SYSTEM\MSCOMCTL.OCX=Yes
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP.EXE=Yes
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP1.EXE=Yes
+D:\WINDOWS\SYSTEM\VB6STKIT.DLL=Yes
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\ST6UNST.EXE=Yes
+G:\Final Keno\Compiled Betas\VVKeno.exe=Yes
+G:\Final Keno\Compiled Betas\CHECK.WAV=Yes
+G:\Final Keno\Compiled Betas\DEAL.WAV=Yes
+G:\Final Keno\Compiled Betas\HIT.WAV=Yes
+G:\Final Keno\Compiled Betas\money.wav=Yes
+G:\Final Keno\Compiled Betas\open.wav=Yes
+
+[Package|Standard Setup Package 2|Configure Registry Files]
+Applicable=No
+
+[Package|Standard Setup Package 2|Configure Remote Servers]
+Applicable=No
+
+[Package|Standard Setup Package 2|Install Locations]
+M:\Final Keno\Compiled Betas\VVKeno.exe=$(AppPath)
+D:\WINDOWS\SYSTEM\MSVBVM60.DLL=$(WinSysPathSysFile)
+D:\WINDOWS\SYSTEM\OLEAUT32.DLL=$(WinSysPathSysFile)
+D:\WINDOWS\SYSTEM\OLEPRO32.DLL=$(WinSysPathSysFile)
+D:\WINDOWS\SYSTEM\ASYCFILT.DLL=$(WinSysPathSysFile)
+D:\WINDOWS\SYSTEM\STDOLE2.TLB=$(WinSysPathSysFile)
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=$(WinSysPathSysFile)
+D:\WINDOWS\SYSTEM\COMDLG32.OCX=$(WinSysPath)
+D:\WINDOWS\SYSTEM\MSCOMCTL.OCX=$(WinSysPath)
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP.EXE=$(AppPath)
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP1.EXE=$(WinPath)
+D:\WINDOWS\SYSTEM\VB6STKIT.DLL=$(WinSysPathSysFile)
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\ST6UNST.EXE=$(WinPath)
+M:\Final Keno\Compiled Betas\check.wav=$(AppPath)
+M:\Final Keno\Compiled Betas\deal.wav=$(AppPath)
+M:\Final Keno\Compiled Betas\hit.wav=$(AppPath)
+M:\Final Keno\Compiled Betas\money.wav=$(AppPath)
+M:\Final Keno\Compiled Betas\open.wav=$(AppPath)
+N:\Final Keno\Compiled Betas\VVKeno.exe=$(AppPath)
+F:\WINNT\system32\MSVBVM60.DLL=$(WinSysPathSysFile)
+F:\WINNT\system32\OLEAUT32.DLL=$(WinSysPathSysFile)
+F:\WINNT\system32\OLEPRO32.DLL=$(WinSysPathSysFile)
+F:\WINNT\system32\ASYCFILT.DLL=$(WinSysPathSysFile)
+F:\WINNT\system32\STDOLE2.TLB=$(WinSysPathSysFile)
+F:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=$(WinSysPathSysFile)
+F:\WINNT\system32\COMDLG32.OCX=$(WinSysPath)
+F:\WINNT\system32\MSCOMCTL.OCX=$(WinSysPath)
+F:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP.EXE=$(AppPath)
+F:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP1.EXE=$(WinPath)
+F:\WINNT\system32\VB6STKIT.DLL=$(WinSysPathSysFile)
+F:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\ST6UNST.EXE=$(WinPath)
+N:\Final Keno\Compiled Betas\check.wav=$(AppPath)
+N:\Final Keno\Compiled Betas\deal.wav=$(AppPath)
+N:\Final Keno\Compiled Betas\hit.wav=$(AppPath)
+N:\Final Keno\Compiled Betas\money.wav=$(AppPath)
+N:\Final Keno\Compiled Betas\open.wav=$(AppPath)
+G:\Final Keno\Compiled Betas\VVKeno.exe=$(AppPath)
+G:\Final Keno\Compiled Betas\CHECK.WAV=$(AppPath)
+G:\Final Keno\Compiled Betas\DEAL.WAV=$(AppPath)
+G:\Final Keno\Compiled Betas\HIT.WAV=$(AppPath)
+G:\Final Keno\Compiled Betas\money.wav=$(AppPath)
+G:\Final Keno\Compiled Betas\open.wav=$(AppPath)
+
+[Package|Standard Setup Package 2|Configure Shared Files]
+Applicable=Yes
+M:\Final Keno\Compiled Betas\VVKeno.exe=No
+M:\Final Keno\Compiled Betas\check.wav=No
+M:\Final Keno\Compiled Betas\deal.wav=No
+M:\Final Keno\Compiled Betas\hit.wav=No
+M:\Final Keno\Compiled Betas\money.wav=No
+M:\Final Keno\Compiled Betas\open.wav=No
+N:\Final Keno\Compiled Betas\VVKeno.exe=No
+N:\Final Keno\Compiled Betas\check.wav=No
+N:\Final Keno\Compiled Betas\deal.wav=No
+N:\Final Keno\Compiled Betas\hit.wav=No
+N:\Final Keno\Compiled Betas\money.wav=No
+N:\Final Keno\Compiled Betas\open.wav=No
+G:\Final Keno\Compiled Betas\VVKeno.exe=No
+G:\Final Keno\Compiled Betas\CHECK.WAV=No
+G:\Final Keno\Compiled Betas\DEAL.WAV=No
+G:\Final Keno\Compiled Betas\HIT.WAV=No
+G:\Final Keno\Compiled Betas\money.wav=No
+G:\Final Keno\Compiled Betas\open.wav=No
+
+[Package|Standard Setup Package 2|Distribution]
+Type=single
+Size=1.2 MB
+Title=Vegas Video Keno
+
+[Package|Standard Setup Package 2|Package]
+PackageFolder=k:\distributiondisks
+ProjectFolder=M:\Final Keno
+ServerSideCab=
+File1=k:\distributiondisks\setup.exe
+File2=k:\distributiondisks\Setup.Lst
+File3=k:\distributiondisks\VVKeno.CAB
+Handler1=PDWizard.FolderDplySubWiz
+Handler2=PDWizard.WebPostDplySubWiz
+
+[Package|Standard Setup Package 2|IconGroups]
+Group0=Keno
+PrivateGroup0=True
+Parent0=$(Programs)
+
+[Package|Standard Setup Package 2|Keno]
+Icon1=VVKeno.exe
+Title1=Vegas Video Keno
+StartIn1=$(AppPath)
+Key1=Icon1
+
+
+[Package|Standard Setup Package 3|Root]
+SubWizProgID=PDWizard.SetupPkgSubWiz
+BuildFolder=f:\todistribute
+
+[Package|Standard Setup Package 3|Configure DAO ISAMs]
+Applicable=No
+
+[Package|Standard Setup Package 3|Configure DAO ODBC]
+JetWorkspace=
+ODBCDirect=
+
+[Package|Standard Setup Package 3|Files Found]
+check.wav=G:\Final Keno\Compiled Betas\check.wav
+deal.wav=G:\Final Keno\Compiled Betas\deal.wav
+hit.wav=G:\Final Keno\Compiled Betas\hit.wav
+money.wav=G:\Final Keno\Compiled Betas\money.wav
+
+[Package|Standard Setup Package 3|Files Released]
+
+[Package|Standard Setup Package 3|Missing Dependency Information]
+
+[Package|Standard Setup Package 3|Out-of-Date Dependency Information]
+
+[Package|Standard Setup Package 3|Files Added]
+check.wav=
+deal.wav=
+hit.wav=
+money.wav=
+open.wav=
+
+[Package|Standard Setup Package 3|Files Removed]
+
+[Package|Standard Setup Package 3|Files In Project]
+G:\Final Keno\Compiled Betas\VVKeno.exe=Yes
+D:\WINDOWS\SYSTEM\MSVBVM60.DLL=Yes
+D:\WINDOWS\SYSTEM\OLEAUT32.DLL=Yes
+D:\WINDOWS\SYSTEM\OLEPRO32.DLL=Yes
+D:\WINDOWS\SYSTEM\ASYCFILT.DLL=Yes
+D:\WINDOWS\SYSTEM\STDOLE2.TLB=Yes
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=Yes
+D:\WINDOWS\SYSTEM\COMDLG32.OCX=Yes
+D:\WINDOWS\SYSTEM\MSCOMCTL.OCX=Yes
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP.EXE=Yes
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP1.EXE=Yes
+D:\WINDOWS\SYSTEM\VB6STKIT.DLL=Yes
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\ST6UNST.EXE=Yes
+G:\Final Keno\Compiled Betas\check.wav=Yes
+G:\Final Keno\Compiled Betas\deal.wav=Yes
+G:\Final Keno\Compiled Betas\hit.wav=Yes
+G:\Final Keno\Compiled Betas\money.wav=Yes
+G:\Final Keno\Compiled Betas\open.wav=Yes
+
+[Package|Standard Setup Package 3|Configure Registry Files]
+Applicable=No
+
+[Package|Standard Setup Package 3|Configure Remote Servers]
+Applicable=No
+
+[Package|Standard Setup Package 3|Install Locations]
+G:\Final Keno\Compiled Betas\VVKeno.exe=$(AppPath)
+D:\WINDOWS\SYSTEM\MSVBVM60.DLL=$(WinSysPathSysFile)
+D:\WINDOWS\SYSTEM\OLEAUT32.DLL=$(WinSysPathSysFile)
+D:\WINDOWS\SYSTEM\OLEPRO32.DLL=$(WinSysPathSysFile)
+D:\WINDOWS\SYSTEM\ASYCFILT.DLL=$(WinSysPathSysFile)
+D:\WINDOWS\SYSTEM\STDOLE2.TLB=$(WinSysPathSysFile)
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=$(WinSysPathSysFile)
+D:\WINDOWS\SYSTEM\COMDLG32.OCX=$(WinSysPath)
+D:\WINDOWS\SYSTEM\MSCOMCTL.OCX=$(WinSysPath)
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP.EXE=$(AppPath)
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP1.EXE=$(WinPath)
+D:\WINDOWS\SYSTEM\VB6STKIT.DLL=$(WinSysPathSysFile)
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\ST6UNST.EXE=$(WinPath)
+G:\Final Keno\Compiled Betas\CHECK.WAV=$(AppPath)
+G:\Final Keno\Compiled Betas\DEAL.WAV=$(AppPath)
+G:\Final Keno\Compiled Betas\HIT.WAV=$(AppPath)
+G:\Final Keno\Compiled Betas\money.wav=$(AppPath)
+G:\Final Keno\Compiled Betas\open.wav=$(AppPath)
+F:\Final Keno\Compiled Betas\VVKeno.exe=$(AppPath)
+E:\WINNT\system32\MSVBVM60.DLL=$(WinSysPathSysFile)
+E:\WINNT\system32\OLEAUT32.DLL=$(WinSysPathSysFile)
+E:\WINNT\system32\OLEPRO32.DLL=$(WinSysPathSysFile)
+E:\WINNT\system32\ASYCFILT.DLL=$(WinSysPathSysFile)
+E:\WINNT\system32\STDOLE2.TLB=$(WinSysPathSysFile)
+E:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=$(WinSysPathSysFile)
+E:\WINNT\system32\COMDLG32.OCX=$(WinSysPath)
+E:\WINNT\system32\MSCOMCTL.OCX=$(WinSysPath)
+E:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP.EXE=$(AppPath)
+E:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP1.EXE=$(WinPath)
+E:\WINNT\system32\VB6STKIT.DLL=$(WinSysPathSysFile)
+E:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\ST6UNST.EXE=$(WinPath)
+F:\Final Keno\Compiled Betas\check.wav=$(AppPath)
+F:\Final Keno\Compiled Betas\deal.wav=$(AppPath)
+F:\Final Keno\Compiled Betas\hit.wav=$(AppPath)
+F:\Final Keno\Compiled Betas\money.wav=$(AppPath)
+F:\Final Keno\Compiled Betas\open.wav=$(AppPath)
+
+[Package|Standard Setup Package 3|Configure Shared Files]
+Applicable=Yes
+G:\Final Keno\Compiled Betas\VVKeno.exe=No
+G:\Final Keno\Compiled Betas\CHECK.WAV=No
+G:\Final Keno\Compiled Betas\DEAL.WAV=No
+G:\Final Keno\Compiled Betas\HIT.WAV=No
+G:\Final Keno\Compiled Betas\money.wav=No
+G:\Final Keno\Compiled Betas\open.wav=No
+F:\Final Keno\Compiled Betas\VVKeno.exe=No
+F:\Final Keno\Compiled Betas\check.wav=No
+F:\Final Keno\Compiled Betas\deal.wav=No
+F:\Final Keno\Compiled Betas\hit.wav=No
+F:\Final Keno\Compiled Betas\money.wav=No
+F:\Final Keno\Compiled Betas\open.wav=No
+
+[Package|Standard Setup Package 3|Distribution]
+Type=multi
+Size=1.2 MB
+Title=Vegas Video Keno
+
+[Package|Standard Setup Package 3|IconGroups]
+Group0=Keno
+PrivateGroup0=True
+Parent0=$(Programs)
+
+[Package|Standard Setup Package 3|Keno]
+Icon1=VVKeno.exe
+Title1=Vegas Video Keno
+StartIn1=$(AppPath)
+Key1=Icon1
+
+[Package|Standard Setup Package 3|Package]
+PackageFolder=f:\todistribute
+ProjectFolder=G:\Final Keno
+ServerSideCab=
+File1=f:\todistribute\setup.exe
+File2=f:\todistribute\Setup.Lst
+File3=f:\todistribute\VVKeno1.CAB
+File4=f:\todistribute\VVKeno2.CAB
+Handler1=PDWizard.FloppyDplySubWiz
+Handler2=PDWizard.FolderDplySubWiz
+Handler3=PDWizard.WebPostDplySubWiz

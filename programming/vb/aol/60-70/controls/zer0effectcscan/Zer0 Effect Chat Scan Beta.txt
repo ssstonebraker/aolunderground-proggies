@@ -1,0 +1,22 @@
+Thank you for Downloading my Chatscan-
+
+[Features]-
+The Chatscan is in beta, so it only has the SN and MSG from last chat
+line, i will be adding subs to the chatscan for aol 7.0 like send chat, 
+instant message, enterpr, and others if you would like a specific code
+added e-mail me and i may add it...
+
+[Known Issues]-
+-It may skip a line every once in a while, doesn't happen often though
+-If the chatscan is minimized it will not scan the room
+-same if vice versa
+-that msg may pick up Link 1 of 1 at the end of the line-kinda rare
+-Link 1 of 1 changes to Link 1 of 2 and up if you are going to download
+and test this maybe someone may beable to shed some light on me. i have
+checked my codeing and cannont figure out why it picks up this string
+furthermore why this strings changes, if you can help me out with this 
+please do...
+
+
+[E-Mail]-
+Shaggyze@aol.com

@@ -1,0 +1,34 @@
+Free Fade Module by S5o
+S5o@hotmail.com
+
+VB16/VB32
+Fades a form, between any 2 user defined RGB Colors.
+
+Important:
+To use this module, true RGB colors will not operate, The user must use the `FadeColor' custom type.
+
+Note:
+1] The `vFreeFade' sub fades the color from top to bottom, while `hFreeFade' fades the form left to right.
+2] This module was completely coded in 2 hours, and you may find some situations that may cause irregular      fades (Which has not occured thus far).
+
+
+'Example:
+'----------------------------------------------------------------
+Private Sub Form_Load ()
+'This code fades the from from Cyan to blue
+
+Dim sColor as FadeColor
+Dim eColor as FadeColor
+
+'Define the first color
+sColor.Blue=255
+sColor.Green=255
+
+'Define the second color
+eColor.Blue=255
+
+'Call the vertical form fade
+Call vFreeFade (Me, sColor, eColor)
+
+End Sub
+'---------------------------------------------------------------

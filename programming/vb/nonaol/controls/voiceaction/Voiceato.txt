@@ -1,0 +1,83 @@
+VoiceAction Setup
+
+Unzip VoiceAction.zip
+....Unzip VAOcx
+............Run Setup
+....Unzip Help...Start with Help.htm whereever you want
+....Unzip VAexpl...whereever you want.
+
+Open VB5.0 + prepare VoiceAction.exe and use it forever.
+
+If you don not have vb run time please download them from 
+this URL:  http://www.simtel.net/simtel.net/win95/dll.html
+
+Learn using VB  to prepare programs for the control. 
+_____________________________________________________________________
+
+Application name : VoiceAction
+Version : 1.2.237
+Release Date :  1/28/99
+
+Platform : Windows 95/98
+32 Bit Application ActiveX Control
+Price : 80 US$
+Payment : See Order.txt
+Registration Status : Shareware
+Evaluation Period : 15 days
+VoiceAction Customer Support Site : http://www.research-lab.com
+Download URL1 : http://www.research-lab.com/VoiceAction.zip
+Download URL2 : http://www.research-lab.com/download.htm#item1
+Screenshot Location :  http://www.research-lab.com/Capshot.gif
+Icon Location :  http://www.research-lab.com/Vaicon.gif
+
+Company name : United Research Labs
+Contact name : Sandeep Thite
+Contact e-mail : urlabs@pn2.vsnl.net.in
+Contact phone : 9120352335
+Contact fax : 9120355044
+Customer support site : www.research-lab.com
+
+Short Description : 
+
+VoiceAction is Speech Recognition ActiveX Custom Control
+which provides a ready made kit for programmers who want
+to develop or add to their current developments 
+speech recognition capabilities. It features Wave To Text,
+Vocabulary and Language Artificial Intelligence design too.
+
+Long Description:
+
+VoiceAction is a  innovation. 
+We have truly opened up speech recognition for the first time on earth.(?) 
+Read further.
+VoiceAction does not use or currently support  microsoft-sapi's or
+ any other company's architecture, instead it makes user build 
+his own basic vocabulary database through easy to use interface
+and this feature enables him to design his own  Artificial Intelligence 
+language database  of words (also through a friendly interface).
+
+All this gives the programmer a  absolutely complete reach
+over all the speech required operations. 
+
+The programmer can hence monitor his program design to
+ disable substitutions and increase accuracy.
+
+We have a ready made 'Windows Multimedia Speech User
+ Interface Setup' too. VoiceAction does everything from
+ recording, to the construction of final word. With VoiceAction
+ one can prepare a speech program in minutes. 
+ See the examples prepared in Visual Basic 5.0.
+
+
+
+
+
+
+
+
+
+
+
+
+
+

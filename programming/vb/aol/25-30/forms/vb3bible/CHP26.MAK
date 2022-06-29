@@ -1,0 +1,8 @@
+CHP26A.FRM
+C:\WINDOWS\SYSTEM\MSOLE2.VBX
+CHP26B.FRM
+ProjWinSize=170,617,248,215
+ProjWinShow=2
+IconForm="formMain"
+Title="Chp 26"
+ExeName="CHP26.EXE"

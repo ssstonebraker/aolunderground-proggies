@@ -1,0 +1,3 @@
+COMBO.FRM
+ProjWinSize=110,747,248,215
+ProjWinShow=2

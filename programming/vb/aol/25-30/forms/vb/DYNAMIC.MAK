@@ -1,0 +1,5 @@
+DYNAMIC.FRM
+C:\WINDOWS\SYSTEM\CMDIALOG.VBX
+ProjWinSize=334,557,248,215
+ProjWinShow=2
+IconForm="frmDynamic"

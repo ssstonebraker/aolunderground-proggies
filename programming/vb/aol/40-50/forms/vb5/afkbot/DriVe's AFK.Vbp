@@ -1,0 +1,17 @@
+Form=..\INHAFK~1\INHAFK.FRM
+Module=dos32; dos32.bas
+Module=HaR02; HAR02.bas
+Module=Ravage; RAVAGE.bas
+ProjWinSize=139,544,252,307
+ProjWinShow=2
+IconForm="Form1"
+Name="Project1"
+HelpContextID="0"
+StartMode=0
+VersionCompatible32="0"
+MajorVer=1
+MinorVer=0
+RevisionVer=0
+AutoIncrementVer=0
+ServerSupportFiles=0
+VersionCompanyName="self"

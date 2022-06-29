@@ -1,0 +1,9 @@
+This is an OCX file for VB4, 5, and 6 that works as a caption bar. U just put it on the form, and you can put an image on it, if you want, and at runtime, you can drag the form by dragging the object. Works really good, and no code necessary!
+
+This .ocx was made by Minx
+
+No ocx's used to make this, and no .bas files
+
+Made on Visual Basic 5.0
+
+You can use this ocx for things like, when you have a borderless form, and you don't know how to make it move when you drag an image, or a label, or whatever. This does that. All you do is put it on the form, and that's it! At runtime, you can move the form by dragging the object!

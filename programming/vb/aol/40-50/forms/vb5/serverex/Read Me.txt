@@ -1,0 +1,15 @@
+VoiD Server Example by Accesszero
+
+This is a general example of making a server.
+
+I did NOT Do this so people can steal it and flood AOL with Servers,
+I did this in the hopes that people will attempt to learn from it and
+to test out the "6 Line" theory.
+
+If you have any comments write them in my guestbook or my web board,
+at http://www.members.tripod.com/~access_vb/
+
+L8er,
+-Accesszero
+[Accesszero@juno.com]
+[http://www.members.tripod.com/~access_vb/]

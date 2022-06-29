@@ -1,0 +1,15 @@
+© 1999 Crystal Dawn - Naïve
+----------------------------
+
+This project shows how to get 
+individual lines of a text 
+box. It also counts the lines.
+
+----------------------------
+
+Coded in VB5 By Naïve
+Email: kaolnaive@hotmail.com
+
+-----------------------------
+
+Give credit where due!

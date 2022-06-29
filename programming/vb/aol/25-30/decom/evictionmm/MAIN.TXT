@@ -1,0 +1,30 @@
+' main.txt - global definitions
+Type T0946
+  M0952 As Integer
+  M0957 As Integer
+End Type
+
+Type T095C
+  M0965 As Integer
+  M096D As Integer
+  M0974 As Integer
+  M097D As Integer
+End Type
+
+Global Const gc005E = 258 ' &H102%
+Global Const gc0060 = 273 ' &H111%
+Global Const gc0062 = 13 ' &HD%
+Global Const gc0064 = 513 ' &H201%
+Global Const gc0066 = 514 ' &H202%
+Global Const gc0068 = 12 ' &HC%
+Global Const gc006E = 16 ' &H10%
+Global Const gc0070 = 14 ' &HE%
+Global Const gc0074 = 1025 ' &H401%
+Global Const gc0076 = 1036 ' &H40C%
+Global Const gc0084 = 2 ' &H2%
+Global Const gc009A = 1 ' &H1%
+Global gv00B0 As Integer
+Global Const gc00B2 = 5 ' &H5%
+Global Const gc00B8 = 1024 ' &H400%
+Global gv00CC As Integer
+Global gv00E2 As Integer

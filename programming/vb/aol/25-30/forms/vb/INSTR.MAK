@@ -1,0 +1,3 @@
+INSTR.FRM
+ProjWinSize=142,114,248,215
+ProjWinShow=2

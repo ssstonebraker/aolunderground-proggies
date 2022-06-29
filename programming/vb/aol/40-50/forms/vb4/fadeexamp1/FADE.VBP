@@ -1,0 +1,15 @@
+Form=..\..\micros~1\specia~1\fade3col.frm
+Module=MonkEFade; ..\Monkefad.bas
+ProjWinSize=70,604,196,128
+ProjWinShow=2
+IconForm="Form2"
+Name="Project1"
+HelpContextID="0"
+StartMode=0
+VersionCompatible32="0"
+MajorVer=1
+MinorVer=0
+RevisionVer=0
+AutoIncrementVer=0
+ServerSupportFiles=0
+VersionCompanyName="Programming"

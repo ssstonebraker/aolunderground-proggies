@@ -1,0 +1,37 @@
+		System Tray ActiveX Control 
+			   With
+	   ActiveX System Tray Control Demo
+
+
+LEGAL NOTICE:
+The System Tray ActiveX Control is FREEWARE. It may be distributed freely as long as its original source is noted, is not modified in any way, and is not sold for a profit. I make no claims on this program's functionality or abilities. The demonstration program included should also be treated in the same manner as the System Tray control.
+
+ABOUT:
+This control was made by Nathan Blecharczyk. Its purpose is to display an icon on the system tray (the area in the bottom, right hand corner of the screen on Windows 95). If you have any question, comments, suggestions, or are interested in the source code for this program please e-mail me at b_nathan@juno.com.
+
+INSTRUCTIONS:
+To use the system Tray control you must first copy systray.ocx to your Windows system directory. Then, from Visual Basic right click on the toolbox and select "Components." Now click browse and locate and scroll down until you see systray.ocx. Now you can use the control in your project.
+
+INFORMATION ON USE:
+Action - Performs an operation according to the passed value.
+Error - Event that occurs after an error has taken place.
+Icon - Icon to display in system tray. Can be a numeric value or path and file name.
+IconAdded - Event that occurs after an icon has been added to system tray.
+IconDeleted - Event that occurs after an icon has been modified on system tray.
+IconModified - Event that occurs after an icon has been deleted from system tray.
+IsIconLoaded - Function that returns true if an icon is being displayed in the system tray. Otherwise false.
+MouseDblClk - Event that occurs after mouse button has been double clicked while over the icon located in the system tray.
+MouseDown - Event that occurs after mouse button has been pressed down while over the icon located in the system tray.
+MouseMove - Event that occurs after mouse has been moved over the icon located in the system tray.
+MouseUp - Event that occurs after mouse button has been released while over the icon located in the system tray.
+SysTrayText - Text to be displayed after mouse has been idle over the icon in the system tray for a while. Displays up to 64 characters.
+
+EVENTS:        PROPERTIES:     FUNCTIONS:      Subroutines:
+Error          Action		IsIconLoaded
+IconAdded      Icon
+IconDeleted    SysTrayText
+IconModified
+MouseDblClk
+MouseDown
+MouseMove
+MouseUp

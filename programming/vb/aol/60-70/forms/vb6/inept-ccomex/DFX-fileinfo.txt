@@ -1,0 +1,83 @@
+-------------------- Do not delete the category text!! -------------------- 
+
+
+VB FILES:
+
+Example Title..........:
+Author.................:
+Requirements...........:
+What this file is for..:
+  - AOL 2.5 - 3.0......:
+  - AOL 4.0 - 5.0......:
+  - AOL 6.0............:
+  - AOL 7.0............:
+  - AIM................:
+  - Windows 95-98se....:
+  - Windows NT.........:
+  - Windows 2000.......:
+  - Windows XP.........:
+  - Games..............:
+  - Compuserve.........:
+  - Tutorials..........:
+  - Sounds.............:
+  - Icons..............:
+  - Other..............:
+Recommended Section....:
+Description for Site...:
+
+
+---------------------------------------------------------------------------
+
+
+CGI-Scripts:
+
+Script Name............:
+Author.................:
+Requirements...........:
+Programming Language...:
+Purpose................:
+Description for Site...:
+
+
+
+----------------------- Do not edit below this line! ---------------------- 
+
+
+
+Do not edit this with AOL!!!  Use Note Pad!!!!!  
+
+Questions with nothing in front of them ARE REQUIRED.
+
+VB FILES:
+
+   - Example Title = Your module name, example name, etc. (e.g. - darc32.bas OR Scrolling Picture Module)
+   - Author = Whoever wrote the code and made the file you are submitting.
+   - Requirements = State what files you used, What AOL this is for, etc. (e.g. - AOL7)
+   - What this file is for = Put an 'X' after the item for what this is used for.  If Other, please specify.  If the file can be used for multiple things, put multiple X's!  :P
+   - Recommended Section = Where do you think this file should go?  (e.g. - VB Files >> AOL 6.0-7.0 >> Modules)
+   - Description for Site = This is the info I will put up on the site,  I will quote you.
+      - DO NOT include your URL here. (Click the links button to submit a URL)
+      - THIS CANNOT BE MORE THAN 100 WORDS!!!
+      - DO NOT mention other people or files.  I will not allow the cutting down of people and/or there work!
+
+
+---------------------------------------------------------------------------
+
+
+CGI-Scripts:
+
+   - Script Name = Name of the Script (e.g. - "Text Counter; NO SSI or ADS")
+   - Author = Whoever made the code
+   - Requirements = Whatever is required (e.g. - "Unix Server + SendMail script installed")
+   - Language = Language code was written in (e.g. - "Perl")
+   - Purpose = Duh! (e.g. - "Hit Counter for website")
+   - Description for Site = This is the info I will put up on the site,  I will quote you.
+      - DO NOT include your URL here. (Click the links button to submit a URL)
+      - THIS CANNOT BE MORE THAN 100 WORDS!!!
+      - DO NOT mention other people or files.  I will not allow the cutting down of people and/or there work!
+
+
+
+Note:  You can include other text (*.txt) files.  In these, you may put your URL or any other info you want people to see.  NO Application (*.exe), Document (*.word; *.doc),. etc.  ONLY text files.  I will not delete your text files.  Place this text file with the file you are submitting and zip them up and send to: files@darcfx.com  If you do not have WinZip and therefore cannot zip files, please go to http://www.winzip.com/ and download it.  If you do not fill this out correctly, your file will not be posted!? 
+
+Revised on December 29, 2001 (12-29-01)

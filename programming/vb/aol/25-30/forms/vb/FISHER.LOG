@@ -1,0 +1,40 @@
+Line 18: Class SSPanel of control Panel3D1 was not a loaded control class.
+Line 28: Class SSCommand of control Command3D6 was not a loaded control class.
+Line 44: Class SSCommand of control Command3D5 was not a loaded control class.
+Line 60: Class SSCommand of control Command3D4 was not a loaded control class.
+Line 100: Class SSFrame of control Frame3D3 was not a loaded control class.
+Line 135: Class SSFrame of control Frame3D2 was not a loaded control class.
+Line 160: Class SSFrame of control Frame3D1 was not a loaded control class.
+Line 175: Class SSOption of control Option3D7 was not a loaded control class.
+Line 193: Class SSOption of control Option3D6 was not a loaded control class.
+Line 210: Class SSOption of control Option3D5 was not a loaded control class.
+Line 244: Class SSOption of control Option3D4 was not a loaded control class.
+Line 260: Class SSOption of control Option3D3 was not a loaded control class.
+Line 276: Class SSOption of control Option3D2 was not a loaded control class.
+Line 292: Class SSOption of control Option3D1 was not a loaded control class.
+Line 19: The property name Alignment in Panel3D1 is invalid.
+Line 20: The property name BorderWidth in Panel3D1 is invalid.
+Line 21: The property name Font3D in Panel3D1 is invalid.
+Line 29: The property name Caption in Command3D6 is invalid.
+Line 30: The property name Font3D in Command3D6 is invalid.
+Line 45: The property name Caption in Command3D5 is invalid.
+Line 46: The property name Font3D in Command3D5 is invalid.
+Line 61: The property name Caption in Command3D4 is invalid.
+Line 62: The property name Font3D in Command3D4 is invalid.
+Line 81: Property Picture in Picture1 had an invalid file reference.
+Line 101: The property name Alignment in Frame3D3 is invalid.
+Line 102: The property name Caption in Frame3D3 is invalid.
+Line 136: The property name Alignment in Frame3D2 is invalid.
+Line 137: The property name Caption in Frame3D2 is invalid.
+Line 161: The property name Alignment in Frame3D1 is invalid.
+Line 162: The property name Caption in Frame3D1 is invalid.
+Line 176: The property name Caption in Option3D7 is invalid.
+Line 177: The property name Font3D in Option3D7 is invalid.
+Line 194: The property name Caption in Option3D6 is invalid.
+Line 195: The property name Font3D in Option3D6 is invalid.
+Line 211: The property name Caption in Option3D5 is invalid.
+Line 212: The property name Font3D in Option3D5 is invalid.
+Line 245: The property name Caption in Option3D4 is invalid.
+Line 261: The property name Caption in Option3D3 is invalid.
+Line 277: The property name Caption in Option3D2 is invalid.
+Line 293: The property name Caption in Option3D1 is invalid.

@@ -1,0 +1,20 @@
+
+1. What it is: A Mail Class For AOL4
+
+2. Made By: Chris (Crisis)
+
+3. What .ocx's .bas's used (If applies): None
+
+4. What Visual Basic it was made on:  Visual Basic Learning Editon ;)
+
+5. Email: MemorexChris@hotmail.com
+
+This is my new class module. This basically is a aol4 
+Massmailer or Server Object. You can add names to its built in collections or remove them. To send mail just call the method Forwardmail(index). So to send your whole mail box just do this
+
+For X = 0 to test.mailCount - 1
+	test.forwardmail (X)
+next X
+
+It will remove errored people (if ya want it to. Its all custom.)
+It has a lot of features. Have fun

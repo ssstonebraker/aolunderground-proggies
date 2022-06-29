@@ -1,0 +1,3 @@
+PARAM.BAS
+ProjWinSize=127,145,266,186
+ProjWinShow=2

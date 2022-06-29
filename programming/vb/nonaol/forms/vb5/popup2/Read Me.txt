@@ -1,0 +1,31 @@
+
+                        ;;;;;;;;;;;;;;;;;;;;;;;;
+                        ;;                    ;;
+                        ;;                    ;;
+                        ;;        mash        ;;
+                        ;;                    ;;
+                        ;;   freez.com/mash   ;;
+                        ;;                    ;;
+                        ;;air_ware@hotmail.com;;
+                        ;;                    ;;
+                        ;;;;;;;;;;;;;;;;;;;;;;;;
+
+This is my popup menu example.  I felt i had to do one because all
+the others are so crap.  This shows how to make menu items bold, 
+explains the popupmenu function properly, how to position the menu
+correctly, how to take the menu from another form and how to make
+the menu only appear when certain mouse buttons are pressed.
+
+If you want to talk to me for any reason you can normally find me
+on EFnet #Discotheque as mash-
+
+
+What it is:  Pop-Up menu example
+
+Made By: mash
+
+BAS File used:  n/a
+
+OCX Files used: n/a
+
+VB that this was built on: Visual Basic 5.o

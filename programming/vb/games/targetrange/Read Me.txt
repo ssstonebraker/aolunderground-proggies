@@ -1,0 +1,9 @@
+Note: This is not a copyrighted game so you can steal the source or change the game in any way you wan't to.
+
+Errors on startup:
+If there is an error on the startup saying that you need a certain dll to run this program then its sbecause you don't have Visual Basic, so what you need to do is go out and get VB or download the dll's off the internet.
+
+Contact:
+Wcn2baseball@aol.com
+
+                                                                                                                   Thank you for downloading my game, Wes  

@@ -1,0 +1,3366 @@
+
+
+The second edition FF2 'handbook'     -courtesy of Ben Siron  9/19/95
+
+a.k.a. 'bensiron@cco.caltech.edu'
+
+
+
+thanks to Adam Lederman for all of the information in his FF2 guide.  it gave
+
+me a lot of ideas on things to research, which I present in this new guide in
+
+addition to all the non-game genie information which he originally compiled
+
+
+
+recent thanks to 'D', who can be contacted using the email address
+
+'slmry@cc.usu.edu'.  'D' gave me corrected physical and magical damage
+
+algorithms, although I still can't verify how any of the defense and % abilities
+
+work. 'D' also gave me useful info about the effects of conditions like 'curse'
+
+and the special abilities of certain classes, and this was enough of a headstart
+
+to attempt and exhaustive list of conditions and special abilities. finally,
+
+there are numerous other corrections to damage ranges and special items in this
+
+version which are due to 'D'
+
+
+
+if you find anything amiss, missing, or badly explained (however trivial) with
+
+this guide, E-mail me, and I'll take note of it. E-mail me also if you find out
+
+any really cool tips, strategies, etc...
+
+
+
+(this listing was made in an evenly spaced font, lines 80 characters wide,
+
+with 8 characters per tab)
+
+
+
+
+
+
+
+- - - -=- -=-  -=< CONTENTS >=- -=- -=- - - -
+
+
+
+0: DEFINITIONS & ABBREVIATIONS..................03%
+
+
+
+1: STATISTICAL & DAMAGE ALGORITHMS..............09%
+
+	damage algorithms	.	.	09%
+
+	statistic algorithms	.	.	13%
+
+
+
+2: ACTIONS & CHARACTER CLASSES..................16%
+
+
+
+3: CONDITIONS...................................22%
+
+
+
+4: MAGIC........................................36%
+
+	black	.	.	.	.	39%
+
+	white	.	.	.	.	42%
+
+	call	.	.	.	.	45%
+
+	ninja	.	.	.	.	47%
+
+	other	.	.	.	.	48%
+
+
+
+5: ITEMS........................................49%
+
+	weapons	.	.	.	.	49%
+
+	armor	.	.	.	.	58%
+
+	other	.	.	.	.	66%
+
+
+
+6: MONSTERS.....................................72%
+
+	special attacks	.	.	.	73%
+
+	monster stats	.	.	.	78%
+
+
+
+7: TIPS, TRICKS, ETC. ..........................93%
+
+
+
+
+
+
+
+
+
+======================== 0: DEFINITIONS & ABBREVIATIONS ========================
+
+
+
+Character classes:K - dark knight (cecil)	D - dragoon (kain)
+
+		@ - caller (young) (rydia)	C - caller (matured) (rydia)
+
+		S - sage (tellah)		P - paladin (cecil)
+
+		T - karate man (yang)		B - bard (edward)
+
+		Z - black wizard (porom)	E - engineer (cid)
+
+		N - ninja (edge)		L - lunarian (fusoya)
+
+		W - white wizard (palom, rosa)
+
+
+
+Damage attributes:	A - arrow		F - fire
+
+(elementals)		S - sacred		D - darkness
+
+			I - ice			L - lit
+
+
+
+Statistics:	STR - strength		AGI - agility
+
+		VIT - vitality		WIS - wisdom
+
+		WILL - willpower	MHP - maximum hit points
+
+		MMP - maximum magic points
+
+		RHP - remaining hit points (current health value)
+
+		ATT - attack value	A% - hit %
+
+		xA - attack multiplier
+
+		DEF - defense value	D% - defend %
+
+		xD - defense mutiplier	M% - magic evasion %
+
+		MD - magic resistance value
+
+		xM - magic resistance multipler
+
+		LV - level
+
+
+
+basic stats - the statistics of STR, AGI, VIT, WIS, and WILL.  these are not
+
+		derived from any other statistic, but they can be modified by
+
+		equipment
+
+
+
+derived stats - the statistics of ATT, A%, xA, DEF, xD, D%, MD, xM, and M%.
+
+		these are completely determined by basic stats, LV, and what is
+
+		being equipped
+
+
+
+(DMG) - this special effect means that the attack ignores the effects of
+
+		target's armor or resistance.
+
+
+
+(secret) - this item is very hard to find: you have to be lucky and win it
+
+		in battle.  very likely, you will play through an entire game
+
+		without ever finding this item
+
+
+
+(sneak) - if you have a ninja in your party, he can 'sneak' items from the
+
+		enemies.  the success rate of this depends on relative agility
+
+		ratings
+
+
+
+(dummy) - this item was taken out of the american or later versions of the
+
+		game (for some unknown reason), and you can't get it unless you
+
+		have a game genie (the code still exists to handle the item,
+
+		though)
+
+
+
+Mathematical notation:
+
+	[x] = the greatest integer less than or equal to x.
+
+			for instance, [ (57/4) ] = [ 14.25 ] = 14, 
+
+			where  /  indicates division.
+
+	(x,y) represents a range of possible point values,
+
+			not less than (x) and not more than (y)
+
+			for instance (200,300) means anything between 200 and
+
+			300, including 200 and 300 (the endpoints)
+
+	(...)k represents that amount in thousands. for example, 100k
+
+			means 100,000
+
+
+
+target - some place that you can cast a spell to, attack, use an item on, etc...
+
+		ex. - your allies and your enemies are targets in a battle
+
+
+
+enemy - a target in battle which is on the left side or on the right side if you
+
+		are attacked from behind.  a charmed enemy is still an enemy.
+
+		an enemy of an enemy is an ally.  an ally of an enemy is an
+
+		enemy
+
+
+
+ally - a target which is not an enemy.  a charmed ally is still an ally.
+
+
+
+phase - the unit of time inside of a battle during which the 'count' condition
+
+		is decremented (very short; 1-2 of these happen between actions
+
+		of each character
+
+
+
+turn - the unit of time inside of a battle required for all participants to take
+
+		an action
+
+
+
+HP leak - target creature continues to lose HP after the initial attack at a
+
+		rate of (1,16) HP per phase for about 4 turns
+
+
+
+attack - any action taken inside of a battle, except for COVER/OFF, HIDE/SHOW,
+
+		CHANGE, (run away), and PARRY
+
+
+
+physical attack - any attack which is carried out by using the ATTACK, JUMP,
+
+		KICK, AIM, or DART option
+
+
+
+magical attack - any attack which is carried out by using the BLACK, WHITE,
+
+		CALL, NINJA, ITEM, SING, PEEP, or TWIN option
+
+
+
+c.a. - counterattack: this technique will be used immediately(even if the game
+
+		is paused) by the creature whenever it is attacked in a certain
+
+		way, but is not eliminated by the attack.  the target of the
+
+		counterattack doesn't have to be the original attacker
+
+
+
+ca:p - counterattack to physical attacks
+
+
+
+ca:m - counterattack to magical attacks
+
+
+
+outside - the state of wandering around on the overland map (not being in a
+
+		town, dungeon, in battle, etc...)
+
+
+
+heal - when this word is in lowercase, it means that any damage this attack
+
+		inflicts is instead added to the target's HP, unless the target
+
+		is undead, in which case the heal attack does damage like any
+
+		other attack.  when this word is used in uppercase, it refers
+
+		to either the spell or the item called 'HEAL', which has a
+
+		totally different effect
+
+
+
+
+
+
+
+======================= 1: STATISTICAL & DAMAGE ALGORITHMS =====================
+
+
+
+- - - -=- -=- DAMAGE CALCULATION ALGORITHMS -=- -=- - - -
+
+the results of nearly all attacks which produce damage are derived from a
+
+few numbers, the base, the 'damage multiplier' ('d.m.'), xA, and the defense of
+
+the target (MD or DEF)
+
+
+
+exceptions: the DART ability which is available to your ninja, and special
+
+	attacks which do damage based on the MHP of the target
+
+
+
+Physical Attacks:
+
+the base is the attacking character's ATT.  if using the dragoon's 'JUMP'
+
+option, double the base.  double the base again if the target of the attack is
+
+'small' or a 'toad'.  if the attacker is 'berserk', multiply the base by 3/2.
+
+finally, if the attacker has 'curse', cut the base power in half
+
+to get the 'd.m.' for a physical attack, start with 1.  if the weapons being
+
+used have elements associated with them which apply to the elemental multipliers
+
+of the target, take the biggest such one and multiply the 'd.m.' by that number
+
+(if the biggest such one is negative, ignore it completely).  if the weapons
+
+being used have race multipliers (such as x4 vs.dragons), take the biggest such
+
+one and multiply the 'd.m.' again by that number.
+
+
+
+Magical Attacks:
+
+every spell or item has a base peculiar to it, as listed in the following parts.
+
+to get the 'd.m.' for a magical attack, also start with 1.  if the
+
+attack has an element associated with it which applies to the elemental
+
+multipliers of the target, multiply the 'd.m.' again by this number
+
+(if this number is negative, ignore it for now, but at the end of this
+
+algorithm, change the sign of the damage to be negative).  an ally which is the
+
+target of an elemental magic attack from another ally always takes x4 damage, so
+
+the elemental multiplier is always 4 in this case
+
+
+
+from this, let Z = ( base, [ base x 3/2 ] ) x 'd.m.'
+
+*BUG: if the attack is magical and the base is derived from the RHP of the
+
+caster, the random range of Z cannot be more than 255.  Formally speaking,
+
+Z would be ( base, Max{ [ base x 3/2 ], base + 255 } ) x 'd.m.'.  so, if you
+
+cast 'MIST' with an RHP of 3500, the random range of Z would be (1750,2005), and
+
+NOT (1750,2625)
+
+
+
+if the attack is (DMG), the target does not get a chance to stop it and we let
+
+N = Z.  otherwise,
+
+for a magical attack, let N = Z - (0,MD), unless the attack is made by an ally
+
+against an ally, in which case the target does not resist and N = Z
+
+for a physical attack, let N = Z - (0,DEF)
+
+
+
+in the case of a magical attack, let xP = either the effective black or white
+
+magic multiplier (as explained in the 'magic' section), or the constant
+
+multiplier which is peculiar to an item being used.  multiply N by a number
+
+between 0 and xP.  this function eludes me, but it is close to
+
+xP - ((xM) x (M%)).  if the attack is made by an ally against an ally, the
+
+target does not resist, and we multiply N by xP
+
+
+
+if N < 1 then N = 1
+
+
+
+in the case of a physical attack, multiply N by a number between 0 and xA.  the
+
+exact function also eludes me, but it depends on xA, xD, %A, %D, and bonuses for
+
+being in the front rows or not.  on average, it is ((xA) x (A%)) - ((xD) x (D%))
+
+
+
+if N > 9999, then N = 9999, except in rare circumstances which are explained
+
+individually
+
+
+
+finally, if the attack is a draining type attack (such as casting PSYCH or
+
+swinging the DRAIN sword), and the target is undead, make the sign of N
+
+negative (DON'T DRAIN UNDEAD!!).
+
+
+
+the effective damage done by the attack to the target is N.  if N is negative,
+
+then most likely the attack will heal the target
+
+
+
+sometimes during a physical attack the screen will flash, indicating a critical
+
+hit.  I don't know what effect this has in the algorithm
+
+
+
+
+
+- - - -=- -=- STATISTICAL ALGORITHMS -=- -=- - - -
+
+here are the ways in which derived stats are obtained from LV and the basic
+
+stats; consider the value of the basic stats to be what they are after being
+
+modified by equipment (as is shown to you on the statistical info subscreen):
+
+
+
+let the level bonus be known as 'LB' = [ LV/4 ], except for the karate man, for
+
+which 'LB' = (LV + 1) x 2.  let the strength bonus be known as 'SB' = [ STR/4 ].
+
+let the vitality bonus be known as 'VB' = [ VIT/2 ].
+
+
+
+ATT = LB + SB + (weapon power).  if the character is ambidextrous and is
+
+equipping a different weapon in either hand, ATT = LB + SB + (left weapon power)
+
++ LB + SB + (right weapon power).  if the character is equipping a bow & arrows
+
+and the arrows are in that character's good hand, ATT = (arrow power) + (bow
+
+power) + SB; if the arrows are in the weak hand multiply this ATT value by 4/5
+
+(this penalty does not apply to ambidextrous characters).  if the character is
+
+equpping a two-handed weapon, it does not matter what hand the weapon is in, or
+
+whether the character is ambidextrous or not: ATT = LB + SB + (weapon power)
+
+
+
+xA = [ STR/8 ] + [ AGI/16 ] + 1
+
+
+
+A% = 50% + [ LV/4 ] + (weapon bonus to A%.  if the character is ambidextrous and
+
+is equipping two weapons, the bonus to A% is the average of the two bonuses)
+
+
+
+DEF = VB + (sum of all DEF armor ratings)
+
+
+
+xD = [ AGI/8 ] + ( [ LV/16 ] if a shield is equipped)
+
+
+
+D% = 30% + (sum of all D% armor bonuses)
+
+
+
+MD = (sum of all MD armor ratings)
+
+
+
+xM = [ (WIS + WILL)/32 ] + [ AGI/32 ]
+
+
+
+M% = [ (WIS + WILL)/8 ] + (sum of all M% armor bonuses)
+
+
+
+
+
+
+
+======================= 2: ACTIONS AND CHARACTER CLASSES =======================
+
+
+
+character classes are the main way in which the characters in your party have
+
+differing abilities.  classes determine what weapons and armor can be equipped,
+
+what spells the character can cast and learn, how the character gains in
+
+statistics at every level up, and what other miscellaneous special actions that
+
+the character can use
+
+
+
+- - - -=- -=- AVAILABLE ACTIONS -=- -=- - - - 
+
+
+
+all classes may use ATTACK, PARRY, (run away), ITEM, or CHANGE as an action in
+
+battle.  in addition to this, certain classes have the following special actions
+
+available to them:
+
+
+
+PALADIN (P):		WHITE		COVER/OFF
+
+DRAGOON (D):		JUMP
+
+DK.KNIGHT (K):
+
+CALLER(young) (@):	WHITE		BLACK		CALL
+
+CALLER(mature) (C):	BLACK		CALL
+
+SAGE (S):		WHITE		BLACK
+
+KARATE MAN (K):		KICK
+
+BARD (B):		HIDE/SHOW	SING
+
+ENGINEER(chief) (E):	PEEP
+
+WH.WIZ (W):		WHITE		AIM(rosa only)	TWIN(palom only)
+
+BL.WIZ (B):		BLACK		TWIN
+
+LUNARIAN (L):		WHITE		BLACK
+
+NINJA (N):		DART		SNEAK		NINJA
+
+
+
+ATTACK - launch a basic physical attack at any available target
+
+PARRY - do nothing; during this time and until this character gets another
+
+  prompt to take an action, defense in increased in some way i'm not sure of
+
+CHANGE - all allies in the back row move to the front row and vice versa
+
+ITEM - use an item in the party's inventory, change equipment in the left and/or
+
+  right hand of the character taking this action, move items around, and/or use
+
+  an equipped weapon as an item
+
+(run away) - this option is not listed, but it can be used at any time by
+
+  holding down the left & right buttons.  this will only be successful if at
+
+  least one ally is available to take an action(or is already taking an action),
+
+  you are not in a subcreen of the main action window, and the game is not
+
+  paused.  you can also quit trying to run away at any time by releasing the
+
+  left & right buttons, at which time you may give the ally who is ready a
+
+  different action.  if (run away) is successful, the battle will be aborted and
+
+  you may lose an amount of gold exactly equal to 1/4 what you would have won if
+
+  you had stayed and fought
+
+WHITE - shows a listing of all white spells that the character knows
+
+BLACK - shows a listing of all black spells that the character knows
+
+NINJA - shows a listing of all ninja spells ...
+
+CALL - shows a listing of all call spells ...
+
+COVER - attempt to intercept most physical attacks aimed at a chosen ally by an
+
+  enemy and become the target of the attack instead.  the paladin will
+
+  automatically COVER any fatigued ally (one with HP =< [ MHP/4 ])
+
+OFF - cancels the previous COVER directive
+
+JUMP - leap high into the air to launch a physical attack against a single enemy
+
+  target with double the normal base ATT value.  a JUMP takes a full turn to
+
+  execute, and while in the air the dragoon may not be the target of any kind
+
+  attack.  all attacks which are directed to target the dragoon before a JUMP,
+
+  but are not executed until the dragoon is already in the air will be
+
+  ineffective or will target a different ally
+
+PEEP - this has the same effect as the white spell of PEEP, but it's free
+
+AIM - a bow & arrow must be equipped to be able to use this action.  AIM makes a
+
+  physical attack as is normally done at single target, except that A% becomes
+
+  99%.  AIM has no extra side costs that I can see, so it seems to be superior
+
+  to the ATTACK option in every way
+
+DART - sacrifice a weapon in the party's inventory to cause exactly
+
+  LV(of ninja) x (power of weapon) + (1,100) points of (DMG) to a single target.
+
+  the special abilities and elemental attributes of the weapon that you use as a
+
+  dart are irrelevant.  you could target an ally with this action, but the
+
+  attack would be ineffective, and you would still lose the weapon forever
+
+SNEAK - attempt to steal an item from a target.  if the target is slow, has
+
+  'stop','paralyze', or 'sleep', or your ninja is fast, the chances of this
+
+  attack being successful are increased.  the type of item stolen will always be
+
+  the same for a given type of monster, and is listed further on.  a successful
+
+  SNEAK from a given monster does not in any way decrease the chances of being
+
+  able to SNEAK from that same monster again.  you can potentially SNEAK an
+
+  infinite number of items from a given monster.  SNEAK may be targetted against
+
+  an ally or an enemy boss, but it is never effective in these instances.  the
+
+  SNEAK attack is neither magical nor physical
+
+TWIN - either palom or porom may initate this action if both characters are in
+
+  your party and have the capability to cast at least a 10 point magic spell
+
+  (i.e. neither has 'mute','swoon','stone','pig', etc...).  once chosen, the
+
+  other ally will terminate whatever action that has been started, and they will
+
+  both begin casting either FLARE or COMET.  if either ally is incapacitated
+
+  in the process of casting, TWIN will be aborted.  the effects of TWIN when
+
+  cast successfully are listed in the magic section
+
+HIDE - if HIDE is used, the ally may not be the target of any attack, and any 
+
+  attack that was targetted at the hidden ally before HIDE was executed will
+
+  fail or be redirected to another ally, as is the case with JUMP.  the only
+
+  action available to a hidden ally is SHOW
+
+SHOW - cancels the previous hide directive
+
+KICK - launches a physical attack against all enemy targets.  i'm not sure
+
+  exactly how this works
+
+SING - ?
+
+
+
+
+
+
+
+================================= 3: CONDITIONS ================================
+
+
+
+there are 19 different ways to alter a character so that the change appears
+
+as a change in status (that I know of):
+
+
+
+			WALL
+
+			D
+
+			PETRIFY
+
+			COUNT
+
+			STOP
+
+			BERSERK
+
+			CHARM
+
+			SLEEP
+
+			PARALYZE
+
+			FLOAT
+
+			CURSE
+
+			POISON
+
+			DARKNESS
+
+			MUTE
+
+			PIG
+
+			SMALL
+
+			TOAD
+
+			STONE
+
+			SWOON
+
+
+
+a character may have several of these conditions simultaneously, but the status
+
+window will only show the one that is lowest (most severe) on the list.  the
+
+other reason I have given the 19 conditions in a specific order is that for the
+
+most part, one condition cannot be set if the target already has a condition
+
+that is more severe (lower on the list).  ex- if the target is 'mute', and you
+
+try to cast BERSK on it, the spell will be ineffective because you can't set the
+
+'berserk' condition once 'mute' has already been set.  you can however remove
+
+conditions which are less severe than ones the target already has.  ex- if the
+
+target is a 'toad' and a 'pig' at the same time (this is possible if you first
+
+cast PIGGY on it, and then TOAD), you can still use PIGGY to remove the 'pig'
+
+condition.  there are a few exceptions to this severity rule:
+
+  - stop, wall, count and poison may be set over anything but stone or swoon
+
+  - any condition may be set over float
+
+  - any permanent condition may be set over any other permanent condition if
+
+    the action is done outside of battle 
+
+
+
+in the explanation of these conditions, 'nP' means non-permanent.  it may not
+
+  exist or persist outside of battle. 'Pm' means permanent.  this condition will
+
+  stay with the target until it is actively removed, and may even persist if the
+
+  target swoons and is revived later
+
+
+
+WALL:nP: a 'wall' lasts for about 1-2 turns and will reflect many kinds of
+
+  magical attacks so that the spell ends up targetting an enemy of the original
+
+  target instead.  a wall will not reflect an attack which already been
+
+  reflected once.  most attacks which only target multiple targets may not be
+
+  reflected.  Reflectable: all black & white spells except PEEP,QUAKE,METEO,
+
+  the special monster attacks of MEGANUKE,EMISSION,COUNT(fataleye),DISRUPT, the
+
+  ninja magic of PIN, all weapons used as items except DANCING(knife).
+
+  Not Reflectable: all call spells, all other ninja spells, all other black &
+
+  white spells, the special monster attacks of ENTANGLE,(2xattack),
+
+  BLIZZARD(blue d.),CURSE(d.fossil),PETRIFY(blackliz), NEEDLE(swordrat), and all
+
+  other item use.
+
+  any other special monster attacks which I have not listed as either
+
+  Reflectable or not I am not sure about.
+
+  a 'wall' is only visible when it is cast or triggered and appears as a round
+
+  crystal shield in front of the target.
+
+
+
+D:nP: 'D' is probably a bug resulting in a mismatched character string for this
+
+  condition.  if a target has 'D', it is 1/3 of the way to becoming 'stone', and
+
+  will gradually move on to the 'petrify' condition by waiting long enough.  'D'
+
+  has no ill side effects and is visible by the target being gray below the
+
+  waist
+
+
+
+PETRIFY:nP: 'petrify' means that the target is 2/3 of the way to becoming
+
+  'stone', and will gradually move on to the 'stone' condition by waiting long
+
+  enough.  'petrify' has no ill side effects and is visible by the target being
+
+  either totally grey or grey below the shoulders
+
+
+
+COUNT:nP: a 'count' begins at 10 and is decremented at every phase, unless the
+
+  target also has 'stop'.  if it is decremented while at zero, the target will
+
+  'swoon'.  'count' is visible as a green two-digit number which sits over the
+
+  target's head and is updated as count as decremented
+
+
+
+STOP:nP: 'stop' means that the target may take no actions and is also more
+
+  vulnerable to magical and physical attacks, as well as the ninja ability of
+
+  SNEAK.  the target may spontaneously break out of this condition without
+
+  outside help.  'stop' is only visible when it is cast, and appears as a green
+
+  clock with the minute hands going through four freeze-frames
+
+
+
+BERSERK:nP: a 'berserk' target may not be controlled.  the target takes twice as
+
+  many actions as is normal and uses them all for basic physical attacks.  as
+
+  mentioned before, the base power of these physical attacks is multipled by
+
+  3/2.  'berserk' is only visible when it is cast, and appears as a cosmic ray
+
+  which envelops the target from above
+
+
+
+CHARM:nP: a target with 'charm' is confused and cannot be controlled.  the
+
+  target will begin to take random actions at a rate twice as often as is
+
+  normal to benefit its enemies and harm its allies.  if the target takes damage
+
+  from a physical attack, 'charm' is removed.  if 'charm' is set, the target
+
+  is freed from the conditions of stop, and berserk.  'charm' is visible as a
+
+  rotating green aura overhead of the target
+
+
+
+SLEEP:nP: 'sleep' means that the target may take no actions.  the target may
+
+  spontaneously break out of this condition without outside help.  'sleep' is
+
+  visible as a blue tear dripping out of the eye of the target
+
+
+
+PARALYZE:nP: a target with 'paralyze' may take no actions.  the target may
+
+  spontaneously break out of this condition without outside help, unless this
+
+  condition has been automatically imposed by being in cave Magnes with metal
+
+  items equipped before defeating the Dark Elf.  if all characters have
+
+  'paralyze' for this reason, your party will automatically perish immediately
+
+  upon entering battle.  'paralyze' is visible as colorful electricity buzzing
+
+  to either side of the target
+
+
+
+FLOAT:quasi-Pm: 'float' disappears if you return to the outside from a battle,
+
+  dungeon, or town, or enter/exit any map.  'float' means that the target is
+
+  immune to QUAKE and TITAN, and does not take damage from floor squares outside
+
+  of battle.  'float' does not grant immunity to stairways or pitfalls.  some
+
+  enemies such as 'eagle' float naturally.  'float' is visible because the
+
+  target will bob up and down in mid-air above an oval shadow
+
+
+
+CURSE:Pm: a target with a 'curse' has its base power for physical attacks
+
+  halved, as mentioned before.  'curse' is visible as a black cloud floating 
+
+  overhead
+
+
+
+POISON:Pm: a target with 'poison' will lose 1 HP for every step taken outside of
+
+  battle, and inside of battle the target will lose [ MHP/8 ] HP once every
+
+  ( 5+[ VIT/2 ] ) phases.  a target with 'poison' has a purple face
+
+
+
+DARKNESS:Pm: 'darkness' means that the target's A% is halved.  a character with
+
+  'darkness' wears shades
+
+
+
+MUTE:Pm: 'mute' prevents the target from casting spells.  the target may still
+
+  use items or special monster attacks.  if a target is 'mute', yellow dialogue
+
+  will blink overhead
+
+
+
+PIG:Pm: 'pig' prevents the target from casting anything but PIGGY, and prevents
+
+  using the special ability of AIM.  a 'pig' will look like a pig
+
+
+
+SMALL:Pm: 'small' reduces the target's ATT to 0.  DEF, Dx, and D% all go
+
+  to 0, and as mentioned before, the bases of all physical attacks against
+
+  'small' targets are doubled.  'small' targets may not use the special
+
+  abilities of DART,COVER,JUMP, or AIM.  a 'small' target will look like a tiny
+
+  doll
+
+
+
+TOAD:Pm: 'toad' reduces the target's attack and defenses in the same manner as
+
+  'small'.  in addition, a 'toad' may not cast anything but TOAD, and may not
+
+  use any special abilities peculiar to certain classes.  a 'toad' will look
+
+  like a toad
+
+
+
+STONE:Pm: a character with 'stone' may take no actions and may not be target of
+
+  any action besides the HEAL item or spell.  a 'stone' enemy is automatically
+
+  eliminated.  setting the 'stone' condition removes the conditions of count
+
+  and berserk.  if all allies in your party become either 'stone', 'swoon' or
+
+  have automatic 'paralyze' as mentioned before, your entire party perishes
+
+  immediately.  a 'stone' target is completely grey and hunched over, immobile
+
+
+
+SWOON:Pm: a character with 'swoon' may take no actions and may not be the target
+
+  of any action besides LIFE1, LIFE2, the LIFE item, or ASURA.  setting the
+
+  'swoon' condition means that HP = 0, and that the conditions of wall, charm,
+
+  count, stop, berserk, paralyze, sleep, and poison are removed.  to 'swoon' is
+
+  to be on the edge of death, face down to the ground
+
+
+
+
+
+
+
+=================================== 4: MAGIC ===================================
+
+
+
+BLACK:
+
+the effectiveness of black magic is dependent on the WIS stat of the caster.
+
+some spells have a base damage, which is then multiplied by the black magic
+
+multiplier, B, which is determined as B = [ WIS / 4 ] + 1.
+
+
+
+WHITE:
+
+likewise for white magic, the power of the spell is dependent only on WILL.
+
+there is a similar white magic multiplier, W = [ WILL / 4 ] + 1.
+
+
+
+some spells can only be cast on a single character (S), some can only be cast on
+
+all allies or all enemies (A), and others you can choose between one target and
+
+multiple ones (S/A).
+
+
+
+if you choose to split a (S/A) spell to multiple targets, the total effect will
+
+be divided up equally among the targets by supposing that you had cast the same
+
+spell to each of the targets individually.  if the spell has a multiplier
+
+associated with it, each target recieves the spell with a multipler of the
+
+original divided by the number of targets.  ex.- you cast FIRE3 on 5 targets,
+
+and your caster has WIS = 30.  so B = [ 30/4 ]+1 = 8.  each of the 5 targets
+
+will recieve a FIRE3 spell with a B multiplier of 8/5
+
+
+
+certain spells have elemental attributes and/or base numbers associated with
+
+them.  this is indicated in the 'Attribute/Effect' column.  ex- F:24 x B means
+
+that the spell will attack the targets it is aimed at with the element of fire,
+
+a base of 24, and in this case the black magic multiplier will apply to the
+
+damage that is done
+
+
+
+an 'nC' abbreviation in the effects column means that the preceding result only
+
+applies outside of combat. a 'Cb' abbreviation means that the preceding result
+
+only applies inside of combat situations.  if the explanation omits to provide a
+
+result for one of the two situations, then this means that the spell is not
+
+available to cast in that situation
+
+
+
+other miscellany: the column 'who learns it/when' gives only approximate
+
+levels at which the spell is learned. Z-13 means that a Bl.Wiz would learn the
+
+spell at around level 13. S-(MO) means that the sage learns the spell at mount
+
+ordeals.  C-(SM) means that the caller learns this in the land of summoned
+
+monsters.  # means that the spell is known by the character at the time that
+
+they join your party.  any black or call spell that the young Caller learns is
+
+retained until you meet her in her matured state, but all of the white spell
+
+that the young Caller learns are lost
+
+
+
+DONT DRAIN UNDEAD!  PSYCH and DRAIN are draining type spells; if you cast them
+
+on undead, you will give away lots of MP or HP to your enemies!
+
+
+
+
+
+- - - -=- -=- BLACK MAGIC -=- -=- - - -
+
+Spell/Cost	to:	Attribute/Effect	    Who learns it/when
+
+
+
+FIRE1 - 5	S/A	F:16 x B	-Cb	    @-near Fabul,Z-#,S-#,L-#
+
+FIRE2 - 15	S/A	F:64 x B	-Cb	    C-#,Z-12,S-(MO),L-#
+
+FIRE3 - 30	S/A	F:256 x B	-Cb	    C-40,Z-?,S-(MO),L-#
+
+ICE 1 - 5	S/A	I:16 x B	-Cb	    @-2,Z-#,S-#,L-#
+
+ICE 2 - 15	S/A	I:64 x B	-Cb	    C-#,Z-11,S-(MO),L-#
+
+ICE 3 - 30	S/A	I:256 x B	-Cb	    C-38,Z-?,S-(MO),L-#
+
+LIT 1 - 5	S/A	L:16 x B	-Cb	    @-5,Z-#,S-#,L-#
+
+LIT 2 - 15	S/A	L:64 x B	-Cb	    C-#,Z-13,S-(MO),L-#
+
+LIT 3 - 30	S/A	L:256 x B	-Cb	    C-42,Z-?,S-(MO),L-#
+
+SLEEP - 12	S/A	make target 'sleep'  -Cb    @-9,Z-#,S-(MO),L-#
+
+VENOM - 2	S/A	0 x B ;'poison' the
+
+			  target	-Cb	    @-10,Z-#,S-(MO),L-#
+
+WARP - 4	A	jump back one floor from
+
+			  inside a dungeon.  -Cb;
+
+			  no effect     -nC	    @-12,Z-?,S-(MO),L-#
+
+TOAD - 7	S/A	switch the 'toad' condition on/off for
+
+			  each target   -nC/Cb	    @-13,Z-22,S-(MO),L-#
+
+PIGGY - 1	S/A	switch the 'pig' condition on/off for
+
+			  each target	-nC/Cb	    C-#,Z-11,S-(MO),L-#
+
+STOP - 15	S	'stop' the target    -Cb    C-#,Z-14,S-#,L-#
+
+PSYCH - 0	S	16 x B ; damage is removed from the
+
+			  target's MP and then added to
+
+			  your own MP	-Cb	    C-31,Z-?,S-#,L-#
+
+STONE - 15	S/A	'stone' the target   -Cb    C-46,Z-?,S-(MO),L-#
+
+DRAIN - 18	S	20 x B ; damage done to the
+
+			  target is added to your
+
+			  own HP	-Cb	    C-35,Z-?,S-(MO),L-#
+
+VIRUS - 20	S/A	128 x B ; target will then
+
+			  have an HP leak    -Cb    C-26,Z-19,S-(MO),L-#
+
+QUAKE - 30	A	200 x B to each target -Cb  C-44,Z-23,L-#
+
+WEAK - 25	S	reduce target to (1,9) HP,
+
+			  unless this would cause the
+
+			  target to gain HP  -Cb    C-48,Z-?,S-(MO),L-#
+
+FATAL - 35	S	'swoon' the target   -Cb    C-49,Z-?,L-#
+
+NUKE - 50	S	400 x B		     -Cb    C-50,Z-?,L-#
+
+METEO - 99	A	800 x B to each target -Cb  C-60,Z-?,L-#
+
+
+
+
+
+- - - -=- -=- WHITE MAGIC -=- -=- - - -
+
+Spell/Cost	to:	Attribute/Effect	    Who learns it / when
+
+
+
+CURE1 - 3	S/A	heal 16 x W	-Cb,
+
+			  see below	-nC	    W-#,@-3,P-#,S-(MO),L-#
+
+CURE2 - 9	S/A	heal 48 x W	-Cb,
+
+			  see below	-nC	    W-14,P-14,S-#,L-#
+
+CURE3 - 18	S/A	heal 144 x W	-Cb,
+
+			  see below	-nC	    W-27,S-(MO),L-#
+
+CURE4 - 40	S/A	heal 288 x W if the spell is
+
+			  split among multiple targets,
+
+			  otherwise heal to MHP (this
+
+			  gain may exceed 9999) -Cb,
+
+			  see below	-nC	    W-38,S-(MO),L-#
+
+SIGHT - 2		view your surroundings
+
+			  if you're outside -nC,
+
+			  no effect	-Cb	    W-#,@-4,P-3,S-(MO),L-#
+
+PEEP - 1	S	view target's HP/MHP and
+
+			  elemental weaknesses,
+
+			  does not work against
+
+			  enemy bosses	       -Cb  W-#,P-8,S-(MO),L-#
+
+HOLD - 5	S	'paralyze' the target  -Cb  W-#,@-7,S-(MO),L-#
+
+SLOW - 14	S/A	slow down target       -Cb  W-#,S-(MO),L-#
+
+MUTE - 6	S/A	'mute' the target      -Cb  W-15,S-(MO),L-#
+
+BERSK - 18	S	'berserk' the target   -Cb  W-18,S-(MO),L-#
+
+EXIT - 10	A	force an escape from battle -Cb,
+
+			  jump out of a town or other
+
+			  area completely to the same place
+
+			  that you left the outside
+
+			  originally	-nC	    W-19,P-20,S-#,L-#
+
+HEAL - 20	S	heal all conditions except
+
+			  'swoon','count','float',
+
+			  and 'berserk'	-nC/Cb	    W-20,P-16,S-#,L-#
+
+BLINK - 8	S	make target hard to hit -Cb W-23,S-#,L-#
+
+CHARM - 10	S	'charm' the target	-Cb W-25,S-#,L-#
+
+SIZE - 6	S/A	make target 'small'	-Cb W-29,S-(MO),L-#
+
+FAST - 25	S	speed up target		-Cb W-30,S-(MO),L-#
+
+FLOAT - 8	S/A	make target 'float'	-Cb W-32,S-(MO),L-#
+
+WALL - 30	S	give target a 'wall'	-Cb W-34,S-(MO),L-#
+
+LIFE1 - 8	S	remove 'swoon' and restore the
+
+			  target's HP to the target's
+
+			  VIT x 5	-nC/Cb	    W-12,S-#,L-#
+
+LIFE2 - 52	S	remove 'swoon' and heal the target
+
+			  to its MHP (target may gain more
+
+			  than 9999 HP)	-nC/Cb	    W-42,S-(MO),L-#
+
+WHITE - 46	S	S:336 x W	-Cb	    W-48,L-#
+
+
+
+unique effect - if you use a cure spell outside of battle to heal a single
+
+  target, that target will gain exactly ([WILL/8]+2) x ([WILL/2]+Z) HP, where
+
+  Z is the base power that the spell would have in combat.  if you choose to
+
+  divide the spell, the total healing amount is the same, but it is
+
+  divided equally among all allies.  the only exception is CURE4, which will
+
+  have the same effect outside of combat as it does in combat, if it is cast on
+
+  a single target
+
+
+
+
+
+- - - -=- -=- CALL MAGIC -=- -=- - - -
+
+Spell/Cost	to:	Attribute/Effect	    Who learns it / when
+
+
+
+CHOCB - 7	S	40 x B		-Cb	    @-1
+
+MIST - 20	A	RHP of caster to each
+
+			  target (DMG)	-Cb	    C-#
+
+SHIVA - 30	A	I:80 x B to each target	-Cb C-#
+
+JINN - 30	A	F:80 x B to each target	-Cb C-#
+
+INDRA - 30	A	L:80 x B to each target	-Cb C-#
+
+TITAN - 40	A	160 x B to each target
+
+			  (a weaker and more expensive
+
+			  version of QUAKE)	-Cb C-#
+
+ASURA-50	A	one of 3 effects, chosen randomly:
+
+			  tan face: heal 160 x B to each target
+
+			  brown face: heal 240 x B to each target
+
+			  black face: cast LIFE1 to 
+
+			    each target		-Cb C-(SM)
+
+LEVIA - 50	A	280 x B to each target	-Cb C-(SM)
+
+ODIN - 45	A	'swoon' each target (this either
+
+			  works completely, or not
+
+			  not at all)	-Cb	    C-(basement of Baron)
+
+SYLPH - 0 (25)	S	120 x B ; damage done to target
+
+			  is divided evenly and used to 
+
+			  heal all allies.  *BUG: although
+
+			  spell infromation says otherwise,
+
+			  casting of this spell is free
+
+			  (gotta love it)	-Cb C-(sylvan cave)
+
+BAHAM-60	A	480 x B to each target	-Cb C-(bahamut's cave)
+
+IMP - 1		S	(secret) i'm not sure how
+
+			  this works, but it only 
+
+			  does about 100 damage	-Cb C-(fight imp types)
+
+MAGE - ?	S	(secret) 'paralyze' the target
+
+			  and cause an HP leak	-Cb C-(fight a 'Mage')
+
+BOMB - ?	?	(secret) RHP of caster?	-Cb C-(fight 'Balloon' or
+
+						'Grenade' on the moon's surface)
+
+ROC - ?		S	(dummy) (secret)	    C-(fight 'Roc Baby' or
+
+			  'stone' the target	-Cb         'Cocktric')
+
+
+
+
+
+- - - -=- -=- NINJA MAGIC -=- -=- - - -
+
+Spell/Cost	to:	Attribute/Effect	    Who learns it / when
+
+
+
+FLAME - 15	A	F:80 x B to each target	-Cb N-#
+
+FLOOD - 20	A	I:120 x B to each target-Cb N-(before Rubicant)
+
+BLITZ - 25	A	L:160 x B to each target-Cb N-(before Rubicant)
+
+PIN - 5		S	'paralyze' the target	-Cb N-27
+
+SMOKE - 10	A	force an escape from
+
+			  battle		-Cb N-35
+
+IMAGE - 6	self	makes caster hard to hit-Cb N-40
+
+
+
+
+
+- - - -=- -=- OTHER MAGICS -=- -=- - - -
+
+Spell/Cost	to:	Attribute/Effect	    Who learns it / when
+
+
+
+TWIN - one of two things happens randomly:    -Cb   Porom,Palom-#
+
+    FLARE - 10	A	120 x B* divided evenly among all targets
+
+    COMET - 20	A	80 x B* to each target
+
+			(B* = black magic multiplier of one of two twins,
+
+			 	 chosen randomly.)
+
+
+
+
+
+
+
+
+
+
+
+
+
+- - - -=- -=- ARMOR -=- -=- - - -
+
+
+
+some armors have the ability to defend certain elements very well.  for example,
+
+the ice armor defends fire, as indicated in the attributes column with an F
+
+before the defensive value
+
+
+
+some armors will stop certain conditions, as might be indicated in the 'special
+
+stuff' column.  this means that inside of battle, the character is immune to
+
+status changes in this condition
+
+
+
+
+
+Robe/Cost	Who	Def	%D	MD	M%	Special stuff
+
+
+
+CLOTH - 50	all-K	1	0	0	0
+
+PRISONER - 70	all		1	0	1	0
+
+BARD - 70	all-K	2	0	1	0	stops mute
+
+LEATHER - 200	all-K	2	0	1	1
+
+GAEA - 500	PCWZSL	3	0	3	3
+
+KARATE - 4k	all	5	10	2	1	STR +3
+
+WIZARD - 1200	PCWZSL	5	0	5	5	WILL +5
+
+BL.BELT - 14k	PDCWNL	10	20	3	2	STR,VIT +5
+
+BLACK - 10k	CL	8	0	7	7	WILL +5
+
+POWER - 4k	PDCWN	5	0	0	0	STR +15
+
+SORCEROR - 30k	PCWZSL	L:12	0	9	9	WIS,WILL +5
+
+NINJA - 64k	N	24	16	50	8	AGI +3
+
+WHITE - 10	PW	D:18	0	10	4	WILL +15
+
+HEROINE - 40k	WC	20	30	5	5	stops paralyze,
+
+							  WIS,WILL -15,
+
+							  STR,AGI, VIT +15
+
+
+
+
+
+Ring/Cost	Who	Def	%D	MD	M%	Special stuff
+
+
+
+IRONRING - 100	@CSWZTNB  2	0	2	1
+
+RUBYRING - 1k	all-K	0	0	3	2	stops pig
+
+SILVER - 650	NWZCTS	4	0	4	4
+
+RUNE - 2k	CTNWL	5	0	8	8	WIS,WILL +3, stops mute
+
+STRENGTH - 760	PCTND	2	0	2	2	STR +5
+
+DIAMOND - 4k	LWCN	L:6	0	8	6
+
+CURSED - ?	?	?	?	?	?	(secret - fight a
+
+							  'Ghost')
+
+CRYSTAL - ?	?	?	?	?	?	(secret - fight a 							  'Behemoth')
+
+PROTECT - 6k	PDNWC	all:10	5	12	10	VIT +15
+
+
+
+
+
+Helmet/Cost	Who	Def	%D	MD	M%	Special stuff
+
+
+
+CAP - 100	all-K	1	-5	1	1
+
+LEATHER - 330	all-K	2	-4	3	3
+
+IRON - 150	PDE	3	-10	0	0
+
+SHADOW - 360	K	4	-10	0	0
+
+DARKNESS - 640	K	5	-10	1	0
+
+BLACK - 980	K	6	-10	1	1
+
+GAEA - 700	CWZSP	3	-3	5	5	WIS,WILL +3
+
+PALADIN - 4k	P	7	-10	2	1	WILL +3
+
+HEADBAND - 450	all	1	0	1	1	STR +5, stops charm
+
+SILVER - 3k	PED	8	-10	2	2
+
+BANDANNA - ?	all	3	2	1	1	STR,VIT +5
+
+WIZARD - 2k	PCWL	5	-2	7	7	WILL +5
+
+DIAMOND - 10k	PD	L:9	10	2	2
+
+SAMURAI - 10	PDN	10	-10	6	3
+
+TIARA - 20k	WC	L:7	0	10	9	WIS +10
+
+NINJA - 2k	all	5	4	1	1	STR,AGI,VIT +3,
+
+							  stops sleep
+
+RIBBON - 10	all	9	2	12	12	stops all condition
+
+					   changing attacks besides sleep, hold,
+
+					  charm, berserk, wall, poison, and stop
+
+DRAGOON - 10	PD	all:11	-10	7	4
+
+CRYSTAL - 10	P	all:12	-10	8	5
+
+GLASS - ?	?	?	?	?	?	(secret - fight a pair
+
+							  of 'Evilmask')
+
+
+
+
+
+Shield/Cost	Who	Def	%D	MD	M%	Special stuff
+
+
+
+IRON - 100	PDE	1	20	0	0
+
+SHADOW - 200	K	1	22	0	0
+
+BLACK - 400	K	2	24	0	1
+
+PALADIN - 700	P	2	24	1	1	WILL +3
+
+SILVER - 1k	PDE	3	26	2	2
+
+FIRE - 1250	PDE	I:3	28	2	2
+
+ICE - 10k	PD	F:3	30	2	2
+
+DIAMOND - 15k	PD	L:4	32	2	3
+
+AEGIS - 20k	PD	4	34	5	4	WIS +3, stops stone
+
+SAMURAI - 10	PD	5	36	3	4
+
+DRAGOON - 10	PD	all:6	38	3	5
+
+CRYSTAL - 10	P	7	40	4	6	WILL +3
+
+
+
+
+
+Gauntlet/Cost	Who	Def	%D	MD	M%	Special stuff
+
+
+
+IRON - 130	PDEN	2	-10	0	0
+
+SHADOW - 260	K	2	-10	0	0
+
+DARKNESS - 520	K	3	-10	0	0
+
+BLACK - 800	K	4	-10	0	0
+
+PALADIN - 3k	P	5	-10	1	1	WILL +3
+
+SILVER - 2k	PDEN	6	-10	2	2
+
+DIAMOND - 5k	PD	L:7	-10	3	3
+
+SAMURAI - 10	PDN	8	-10	5	3
+
+DRAGOON - 10	PD	all:9	-10	6	3
+
+CRYSTAL - 10	PD	10	-10	7	4	WILL +3
+
+ZEUS - ?	?	?	?	?	?	(secret - fight a
+
+							 skeleton type monster)
+
+
+
+
+
+Armor/Cost	Who	Def	%D	MD	M%	Special stuff
+
+
+
+IRON - 600	PDE	4	-10	1	0
+
+SHADOW - 1100	K	5	-10	1	0
+
+DARKNESS - 2k	K	7	-10	2	0
+
+BLACK - 3k	K	9	-10	3	0
+
+PALADIN - 8k	P	11	-10	3	1	WILL +3
+
+SILVER - 17k	PDE	13	-10	4	2
+
+FIRE - 30k	PD	I:15	-10	4	2
+
+ICE - 35k	PD	F:17	-10	4	2
+
+DIAMOND - 40k	PD	L:19	-10	4	2
+
+SAMURAI - 10	PDN	21	-10	4	2
+
+DRAGOON - 10	PD	all:23	-10	8	5
+
+CRYSTAL - 10	P	25	-10	10	6	WILL +3, stops all of
+
+						    the same condition changing
+
+						      attacks that RIBBON does
+
+ADAMANT - 10	all    all:100	99	20	8	all basic stats +15,
+
+						 stops all of the same condition
+
+					       changing attacks that RIBBON does
+
+
+
+
+
+- - - -=- -=- WHERE TO BUY EQUIPMENT -=- -=- - - -
+
+KAIPO:					FABUL:
+
+	ROD(rod)				FIRECLAW(claw)
+
+	STAFF(staff)				ICECLAW(claw)
+
+	SHORTBOW(bow)				THUNDER(claw)
+
+	IRON(arrow)				BLACK(gauntlet)
+
+	CAP(helmet)				BLACK(helmet)
+
+	CLOTH(robe)				BLACK(armor)
+
+	LEATHER(robe)			
+
+	IRONRING(ring)			MYSIDIA:
+
+						ICEROD(rod)
+
+BARON:						FLAMEROD(rod)
+
+	FIRECLAW(claw)				CURE(staff)
+
+	ICECLAW(claw)				CROSSBOW(bow)
+
+	THUNDER(claw)				WHITE(arrow)
+
+	CURE(staff)				GAEA(helmet)
+
+	THUNDER(rod)				PALADIN(gauntlet)
+
+	HEADBAND(helmet)			PALADIN(shield)
+
+	KARATE(robe)				PALADIN(armor)
+
+	SILVER(ring)				PALADIN(helmet)
+
+						GAEA(robe)
+
+MIST:						SILVER(ring)
+
+	BARD(robe)
+
+	WHIP(whip)			TOROIA:
+
+	DANCING(knife)				CAP(helmet)
+
+						LEATHER(helmet)
+
+AGART:						CLOTH(robe)
+
+	IRON(shield)				LEATHER(robe)
+
+	IRON(helmet)				RUBYRING(ring)
+
+	IRON(armor)				WOODEN(hammer)
+
+	IRON(gauntlet)				GREATBOW(bow)
+
+	IRONRING(ring)				FIRE(arrow)
+
+	ROD(rod)				ICE(arrow)
+
+	STAFF(staff)				LIT(arrow)
+
+	SPEAR(spear)
+
+	BOOMERANG(boomerang)		SILVERA:
+
+	SHORTBOW(bow)				SILVER(shield)
+
+	CROSSBOW(bow)				SILVER(helmet)
+
+	IRON(arrow)				SILVER(armor)
+
+	WHITE(arrow)				SILVER(gauntlet)
+
+						SILVER(knife)
+
+CASTLE OF DWARVES:				SILVER(staff)
+
+	FIRE(shield)				SILVER(hammer)
+
+	FIRE(armor)				SILVER(sword)
+
+	WIZARD(helmet)
+
+	WIZARD(robe)			EBLAN:
+
+	RUNE(ring)				ICE(shield)
+
+	DWARF(axe)				ICE(armor)
+
+	GREATBOW(bow)				BLACK(robe)
+
+	DARKNESS(arrow)				POWER(staff)
+
+	FIRE(sword)				ICEBRAND(sword)
+
+	FLAME(spear)				SHORT(blade)
+
+						BLIZZARD(spear)
+
+TOMRA:						BOOMERANG(boomerang)
+
+	DIAMOND(shield)				ARCHER(bow)
+
+	DIAMOND(armor)				POISON(arrow)
+
+	DIAMOND(gauntlet)
+
+	DIAMOND(ring)			LAND OF SUMMONED MONSTERS:
+
+	DIAMOND(helmet)				WHIP(whip)
+
+	TIARA(helmet)				CHAIN(whip)
+
+	MIDDLE(blade)				BLITZ(whip)
+
+	CHAIN(whip)				LONG(blade)
+
+	OGRE(axe)				CHARM(rod)
+
+	ARCHER(bow)				LUNAR(staff)
+
+	MUTE(arrow)				CHARM(arrow)
+
+						AEGIS(shield)
+
+KOKKOL's:					SORCEROR(robe)
+
+	SHURIKEN(dart)
+
+	NINJA(dart)
+
+	SAMURAI(arrow)
+
+	
+
+
+
+- - - -=- -=- OTHER ITEMS -=- -=- - - -
+
+there are some items which can be obtained only by using a game genie.  this
+
+listing does not contain many of those items, as I do not use a game genie
+
+(sorry)
+
+
+
+the use of some items vary between combat and non-combat situations.  the
+
+effects of the item use in the two domains will be distinguished with the same
+
+terminology as was used in the magic section
+
+
+
+Item/Cost	Use
+
+CABIN - 1k	restore all allies to MHP & MMP
+
+		  (can only be used at a save location or outside) -nC
+
+TENT - 200	restore 100 MP & 1000 HP to all allies
+
+		  (can only be used at a save location or outside) -nC
+
+HEAL - 100	cast HEAL	-nC/Cb
+
+LIFE - 150	cast LIFE1	-nC/Cb
+
+ELIXIR - 100k	restore all HP & MP to a single target		-nC/Cb
+
+ETHER2 - 50k	restore exactly 144 MP to a single target -nC, make an MP
+
+		  healing attack with a base of 96 to a single target -Cb
+
+ETHER1 - 10k	restore exactly 48 MP to a single target -nC, make an MP
+
+		  healing attack with a base of 32 to a single target -Cb
+
+CURE3 - 3k	heal exactly 1920 HP to a single target -nC, make an HP
+
+		  healing attack with a base of 1280 to a single target -Cb
+
+CURE2 - 150	heal exactly 480 HP to a single target - nC,  make an HP
+
+		  healing attack with a base of 320 to a single target -Cb
+
+CURE1 - 30	heal exactly 96 HP to a single target -nC, make an HP
+
+		  healing attack with a base of 64 to a single target -Cb
+
+CRYSTAL - !	have your paladin use it on Zeromus	-Cb
+
+LIT-BOLT - 100	L:[ (RHP of user)/2 ] to all enemy targets -Cb
+
+FIREBOMB - 100	F:[ (RHP of user)/2 ] to all enemy targets -Cb
+
+ICEBLAST - 100	I:[ (RHP of user)/2 ] to all enemy targets -Cb
+
+CARROT - 50	if it 'smells like chocobos', use this to summon
+
+		  the big chocobo	-nC
+
+WHISTLE - 20k	use to summon the big chocobo from anywhere	-nC
+
+PASS - 10k	use to see a show in Toroia		-nC
+
+PAN - !		recieve this from Yang's wife before taking the big whale to the
+
+		  moon.  use to revive Yang in the sylvan cave, and also to
+
+		  trade in for a SPOON(dart) from Yang's wife	-nC
+
+RAT(tail) - !	trade for the ADAMANT(ore)			-nC
+
+PINK(tail) - !	(secret) trade for the ADAMANT(armor)		-nC
+
+TWINHARP - !	activates automatically in the lair of the Dark Elf	-Cb
+
+DARKNESS - !	a crystal you find in the Sealed cave of many traps
+
+EARTH - !	the crystal stolen from Toroia by the Dark Elf
+
+LUCA KEY - !	use to open the Sealed cave		-nC
+
+TOWER KEY - !	use to open the cannon room in the tower of Bab-il	-nC
+
+MAGMA KEY - !	drop in a well in Agart for a big boom		-nC
+
+SANDRUBY - !	medicine to heal Rosa; you can get this from Antlion	-nC
+
+BARON KEY - !	unlocks the weapon shop & secret passage in Baron	-nC
+
+PACKAGE - !	a gift of goodwill from the king to the neighbors
+
+
+
+
+
+- - - -=- -=- WHERE TO BUY ITEMS -=- -=- - - - 
+
+there are four types of item shops, which will be denoted A,B,C, and D.  what
+
+these shops sell (in order) are:
+
+
+
+TYPE A: CURE1, LIFE, TENT, CARROT, HEAL, ETHER1
+
+TYPE B: CURE1, CURE2, LIFE, TENT, CABIN, CARROT, HEAL, ETHER1
+
+TYPE C: HEAL
+
+TYPE D: CURE2, LIFE, CABIN, ETHER1, ETHER2, ELIXIR, WHISTLE
+
+
+
+each town or settlement possesses either a shop of one of these types or no item shop at all:
+
+
+
+Baron, Kaipo, Fabul, Toroia, Agart: A
+
+Mysidia, CoD*, Eblan, Tomra, land of SM^: B
+
+Silvera: C
+
+Hummingway's(on the moon): D
+
+Mist: no shop
+
+
+
+(^land of summoned monsters)	(*castle of the dwarves)
+
+
+
+
+
+
+
+================================= 6: MONSTERS ==================================
+
+
+
+monsters here are listed first by their race/picture and secondly by the order
+
+in which you meet them in the game.  type can be important in determining
+
+weaknesses. for instance, the ARTEMIS(arrow) is x4 vs. dragons.  'D.Fossil' is
+
+a dragon, so if you shoot those arrows at it, it will take four times as much
+
+damage as it would normally take, as was described in the damage algorithm
+
+section
+
+
+
+experience listed is that which you would recieve with 5 characters in your
+
+party, if you were to fight one of those monsters all by itself.  total
+
+experience given is the sum of the experience reward for each one of the
+
+monsters defeated (if they run away before you kill them, they don't count).
+
+if you have fewer than 5 characters in your party, say 3, each one get 5/3 as
+
+many experience points (xp), so that the total experience rewarded remains
+
+constant
+
+
+
+money awarded is also additive per monster, and the ones that run away don't
+
+give you anything.  since you only keep one pool of money for your entire
+
+party, this isn't split up
+
+
+
+some monsters are weak vs. certain elements.  this will be indicated with an
+
+attribute before the number of HP it has.  one letter for the attribute means
+
+that the monster takes double damage from that element.  two letters means
+
+quadruple damage.  a minus before the letter means that an attack with that
+
+attack with that attribute causes reverse damage.  physical attacks ignore a
+
+negative multiplier.  a '#' sign before the letter means that all attacks with
+
+that element cause 0 damage.  for instance, -F,LL: 250 in the HP column means
+
+that the monster has 250 HP, magical fire attacks will heal it, and it takes
+
+quadruple damage from all lightning attacks
+
+
+
+if you have a ninja, he can SNEAK items from enemies during a battle.  what item
+
+you will get from each monster is listed in the 'Sn' column
+
+
+
+some monsters have special attacks used in certain circumstances.  what these
+
+attack are and when they are invoked is described in the 'Special Attacks'
+
+column.  a tactic listed in parenthesis and lowercase is a name I have given the
+
+attack because in reality it has no name.  (DMG) which is a fraction of the MHP
+
+of the target and is elemental in nature is always exactly [ MHP/2 ] if the
+
+target is weak vs. that element, and is always exactly [ MHP/10 ] if the target
+
+resists that element.  the effects of these special attacks will be explained
+
+first:
+
+
+
+
+
+- - - -=- -=- MONSTERS' SPECIAL ATTACKS -=- -=- - - -
+
+Tactic		Effect
+
+
+
+(2xattack)	attack twice and resolve both hits at once
+
+ABSORB		monster recovers HP
+
+ALERT		summons another monster
+
+ARMOR		boosts resistance to weapon attacks
+
+BEAK		stone one target
+
+BEAM		(DMG) = [ MHP/10 ] to a single target
+
+BIG BANG	1200(DMG) and HP leak to all allies
+
+BIG WAVE	(DMG) = [ MHP/4 ] to all allies
+
+BLAST		a weak attempt to paralyze one ally
+
+BLK.HOLE	removes wall in all allies
+
+BLAZE		I:(DMG) = [ MHP/4 ] to all allies
+
+BLITZ		L:(DMG) = [ MHP/2 ] to one target
+
+BLIZZARD	I:264 to all allies
+
+BLUSTER		paralyze or swoon one target
+
+BREATH		set charm, mute, small, darkness, pig, and toad in one target
+
+CALL		summons another monster
+
+CALL(golbez)	summons SHADOW
+
+CHARM(mind)	charm all allies
+
+COLDMIST	I:(DMG) to all allies
+
+(combine)	morph into 'Calbrena'
+
+COUNT		give 'count' to one target
+
+  (fatal eye)
+
+COUNT(plague)	give 'count' to all allies
+
+COUNTER		(DMG) to one character
+
+  (antlion)
+
+COUNTER(larva)	boosts magic resistance
+
+(croak)		all Tinytoads present cast TOAD
+
+CRUSH		guaranteed swoon to one target
+
+CURSE		curse one target
+
+(dance)		all allies and enemies become berserk
+
+DIGEST		(DMG) to one target
+
+DISRUPT		guaranteed swoon to one target
+
+EMISSION	F:? to all allies
+
+ENTANGLE	paralyze one target
+
+EXPLODE		sacrifice self to cause exactly the RHP of caster as (DMG) to a
+
+		  single target (damage done may exceed 9999)
+
+FIRE		F:(DMG) = [ MHP/5 ] to all allies
+
+FISSION		damage to one target
+
+GAS		darkness or paralyze to all allies
+
+GLANCE		turn one ally to stone
+
+GLARE		(DMG) to all allies
+
+GLOBE199	(DMG) = 9999 to one ally
+
+HATCH		the monster inside the egg will become visible
+
+HEAT RAY	F:? to all allies
+
+HOLD GAS	guaranteed paralyze to all allies
+
+HUG		heal target to MHP and stone it
+
+JUMP		this is just the dragoon's JUMP option
+
+KICK		this is just the karate man's KICK option
+
+LASER		(DMG) = [ MHP/5 ] to one target
+
+MAGNET		weak attempt to paralyze one target
+
+MASER		(DMG) to all allies
+
+MEGANUKE	damage to all allies
+
+(morph)		monster diasappears and summons a different, undamaged monster
+
+NEEDLE		(DMG) to a single target
+
+PETRIFY		sets the 'D' condition.  if 'D' is already set, this sets the
+
+		  petrify condition.  if petrify is already set, the target
+
+		  becomes stone
+
+POISON		(DMG) and poison to all allies
+
+POLLEN		HP leak to all allies
+
+POWDER		darkness to a single target
+
+RAY		same as PETRIFY
+
+RECOVER		cast LIFE2 on all components
+
+REMEDY		heal 2000 HP
+
+REPORT		cast PEEP
+
+RETREAT		(run away)
+
+SEARCH		cast PEEP
+
+SLAP		randomly charm, curse, mute,or cause darkness in a single target
+
+SPIN		boosts resistance to everything, may be on or off.  if SPIN is
+
+		  on, user will look like a tornado.  may be switched off by a
+
+		  successful JUMP attack
+
+STORM		WEAK to all allies
+
+SWORD ATTACK	4000(DMG) to all allies
+
+TORNADO		[ (caster's RHP)/20 ] (DMG) to all allies
+
+THUNDER		L:(DMG) = [ MHP/4 ] to all allies
+
+VAMPIRE		cast DRAIN, then HP leak to one target
+
+WAVE		(DMG) to entire party
+
+
+
+
+
+- - - -=- -=- MONSTER STATS -=- -=- - - -
+
+Monster/Type/MHP		Gold	XP	Sn	Special Attacks
+
+
+
+IMP		6		10	4	CURE1
+
+IMP. CAP	37		50	38	CURE1
+
+DARK IMP	199		45	388	CURE1
+
+TRICKER		L*:12000	10700	4200	CURE1	PEEP(constantly),FAST
+
+	(*do you feel lucky, punk?)	  and LIT 3(constantly if attacked by L)
+
+
+
+
+
+EAGLE		A:18		10	6	LIFE
+
+COCKTRIC	AA:100		120	56	LIFE	BEAK
+
+ROC BABY	AA:50		85	202	LIFE	BEAK(ca:m)
+
+
+
+
+
+FLOATEYE	A:20		10	8	HEAL
+
+RED EYE		A:2000		465	700	HEAL	GAZE
+
+FATALEYE	A:25000		65200	8000	ETHER1	COUNT
+
+PLAGUE(boss)	A:28000		550	6240		COUNT(immediately)
+
+
+
+
+
+SWORDRAT	30		20	14	CURE1	NEEDLE(ca:p)
+
+NEEDLER		110		55	74	CURE1	NEEDLE(ca:p)
+
+STINGRAT	300		220	242	CURE1	NEEDLE(ca:p)
+
+
+
+
+
+LARVA		28		10	10	CURE1	COUNTER,PSYCH(ca:m)
+
+ROCLARVA	800		40	566	CURE1
+
+
+
+
+
+D. MIST(boss dragon)	465	200	140		COLDMIST(c.a. when in
+
+							  mist form)
+
+
+
+
+
+SANDMOTH	A:40		20	16	HEAL
+
+ROCKMOTH	A:850		315	640	HEAL	POWDER 
+
+
+
+
+
+SANDWORM	75		20	18	CURE1	TORNADO
+
+AQUAWORM	L:638		350	240	CURE1	WAVE(if in back row)
+
+REDWORM		FF:7000		310	1430	ETHER1	VAMPIRE,RETREAT
+
+
+
+
+
+SANDMAN		II:20		20	16	HEAL
+
+WATERHAG	L:48		40	28	CURE1
+
+
+
+
+
+SANDPEDE	60		20	16	CURE1
+
+CENTPEDE	600		345	560	CURE1
+
+
+
+
+
+SOLDIER		27		55	32	?
+
+FIGHTER		65		100	82	?
+
+OFFICER		221		80	80	?	RETREAT(if alone)
+
+GENERAL		320		155	122	?	RETREAT(if alone)
+
+
+
+
+
+EVILSHEL	LL:58		30	22	HEAL
+
+FANGSHEL	LL:300		550	210	HEAL
+
+
+
+
+
+CAVETOAD	I:44		25	18	HEAL
+
+MADTOAD		I:59		35	13	HEAL
+
+
+
+
+
+PIKE		LL:65		35	24	CURE1
+
+PIRANHA		L:105		145	92	CURE1
+
+ELECFISH	-L,AA:200	230	130	HEAL
+
+
+
+
+
+WATERBUG	L:110		80	46	HEAL	REMEDY(ca:m),RETREAT
+
+HUGECELL	555		255	302	CURE1	REMEDY(ca:m),RETREAT
+
+MOONCELL	980		1100	570	ETHER1	REMEDY(ca:m),RETREAT
+
+
+
+
+
+TINYMAGE(magic user)   69	100	52	ROD(rod) PSYCH(ca:m),HOLD(ca:p),
+
+							LIT 1,FIRE1,ICE 1
+
+
+
+
+
+ALIGATOR	II:150		95	48	CAP(helmet)	(2xattack)
+
+CROCDILE	II:292		300	174	CAP(helmet)	(2xattack)
+
+
+
+
+
+JELLY		FF:35		35	28	CURE1
+
+CREAM		LL:55		35	30	CURE1
+
+SLIME		F:50		50	152	CURE1
+
+TOFU		I:102		385	212	CURE1
+
+PUDDING		1050		1300	702	ETHER1
+
+PINKPUFF	10000		55555	2000	ETHER2	(dance)(constantly)
+
+
+
+
+
+	(undead)
+
+ZOMBIE		#D,F,S:40	35	24	CURE1
+
+GHOUL		#D,F,S:120	180	116	CURE1
+
+REVENANT	#D,F,S:160	190	136	CURE1
+
+
+
+
+
+OCTOMAMM(boss)   D,L:2350	500	240		
+
+
+
+
+
+BASILISK	90		30	24	CURE1
+
+ICE LIZ		-I,FF:400	290	300	?
+
+BLACK LIZ	I:700		45	260	MEDUSA(arrow)	PETRIFY(ca:p)
+
+
+
+
+
+TURTLE		II:150		80	48	HEAL
+
+TORTOISE	I:400		235	340	SILVER(shield)
+
+CARAPACE	II:700		230	270	?
+
+
+
+
+
+IRONBACK	100		235	220	SILVER(shield)
+
+ARMADILLO	300		195	320	SILVER(shield)
+
+
+
+
+
+	(spirits)
+
+WEEPER		100		40	32	CURE1
+
+SCREAMER	1000		205	620	LIT(arrow)
+
+GRUDGER		S:1400		190	792	LIT(arrow)
+
+
+
+
+
+ANTLION(boss)   1000		800	300		COUNTER(ca:p)
+
+
+
+
+
+	(spirits)
+
+GARGOYLE	AA,SS:160	100	64	CURE1	WEAK
+
+HOOLIGAN	A,S:1900	485	818	CURE1	WEAK
+
+
+
+
+
+	(spirits)
+
+SPIRIT		-F,SS:50	125	58	CURE1	FIRE1
+
+SOUL		-F,SS:150	165	102	CURE1	FIRE1
+
+GHOST		-F:1100		365	740	CURE1	FIRE2
+
+
+
+
+
+	(undead)
+
+SKELETON	FF,SS:50	125	48	CURE1	LIT 1
+
+RED BONE	FF,SS:170	295	122	CURE1
+
+SKULL		FF,SS:740	120	316	CURE1
+
+
+
+
+
+BOMB		50		80	74	CURE1
+
+GRAYBOMB	100		105	90	CURE1	EXPLODE
+
+BALLOON		A:600		315	496	CURE1	EXPLODE
+
+GRENADE		A:820		630	530	CURE1
+
+MOMBOMB(boss)	D:1080		1200	350		EXPLODE
+
+
+
+
+
+*DRAGOON(boss)	65000		?	?		JUMP(constantly)
+
+	(*the world will never know how your old buddy ever got so buff, but
+
+	he means to kick your ass, and you can't do much about it)
+
+
+
+
+
+RAVEN		A:941		700	148	LEATHER(helmet)	(2xattack)
+
+ROC		A:999		150	282	LEATHER(helmet)	(2xattack)
+
+
+
+
+
+LILLITH(undead)	FF:320		365	550	ETHER1	SLAP(ca:p)
+
+LAMIA		1200		1210	412	CHARM(harp)	CHARM
+
+Q. LAMIA	11000		250	580	CHARM(harp)	CHARM
+
+
+
+
+
+MILON(boss)	3100		3000	600		LIT 1
+
+MILON Z.(boss)  F,S,A:3000	3000	800		POISON
+
+
+
+
+
+*D.KNIGHT	1000		0	0
+
+	(*he'll die on his own after a preset time if you don't attack him)
+
+
+
+
+
+*KARATE(boss)	4000		0	0		KICK
+
+		(*I wonder where he got all those hit points from?)
+
+
+
+
+
+HYDRA		I,L:285		255	166	POISON(arrow)	ENTANGLE
+
+PYTHON		II,SS:593	345	560	POISON(arrow)
+
+
+
+
+
+GUARD		200		500	144	CURE1	SIZE, PIGGY
+
+FLAMEMAN	I:579		300	344	FLAME(spear)
+
+BLADEMAN	S:1050		215	520	TENT	VIRUS(c.a.)
+
+
+
+
+
+BAIGAN(boss)	3500		3000	960		WALL,RECOVER(if both
+
+							   arms are eliminated)
+
+*L. ARM, R. ARM	350		0	2
+
+					      (*these are components of BAIGAN)
+
+
+
+
+
+KAINAZZO(boss)	L:4000		4000	1100		WAVE(if uncoiled)
+
+
+
+
+
+TREANT		F:260		150	200	HEAL
+
+DARKTREE(magic user) F:1800	525	1110	HEAL	BERSK
+
+
+
+
+
+PANTHER		S:285		255	186	CURE1	BLUSTER(c.a.)
+
+BLACKCAT	593		345	560	CURE2	BLUSTER(c.a.)
+
+
+
+
+
+CANNIBAL	F:370		220	192	HEAL	POLLEN(if alone)
+
+TRAPROSE	FF:300		35	242	HEAL	POLLEN(if alone)
+
+
+
+
+
+CAVE BAT	-L,AA,SS:150	155	126	CURE1	VAMPIRE
+
+GIANTBAT	-L,A,F:399	365	256	CURE1	VAMPIRE
+
+WEREBAT		-L,A,F:800	355	410	CURE1	VAMPIRE
+
+
+
+
+
+MAGE(magic user)  500		235	220	CURE2	BLAST
+
+
+
+
+
+CAVENAGA	SS:255		205	150	POISON(arrow)
+
+NAGA		900		150	220	?	MUTE
+
+HUGENAGA	1200		240	720	POISON(arrow)
+
+
+
+
+
+	(undead)
+
+VAMPGIRL   -L,FF,SS:250		195	150	CURE2	VAMPIRE
+
+VAMPLADY   -L,FF,SS:2375	190	920	CURE2	VAMPIRE,LIT 2
+
+
+
+
+
+	(giants)
+
+OGRE		S:865		240	220	CURE2
+
+MAD OGRE	1700		270	474	CURE2
+
+
+
+
+
+	(dragon magic users)
+
+*DARK ELF(boss)	3000		5000	1200		WEAK,ICE 2,LIT 2,FIRE2
+
+	(*after transformation)
+
+PALE DIM(boss)  27300		0	11800		SLOW, QUAKE
+
+
+
+
+
+	(magic users)
+
+MARION		473		195	555	CURE(staff)	CALL(if alone)
+
+SORCEROR	1000		275	2370	CURE(staff)	CALL(if alone)
+
+CONJUROR	3000		475	3700	CURE(staff)	CALL(if alone)
+
+
+
+
+
+PUPPET		F:256		180	190	?
+
+EVILDOLL	300		270	284	CURE1
+
+BRENA*		300		500	200		(combine)(c.a. if all of
+
+							  CAL is eliminated)
+
+CAL*		1000		500	200		(combine)(c.a. if all of
+
+							  BRENA is eliminated)
+
+CALBRENA(boss)	4624		4500	2800
+
+					(*these are components of CALBRENA)
+
+
+
+
+
+SWORDMAN	F:320		175	220	CURE2	ABSORB(c.a.)
+
+WARRIOR		2400		575	860	TENT
+
+
+
+
+
+EPEEGIRL	390		200	252	?
+
+KARY		2700	   	3500	2620	ARTEMIS(arrow)	HUG,
+
+						  RETREAT(immediately after HUG)
+
+
+
+
+
+ICEBEAST	-I,FF:445	280	304	?	BLIZZARD
+
+FLAMEDOG	-F,II:1221	245	344	FIRE(arrow)   FIRE(if alone)
+
+
+
+
+
+CENTAUR		380		175	200	?
+
+HORSEMAN	3000		1220	990	TENT
+
+
+
+
+
+	(magic users)
+
+WITCH		300		330	334	?	SLOW
+
+TOADLADY	2960		600	700	HEAL	(croak)(constantly)
+
+WARLOCK		4250		2400	3460	HEAL	DRAIN, PSYCH,LIT 2,
+
+							  ICE 2,FIRE2
+
+
+
+
+
+	(magic users)
+
+GREMLIN		F:385		275	300	?	CHARM
+
+FIEND		2980		625	1280	CURE2	CHARM
+
+
+
+
+
+	(magic user magus sisters)
+
+SANDY(tall)	2500	 \				WALL,BERSK,LIT 1
+
+MINDY(short)	2200	--> 	9000	1800 - - - - - - - - - - >DELTA ATTACK*
+
+CINDY(fat)	4300	 /				RECOVER(if SANDY or
+
+							  MINDY is eliminated)
+
+		(*one of VIRUS, FIRE2, ICE 2, LIT 2 chosen randomly, and only
+
+			works if all three sisters are alive)
+
+
+
+
+
+VALVALIS(boss)	6000		5500	1900		SPIN,WEAK and RAY(if
+
+							  SPIN is being used)
+
+
+
+
+
+	(giants)
+
+STONEMAN	II:2000		240	590	CURE2
+
+STALEMAN	I:2100		445	420	EARTH(wrench)	hit to sleep
+
+IRONMAN		2500		385	750	SILVER(dagger)
+
+
+
+
+
+ALERT		1425		380	420	CURE1	BEAM,ALERT(if alone)
+
+SEARCHER	5500		900	1760	CURE1	BEAM,ALERT(if alone)
+
+LAST ARM	9500		320	3840	CURE1	SEARCH,MAGNET and
+
+							  FISSION(after SEARCH)
+
+
+
+
+
+CHIMERA		-F,-I,-L:700	230	460	FIRE(arrow)	BLAZE(if alone)
+
+MANTCORE	-F,-I,-L:2000	1200	7000	FIRE(arrow)	BLAZE(if alone)
+
+
+
+
+
+MEDUSA		430		225	250	MEDUSA(arrow)	GLANCE, RAY
+
+
+
+
+
+GOLBEZ(boss)  	F,S:5000	11000	4000		HOLDGAS(immediately), 							  CALL,LIT 3,FIRE2,VIRUS
+
+
+
+
+
+	(dragons)
+
+*SHADOW		?		?	?		DISRUPT(constantly)
+
+							  (*hope for a miracle)
+
+CLAPPER		-L,A:7000	900	1600	CURE1	BLITZ
+
+GING-RYU	7500		19000	5000	CURE1	TORNADO,BLAZE(if alone)
+
+KING-RYU	8200		23000	6000	CURE1	ENTANGLE(c.a.),BLITZ
+
+
+
+
+
+DR.LUGAE(boss)		4416	0	0	
+
+BALNAB(component)	3927	0	0
+
+*DR.LUGAE(boss)		6600	4000	3000		GAS,POISON,BEAM, 
+
+	(*after transformation)				  LASER,EMISSION
+
+
+
+
+
+*Q.EBLAN(boss)	60000		?	?		attacks only as c.a.
+
+*K.EBLAN(boss)	60000		?	?		attacks only as c.a.
+
+	(*these 'people' die on their own after a preset period of time)
+
+
+
+
+
+RUBICANT(boss)	*I:25200	7000	5000		FIRE2, GLARE
+
+	(*-I if cape is closed, II if open.  also, casting FLAME(ninja) on
+
+	  rubicant will cause him to cast LIFE1 to all party members)
+
+
+
+
+
+TRAPDOOR	5000		4500	6220	?	SEARCH,DISRUPT(after
+
+						    SEARCH,(morph)(if low on HP)
+
+
+
+
+
+EVILWALL(boss)	19000		8000	2300		CRUSH(constantly after a
+
+						  preset amount of time),PETRIFY
+
+
+
+
+
+TINYTOAD	I:400		335	370	HEAL	TOAD
+
+
+
+
+
+ARACHNE		II,AA:3500	585	880	CURE1	QUAKE(constantly)
+
+
+
+
+
+MOLBOL		1999		460	2200	HEAL	BREATH,
+
+							  DIGEST(after BREATH)
+
+
+
+
+
+ASURA(boss)	23000		0	4000		CURE3,CURE4,LIFE1,
+
+							  attacks only as c.a.
+
+
+
+
+
+LEVIATAN(boss)	L:35000		0	11200	      ICE 2,BIGWAVE(if uncoiled)
+
+OGOPOGO(boss)	37000		0	24440	      BLAZE,BIGWAVE(if uncoiled)
+
+
+
+
+
+ODIN(boss)	LL:20500	0	3600		SWORD ATTACK(after a
+
+							  preset amount of time)
+
+
+
+
+
+JUCLYOTE	1700		1560	1440	CURE2
+
+PROCYOTE	2200		1850	1820	CURE2	hit to poison
+
+
+
+
+
+	(undead dragons)
+
+D. BONE		F:9000		6750	2820	CURE1
+
+D. FOSSIL	F,S:10000	8100	3020	CURE1	CURSE,hit to paralyze
+
+D.LUNAR(boss)	F:21000		0	10000		WALL,REMEDY,VIRUS,FIRE
+
+
+
+
+
+BEHEMOTH	16000		65000	11740	HEADBAND(helmet)   STORM,
+
+							attacks only as c.a.
+
+
+
+
+
+	(dragons)
+
+YELLOW D.	1800		1500	6800	HEAL	THUNDER
+
+GREEN D.	2200		?	?	HEAL	THUNDER
+
+
+
+
+
+	(dragons)
+
+D. MACHIN	F:15000		2550	8300	CURE1	FIRE(if alone)
+
+RED D.		-F,I:15000	60500	10360	FIREBOMB   HEAT RAY,(2xattack)
+
+BLUE D.	    -S,-F,-I,-L:13200	40200	720	CURE2	BLIZZARD
+
+
+
+
+
+	(giants)
+
+MACGIANT	8500		7000	3780	CABIN
+
+REDGIANT	11800		1500	6200	CABIN	EMISSION,EXPLODE(c.a. to
+
+							  call magic)
+
+
+
+
+
+BAHAMUT(boss)	37000		0	70000		MEGANUKE(after a preset 
+
+							  amount of time)
+
+WYVERN(boss)	25000		0	12860	       NUKE,MEGANUKE,WALL,REMEDY
+
+
+
+
+
+BEAMER	1800			890	650	TENT	BEAM
+
+
+
+
+
+MACHINE	3600			985	1640	LIT(arrow)
+
+
+
+
+
+	(elements: you must fight them one after another in the order
+
+	listed without breaks inbetween.  when you beat them all, you
+
+	get the gold and XP listed below)
+
+MILON(boss)	FF  \					CURSE
+
+RUBICANT(boss)	*I --} 57000 ---} 10000 15000		GLARE,FIRE3,FIRE2
+
+KAINAZZO(boss)	LL  \	       /			WAVE
+
+VALVALIS(boss)	LL --} 47000  /				SPIN,STORM
+
+ (*ice damage works the same way as it did in the earlier battle with rubicant)
+
+
+
+
+
+CPU(boss)	20000	 \				GLOBE199 and RECOVER(if
+
+				      ATTACKER and DEFENDER are eliminated),WALL
+
+*ATTACKER	2000	-->	10333	25000		MASER(constantly)
+
+*DEFENDER	2000	 /				REMEDY(constantly)
+
+	(*these are components of the cpu)
+
+
+
+
+
+EVILMASK(magic user)  25500	50000	13000	CURE2	WALL,VIRUS,NUKE,WHITE
+
+
+
+
+
+	(spirits)
+
+BREATH		31300		50000	12000	?	REPORT,BLAST
+
+MIND		12300		50000	13000	?	*CHARM,ARMOR
+
+							  (*special attack)
+
+
+
+
+
+*ZEROMUS(boss)	111111		0	0		BIG BANG,BLK.HOLE(every
+
+    (*zeromus in invincible until the paladin	     few turns),WHITE,METEO,NUKE
+
+	uses the crystal given to him by golbez)
+
+
+
+
+
+
+
+============================= 7: TIPS, TRICKS, ETC. ============================
+
+
+
+to duplicate any item which can be equipped in the left or right hand (such as
+
+a shield, sword, rod, axe, etc...), first get into battle, making sure that one
+
+of your characters has the item that you want duplicated equipped.  when that
+
+character's is prompted to take an action, go to your item list, select any
+
+blank space in it, and then select the item you want duplicated(which must be
+
+in the left or right hand).  this will switch the item with the blank space in
+
+the item list.  now leave the item list and then run away from battle.  when you
+
+try to re-equip the item outside of battle, there will be two of them in your
+
+hand at once.  remove the item from your hand again and there will now be two of
+
+them in your item list.
+
+
+
+this tactic is especially useful in building up money quickly near the middle
+
+of the game, and is also useful when you get the ninja.  just duplicate the
+
+drain spear or excalibur sword a few times, and throw the extras as darts.
+
+you'll do outrageous amounts of damage, and since it is (DMG), the dart attack
+
+ignores the target's armor.  this makes for a good way to defeat bosses.
+
+unfortunately, you can't duplicate the spoon dart, but if your ninja is above
+
+level 50, the excalibur sword is practically just as effective.  you can pick up
+
+the excalibur sword as soon as the big whale spaceship is available to you.  I
+
+find that a few excalibur darts will make short work out of bahamut, the cpu,
+
+odin, 'plague', etc...  never leave home without them!
+
+
+
+to equip any weapon or shield(that your ninja can SNEAK) on any character, first
+
+make sure that you have none of the item that you plan to SNEAK already in your
+
+inventory.  now, enter battle and SNEAK from an enemy that will give you a
+
+weapon or shield.  the next ally available to take an action can now use the
+
+ITEM option to equip the stolen weapon or shield, regardless of whether or not
+
+that ally belongs to the right character class.  this trick only works for
+
+the action immediately following SNEAK, so you should use the FORM option before
+
+entering battle to set things up right so that the desired character follows
+
+after your ninja.  if you decide to remove the stolen equipment at a later time,
+
+you may not put it back on unless that character could normally do so.  in some
+
+cases immediately following the battle in which you execute this trick, your
+
+statistics may not reflect the new piece of equipment.  all you need to do in
+
+this case is go to the equip window, and then you come back to the statistics
+
+window - everything will be alright.  during the battle in which you stole the
+
+equipment, if you try using the equipment as an item, strange things will
+
+happen, the effect usually being guaranteed elimination of one target.  in
+
+subsequent battles, the equipment will act normally if used as an item
+
+
+
+this trick is actually not as useful as it sounds, as there isn't much good
+
+stuff that you can SNEAK.  what I find most useful is giving the caller a silver
+
+shield
+
+
+
+if you want to find that damned PINK tail(in order to get the ADAMANT armor -
+
+armor which is so unbelievably powerful that it's not even funny), prepare to be
+
+frustrated.  a pink tail can only be obtained from beating a PINKPUFF group, and
+
+the only place that you will ever find a pinkpuff is in a tiny room in B5 of the
+
+Lunar Subterrain.  to find this room, it is best to start from the last chance
+
+saving spot before ZEROMUS on B7.  exit this room and go the left, then back up
+
+two floors so that you will be on the bottom of the screen on B5.  there will be
+
+a small room immediately to the right, and a stairway a little bit further to
+
+the left.  enter the room on the right.  in this room, there should be a
+
+treasure chest on the far right wall which contains a CABIN.  wander around this
+
+room for an eternity and run from everything which is not a pinkpuff(if you have
+
+a game genie, there exists an item to summon a pinkpuff immediately).  there is
+
+a small chance that you will win a PINK(tail) from fighting pinkpuffs.  in the
+
+event that you get lucky and recieve the tail, you can take it to the small dude
+
+who collects tails in the mine southeast of Silvera
+
+
+
+make use of weakness multipliers whenever possible.  often, an area will
+
+contain monsters that are weak against the items you can find there.  for
+
+instance, the path to the lunar core has lots of dragons.  near the entrance
+
+you'll have the opportunity to sneak artemis arrows from karys.  take 40 or 50
+
+and shoot them at whatever dragons cross your path.  it will make a big
+
+difference
+
+
+
+if you know that one of your party members is going to leave you, remove all
+
+their equipment before they do.  anything they have when they leave you, you
+
+will never see again.  one good example of this is making sure that you keep at
+
+least one defense sword in your item list before your dragoon betrays you in
+
+the sealed cave.  later, you can re-equip him with it, which will be an
+
+improvement over the gungnir spear.  at the very least, you can resell all the
+
+stuff your old characters used to have
+
+
+
+i find that it's convienent to move the -sort- option to the top of the item
+
+list.  moving around items is something you're probably going to do a lot, so
+
+you might as well have the option where you can use it
+
+
+
+some monsters will only attack if you attack them first (such as behemoth).  so
+
+if you only attack with your strongest characters, and have the rest parry, you
+
+will take less damage.  also, some monsters will constantly use elemental
+
+special attacks if they are alone.  if you are not well protected, you could
+
+easily lose your entire party in seconds.  so, if you run into one such monster
+
+in the company of other monsters, try to kill the ones with the special attacks
+
+first, or get them all at once with a strong magic spell
+
+
+
+secret passages are sometimes indicated by dark gray against the black of the
+
+walls.  you may not be able to see them if the brightness on your TV is turned
+
+down.  some secret passages of particular usefulness are in the village of
+
+mist, inside a burned out fireplace.  you can find the rod of change and a
+
+tiara helmet there.  save the tiara for your reunion with your wh.wiz, although
+
+ultimately it will be put to the best use by your caller.  there are also
+
+secret pitfalls in castle eblan, secret passages in the sylvan cave, cave of
+
+summoned monsters, the lunar subterrain and many other places.  one exception
+
+to this pattern is an invisible bridge on the left side of B6 of the Lunar
+
+Subterrain for which there is no indication of a secret passage.  this bridge
+
+leads ultimately to a saving point, and the WYVERN boss who guards the awesome
+
+CRYSTAL sword.  always be on the lookout for secret powerups hidden in jars,
+
+tall grasses, shallow water, and bookshelves too
+
+
+

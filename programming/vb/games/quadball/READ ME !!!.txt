@@ -1,0 +1,74 @@
+(if This Is Notepad, Make Sure "Word Wrap" (in the "Edit" Menu) is Off) 
+
+|----------------------------------|
+|Last Min notes: (for source code) |
+|----------------------------------|
+|
+| This was written In VB6 so i'm not sure if it will work in vb5,
+| IF YOU ARE USING VB5 INSTALL "PICCLP32.OCX" BY GOING INTO THE 
+| "SOURCE" DIRECTORY AND DOUBLE CLICKING ON THE FILE "INSTPCPL.BAT"
+|
+| if it doesn't just download "vb6run.exe" form the microsoft site
+| and then you will at least be able to play the compiled Exe's.
+|
+| For the complied exe's to work all the ".exe" , ".Img" and ".Qbs"
+| must be in the same directory.
+| 
+| Please Note That This FreeWare can be placed on magazine Cds as long as
+| Arvinder Sehmi is notified ( arvinder@bigfoot.com )
+|
+| If There are any problems, or if you have any comments , questions or
+| suggestions please contact Arvinder Sehmi ( E-Mail Above )
+|
+|--------------------------------------------------------------------------
+
+Read-Me File:
+
+    .----------------------<Q><U><A><D>-<B><A><L><L>---------------------.
+    |                                                                    |
+    |                                 |
+    |                         |
+    |                                        |
+    |                                        |
+    |                                 |
+    |                            |
+    |                         |
+    |                                                                    |
+    |------------------<I><N><F><O><R><M><A><T><I><O><N>-----------------|
+    |                                                                    |
+    | Quad-Ball is freeware! If you like the game, please send Me email! |
+    |                                                                    |
+    |   Arvinder@Sehmi.co.uk -Or- Arvinder@Arvinder.free-online.co.uk    |
+    |                                                                    |
+    | This way i'll know if anyone is playing my game and will inspire   |
+    | me to make more.                                                   |
+    |                                                                    |
+    | Visit Quad-Ball's Web Page Where You Can Downalod Updates, & The   |
+    | Latest Versions                                                    |
+    |                                                                    |
+    |  http://www.arvinder.co.uk/quadball/  (currently Down)             |
+    |                                                                    |
+    |----------------<I><N><S><T><R><U><C><T><I><O><N><S>----------------|
+    |                                                                    |
+    | Simply Use The Mouse To Move The Paddles. You Must Make The Paddle |
+    | Obstruct The Ball, Thus Keeping The Comet On Screen.               |
+    |                                                                    |
+    |----------------------<C><R><E><A><T><O><R><S>----------------------|
+    |                                                                    |
+    | Arvinder Sehmi:  Programming, Graphics, Sound Effects.             |
+    | Rajeev Bamra:    Main Idea (FOR THE STORY).                        |
+    |                                                                    |
+    |--------------<T><E><C><H><N><I><C><A><L>-<I><N><F><O>--------------|
+    |                                                                    |
+    | Programming In Visual Basic 6.0 Enterprise Edition.                |
+    | Compiled with Visual Basic 6.0 32-bit Compiler.                    |
+    | Sound Effects In My Voice (Speeded Up, Etc...).                    |
+    | Graphics in Paint Shop Pro 5, And Adobe Photoshop 5 and            |
+    | Adobe Premier                                                      | 
+    |                                                                    |
+    |----------------<M><A><G><'S>-<A><N><D>-<C><D><'><S>----------------|
+    |                                                                    |
+    | It's free to publish this game in a computer magazine or in a CD   |
+    | collection. Please send us an email if you do.                     |
+    |                                                                    |
+    `---------------------------<E><N><D>--------------------------------'

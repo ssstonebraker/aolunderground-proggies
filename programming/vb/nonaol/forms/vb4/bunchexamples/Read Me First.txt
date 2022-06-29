@@ -1,0 +1,20 @@
+Iz Representing eXcel 2001
+
+This example will show you how to
+add an item to a listbox or do any other kind of
+function when the user hits 'enter' in a listbox
+
+programmed in Visual Basic 4.0 Pro
+If you have problems loading it, here is the code
+
+v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^vv^v^v^v^v^v^v^v^v
+
+Private Sub Text1_KeyPress(KeyAscii As Integer)
+'ok here is how you take information from a textbox to a list box
+'using the textbox's Key_Press function
+'Iz Representing eXcel 2001
+If KeyAscii = 13 Then 'waits for the user to press enter(Chr(13))
+List1.AddItem Text1.Text ' Adds the text to a list box
+Text1.Text = "" 'Clears the textbox
+End If ' closes the IF statement
+End Sub

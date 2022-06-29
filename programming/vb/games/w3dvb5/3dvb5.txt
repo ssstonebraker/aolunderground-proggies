@@ -1,0 +1,25 @@
+  Win3D vb5 By Fabio Guerrazzi 1995/1999
+  fabiog@si.tdnet.it
+
+This program is created with Visual Basic 5.0 and include some features
+for a 3D graphing programming. The code is free and you can use and modify in any way. contact me for suggestions and tips. 
+
+If you want try other controls about Computer Graphic [richiedimi] shareware ocx:
+
+- Delaunay Triangulation
+- Pattern Fill
+- Extended Line Style 
+- DXF Import/Export
+- 2D/3D Math utilities 
+
+and more..
+
+Fabio Guerrazzi 
+fabiog@si.tdnet.it
+
+
+  
+
+
+
+

@@ -1,0 +1,19 @@
+file name: AxisAutoUp32.bas
+maker:axis
+used: 32bit coding
+VB Used:visual basic 5
+
+Info:AxisAutoUp32.bas is a simple bas
+that i made from a request of a friend he wanted
+to know how to make an auto upchat so i felt like
+making an auto upchat which i never had made one 
+before this will show an example how easy is API
+and how simple the coding is even if you think is
+cool imagine how many knowm programmers make it 
+and how interesting there prog is all you have
+to be is very creative and thats all you need
+basic skills and knowledge-axis out
+
+mail me:Axis@AsiansOnly.net
+visit my site:http://www.asiansimplicity.cjb.net
+

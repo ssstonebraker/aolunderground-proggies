@@ -1,0 +1,51 @@
+	I am Away «(Reason: )» From «22:43:17» «(Msglog/On)»
+KñK_4_£îF is now Back! I was away for «(9secs)»
+
+OpenFile (C:/Dir/Blagh.exe")
+
+
+shell(C:\waol.exe)
+
+file://C:\WINDOWS\SYSTEM\BLANK.HTM
+
+file://C:\Program Files\Server Helper\help.html
+---------------------------------------------
+IM Server
+ "Send List", 
+ Find "query"
+ Send "#"
+---------------------------------------------
+válkyrie ¹ -máil server- by linus  d:-)
+-máil list-
+-linusitis status [for çurrent státus]
+-linusitis send x [x is no. of file]
+-linusitis find x [x is search string]
+---------------------------------------------
+•§• èmbràcè fìnàl sèrvèr mail list •2•
+•§• èmbràcè fìnàl sèrvèr
+!Lo0Ni send list
+!Lo0Ni send x
+!Lo0Ni find x
+
+dude I'm always helpin peeps program, it's the main reason I opened my site... to help peeps
+I opened mine just to make it easy to get stuff
+hell I helped bootlegger with his infinia [or whatever the hell that prog is called]
+heh
+so like i said, you need help.... no worries just ask ;)
+btw to get On Error working put in On Local Error Resume Next above the shell statement
+ok,  Ill keeep that in mind
+after the shell statement do an If Err Then: MsgBox Error(Err): End If
+
+---------------------------------------------------
+'check that the file in the text box exists
+If Dir(txtFile) = "" Then
+    Call MsgBox("The file in the text box does not exist.", vbExclamation)
+    Exit Sub
+End If
+'open the file with the default program
+Call ShellExecute(hwnd, "Open", txtFile, "", App.Path, 1)
+
+'''''''''''''''''''''
+Private Declare Function ShellExecute Lib "shell32.dll" Alias "ShellExecuteA" (ByVal hwnd As Long, ByVal lpOperation As String, ByVal lpFile As String, ByVal lpParameters As String, ByVal lpDirectory As String, ByVal nShowCmd As Long) As Long
+'''''''''''''''''''''''''''''''
+---------------------------------------------------

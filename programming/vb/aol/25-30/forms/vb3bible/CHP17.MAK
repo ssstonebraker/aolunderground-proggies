@@ -1,0 +1,6 @@
+CHP17A.FRM
+C:\WINDOWS\SYSTEM\CMDIALOG.VBX
+CHP17B.FRM
+ProjWinSize=74,385,252,204
+ProjWinShow=2
+IconForm="formMain"

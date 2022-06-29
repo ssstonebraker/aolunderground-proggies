@@ -1,0 +1,17 @@
+---Contents---
+
+These files are the complete VB6 Enterprise source code for the kick ass macro renderer - Caustik Converter.
+
+Required (and included) to run this code are:
+
+vb6 runtimes
+Richtx32.ocx
+swflash.ocx
+
+--About--
+This program was written to load icons/images/.exe icons/.dll icons from any file on your computer, and then convert them into aol4.0 colored macros. This is a very interesting idea, and you can make some really cool macros this way. I have created an algorithm to allow the use of ANY font, and ANY character. When you change characters or fonts, the variables are automatically created to keep the image within the borders of the chatroom - and under the text length limit. If you want to make the macro bigger, options can easily be adjusted. The preview function is gorgeous- making use of quite a few functions i created for rich-->Aol heximal conversion. I hope anyone who gets a hold of this code enjoys it, and learns alot. There is ALOT of information and good programming in these codes - and i wrote every bit of it, including the shockwave, rich control, and all the .bas modules. If you have any questions, need help, or just want to comment on the program or the coding, feel free to instant message my aim name : ocaustik, or email me at caustik@hotmail.com. 
+NOTE: YES, it WOULD be possible - (AND NOT TOO DIFFICULT) to make a complete prog out of pure shockwave (see the about, and help screens inside program).
+
+Coding/All art/ EVERYTHING by: caustik.
+
+HAVE FUN - ;)

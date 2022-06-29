@@ -1,0 +1,105 @@
+' main.txt - global definitions
+Global gv0110(5) As Variant
+Global gv0126(5) As Variant
+Global gv015C As Variant
+Type T1324
+  M132C As Integer
+  M1334 As Integer
+  M133B As Integer
+  M1344 As Integer
+End Type
+
+Type T134E
+  M135A As Integer
+  M135F As Integer
+End Type
+
+Type T1364
+  M137A As Integer
+  M1389 As Integer
+End Type
+
+Type T1399
+  M13AC As Long
+  M13B7 As Long
+  M13C2 As Integer
+  M135A As Integer
+  M135F As Integer
+  M13CC As Integer
+  M13D2 As Integer
+  M13D8 As Long
+  M13E1 As Long
+End Type
+
+Type T13EB
+  M13FB As Long
+  M140D As Integer
+  M141A As Integer
+  M1423 As Integer
+  M13D2 As Integer
+  M13CC As Integer
+  M135F As Integer
+  M135A As Integer
+  M13D8 As Long
+  M1431 As Long
+  M143D As Long
+  M144A As Long
+End Type
+
+Type T1455
+  M145F As Integer
+  M1469 As Integer
+  M1474 As Integer
+  M1480 As Integer
+  M1490 As String * 1
+  M149C As String * 1
+  M14AB As Long
+End Type
+
+Global Const gc02DE = 16 ' &H10%
+Global Const gc02E0 = 1024 ' &H400%
+Global Const gc02E4 =-1 ' &HFFFF%
+Global Const gc02E6 =-2 ' &HFFFE%
+Global Const gc02E8 = 16 ' &H10%
+Global Const gc02EA = 64 ' &H40%
+Type T15BC
+  M15C9 As Integer
+  M15D1 As Integer
+  M135A As Integer
+  M135F As Integer
+  M13CC As Integer
+  M13D2 As Integer
+  M15E4 As Integer
+End Type
+
+Type T15ED
+  M15F9 As Integer
+  M1604 As Integer
+  M160E As Integer
+  M1618 As Long
+End Type
+
+Global gv07EE As Integer
+Global Const gc07F8 = 3 ' &H3%
+Global Const gc07FC = 5 ' &H5%
+Global Const gc07FE = 6 ' &H6%
+Global Const gc0804 = 9 ' &H9%
+Global Const gc0950 = 16 ' &H10%
+Global Const gc0962 = 12 ' &HC%
+Global Const gc0964 = 13 ' &HD%
+Global Const gc0966 = 14 ' &HE%
+Global Const gc09B8 = 258 ' &H102%
+Global Const gc09C8 = 273 ' &H111%
+Global Const gc09E0 = 513 ' &H201%
+Global Const gc09E2 = 514 ' &H202%
+Global Const gc0B66 = 17 ' &H11%
+Global Const gc0BB8 = 2 ' &H2%
+Global Const gc0BBE = 5 ' &H5%
+Global gv0BFE As Integer
+Global Const gc0CE8 = 1047 ' &H417%
+Global Const gc0D4A = 1025 ' &H401%
+Global Const gc0DE8 = 1036 ' &H40C%
+Global Const gc0DFE = 1050 ' &H41A%
+Global Const gc0E64 = 1030 ' &H406%
+Global Const gc0E78 = 1040 ' &H410%
+Global gv1210 As Variant

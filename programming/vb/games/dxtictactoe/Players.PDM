@@ -1,0 +1,112 @@
+[Root]
+Most Recent Package=Standard Setup Package 1
+
+
+[Package|Standard Setup Package 1|Root]
+SubWizProgID=PDWizard.SetupPkgSubWiz
+BuildFolder=H:\My Tic Tac Toe\oneplane\Package
+
+[Package|Standard Setup Package 1|Configure DAO ISAMs]
+Applicable=No
+
+[Package|Standard Setup Package 1|Configure DAO ODBC]
+JetWorkspace=
+ODBCDirect=
+
+[Package|Standard Setup Package 1|Files Found]
+
+[Package|Standard Setup Package 1|Files Released]
+
+[Package|Standard Setup Package 1|Missing Dependency Information]
+
+[Package|Standard Setup Package 1|Out-of-Date Dependency Information]
+D:\WINDOWS\SYSTEM\COMCT332.OCX=
+
+[Package|Standard Setup Package 1|Files Added]
+H:\My Tic Tac Toe\oneplane\tictac.ico=
+H:\My Tic Tac Toe\oneplane\O.ICO=
+H:\My Tic Tac Toe\oneplane\X.ICO=
+
+[Package|Standard Setup Package 1|Files Removed]
+h:\my tic tac toe\oneplane\tictac.ico=
+
+[Package|Standard Setup Package 1|Files In Project]
+D:\WINDOWS\SYSTEM\MSVBVM60.DLL=Yes
+D:\WINDOWS\SYSTEM\OLEAUT32.DLL=Yes
+D:\WINDOWS\SYSTEM\OLEPRO32.DLL=Yes
+D:\WINDOWS\SYSTEM\ASYCFILT.DLL=Yes
+D:\WINDOWS\SYSTEM\STDOLE2.TLB=Yes
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=Yes
+D:\WINDOWS\SYSTEM\COMCT332.OCX=Yes
+D:\WINDOWS\SYSTEM\MSCOMM32.OCX=Yes
+D:\WINDOWS\SYSTEM\MSCOMCTL.OCX=Yes
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP.EXE=Yes
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP1.EXE=Yes
+D:\WINDOWS\SYSTEM\VB6STKIT.DLL=Yes
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\ST6UNST.EXE=Yes
+\\Fileserver\server c\Program Files\Players\multiplayertictac.exe=Yes
+D:\WINDOWS\SYSTEM\RICHTX32.OCX=Yes
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\RICHED32.DLL=Yes
+H:\My Tic Tac Toe\oneplane\tictac.ico=No
+H:\My Tic Tac Toe\oneplane\O.ICO=Yes
+H:\My Tic Tac Toe\oneplane\X.ICO=Yes
+
+[Package|Standard Setup Package 1|Configure Registry Files]
+Applicable=No
+
+[Package|Standard Setup Package 1|Configure Remote Servers]
+Applicable=No
+
+[Package|Standard Setup Package 1|Install Locations]
+\\Fileserver\server c\multiplayertictac.exe=$(AppPath)
+D:\WINDOWS\SYSTEM\MSVBVM60.DLL=$(WinSysPathSysFile)
+D:\WINDOWS\SYSTEM\OLEAUT32.DLL=$(WinSysPathSysFile)
+D:\WINDOWS\SYSTEM\OLEPRO32.DLL=$(WinSysPathSysFile)
+D:\WINDOWS\SYSTEM\ASYCFILT.DLL=$(WinSysPathSysFile)
+D:\WINDOWS\SYSTEM\STDOLE2.TLB=$(WinSysPathSysFile)
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=$(WinSysPathSysFile)
+D:\WINDOWS\SYSTEM\COMCT332.OCX=$(WinSysPath)
+D:\WINDOWS\SYSTEM\MSCOMM32.OCX=$(WinSysPath)
+D:\WINDOWS\SYSTEM\MSCOMCTL.OCX=$(WinSysPath)
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP.EXE=$(AppPath)
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP1.EXE=$(WinPath)
+D:\WINDOWS\SYSTEM\VB6STKIT.DLL=$(WinSysPathSysFile)
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\ST6UNST.EXE=$(WinPath)
+\\Fileserver\server c\Program Files\Players\multiplayertictac.exe=$(AppPath)
+D:\WINDOWS\SYSTEM\RICHTX32.OCX=$(WinSysPath)
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\RICHED32.DLL=$(WinSysPathSysFile)
+H:\My Tic Tac Toe\oneplane\O.ICO=$(AppPath)
+H:\My Tic Tac Toe\oneplane\X.ICO=$(AppPath)
+
+[Package|Standard Setup Package 1|Configure Shared Files]
+Applicable=Yes
+\\Fileserver\server c\multiplayertictac.exe=No
+\\Fileserver\server c\Program Files\Players\multiplayertictac.exe=No
+H:\My Tic Tac Toe\oneplane\O.ICO=No
+H:\My Tic Tac Toe\oneplane\X.ICO=No
+
+[Package|Standard Setup Package 1|Distribution]
+Type=single
+Size=
+Title=Players
+
+[Package|Standard Setup Package 1|Package]
+PackageFolder=H:\My Tic Tac Toe\oneplane\Package
+ProjectFolder=H:\My Tic Tac Toe\oneplane
+ServerSideCab=
+File1=H:\My Tic Tac Toe\oneplane\Package\setup.exe
+File2=H:\My Tic Tac Toe\oneplane\Package\Setup.Lst
+File3=H:\My Tic Tac Toe\oneplane\Package\multiplayertictac.CAB
+Handler1=PDWizard.FolderDplySubWiz
+Handler2=PDWizard.WebPostDplySubWiz
+
+[Package|Standard Setup Package 1|IconGroups]
+Group0=Players
+PrivateGroup0=True
+Parent0=$(Programs)
+
+[Package|Standard Setup Package 1|Players]
+Icon1=multiplayertictac.exe
+Title1=Players
+StartIn1=$(AppPath)
+Key1=Icon1

@@ -1,0 +1,75 @@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@        @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@                @@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@              @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@                   @@@@@@@@@@@@@
+@@@@@@@@@@@@@@     @@@@@@@@     @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@    @@@@@@@@@@@@    @@@@@@@@@@@@
+@@@@@@@@@@@@@    @@@@@@@@@@@@     @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@    @@@@@@@@@@@@    @@@@@@@@@@@@
+@@@@@@@@@@@@   @@@@@@@@@@@@@@@    @@@  @@@@@@@@@@@@@@@@@@@  @@@@    @@@@@@@@@@@@    @@@@@@@@@@@@
+@@@@@@@@@@@   @@@@@@@@@@@@@@@@@  @@@    @@@@@@@@@@@@@@@@@    @@@    @@@@@@@@@@@@    @@@@@@@@@@@@
+@@@@@@@@@@   @@@@@@@@@@@@@@@@@@@@@@@    @@@@@@@@@@@@@@@@@@  @@@@    @@@@@@@@@@@@    @@@@@@@@@@@@
+@@@@@@@@@@   @@@@@@@@@@@@@@@@@@@@@@@    @@@@@@@@@@@@@@@@@@@@@@@@    @@@@@@@@@@@@    @@@@@@@@@@@@
+@@@@@@@@@   @@@@@@@@@@@@@@@@@@@@@@@@    @@@@@@@@@@@@@@@@@@@@@@@@    @@@@@@@@@@@@    @@@@@@@@@@@@
+@@@@@@@@@   @@@@@@@@@@@@@@@@@@@@@@@@    @@@@@@@@@@@@@@@@@@  @@@@    @@@@@@@@@@@@    @@@@@@@@@@@@
+@@@@@@@@@   @@@@@@@@@@@@@@@@@@@@@@@@    @@@       @@@@@@@    @@@    @@@@@@@@@@@     @@@@@@@@@@@@
+@@@@@@@@   @@@@@@@@@@@@@@@@@@@@@@@@@    @@         @@@@@@    @@@                  @@@@@@@@@@@@@@
+@@@@@@@@   @@@@@@@@@@@@@@@@@@@@@@@@@    @   @@@@@   @@@@@    @@@                @@@@@@@@@@@@@@@@
+@@@@@@@@   @@@@@@@@@@@@@@@@@@@@@@@@@      @@@@@@@@   @@@@    @@@    @@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@   @@@@@@@@@@@@@@@@@@@@@@@@     @@@@@@@@@    @@@    @@@    @@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@   @@@@@@@@@@@@@@@@@@  @@@@    @@@@@@@@@@    @@@    @@@    @@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@    @@@@@@@@@@@@@@     @@@    @@@@@@@@@@    @@@    @@@    @@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@     @@@@@@@@@@@     @@@@    @@@@@@@@@@    @@@    @@@    @@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@      @@@@@@@     @@@@@    @@@@@@@@@@    @@@    @@@    @@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@              @@@@@@@    @@@@@@@@@@    @@@    @@@    @@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@         @@@@@@@@@@  @@@@@@@@@@@@  @@@@@  @@@@@  @@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+
+ _______________________________________________________________________________________________
+|                                 ChiP ChaT Aol 4.o Chat Control                                |
+|                                            By ChiP                                            |
+|_______________________________________________________________________________________________|
+|Sup everybody?!  I am ChiP.  You probably never heard of me since i never released anything    |
+|I've made.  The only reason is because I thought it would never live up to today's programmers |
+|on AOL.  This custom control for VB4 and VB5 will.  I am very confident that it is better than |
+|DoS's VB5Chat.OCX.  This reason is because DoS's skips lines scrolled by the same person (which|
+|makes it hard to make a auto-ignore).  He even admits it in his Text file.  I talked with DoS  |
+|one time and he told me that he is making one for VB6 that is much faster and he fixed that    |
+|problem (that's if it wasn't his poser, I couldn't really tell :P ).  Well, today it's fixed. I|
+|have created ChiPChaT.OCX for your convenience and usage.  It does NOT skip lines scrolled by  |
+|the same person.  If you have any questions, please mail me at IilChiPliI@yahoo.com.  Please   |
+|scroll down to see the functions and events for this custom control.  The first step is to add |
+|the custom control to your project and add to a form. I did not use any Bas files with this    | |(except my own but I had to trim it down alot for this project; most of it wasn't needed).     |
+|_______________________________________________________________________________________________|
+
+
+ _______________________________________________________________________________________________
+|At first i wasn't going to release this OCX until I figured I would never make a prog for AOL. |
+|I decided I was going to, but I still thought other people should be able to scan the chatroom |
+|for lines.  In order to protect my OCX from anyone else, I created a Password system.  You     |
+|Place the password in a property called "password" and if you got it wrong, nothing on this OCX|
+|would work.  No, I'm not stupid, I TOOK OUT THE PASSWORD SYSTEM for you guys so you can use it.|
+|Anyways, here are the commands to operate my OCX...                                            |
+|												|
+|												|
+|		Chat1.ChatON				Turns the chat scanner on.		|
+|               Chat1.ChatOFF				Turns the chat scanner off.		|
+|               Name$ = Chat1.UserSN			Returns the AOL users screen name.	|
+|		Chat1.ChatSend "What to send"   	Sends chat to the chat room.		|
+|												|
+|												|
+|After you turn on the Chat scanner, everytime there is a new line of chat, the ChatMessage     |
+|event is executed with the Text in the variable "Text" and who said it in the variable "SName".|	
+|_______________________________________________________________________________________________|
+
+
+Well, that's about all there is to this.  It's very simple to use and it's fun.  Perfect for Bots and other things.  Remember, if you have ANY questions, please mail me at IilChiPliI@yahoo.com
+
+-ChiP
+
+
+
+
+
+
+
+
+

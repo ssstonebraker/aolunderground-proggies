@@ -1,0 +1,6 @@
+Line 33: Class MSWinsockLib.Winsock of control Winsock1 was not a loaded control class.
+Line 37: The property name _ExtentX in Winsock1 is invalid.
+Line 38: The property name _ExtentY in Winsock1 is invalid.
+Line 39: The property name RemoteHost in Winsock1 is invalid.
+Line 40: The property name RemotePort in Winsock1 is invalid.
+Line 41: The property name LocalPort in Winsock1 is invalid.

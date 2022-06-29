@@ -1,0 +1,30 @@
+Program: PAT or JK's API SPY 3.0
+Author: Patrick Gillespie
+Note: This 3.0 version does not include the fading titlebar.
+
+* Drag and drop code generating - This makes it so all you have to do
+to generate the code to find a window is to drag and drop the "Ring
+of source code" onto that window.
+
+* Finding a certain window functions - This lets you find a certain
+type of window in a group of other windows that have the same class
+name.
+
+* Built in codes - Has some pre-made message sending codes that you
+can add on to the windows you find (like setting the text).
+
+* Generates code that works in 16 bit and 32 bit versions of VB
+
+* Tells you what you need to put in your module (*.bas file) for the
+code to work.
+
+* Tips - Gives you some helpful tips.
+
+* Doesn't advertise in chat rooms.
+
+* It's free!
+
+If you have any problems with it you can contact me by...
+
+email: patorjk@aol.com
+webpage: www.patorjk.com

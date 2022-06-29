@@ -1,0 +1,9 @@
+File: FaDeDaT.bas
+Coded By: N/A                
+E-Mail: XxFaDeDaTxX@n2.com
+File Used: N/A
+Version: AOL 4.0                      
+Coded in: VB6
+Version of File: 1ST                      
+Comments: This Bas File MUST have a 32 bit Bas File 
+with SendChat to work properly!

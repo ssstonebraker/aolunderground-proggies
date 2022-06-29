@@ -1,0 +1,14 @@
+Greetin's all,
+
+	1. What it is:    Web Launcher
+	2. Made By:       NightShade    
+	3. What bas used: Web Launcher bas included
+	4. VB Version:    Visual Basic 6.0
+
+	This example shows how to make a hyperlink and image link on you vb form. It launchs your default web browser and sets the url.
+
+
+ Questions or comments can be sent to me at NightShadeXX@hotmail.com
+  
+                  
+                       NightShade   08/09/1999

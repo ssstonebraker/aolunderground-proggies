@@ -1,0 +1,12 @@
+ÿPthis example involves finding arguments, comments, declares, procedure titles, and variables in a procedure. these are things that many code stealers will change, add, or remove in an effort to make the code look like they wrote it. by finding these things, we will then be able to either remove these, or replace them with wildcards.
+ÿÒPublic Sub ChatSend(Chat As String)
+    'chatsend sub taken from dos32.bas
+    'email: xdosx@hotmail.com
+    'aim: xdosx
+    Dim Room As Long, AORich As Long, AORich2 As Long
+    Room& = FindRoom&
+    AORich& = FindWindowEx(Room, 0&, "RICHCNTL", vbNullString)
+    AORich2& = FindWindowEx(Room, AORich, "RICHCNTL", vbNullString)
+    Call SendMessageByString(AORich2, WM_SETTEXT, 0&, Chat$)
+    Call SendMessageLong(AORich2, WM_CHAR, ENTER_KEY, 0&)
+End Sub

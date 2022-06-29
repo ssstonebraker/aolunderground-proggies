@@ -1,0 +1,5 @@
+Okay here is another demo finished. It just basically shows how to make a simple race game. It doesn't have all the physics in but I did this fairly fast(such as you can run into walls and still be at the same speed). Use the arrow keys to move up accelerates and down brakes while left/right turn. I have all the info I need right now to make a multiplayer demo which will be my next demo. It will be using a tcp connection which I hope you have if you got this off the internet. It will be a simple 3d chat thing. Maybe Eldermage can use it to have a chatroom going all the time. Thats all for now. 
+
+John
+cryect@geocities.com
+http://www.geocities.com/TimesSquare/Castle/2259/

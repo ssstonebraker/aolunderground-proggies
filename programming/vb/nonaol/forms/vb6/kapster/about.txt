@@ -1,0 +1,7 @@
+all code by robbie saunders aka wizdum
+beta .2
+-account master added to zip
+-fixed the download modal problem, for real this time ;)
+-recoded that horrible splitter
+beta .1
+-fixed a download modal problem

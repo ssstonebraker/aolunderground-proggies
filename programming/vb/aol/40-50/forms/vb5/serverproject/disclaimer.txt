@@ -1,0 +1,6 @@
+Sup! Guys This Is TiTo .
+
+Freely Distruibuted Free Usage Granted For All.This project  Files Were Made For Educational Purposes Only.The Maker Of This project File Are Not Responsible For He/She Actions.This Forms Files Can Not Directly Violate AOL's Terms Of ServicesOn It's Own.You Will Assume Full Responsibility For Your Own Actions.
+
+This is the complete source for X-Treme Server '99,It Was written by me for Microsoft Visual Basic 5.0.  If you don't understand the source code,E-Mail Any Question To TiToVb5@Hotmail.com .I provided it for educational use, so you can get a better understanding of windows API And Visual Basic 5.0 . I ask that you don't just take program and
+change the name and the pictures and call it your own Cuz I Have Added A Few Bugs To It You Have To Understand a Little Bit About Visual Basic And I Figure If You Are A Good Programmer Why bothering Making A Program Like This Use The code Freely.But i know someone will, so I Dont Give A Shit What You Do With It.But Anyways, enjoy the source codes...

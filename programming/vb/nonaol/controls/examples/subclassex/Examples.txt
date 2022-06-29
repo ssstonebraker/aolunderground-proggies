@@ -1,0 +1,208 @@
+Examples.txt - Text file for Subclass Examples
+Copyright (c) 1997 SoftCircuits Programming (R)
+Redistributed by Permission
+
+The accompanying files provide several examples of using a subclassing
+control with Visual Basic to intercept Windows messages. Emphasis is
+placed on those messages that result in functionality that cannot be
+obtained through Visual Basic alone. Each of the examples are
+documented below.
+
+The accompanying files may be distributed on the condition that they
+are distributed in full and unchanged, and that no fee is charged for
+such distribution with the exception of reasonable shipping and media
+charges. In addition, the code in these example programs may be
+incorporated into your own programs and the resulting programs may be
+distributed without payment of royalties.
+
+This example program was provided by:
+ SoftCircuits Programming
+ http://www.softcircuits.com
+ P.O. Box 16262
+ Irvine, CA 92623
+
+Special thanks to Karl Peterson who wrote the original code that
+the DropFile and MDIPaint examples were based on.
+
+'=======================================================================
+
+DropFile Example
+----------------
+Windows 95 support for drag and drop is extensive. One basic
+functionality that can be useful is the ability to drop files from the
+Windows 95 explorer onto a running application. Windows does this by
+sending the application the WM_DROPFILES messages.
+
+The DropFile example starts by calling the DragAcceptFiles API function
+to notify Windows that the form supports the WM_DROPFILES message (see
+the AcceptDrops subroutine). When the form receives the WM_DROPFILES
+message, it uses the DragQueryFile and DragFinish API functions to
+retrieve the names of the files that were dropped and then displays
+these names in the list box.
+
+
+GetMinMx Example
+----------------
+If you want to limit the sizes allowed for a particular form in Visual
+Basic, you have a few choices. You can make the form's border
+non-sizeable or you can write code in the form's Resize event that
+simply moves the form back to where you want it. However, non-sizeable
+forms can have a different appearance in some instances and they don't
+allow you to prevent the user from sizing the form smaller than a
+predetermined size, for example, they simply don't allow the user to
+size the form at all. And in the case of moving the form back in range
+from the Resize event, this can cause an annoying flicker because the
+Resize event occurs after the form has already moved.
+
+The GetMinMx example demonstrates another alternative by using Subclass
+to intercept the WM_GETMINMAXINFO message. This message requests
+information about how the form can be sized and allows you to prevent
+the form from becoming too small or too large, or from being moved to a
+particular area of the screen. Also, because Windows sends this message
+while the user is sizing the form, it actually restricts the "phantom"
+border that appears while a window is being sized.
+
+The WM_GETMINMAXINFO message passes the address of a MINMAXINFO
+user-defined type. The code uses the CopyMemory function to access this
+structure to specify the minimum and maximum tracking sizes.
+
+See also the WinPosCh for similar functionality.
+
+
+InitMenu Example
+----------------
+Visual Basic allows you to modify the text of a menu command by setting
+the Caption property of a menu object. However, it often makes more
+sense to be able to set this caption just before the drop down menu is
+displayed. For example, let's say you had a spreadsheet with names and,
+when a menu was dropped down, you wanted the currently selected name to
+appear in the menu as part of a command. Rather than changing the menu
+caption every time the current selection changes, wouldn't it be easier
+to simply set the caption to the currently selected name just before the
+menu is displayed?
+
+Visual Basic does allow you to do this. For example, if you have an Edit
+menu that contains a Copy command, you can modify the Copy command's
+Caption property in the Edit menu's Click event. The Edit menu's Click
+event occurs before the menu is displayed. Unfortunately, Windows has
+already calculated the width of the menu at this point. If the new text
+for the caption is longer that the width of the menu, the text will be
+cut off.
+
+We can solve this problem by using a subclassing control to intercept
+the WM_INITMENUPOPUP message. This message is sent before a drop down
+menu is displayed and, significantly, before the width of the menu has
+been calculated. The InitMenu example demonstrates this technique.
+
+The value you assign to the Result parameter, which Subclass passes to
+the Message event handler, will be returned to Windows. Like the wParam
+and lParam paramters, the meaning of the value returned depends on the
+actual message being sent. However, most messages, including
+WM_MENUSELECT, simply use a return value of 0 to indicate that your
+program processed the message.
+
+
+MDIPaint Example
+----------------
+Although newer versions of Visual Basic allow MDI parent forms to
+contain a graphic image, this support is limited. For example, you
+cannot position the graphic in the center of the MDI parent form.
+
+The MDIPaint example does display a graphic image in the center of an
+MDI form. It does it by subclassing the WM_PAINT and WM_ERASEBKGND
+messages. These messages are sent when part of a window (in this case,
+the client area of the MDI parent window) needs to be painted. Because
+of the MDI window's poor support for graphics methods, the code uses a
+number of API calls to paint the image. The actual graphic is stored on
+a hidden picture box control.
+
+
+MenuSel Example
+---------------
+Many Windows applications display a brief hint on the status bar about
+menu items as each menu item is highlighted. Although Visual Basic can
+easily display a message on a status bar, it provides no ready way to
+detected when a new menu item has been selected.
+
+The MenuSel example subclasses the WM_MENUSELECT message, which is sent
+as each menu item is selected. When this message is received, the low
+word of the wParam argument contains the command ID of the menu item
+that was selected. Although Visual Basic doesn't allow you to specify
+the IDs of menu commands, the numbers used can be determined easily. The
+first menu, usually "File" has an ID of 1. The first command in the file
+menu has an ID of 2 and so on. This numbering continues on to the next
+menu and so forth.
+
+The code that processes the WM_MENUSELECT message uses this logic to
+determine which command is highlighted and displays an appropriate
+message on the status bar. The code also provides hints for commands in
+the form's system menu. These IDs are defined by Windows.
+
+Note that this example uses the StatusBar from the Windows common
+controls. To run this example without modification, you will need this
+StatusBar control.
+
+
+OwnrDraw Example
+----------------
+Many Windows controls support some type of "owner draw" style. Owner
+draw controls allow an application to customize the appearance of a
+control by painting elements of the control itself while still taking
+advantage of logic already provided by Windows.
+
+When an element of an owner draw control needs to be painted, it
+notifies the application that owns the control by sending the
+appropriate messages. Subclassing allows Visual Basic to intercept owner
+draw messages. However, it can still be a problem to create owner draw
+controls because Visual Basic does not supply direct support for
+specifying what Windows styles controls are created with. And, for most
+controls, the owner draw style cannot be changed once the control has
+been created.
+
+One exception to this are menus. You can use the ModifyMenu API function
+to make a menu owner draw. This is exactly what the OwnrDraw example
+does to create some color-selection commands that appear only as the
+colors, with no text.
+
+After making changes to the menu, the code subclasses the WM_MEASUREITEM
+and WM_DRAWITEM messages. Because you are drawing the menu, Windows does
+not know how wide the menu needs to be. It sends the WM_MEASUREITEM
+message to determine the menu size. Then it sends the WM_DRAWITEM when
+a menu command needs to be painted.
+
+
+SysCmd Example
+--------------
+It is a relatively simple task to place a new command into a form's
+system menu. However, responding to this command requires subclassing.
+
+The SysCmd example adds an About command to the system menu using the
+AppendMenu API function. When specifying command IDs, you must use an ID
+less than &HF000 to prevent conflicts with existing system commands. The
+SysCmd demo uses an ID of 10.
+
+This example then subclasses the WM_SYSCOMMAND message. When Windows
+sends this message, the wParam argument contains the ID for the menu
+command. The code simply tests this ID and, if it matches the added
+command, the program responds to it.
+
+
+WinPosCh Example
+----------------
+Just before a window gets sized or moved, Windows sends it a
+WM_WINDOWPOSCHANGING message that includes information about the new
+window position. A window procedure can inspect the information about the
+new position and even modify it.
+
+The WM_WINDOWPOSCHANGING message uses the lParam parameter to hold the
+address of (or pointer to) a WINDOWPOS user-defined type. The WinPosCh
+example uses CopyMemory to access the data in this structure. This data
+structure contains information about the new window position. If this
+information is modified, the changes will affect how the window is moved.
+Setting the SWP_NOSIZE and SWP_NOMOVE bits of the flags element of the
+WINDOWPOS structure prevents any moving or sizing at all. This example, sets
+these bits and then calls CopyMemory once again to copy the data structure
+back.
+
+See also the GetMinMx example to see another approach to preventing or
+limiting window movement.

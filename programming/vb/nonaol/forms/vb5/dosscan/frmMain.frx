@@ -1,0 +1,62 @@
+ÿerecently, knk posted the results of a program i wrote at his 
+request. this program takes bas files (modules) and compares 
+them procedure by procedure, giving results regarding the 
+similarities among the files. in other words, should you know one 
+file is an "original", these results will show how much of the other 
+file is a copy.
+
+once results from this scanner were posted on knk's web site, i 
+received a few objections to the programs reliability. most of 
+these doubts came from people who had either released a bas 
+file and had it scan bad, or those who were releasing one very 
+soon. you can make your own conclusions from that.  i guess i 
+should have expected the negativety though. i was just as 
+shocked (and humored) as many of you were to see the results 
+of most aol bas files. still though, it isn't "impossible" as some 
+would have you beleive.
+
+first, you have to understand the concept behind the program. 
+also, you need to know what is required of this program. the 
+following are the basics of what your program would need to be 
+able to do in order to successfully do this.
+
+	1. load bas files into your program, seperating 
+procedures into an array.
+	2. identify arguments, comments, declares, procedure 
+titles, and variables.
+	3. replace all arguments, comments, declares, 
+procedure titles, and variables with wildcards.
+	4. loop through two files, comparing all procedures 
+against eachother keeping track of the related totals.
+
+step 1 is a bit complicated, but if you know how to open a file, and 
+you're good with strings and arrays, this can be accomplished. 
+still, no matter how good you are, its still a pain in the ass.
+
+step 2 and 3 are similar. they involve finding different things that 
+many code stealers will change, add, or remove in order to make 
+the code look like they wrote it. by eliminating these conditions, a 
+more effective compare can be preformed.
+
+step 4 isn't really that hard. it can be confusing, but its not too 
+bad. for the sake of this example, i will not show how to do this. 
+there is no doubt in anybody's mind that this part can be 
+accomplished.
+
+these examples are meant for you to learn from as well as 
+understand how my program works. this is not the source for my 
+program. my program scans multiple files and requires extensive 
+use of classes and arrays in order to accomplish what it does. 
+instead, this is just an example to prove the "impossible".
+
+btw, should you be one of the neglected/deprived individuals not 
+using visual basic 6, this demo will not work for you. this example 
+uses a vb6 function called "Replace". however, if you have 
+dos32.bas, you can take the "ReplaceString" function from that 
+file, add it to the module in this program, and change every 
+reference in this example of "Replace" to "ReplaceString".
+
+dos
+
+aim: xdosx
+email: xdosx@hotmail.com

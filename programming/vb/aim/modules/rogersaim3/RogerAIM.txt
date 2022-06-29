@@ -1,0 +1,2 @@
+RogersAIM3 by Rogers (c) 1999
+This is your average AIM bas file created in Visual Basic 5 using AIM 3.0 so it works on 3.0 and I think everything below that. It definately works on 2. Includes extra subs included in many aol modules but not aim like sound functions and saving and such. have fun. http://rogers.ownz.com
