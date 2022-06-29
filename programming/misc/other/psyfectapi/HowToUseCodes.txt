@@ -1,0 +1,40 @@
+hWnd is the handle of the window you have found.
+
+Example how to use:
+
+  If you have found the sign on screen, then the 'set up' icon, your code for the
+icon would look like this:
+--------------------------------------------------------------------------------------------------------
+	Public Function SignOnIcon() As Long
+	    SignOnIcon& = ManipChild(SignOn(), "_aol_icon", 4)
+	End Function
+  -          -          -          -          -          -          -          -          -          -          -          -      
+	Public Function CloseIt (hWnd As Long)
+	    Call PostMessage(hWnd&, WM_CLOSE, 0&, 0&)
+	End Function
+--------------------------------------------------------------------------------------------------------
+  We make "CloseIt" a function so we can simply put "CloseIt Window&" any time
+we want to close a window instead of calling:
+"Call PostMessage(hWnd&, WM_CLOSE, 0&, 0&)" every time.
+
+(I personally prefer PostMessage, since it seems to be the only
+api that can close an internet explorer window)
+
+Now let's say we want to close the icon, so it can no longer be used.
+
+        We would change this:
+	ManipChild(SignOn(), "_aol_icon", 4)
+        to this:
+	Call PostMessage(ManipChild(SignOn(), "_aol_icon", 4), WM_CLOSE, 0&, 0&)
+        Or
+	Call (CloseIt ManipChild(SignOn(), "_aol_icon", 4))
+
+We could also leave the code the way it was, and in a command button put:
+
+	Call PostMessage(Find_aolicon(), WM_CLOSE, 0&, 0&)
+        Or
+	CloseIt Find_AolIcon()
+
+  It's that simple!  Just toss the manip codes I've provided in the zip into a
+module along with my ManipChild function (if you want) found in the
+"Small Code.doc" tutorial and your set to start small coding!
