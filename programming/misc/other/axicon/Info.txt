@@ -1,0 +1,24 @@
+What it is: Attention Bot
+
+Made By: KnK,  Bill@knk.tierranet.com
+
+.BAS File used: Jolt32.BAS
+
+.OCX Files used:  The basic ones that come with VB5
+
+VB that this was built on: Visual Basic 5
+
+Comments:  This is a simple Attention bot that I made.  
+           This only works on AOL 4.o.  This attention 
+           bot loops every min.
+ ___________________________________________
+/                                           \
+\___________________________________________/
+  Y          KnK 4.o Productions          Y
+  |    http://knk.tierranet.com/knk4o     |
+ /           E-MAIL Questons to          /
+|          Bill@knk.tierranet.com       |   
+|               KnK 4.o '98             |    
+ \_______________________________________\_
+/                                          \
+\__________________________________________/
