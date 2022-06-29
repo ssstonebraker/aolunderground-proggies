@@ -1,0 +1,24 @@
+<html>
+
+<head>
+<title>404 File Not Found</title>
+<style>
+<!--.nu {text-decoration: none; font-family: arial;}
+A:link {text-decoration: none; color: black}
+A:visited {text-decoration: none; color: black}
+A:hover {text-decoration: underline; color: red}-->
+</style>
+</head>
+
+<body>
+
+<p align="center"><font face="digitsmall">Ooops! That page was not found!</font></p>
+
+<p align="center"><font face="tahoma">Follow the address below and you should find what
+you are looking for:</font></p>
+
+<p align="center"><a href="http://www.ripasrealm.simplenet.com"><font face="tahoma">www.ripasrealm.simplenet.com</font></a></p>
+
+<p align="center"><img src="http://ripasrealm.simplenet.com/ripasbanner1.gif"></p>
+</body>
+</html>

@@ -1,0 +1,73 @@
+BUG: GP Fault in KRNL286 When Run EXE on 286 or w/ NT on MIPs
+
+---------------------------------------------------------------------
+The information in this article applies to:
+
+- Standard and Professional Editions of Microsoft Visual Basic for
+  Windows, version 3.0
+---------------------------------------------------------------------
+Summary:
+
+SYMPTOMS
+--------
+You may encounter a general protection (GP) fault in KRNL286 at 0001:259F
+when you try to run a Visual Basic executable (.EXE) file in Windows on
+a 286 computer or in Windows NT on a MIPs computer.
+
+This problem will not occur when running a Visual Basic application from
+the Visual Basic design environment on a 286 or MIPs computer.
+
+RESOLUTION
+----------
+This problem has been fixed in a post-release version of VBRUN300.DLL.
+The post-release version of VBRUN300.DLL can be downloaded as a 
+self-extracting .ZIP file, BTR110.EXE from the Microsoft Software Library (MSL)
+accessable from the following services:
+
+	- Microsoft Software Library (MSL) on CompuServe (GO MSL).
+
+	- Microsoft Software Library on Internet (ftp.microsoft.com  cd softlib)
+
+	- Microsoft Download Service (206)936-MSDL.
+
+
+STATUS
+------
+Microsoft has confirmed this to be a bug in the Microsoft Visual Basic
+programming system for Windows, version 3.0. To correct the problem,
+obtain the post-release version of VBRUN300.DLL on the MSBASIC forum
+of CompuServe.
+
+More Information:
+
+This bug occurs because of a problem with VBRUN300.DLL. The date,
+time, size and version number of the VBRUN300.DLL file that leads to
+this problem is as follows:
+
+  Date: 04-APR-1993
+  Time: 12:00 a.m.
+  Size: 394384
+  Version: 03.00.0537
+
+The date, time, size and version number of the VBRUN300.DLL file that
+fixes this problem is as follows:
+
+  Date: 12-MAY-1993
+  Time: 12:00 a.m.
+  Size: 398416
+  Version: 03.00.0538
+
+Steps to Reproduce Problem
+--------------------------
+1. Start Visual Basic or from the File menu, choose New Project (ALT, F, N)
+   if Visual Basic is already running. Form1 is created by default.
+
+2. From the File menu, choose Make EXE File (ALT, F, k) and use the
+   default name of PROJECT1.EXE.
+
+3. Copy PROJECT1.EXE and VBRUN300.DLL to a 286 computer running Windows or
+   a MIPs computer running Windows NT.
+
+4. Run PROJECT1.EXE.
+
+A GP fault occurs in KRNL286 at 0001:259F.
