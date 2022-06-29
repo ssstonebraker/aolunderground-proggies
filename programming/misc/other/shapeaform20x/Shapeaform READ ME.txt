@@ -1,0 +1,52 @@
+Program Name: Shapeaform
+Version: 2.0
+Author: PAT or JK (Patrick Gillespie)
+Works For: 32 versions of VB
+Files Needed: VB6 Run times, Comctl32.ocx
+
+Program's Function:
+Lets you customize the same of a form in vb.
+
+Things to note:
+* Make sure you declare all the api functions that this program uses.
+  A list of them to copy is provided in the help section (on the
+  About/help tab)
+* Put the code the program generates in the load event of the form.
+* VB may freeze up if you move a form with a really complex shape 
+  around a lot at run time, but this shouldn't happen when the project 
+  is compiled into an exe.
+
+How to get a form to draw on:
+First Way:  Click the "Get Form" button, then in the next 10 seconds
+            click on the form you want to draw on (a picture will be
+            taken of that form).
+Second Way: Click down on the picture of the mouse (next to the "Get
+            Form" button) and drag it onto the form you want.
+
+***Using multipule shapes:
+Inorder to shape a form to more then one shape, you have to stain the
+first shape you drew onto the image. To do this just right click on the
+picture and select "Stain." Once you stain a shape on the form you
+cannot remove it. The only way to get rid of it is to get the image
+again. Once the image is stained, just start working with the new 
+shape.
+
+Moving the shape with the arrow keys:
+(only works on the Ovals tab) If you want, you can adjust the shape 
+using the arrow keys when on the oval tab.
+
+Shape a form to a bitmap:
+Get the picture of the form you want to shape. Then push the "Create
+Code For Bitmap Outline" button, when the dialog box appears select the
+color you want to be transparent (drag the mouse onto the color), and
+push the "Create Code" button.
+
+API functions this program uses:
+CombineRgn - Takes two regions and puts them together to form a new one.
+CreateEllipticRgn - Creates a region in the shape of an oval based on
+                    the rectangle you create with the X and Y points.
+CreatePolygonRgn - Creates a region based on an array of points.
+CreatePolyPolygonRgn - Creates a region made up of other polygons.
+CreateRectRgn - Creates a region in the shape of a rectangle.
+CreateRoundRectRgn - Creates a round rectangle region.
+SetWindowRgn - Allows you to change the shape of a window.
