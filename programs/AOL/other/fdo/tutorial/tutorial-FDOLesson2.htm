@@ -1,0 +1,228 @@
+<META http-equiv=Content-Type content="text/html; charset=iso-8859-1"><LINK 
+href="http://www.aolers.com/aol/aol-files.css" rel=stylesheet>
+<META content="MSHTML 6.00.2713.1100" name=GENERATOR></HEAD>
+<BODY>
+<TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+  <TBODY>
+  <TR>
+    <TD><A href="http://www.aol-files.com/index.html"><IMG height=80 
+      src="http://www.aolers.com/aol/aolfileswhite.gif" width=356 
+      border=0></A></TD>
+    <TD>
+      <DIV class=14pt_bold align=center></DIV></TD></TR>
+  <TR>
+    <TD colSpan=2>
+      <TABLE borderColor=#00679f cellSpacing=0 cellPadding=0 width="100%" 
+      border=0>
+        <TBODY>
+        <TR borderColor=#fff8f0>
+          <TD>
+            <TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+              <TBODY>
+              <TR bgColor=#ffffff>
+                <TD>
+                  <TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+                    <TBODY>
+                    <TR bgColor=#cccccc>
+                      <TD height=1><IMG height=1 
+                        src="http://www.aolers.com/aol/pixel.gif" 
+                    width=1></TD></TR>
+                    <TR bgColor=#f0f0f0>
+                      <TD>
+                        <TABLE cellSpacing=2 cellPadding=0 width="100%" 
+border=0>
+                          <TBODY>
+                          <TR>
+                            <FORM name=loginform 
+                            action=http://mail.bigmailbox.com/users/aol-filescom/enter.cgi 
+                            method=post target=new><INPUT type=hidden value=1 
+                            name=fr> 
+                            <TD align=left 
+                              colSpan=3><B>Mail:</B>&nbsp;&nbsp;Username: <INPUT 
+                              class=input maxLength=20 size=10 name=un> 
+                              &nbsp;Password: <INPUT class=input type=password 
+                              maxLength=10 size=10 name=pw> <INPUT type=image 
+                              height=17 cache hspace=5 width=17 
+                              src="http://www.aolers.com/aol/go.gif" 
+                              align=absMiddle vspace=2 border=0> &nbsp; <A 
+                              class=nodecoration 
+                              onmouseover="window.status='Click to Retrieve Your Password';return true" 
+                              onmouseout="window.status='';return true" 
+                              href="http://mail.bigmailbox.com/users/aol-filescom/forgotpassword.cgi" 
+                              target=new>Help</A> | <A class=nodecoration 
+                              href="http://mail.bigmailbox.com/users/aol-filescom/signup.cgi" 
+                              target=new>Sign Up</A></TD></FORM>
+                            <FORM action=http://www.picosearch.com/cgi-bin/ts.pl 
+                            method=post><INPUT type=hidden value=88065 
+                            name=index> 
+                            <TD vAlign=center align=left width="30%" 
+                              colSpan=3><DIV align=right><B>Search:</B>&nbsp; 
+                              <INPUT class=input size=15 name=query> <INPUT 
+                              type=image height=17 cache hspace=5 width=17 
+                              src="http://www.aolers.com/aol/go.gif" 
+                              align=absMiddle vspace=2 border=0> <IMG height=1 
+                              src="http://www.aolers.com/aol/pixel.gif" 
+                              width=6 border=0><FONT face=verdana,arial 
+                              color=#006699 
+                          size=1></FONT></DIV></TD></FORM></TR></TBODY></TABLE></TD></TR>
+                    <TR bgColor=#cccccc>
+                      <TD height=1><IMG height=1 
+                        src="http://www.aolers.com/aol/pixel.gif" 
+                    width=1></TD></TR></TBODY></TABLE>
+                  <TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+                    <TBODY>
+                    <TR>
+                      <TD vAlign=top width="100%"><!-- #BeginEditable "data" --><IMG 
+                        height=38 
+                        src="http://www.aolers.com/aol/headfdo91.gif" 
+                        width=153><BR><BR><SPAN class=head>FDO Tutorial: Lesson 
+                        2</SPAN><BR><SPAN class=disclaimer>by Tau </SPAN><BR>
+                        <P>In this tutorial the basics of designing forms will 
+                        be taught. First off, every action, including creating 
+                        forms begins with the atom <SPAN class=example><SPAN 
+                        class=fdo>uni_start_stream</SPAN></SPAN>. Next comes the 
+                        properties of a form. Below are few of the properties 
+                        that a form can have. All of the following atoms are 
+                        descriped in the atom database.</P>
+                        <UL>
+                          <LI><SPAN class=example><SPAN 
+                          class=fdo>mat_orientation</SPAN></SPAN> 
+                          &lt;<I>Argument</I>&gt; - describes the shape of the 
+                          objects width relavitve to its height. We are just 
+                          going to use "vff" for now because there are so many. 
+                          <LI><SPAN class=example><SPAN 
+                          class=fdo>mat_color_face</SPAN></SPAN> &lt;<I>R, G, 
+                          B</I>&gt; - sets the background color of the form. 
+                          <LI><SPAN class=example><SPAN 
+                          class=fdo>mat_bool_background_flood</SPAN></SPAN> 
+                          &lt;<I>Yes</I> or <I>No</I>&gt; - This must be 
+                          <B>Yes</B> in order for <SPAN class=example><SPAN 
+                          class=fdo>mat_color_face</SPAN></SPAN> to take effect. 
+
+                          <LI><SPAN class=example><SPAN 
+                          class=fdo>mat_position</SPAN></SPAN> 
+                          &lt;<I>Argument</I>&gt; - controls where the form is 
+                          when it loads. First part of the argument is the row 
+                          it is in. It is either <B>top</B>, <B>center</B>, or 
+                          <B>bottom</B>. This is followed by an underscore (_) 
+                          then <B>left</B>, <B>center</B>, or <B>right</B>. So 
+                          if you wanted the form to start in the middle of the 
+                          screen and at the top you would use <B>top_center</B>. 
+
+                          <LI><SPAN class=example><SPAN 
+                          class=fdo>mat_bool_resize_vertical</SPAN></SPAN> 
+                          &lt;<I>Yes</I> or <I>No</I>&gt; - controls whether the 
+                          form can be resized. If either the atom <SPAN 
+                          class=example><SPAN 
+                          class=fdo>mat_bool_resize_horizontal</SPAN></SPAN> or 
+                          this is <B>No</B> then the form will not have a 
+                          maximize button. 
+                          <LI><SPAN class=example><SPAN 
+                          class=fdo>mat_precise_width</SPAN></SPAN> 
+                          &lt;<I>#</I>&gt; - Determines the width of a form 
+                          measured in pixels. <SPAN class=example><SPAN 
+                          class=fdo>mat_bool_precise</SPAN></SPAN> must be 
+                          <B>Yes</B>. 
+                          <LI><SPAN class=example><SPAN 
+                          class=fdo>mat_precise_height</SPAN></SPAN> 
+                          &lt;<I>#</I>&gt; - Determines the height of a form 
+                          measured in pixels. <SPAN class=example><SPAN 
+                          class=fdo>mat_bool_precise</SPAN></SPAN> must be 
+                          <B>Yes</B>. 
+                          <LI><SPAN class=example><SPAN 
+                          class=fdo>mat_precise_x</SPAN></SPAN> &lt;<I>#</I>&gt; 
+                          - Controls where the form starts. If the number is 0 
+                          then it will be 0 pixels across from the top left 
+                          corner of AOL and down however many units specified in 
+                          <SPAN class=example><SPAN 
+                          class=fdo>mat_precise_y</SPAN></SPAN>. 
+                          <LI><SPAN class=example><SPAN 
+                          class=fdo>mat_precise_y</SPAN></SPAN> &lt;<I>#</I>&gt; 
+                          - Controls where the form starts. If the number is 0 
+                          then it will be 0 pixels down from the top left corner 
+                          of AOL and acrosss however many units specified in 
+                          <SPAN class=example><SPAN 
+                          class=fdo>mat_precise_x</SPAN></SPAN>. 
+                          <LI><SPAN class=example><SPAN 
+                          class=fdo>mat_bool_precise</SPAN></SPAN> 
+                          &lt;<I>Yes</I> or <I>No</I>&gt; - Determines whether 
+                          the form is the exact width and height as specified 
+                          above. 
+                          <LI><SPAN class=example><SPAN 
+                          class=fdo>mat_art_id</SPAN></SPAN> &lt;<I>id</I>&gt; - 
+                          If <SPAN class=example><SPAN 
+                          class=fdo>mat_bool_background_pic</SPAN></SPAN> is 
+                          <B>Yes</B> then the form will have a picture 
+                          background wit the specified id. 
+                          <LI><SPAN class=example><SPAN 
+                          class=fdo>mat_bool_background_pic</SPAN></SPAN> 
+                          &lt;<I>Yes</I> or <I>No</I>&gt; - Determines whether 
+                          the form has a background image defined by <SPAN 
+                          class=example><SPAN 
+                          class=fdo>mat_art_id</SPAN></SPAN>. </LI></UL>
+                        <P>Every window also has a name. The name for a form is 
+                        <B>ind_group</B>. The code to start a form is as 
+                        follows:</P>
+                        <P><SPAN class=fdo><SPAN 
+                        class=example>man_start_object</SPAN> &lt;ind_group, 
+                        "<I>caption</I>"&gt;</SPAN></P>
+                        <P>Where <I>caption</I> is the form's caption.</P><SPAN 
+                        class=head>Example #1</SPAN><BR>
+                        <P>Now to combine everything that has just been 
+                        explained. Save the following FDO stream and play it 
+                        using the methods explained in Lesson 1.</P><PRE class=fdo>uni_start_stream
+	man_start_object &lt;ind_group, "Test - Lesson2"&gt;
+		mat_orientation &lt;vff&gt; 
+		mat_position &lt;center_center&gt;
+		mat_bool_resize_vertical &lt;no&gt;
+		mat_precise_width &lt;300&gt;
+		mat_precise_height &lt;150&gt;
+		mat_bool_precise &lt;yes&gt;
+		mat_art_id &lt;1-1-40898&gt;
+		mat_bool_background_pic &lt;yes&gt;
+	man_end_object
+	man_update_display
+uni_end_stream				
+</PRE>
+                        <P>Will result in:</P>
+                        <CENTER><IMG 
+                        src="http://www.aolers.com/aol/fdo_lesson02.gif"> 
+                        </CENTER><SPAN class=head>Example #2</SPAN><BR><PRE class=fdo> uni_start_stream
+	man_start_object &lt;ind_group, "Test - Lesson2 b"&gt;
+		mat_orientation &lt;vff&gt; 
+		mat_position &lt;top_center&gt;
+		mat_bool_resize_vertical &lt;yes&gt;
+		mat_color_face &lt;0, 102, 153&gt;
+		mat_bool_background_flood &lt;yes&gt;
+		mat_precise_width &lt;400&gt;
+		mat_precise_height &lt;100&gt;
+		mat_bool_precise &lt;yes&gt;
+      man_end_object
+    man_update_display
+uni_end_stream
+</PRE>
+                        <P>Will result in:</P>
+                        <CENTER><IMG 
+                        src="http://www.aolers.com/aol/fdo_lesson02b.gif"> 
+                        </CENTER>
+                        <P>Next week the focus will be on the objects that can 
+                        be on a 
+                  form.</P><!-- #EndEditable --></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE>
+<TABLE cellSpacing=0 cellPadding=0 width="100%" align=center border=0>
+  <TBODY>
+  <TR>
+    <TD class=verdana_8pt_center>
+      <P><A href="http://www.aol-files.com/articles/index.html"><BR>Articles</A> 
+      | <A 
+      href="http://www.aol-files.com/downloads/docs/index.html">Documents</A> | 
+      <A href="http://www.aol-files.com/downloads/tools/index.html">Tools</A> | 
+      <A href="http://www.aol-files.com/fdo91/index.html">FDO</A> | <A 
+      href="http://www.aol-files.com/fdo91/atoms/index.html">Atoms</A> | <A 
+      href="http://www.aol-files.com/fdo91/tokens/index.html">Tokens</A><A 
+      href="http://www.aol-files.com/Templates/fdo91/tokens/index.html"></A> | 
+      <A href="http://www.aol-files.com/breaches/index.html">Security 
+      Breaches</A></P>
+      <P><SPAN class=disclaimer>© 2000 BMB and Tau Productions. Contacts: <A 
+      href="http://www.aol-files.com/~bmb/index.html">BMB</A> | <A 
+      href="http://www.aol-files.com/~tau/index.html">Tau</A> | <A 
+      href="http://www.aol-files.com/~rob/index.html">Rob</A></SPAN></P></TD></TR></TBODY></TABLE><!-- #EndTemplate --></BODY></HTML>

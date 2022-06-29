@@ -1,0 +1,1630 @@
+uni_start_stream
+  man_set_context_globalid <2>
+  man_start_last <trigger, "Viowatch's Menu">
+    mat_object_id <44-8>
+    man_start_object <dss_list, "Keywords">
+    man_start_object <trigger, "Parental Controls">
+      mat_shortcut_key <"P">
+      act_replace_select_action
+        <
+        uni_start_stream
+        sm_send_token_arg <"f1", 44-14724>
+        >
+    man_start_sibling <trigger, "FTP">
+      act_replace_select_action
+        <
+        uni_start_stream
+        sm_m_send_token_arg <"YA", 0-0-144>
+        uni_end_stream
+        >
+    man_start_sibling <trigger, "Member Directory">
+      act_replace_select_action
+        <
+        uni_start_stream
+        sm_send_token_arg <"f1", 41-35275>
+        uni_end_stream
+        >
+    man_start_sibling <trigger, "Billing">
+      mat_shortcut_key <"g">
+      act_replace_select_action
+        <
+        uni_start_stream
+        sm_send_token_arg <"f1", 40-22494>
+        >
+       man_start_sibling <trigger, "Get Billing Information">
+        mat_shortcut_key <"G">
+        act_replace_select_action
+          <
+          uni_start_stream
+		sm_send_token_arg <"RE">
+          uni_end_stream
+          >
+    man_start_sibling <trigger, ">Change US Billing Method">
+      act_replace_select_action
+        <
+        uni_start_stream
+        sm_m_send_token_arg <"Rf", 0-0-2>
+        >
+    man_start_sibling <trigger, "Password">
+      act_replace_select_action
+        <
+        uni_start_stream
+        sm_send_token_arg <"f1", 32-7611>
+        >
+    man_start_sibling <trigger, ">Change Password">
+      act_replace_select_action
+        <
+        uni_start_stream
+        sm_send_token_arg <"f1", 41-51085>
+        >
+    man_start_sibling <ornament, "">
+    man_start_sibling <trigger, "Sign on Screen">
+      mat_shortcut_key <"S">
+      act_replace_select_action
+        <
+        uni_start_stream
+        sm_send_token_arg <"f1", 32-221>
+        >
+    man_start_sibling <trigger, "Guest Sign On">
+      act_replace_select_action
+        <
+        uni_start_stream
+        sm_send_token_arg <"f1", 32-125>
+        >
+    man_start_sibling <trigger, "Switch SN">
+      act_replace_select_action
+        <
+        uni_start_stream
+	  man_set_context_globalid <1>
+  	  hfs_attr_flags <64>
+  	  man_start_object <ind_group, "Switch Screen Name">
+    mat_orientation <hct>
+    mat_precise_width <355>
+    mat_precise_height <126>
+    mat_bool_precise <yes>
+    mat_bool_resize_vertical <no>
+    mat_bool_resize_horizontal <no>
+    mat_color_face <255, 251, 240>
+    mat_bool_background_flood <yes>
+    mat_dirty_query <yes>
+    act_set_criterion <111>
+    act_replace_action
+      <
+      uni_start_stream
+         mat_bool_disabled <yes>
+      uni_end_stream
+      >
+    man_start_object <ornament, "Screen Name:">
+      mat_precise_width <83>
+      mat_precise_height <16>
+      mat_precise_x <9>
+      mat_precise_y <70>
+      mat_font_sis <arial, 9, bold>
+      mat_orientation <hlf>
+    man_start_sibling <trigger, "Switch">
+      act_replace_select_action
+        <
+        uni_start_stream
+          de_start_extraction <00x>
+          man_set_context_relative <1>
+          de_get_data_pointer
+          uni_use_last_atom_string <async_storename>
+          de_end_extraction
+          async_relogon_init
+          buf_destroy_buffer
+          buf_start_buffer <9fx>
+          uni_next_atom_typed <0>
+          buf_set_token <"UR">
+          buf_add_atom_data <0>
+          buf_close_buffer
+        uni_end_stream
+        >
+      mat_font_sis <arial, 8, normal>
+      mat_color_text <254, 255, 255>
+      mat_title_width <8>
+      mat_precise_x <285>
+      mat_precise_y <97>
+      mat_trigger_style <rectangle>
+      mat_bool_default <yes>
+      mat_color_top_edge <150, 200, 255>
+      mat_color_face <0, 109, 170>
+    man_start_sibling <edit_view, "">
+      mat_bool_importable <yes>
+      mat_precise_width <244>
+      mat_precise_height <22>
+      mat_precise_x <100>
+      mat_precise_y <68>
+      mat_bool_resize_vertical <no>
+      mat_bool_vertical_scroll <no>
+      mat_capacity <16>
+      man_append_data <"">
+      man_end_data
+      mat_relative_tag <1>
+    man_start_sibling <ornament, "Switch Screen Name">
+      mat_precise_width <215>
+      mat_precise_height <23>
+      mat_precise_x <11>
+      mat_precise_y <12>
+      mat_font_sis <arial, 15, bold>
+      mat_orientation <hlf>
+    man_start_sibling <ornament, "">
+      mat_precise_width <334>
+      mat_precise_height <18>
+      mat_precise_x <13>
+      mat_precise_y <42>
+      mat_font_sis <arial, 8, normal>
+      man_append_data <"Created by Tau for aol-files.com">
+      man_end_data
+      mat_orientation <hlf>
+    man_place_cursor <1>
+    man_end_object
+the_unknown <51, 43>
+  man_update_woff_end_stream
+  uni_start_stream
+    man_set_context_globalid <1>
+    var_lookup_by_id <A, 192>
+    var_lookup_by_id <B, 193>
+    man_end_context
+    var_number_save <A, 192>
+    var_number_save <B, 193>
+  uni_end_stream
+        >
+    man_end_object
+man_end_object
+    man_start_object <dss_list, "Chat">
+    man_start_object <trigger, "Find a Chat">
+      mat_shortcut_key <"F">
+      act_replace_select_action
+        <
+        uni_start_stream
+        sm_send_token_arg <"f1", 32-5337>
+        >
+    man_start_sibling <trigger, "Enter Private Chat">
+      act_replace_select_action
+        <
+        uni_start_stream_wait_on <00x>
+	sm_send_token_arg <"L1", 0-0-28>
+        >
+    man_start_sibling <trigger, "Enter Lobby">
+      mat_shortcut_key <"y">
+      act_replace_select_action
+        <
+        uni_start_stream
+        sm_send_token_arg <"f1", 43-47803>
+        >
+    man_start_sibling <trigger, "Enter German Lobby">
+      act_replace_select_action
+        <
+        uni_start_stream_wait_on <00x>
+  	buf_start_buffer <9fx>
+  	buf_clear_buffer
+  	buf_set_token <"ur">
+  	buf_add_atom_pointer <"aol://2719:28-2-Foyer%20">
+  	buf_close_buffer
+	uni_end_stream
+        >
+    man_start_sibling <trigger, "Enter UK Lobby">
+      act_replace_select_action
+        <
+        uni_start_stream
+        sm_send_k1 <14-14902>
+        >
+    man_start_sibling <ornament, "">
+man_end_object
+    man_start_object <dss_list, "Lamer Rooms">
+    man_start_object <trigger, "Art">
+      act_replace_select_action
+        <
+        uni_start_stream_wait_on <00x>
+  	buf_start_buffer <9fx>
+  	buf_clear_buffer
+  	buf_set_token <"ur">
+  	buf_add_atom_pointer <"aol://2719:2-2-art">
+  	buf_close_buffer
+	uni_end_stream
+        >
+    man_start_sibling <trigger, "Ixa">
+      act_replace_select_action
+        <
+        uni_start_stream_wait_on <00x>
+  	buf_start_buffer <9fx>
+  	buf_clear_buffer
+  	buf_set_token <"ur">
+  	buf_add_atom_pointer <"aol://2719:2-2-ixa">
+  	buf_close_buffer
+	uni_end_stream
+        >
+    man_start_sibling <trigger, "Phishy">
+      act_replace_select_action
+        <
+        uni_start_stream_wait_on <00x>
+  	buf_start_buffer <9fx>
+  	buf_clear_buffer
+  	buf_set_token <"ur">
+  	buf_add_atom_pointer <"aol://2719:2-2-Phishy">
+  	buf_close_buffer
+	uni_end_stream
+        >
+    man_start_sibling <trigger, "Phishy2">
+      act_replace_select_action
+        <
+        uni_start_stream_wait_on <00x>
+  	buf_start_buffer <9fx>
+  	buf_clear_buffer
+  	buf_set_token <"ur">
+  	buf_add_atom_pointer <"aol://2719:2-2-Phishy2">
+  	buf_close_buffer
+	uni_end_stream
+        >
+    man_start_sibling <trigger, "Progs">
+      act_replace_select_action
+        <
+        uni_start_stream_wait_on <00x>
+  	buf_start_buffer <9fx>
+  	buf_clear_buffer
+  	buf_set_token <"ur">
+  	buf_add_atom_pointer <"aol://2719:2-2-Progs">
+  	buf_close_buffer
+	uni_end_stream
+        >
+    man_start_sibling <trigger, "Punters">
+      act_replace_select_action
+        <
+        uni_start_stream_wait_on <00x>
+  	buf_start_buffer <9fx>
+  	buf_clear_buffer
+  	buf_set_token <"ur">
+  	buf_add_atom_pointer <"aol://2719:2-2-Punters">
+  	buf_close_buffer
+	uni_end_stream
+        >
+    man_start_sibling <trigger, "Scroll">
+      act_replace_select_action
+        <
+        uni_start_stream_wait_on <00x>
+  	buf_start_buffer <9fx>
+  	buf_clear_buffer
+  	buf_set_token <"ur">
+  	buf_add_atom_pointer <"aol://2719:2-2-Scroll">
+  	buf_close_buffer
+	uni_end_stream
+        >
+    man_start_sibling <trigger, "VB">
+      act_replace_select_action
+        <
+        uni_start_stream_wait_on <00x>
+  	buf_start_buffer <9fx>
+  	buf_clear_buffer
+  	buf_set_token <"ur">
+  	buf_add_atom_pointer <"aol://2719:2-2-VB">
+  	buf_close_buffer
+	uni_end_stream
+        >
+    man_start_sibling <trigger, "VB4">
+      act_replace_select_action
+        <
+        uni_start_stream_wait_on <00x>
+  	buf_start_buffer <9fx>
+  	buf_clear_buffer
+  	buf_set_token <"ur">
+  	buf_add_atom_pointer <"aol://2719:2-2-VB4">
+  	buf_close_buffer
+	uni_end_stream
+        >
+    man_start_sibling <trigger, "VB6">
+      act_replace_select_action
+        <
+        uni_start_stream_wait_on <00x>
+  	buf_start_buffer <9fx>
+  	buf_clear_buffer
+  	buf_set_token <"ur">
+  	buf_add_atom_pointer <"aol://2719:2-2-VB6">
+  	buf_close_buffer
+	uni_end_stream
+        >
+man_end_object
+man_end_object
+    man_start_object <dss_list, "Porn Rooms">
+    man_start_object <trigger, "Avis">
+      act_replace_select_action
+        <
+        uni_start_stream_wait_on <00x>
+  	buf_start_buffer <9fx>
+  	buf_clear_buffer
+  	buf_set_token <"ur">
+  	buf_add_atom_pointer <"aol://2719:2-2-avis">
+  	buf_close_buffer
+	uni_end_stream
+        >
+    man_start_sibling <trigger, "Fuck">
+      act_replace_select_action
+        <
+        uni_start_stream_wait_on <00x>
+  	buf_start_buffer <9fx>
+  	buf_clear_buffer
+  	buf_set_token <"ur">
+  	buf_add_atom_pointer <"aol://2719:2-2-fuck">
+  	buf_close_buffer
+	uni_end_stream
+        >
+    man_start_sibling <trigger, "Gif">
+      act_replace_select_action
+        <
+        uni_start_stream_wait_on <00x>
+  	buf_start_buffer <9fx>
+  	buf_clear_buffer
+  	buf_set_token <"ur">
+  	buf_add_atom_pointer <"aol://2719:2-2-gif">
+  	buf_close_buffer
+	uni_end_stream
+        >
+    man_start_sibling <trigger, "Gif 2">
+      act_replace_select_action
+        <
+        uni_start_stream_wait_on <00x>
+  	buf_start_buffer <9fx>
+  	buf_clear_buffer
+  	buf_set_token <"ur">
+  	buf_add_atom_pointer <"aol://2719:2-2-gif2">
+  	buf_close_buffer
+	uni_end_stream
+        >
+    man_start_sibling <trigger, "Lesbian">
+      act_replace_select_action
+        <
+        uni_start_stream_wait_on <00x>
+  	buf_start_buffer <9fx>
+  	buf_clear_buffer
+  	buf_set_token <"ur">
+  	buf_add_atom_pointer <"aol://2719:2-2-Lesbian">
+  	buf_close_buffer
+	uni_end_stream
+        >
+    man_start_sibling <trigger, "Pic">
+      act_replace_select_action
+        <
+        uni_start_stream_wait_on <00x>
+	async_alert <info, "Be careful Catwatch01 sometimes visits!">
+  	buf_start_buffer <9fx>
+  	buf_clear_buffer
+  	buf_set_token <"ur">
+  	buf_add_atom_pointer <"aol://2719:2-2-Pic">
+  	buf_close_buffer
+	uni_end_stream
+        >
+    man_start_sibling <trigger, "Sex">
+      act_replace_select_action
+        <
+        uni_start_stream_wait_on <00x>
+  	buf_start_buffer <9fx>
+  	buf_clear_buffer
+  	buf_set_token <"ur">
+  	buf_add_atom_pointer <"aol://2719:2-2-Sex">
+  	buf_close_buffer
+	uni_end_stream
+        >
+    man_start_sibling <trigger, "Smut">
+      act_replace_select_action
+        <
+        uni_start_stream_wait_on <00x>
+  	buf_start_buffer <9fx>
+  	buf_clear_buffer
+  	buf_set_token <"ur">
+  	buf_add_atom_pointer <"aol://2719:2-2-Smut">
+  	buf_close_buffer
+	uni_end_stream
+        >
+    man_start_sibling <trigger, "Smut 2">
+      act_replace_select_action
+        <
+        uni_start_stream_wait_on <00x>
+  	buf_start_buffer <9fx>
+  	buf_clear_buffer
+  	buf_set_token <"ur">
+  	buf_add_atom_pointer <"aol://2719:2-2-Smut2">
+  	buf_close_buffer
+	uni_end_stream
+        >
+man_end_object
+man_end_object
+    man_start_object <dss_list, "Warez Rooms">
+    man_start_object <trigger, "Cerver">
+      act_replace_select_action
+        <
+        uni_start_stream_wait_on <00x>
+  	buf_start_buffer <9fx>
+  	buf_clear_buffer
+  	buf_set_token <"ur">
+  	buf_add_atom_pointer <"aol://2719:2-2-Cerver">
+  	buf_close_buffer
+	uni_end_stream
+        >
+    man_start_sibling <trigger, "Cerver 2">
+      act_replace_select_action
+        <
+        uni_start_stream_wait_on <00x>
+  	buf_start_buffer <9fx>
+  	buf_clear_buffer
+  	buf_set_token <"ur">
+  	buf_add_atom_pointer <"aol://2719:2-2-Cerver2">
+  	buf_close_buffer
+	uni_end_stream
+        >
+    man_start_sibling <trigger, "Cerver 3">
+      act_replace_select_action
+        <
+        uni_start_stream_wait_on <00x>
+  	buf_start_buffer <9fx>
+  	buf_clear_buffer
+  	buf_set_token <"ur">
+  	buf_add_atom_pointer <"aol://2719:2-2-Cerver3">
+  	buf_close_buffer
+	uni_end_stream
+        >
+    man_start_sibling <trigger, "Cerver 4">
+      act_replace_select_action
+        <
+        uni_start_stream_wait_on <00x>
+  	buf_start_buffer <9fx>
+  	buf_clear_buffer
+  	buf_set_token <"ur">
+  	buf_add_atom_pointer <"aol://2719:2-2-Cerver4">
+  	buf_close_buffer
+	uni_end_stream
+        >
+    man_start_sibling <trigger, "Cerver 5">
+      act_replace_select_action
+        <
+        uni_start_stream_wait_on <00x>
+  	buf_start_buffer <9fx>
+  	buf_clear_buffer
+  	buf_set_token <"ur">
+  	buf_add_atom_pointer <"aol://2719:2-2-Cerver5">
+  	buf_close_buffer
+	uni_end_stream
+        >
+    man_start_sibling <trigger, "Cerver 6">
+      act_replace_select_action
+        <
+        uni_start_stream_wait_on <00x>
+  	buf_start_buffer <9fx>
+  	buf_clear_buffer
+  	buf_set_token <"ur">
+  	buf_add_atom_pointer <"aol://2719:2-2-Cerver6">
+  	buf_close_buffer
+	uni_end_stream
+        >
+    man_start_sibling <trigger, "Cerver 7">
+      act_replace_select_action
+        <
+        uni_start_stream_wait_on <00x>
+  	buf_start_buffer <9fx>
+  	buf_clear_buffer
+  	buf_set_token <"ur">
+  	buf_add_atom_pointer <"aol://2719:2-2-Cerver7">
+  	buf_close_buffer
+	uni_end_stream
+        >
+    man_start_sibling <trigger, "Cerver 8">
+      act_replace_select_action
+        <
+        uni_start_stream_wait_on <00x>
+  	buf_start_buffer <9fx>
+  	buf_clear_buffer
+  	buf_set_token <"ur">
+  	buf_add_atom_pointer <"aol://2719:2-2-Cerver8">
+  	buf_close_buffer
+	uni_end_stream
+        >
+    man_start_sibling <trigger, "Cerver 9">
+      act_replace_select_action
+        <
+        uni_start_stream_wait_on <00x>
+  	buf_start_buffer <9fx>
+  	buf_clear_buffer
+  	buf_set_token <"ur">
+  	buf_add_atom_pointer <"aol://2719:2-2-Cerver9">
+  	buf_close_buffer
+	uni_end_stream
+        >
+    man_start_sibling <trigger, "Infinite">
+      act_replace_select_action
+        <
+        uni_start_stream_wait_on <00x>
+  	buf_start_buffer <9fx>
+  	buf_clear_buffer
+  	buf_set_token <"ur">
+  	buf_add_atom_pointer <"aol://2719:2-2-Infinite">
+  	buf_close_buffer
+	uni_end_stream
+        >
+    man_start_sibling <trigger, "MP3">
+      act_replace_select_action
+        <
+        uni_start_stream_wait_on <00x>
+  	buf_start_buffer <9fx>
+  	buf_clear_buffer
+  	buf_set_token <"ur">
+  	buf_add_atom_pointer <"aol://2719:2-2-MP3">
+  	buf_close_buffer
+	uni_end_stream
+        >
+    man_start_sibling <trigger, "MP3 2">
+      act_replace_select_action
+        <
+        uni_start_stream_wait_on <00x>
+  	buf_start_buffer <9fx>
+  	buf_clear_buffer
+  	buf_set_token <"ur">
+  	buf_add_atom_pointer <"aol://2719:2-2-MP32">
+  	buf_close_buffer
+	uni_end_stream
+        >
+    man_start_sibling <trigger, "MP3 3">
+      act_replace_select_action
+        <
+        uni_start_stream_wait_on <00x>
+  	buf_start_buffer <9fx>
+  	buf_clear_buffer
+  	buf_set_token <"ur">
+  	buf_add_atom_pointer <"aol://2719:2-2-MP33">
+  	buf_close_buffer
+	uni_end_stream
+        >
+    man_start_sibling <trigger, "PRM">
+      act_replace_select_action
+        <
+        uni_start_stream_wait_on <00x>
+  	buf_start_buffer <9fx>
+  	buf_clear_buffer
+  	buf_set_token <"ur">
+  	buf_add_atom_pointer <"aol://2719:2-2-PRM">
+  	buf_close_buffer
+	uni_end_stream
+        >
+man_end_object
+    man_start_sibling <ornament, "">
+    man_start_sibling <trigger, "Chat tool">
+      act_replace_select_action
+        <
+        uni_start_stream
+  	  man_set_context_globalid <1>
+  man_start_object <ind_group, "Chat Tool 2.0">
+    mat_orientation <vff>
+    mat_precise_width <446>
+    mat_precise_height <56>
+    mat_bool_precise <yes>
+    mat_bool_resize_vertical <no>
+    mat_bool_resize_horizontal <no>
+    mat_art_id <1-1-40898>
+    mat_bool_background_pic <yes>
+    mat_position <bottom_center>
+    man_start_object <ornament, "Clipboard:">
+      mat_precise_x <212>
+      mat_precise_y <35>
+      mat_font_sis <arial, 9, bold>
+      mat_orientation <hrc>
+    man_start_sibling <edit_view, "">
+      mat_bool_writeable <yes>
+      mat_bool_importable <yes>
+      mat_precise_width <432>
+      mat_precise_height <20>
+      mat_precise_x <5>
+      mat_precise_y <5>
+      mat_bool_resize_vertical <no>
+      mat_bool_vertical_scroll <no>
+      mat_capacity <130>
+      mat_relative_tag <1>
+    man_start_sibling <trigger, "Get Profile">
+      act_replace_select_action
+        <
+        uni_start_stream_wait_on <00x>
+          man_set_context_relative <1>
+        de_ez_send_form <"ji">
+        man_end_context
+        >
+      mat_color_text <255, 255, 255>
+      mat_width <10>
+      mat_height <3>
+      mat_precise_x <151>
+      mat_precise_y <30>
+      mat_trigger_style <rectangle>
+      mat_color_top_edge <145, 182, 255>
+      mat_color_face <0, 109, 170>
+    man_start_sibling <trigger, "Enter Private Room">
+      act_replace_select_action
+        <
+        uni_start_stream_wait_on <00x>
+          man_set_context_relative <1>
+          de_start_extraction
+          buf_set_token <"cV">
+          de_get_data
+          de_end_extraction
+          buf_close_buffer
+          man_end_context
+        uni_end_stream <00x>
+        >
+      mat_color_text <255, 255, 255>
+      mat_width <10>
+      mat_height <3>
+      mat_precise_x <47>
+      mat_precise_y <30>
+      mat_trigger_style <rectangle>
+      mat_color_top_edge <145, 182, 255>
+      mat_color_face <0, 109, 170>
+    man_start_sibling <trigger, "Send">
+      act_replace_select_action
+        <
+        uni_start_stream_wait_on
+          buf_start_buffer <9fx>
+          de_start_extraction <0>
+          buf_set_token <"Aa">
+          var_number_set_id_one_value <00x, 00x, 00x, 01x>
+          man_set_context_relative <1>
+          de_get_data
+          man_end_context
+          de_set_data_type <var>
+          de_set_variable_id <1>
+          de_get_data <current_object>
+          de_end_extraction
+          buf_close_buffer
+  man_set_context_relative <1>
+  man_replace_data
+  man_make_focus
+          man_end_context
+        man_update_display
+      uni_wait_off_end_stream
+      >
+    mat_color_text <255, 255, 255>
+    mat_width <10>
+    mat_height <3>
+    mat_precise_x <5>
+    mat_precise_y <30>
+    mat_trigger_style <rectangle>
+    mat_bool_default <yes>
+    mat_color_top_edge <145, 182, 255>
+    mat_color_face <0, 109, 170>
+  man_start_sibling <sss_list, "">
+    mat_orientation <hff>
+    mat_relative_tag <2>
+    man_start_object <trigger, "Copy">
+      act_replace_select_action
+        <
+        uni_start_stream
+          man_place_cursor <1>
+        man_update_display
+        man_do_edit_menu <4>
+        man_do_edit_menu <2>
+      uni_end_stream
+      >
+    mat_precise_x <283>
+    mat_precise_y <32>
+    mat_value <1>
+  man_start_sibling <trigger, "Cut">
+    act_replace_select_action
+      <
+      uni_start_stream
+        man_place_cursor <1>
+      man_update_display
+      man_do_edit_menu <4>
+      man_do_edit_menu <1>
+    uni_end_stream
+    >
+  mat_font_sis <system, 7, normal>
+  mat_precise_x <339>
+  mat_precise_y <32>
+  mat_value <1>
+man_start_sibling <trigger, "Paste">
+  act_replace_select_action
+    <
+    uni_start_stream
+      man_place_cursor <1>
+    man_update_display
+    man_do_edit_menu <4>
+    man_do_edit_menu <3>
+  uni_end_stream
+  >
+mat_precise_x <383>
+mat_precise_y <32>
+mat_value <1>
+man_end_object
+man_end_object
+man_update_woff_end_stream
+        >
+    man_end_object
+man_end_object
+    man_start_object <dss_list, "Cheats">
+    man_start_object <trigger, "Close AOL6 Welcome Screen">
+      act_replace_select_action
+        <
+        uni_start_stream <00x>
+          ;the form global ID is 44-56042
+          man_set_context_globalid <32-30>
+          man_close_update
+        uni_end_stream
+        >
+    man_start_sibling <trigger, "Close AOL5 Welcome Screen">
+      mat_shortcut_key <"C">
+      act_replace_select_action
+        <
+        uni_start_stream <00x>
+          man_set_context_globalid <41-27564>
+          man_close_update
+        uni_end_stream
+        >
+    man_start_sibling <trigger, "Close AOL4 Welcome Screen">
+      act_replace_select_action
+        <
+        uni_start_stream <00x>
+          man_set_context_globalid <32-7456>
+          man_close_update
+        uni_end_stream
+        >
+    man_start_sibling <trigger, "Close 32-30 (welcome screen)">
+      act_replace_select_action
+        <
+        uni_start_stream <00x>
+          man_set_context_globalid <32-30>
+          man_close_update
+        uni_end_stream
+        >
+    man_start_sibling <trigger, "Close AOLPlus Advertising - home">
+      act_replace_select_action
+        <
+        uni_start_stream <00x>
+          man_set_context_globalid <44-58113>
+          man_close_update
+          man_set_context_globalid <44-58451>
+          man_close_update
+        uni_end_stream
+        >
+    man_start_sibling <trigger, "Close AOLPlus Advertising - main">
+      act_replace_select_action
+        <
+        uni_start_stream <00x>
+          man_set_context_globalid <44-58451>
+          man_close_update
+        uni_end_stream
+        >
+    man_start_sibling <trigger, "Hide Chatroom Advertising">
+      mat_shortcut_key <"H">
+      act_replace_select_action
+        <
+        uni_start_stream
+  	man_set_context_globalid <1>
+        man_set_context_relative <256>
+  	if_last_return_true_then <50, 51>
+  	man_set_context_relative <256>
+  	chat_screen_name_color <255>
+  	chat_screen_name_back_color <16777215>
+  	chat_screen_name_font_size <2>
+  	uni_next_atom_typed <0>
+  	chat_screen_name <"AOLTech Viowatch">
+  	uni_next_atom_typed <0>
+  	chat_new_message <"<HTML><PRE><HTML>Advertising removed it may take up to a minute for form to refresh.</HTML></PRE></HTML>">
+  	uni_sync_skip <50>
+  	uni_sync_skip <51>
+	man_set_context_relative <107>
+	chat_user_enter_thru_list <"CATWatch01">
+	man_end_context
+  	man_change_context_relative <270>
+  	mat_bool_hidden <yes>
+  	man_change_context_relative <271>
+  	mat_bool_hidden <yes>
+  	man_change_context_relative <260>
+  	mat_bool_hidden <yes>
+  	man_change_context_relative <262>
+  	mat_bool_hidden <yes>
+	uni_end_stream
+        >
+    man_start_sibling <trigger, "Hide 100">
+      act_replace_select_action
+        <
+        uni_start_stream
+        man_set_context_globalid <1>
+  	  man_change_context_relative <100>
+  	  mat_bool_hidden <yes>
+	  uni_end_stream
+        >
+    man_start_sibling <trigger, "Disable Inactivity Timer">
+      mat_shortcut_key <"D">
+      act_replace_select_action
+        <
+        uni_start_stream
+  man_set_context_globalid <1>
+  hfs_attr_flags <64>
+  man_start_object <ind_group, "Disable Inactivity Timer">
+    mat_orientation <vff>
+    mat_precise_width <256>
+    mat_precise_height <43>
+    mat_bool_precise <yes>
+    mat_bool_resize_vertical <no>
+    mat_bool_resize_horizontal <no>
+    mat_color_face <255, 251, 240>
+    mat_bool_background_flood <yes>
+    man_start_object <view, "">
+      mat_precise_width <222>
+      mat_precise_height <78>
+      mat_precise_x <8>
+      mat_precise_y <8>
+      mat_bool_vertical_scroll <yes>
+      man_append_data <"uni_start_stream\r\n  mt_set_timeout_mode <01x>\r\nuni">
+      man_append_data <"_end_stream">
+      man_end_data
+      mat_bool_hidden <yes>
+      mat_bool_invisible <yes>
+      mat_relative_tag <1>
+    man_start_sibling <org_group, "">
+      mat_orientation <hff>
+      mat_precise_width <290>
+      mat_precise_height <30>
+      mat_precise_x <8>
+      mat_precise_y <8>
+      man_start_object <trigger, "disable">
+        mat_relative_tag <5>
+        act_replace_select_action
+          <
+          uni_start_stream
+            mt_set_timeout_mode <01x>
+            man_set_context_relative <3>
+            mat_bool_hidden <no>
+            man_set_context_relative <5>
+            mat_bool_hidden <yes>
+            man_set_context_relative <6>
+            mat_bool_hidden <no>
+            man_set_context_relative <7>
+            mat_bool_hidden <yes>
+            man_end_context
+          man_update_display
+        uni_end_stream
+        >
+      mat_precise_width <62>
+      mat_precise_height <26>
+      mat_precise_x <8>
+      mat_precise_y <8>
+    man_start_sibling <trigger, "close">
+      mat_bool_hidden <yes>
+      mat_relative_tag <6>
+      sm_set_object_domain <00x>
+      act_replace_select_action
+        <
+        uni_start_stream
+          man_close_update
+        uni_end_stream
+        >
+      mat_precise_width <60>
+      mat_precise_height <26>
+      mat_precise_x <9>
+      mat_precise_y <8>
+    man_start_sibling <ornament, "inactivity timer disabled">
+      mat_bool_hidden <yes>
+      mat_relative_tag <3>
+      mat_precise_width <171>
+      mat_precise_height <17>
+      mat_precise_x <84>
+      mat_precise_y <13>
+      mat_font_sis <system, 8, bold>
+      mat_color_text <255, 51, 0>
+      mat_orientation <hlf>
+    man_start_sibling <ornament, "by viowatch">
+      mat_relative_tag <7>
+      mat_precise_x <113>
+      mat_precise_y <14>
+      mat_font_sis <system, 8, normal>
+      mat_color_text <51, 153, 153>
+      mat_orientation <hlf>
+    man_end_object
+  man_end_object
+the_unknown <51, 43>
+man_update_woff_end_stream
+uni_start_stream
+  man_set_context_globalid <1>
+  var_lookup_by_id <A, 192>
+  var_lookup_by_id <B, 193>
+  man_end_context
+  var_number_save <A, 192>
+  var_number_save <B, 193>
+uni_end_stream
+uni_start_stream
+  man_check_and_set_context_rid <61>
+  if_last_return_true_then <2>
+  man_get_attribute <mat_bool_repeat_animation>
+  if_last_return_false_then <1>
+  mat_art_animation_rate <95>
+  mat_bool_repeat_animation <yes>
+man_update_display
+uni_sync_skip <1>
+man_end_context
+uni_sync_skip <2>
+uni_end_stream
+uni_start_stream
+  man_check_and_set_context_rid <61>
+  if_last_return_true_then <1>
+  mat_bool_repeat_animation <no>
+  man_end_context
+  uni_sync_skip <1>
+uni_end_stream
+        >
+    man_start_sibling <trigger, "Erase Account Info">
+      mat_shortcut_key <"E">
+      act_replace_select_action
+        <
+        uni_start_stream
+        uni_invoke_local <32-503>
+        async_alert <info, "Account reset to original record.">
+        uni_end_stream
+        >
+    man_start_sibling <trigger, "Change Version Number">
+      act_replace_select_action
+        <
+        uni_start_stream
+        sm_send_token_arg <"f1", 41-49847>
+        >
+    man_start_sibling <trigger, ">Current Beta Versions">
+      mat_shortcut_key <"B">
+      act_replace_select_action
+        <
+        uni_start_stream
+        sm_m_send_token_arg <"U1", 0-16-13389>
+        >
+    man_start_sibling <trigger, ">Current Blocked Versions">
+      act_replace_select_action
+        <
+        uni_start_stream
+	  sm_m_send_token_arg <"U1", 0-16-10226>
+        >
+    man_start_sibling <ornament, "">
+    man_start_sibling <trigger, "Manage Tools">
+      act_replace_select_action
+        <
+        uni_start_stream
+        mt_manage_tools
+        >
+    man_start_sibling <trigger, "Invoke F1 Token (need masteraol)">
+      mat_shortcut_key <"I">
+      act_replace_select_action
+        <
+        uni_start_stream
+        sm_send_token_arg <"f1", 32-2501>
+        >
+    man_start_sibling <trigger, "Open Atomic Debugger (if installed)">
+      mat_shortcut_key <"O">
+      act_replace_select_action
+        <
+        uni_start_stream
+  	mt_start_atomdebug
+	uni_end_stream
+        >
+    man_end_object
+man_end_object
+    man_start_object <dss_list, "Beta">
+    mat_shortcut_key <"t">
+    mat_title <"Beta">
+    man_start_object <trigger, "US Betacentral - Main">
+      act_replace_select_action
+        <
+        uni_start_stream_wait_on <00x>
+        man_preset_url <"aol://1722:beta">
+        sm_send_f1 <44-39841>
+        uni_end_stream
+        >
+    man_start_sibling <trigger, "US TODcentral">
+      act_replace_select_action
+        <
+        uni_start_stream_wait_on <00x>
+        man_preset_url <"aol://1722:todbeta">
+        sm_send_token_arg <"U1", 16-14397>
+        uni_end_stream
+        >
+    man_start_sibling <trigger, "US Beta Message Boards">
+      act_replace_select_action
+        <
+        uni_start_stream_wait_on <00x>
+        sm_send_f1 <44-15600>
+        uni_end_stream
+        >
+    man_start_sibling <trigger, "US Beta Chatroom">
+      mat_shortcut_key <"U">
+      act_replace_select_action
+        <
+        uni_start_stream
+        sm_m_send_token_arg <"MR", 4986>
+        uni_end_stream
+        >
+    man_start_sibling <ornament, "">
+    man_start_sibling <trigger, "AOL 6.0 - Main">
+      act_replace_select_action
+        <
+        uni_start_stream
+	sm_send_token_arg <"U1", 16-14126>
+        uni_end_stream
+        >
+    man_start_sibling <trigger, "AOL 6.0 - Broadband">
+      act_replace_select_action
+        <
+        uni_start_stream
+	sm_send_token_arg <"U1", 16-14610>
+        uni_end_stream
+        >
+    man_start_sibling <ornament, "">
+    man_start_sibling <trigger, "US RM #1">
+      act_replace_select_action
+        <
+        uni_start_stream
+        sm_m_send_token_arg <"eB", 16955>
+        uni_end_stream
+        >
+    man_start_sibling <trigger, "US RM #2">
+      act_replace_select_action
+        <
+        uni_start_stream
+	sm_m_send_token_arg <"eB", 34712>
+        uni_end_stream
+        >
+    man_end_object
+man_end_object
+    man_start_object <dss_list, "AOL 6.0">
+    man_start_object <trigger, "Change Version Number">
+      act_replace_select_action
+        <
+        uni_start_stream <00x>
+        man_set_context_globalid <1>
+ 	man_start_object <independent, "Set Version Number">
+    mat_object_id <32-8096>
+    mat_style_id <32-8096>
+    mat_orientation <vcf>
+    mat_position <center_center>
+    mat_title_width <26>
+    man_start_object <editable_view, "Version (2 byte):">
+      mat_title_width <25>
+      mat_size <10, 1>
+      mat_relative_tag <1>
+      idb_set_context <20-0-6>
+      idb_atr_offset <6>
+      idb_get_value <02x>
+      uni_convert_last_atom_data <>
+      uni_use_last_atom_string <man_replace_data>
+      idb_end_context <>
+      mat_title_pos <left | center>
+      mat_bool_vertical_scroll <no>
+      mat_bool_resize_vertical <no>
+      mat_bool_exportable <no>
+      mat_bool_importable <no>
+    man_start_sibling <editable_view, "Sub-version (2 byte):">
+      mat_title_width <25>
+      mat_size <10, 1>
+      mat_relative_tag <2>
+      idb_set_context <20-0-6>
+      idb_atr_offset <8>
+      idb_get_value <02x>
+      uni_convert_last_atom_data <>
+      uni_use_last_atom_string <man_replace_data>
+      idb_end_context <>
+      mat_title_pos <left | center>
+      mat_bool_vertical_scroll <no>
+      mat_bool_resize_vertical <no>
+      mat_bool_exportable <no>
+      mat_bool_importable <no>
+    man_start_sibling <editable_view, "Build OS Type (2 byte):">
+      mat_title_width <25>
+      mat_size <10, 1>
+      mat_relative_tag <3>
+      idb_set_context <20-0-6>
+      idb_atr_offset <4>
+      idb_get_value <02x>
+      uni_convert_last_atom_data <>
+      uni_use_last_atom_string <man_replace_data>
+      idb_end_context <>
+      mat_title_pos <left | center>
+      mat_bool_vertical_scroll <no>
+      mat_bool_resize_vertical <no>
+      mat_bool_exportable <no>
+      mat_bool_importable <no>
+    man_end_object <>
+    mat_value <1>
+    man_start_object <editable_view, "Build OS Version (2 byte):">
+      mat_title_width <25>
+      mat_size <10, 1>
+      mat_relative_tag <4>
+      idb_set_context <20-0-6>
+      idb_atr_offset <56>
+      idb_get_value <02x>
+      uni_convert_last_atom_data <>
+      uni_use_last_atom_string <man_replace_data>
+      idb_end_context <>
+      mat_title_pos <left | center>
+      mat_bool_vertical_scroll <no>
+      mat_bool_resize_vertical <no>
+      mat_bool_exportable <no>
+      mat_bool_importable <no>
+    man_start_sibling <editable_view, "Service Type (2 byte):">
+      mat_title_width <25>
+      mat_size <10, 1>
+      mat_relative_tag <5>
+      idb_set_context <20-0-6>
+      idb_atr_offset <10>
+      idb_get_value <02x>
+      uni_convert_last_atom_data <>
+      uni_use_last_atom_string <man_replace_data>
+      idb_end_context <>
+      mat_title_pos <left | center>
+      mat_bool_vertical_scroll <no>
+      mat_bool_resize_vertical <no>
+      mat_bool_exportable <no>
+      mat_bool_importable <no>
+    man_start_sibling <org_group, "">
+      mat_orientation <hlf>
+      man_start_object <editable_view, "Country Code  (2 byte):">
+        mat_title_width <25>
+        mat_size <2, 1, 1>
+        mat_relative_tag <6>
+        idb_set_context <20-0-6>
+        idb_atr_offset <25>
+        idb_get_data <>
+        uni_use_last_atom_string <man_replace_data>
+        idb_end_context <>
+        mat_title_pos <left | center>
+        mat_bool_vertical_scroll <no>
+        mat_bool_resize_vertical <no>
+        mat_bool_exportable <no>
+        mat_bool_importable <no>
+      man_start_sibling <editable_view, "">
+        mat_title_width <25>
+        mat_size <2, 1, 1>
+        mat_relative_tag <8>
+        idb_set_context <20-0-6>
+        idb_atr_offset <24>
+        idb_get_data <>
+        uni_use_last_atom_string <man_replace_data>
+        idb_end_context <>
+        mat_title_pos <left | center>
+        mat_bool_vertical_scroll <no>
+        mat_bool_resize_vertical <no>
+        mat_bool_exportable <no>
+        mat_bool_importable <no>
+      man_end_object <>
+    man_start_sibling <editable_view, "Hardware  (2 byte):">
+      mat_title_width <25>
+      mat_size <10, 1>
+      mat_relative_tag <7>
+      idb_set_context <20-0-6>
+      idb_atr_offset <18>
+      idb_get_value <02x>
+      uni_convert_last_atom_data <>
+      uni_use_last_atom_string <man_replace_data>
+      idb_end_context <>
+      mat_title_pos <left | center>
+      mat_bool_vertical_scroll <no>
+      mat_bool_resize_vertical <no>
+      mat_bool_exportable <no>
+      mat_bool_importable <no>
+    man_start_sibling <editable_view, "AOL Version">
+      mat_title_width <25>
+      mat_size <10, 1, 31>
+      mat_relative_tag <10>
+      idb_exists <20-0-68>
+      if_last_return_true_then <1>
+      idb_set_context <20-0-68>
+      idb_atr_offset <0>
+      idb_get_data <>
+      uni_use_last_atom_string <man_replace_data>
+      idb_end_context <>
+      uni_sync_skip <1>
+      mat_title_pos <left | center>
+      mat_bool_vertical_scroll <no>
+      mat_bool_resize_vertical <no>
+      mat_bool_exportable <no>
+      mat_bool_importable <no>
+    man_start_sibling <trigger, "Update">
+      mat_bool_default <yes>
+      act_replace_select_action
+        <
+        uni_start_stream <>
+          idb_set_context <20-0-6>
+          idb_atr_globalid <20-0-6>
+          de_start_extraction <00x>
+          man_set_context_relative <1>
+          de_get_data_pointer <>
+          uni_convert_last_atom_string <>
+          mt_flip_value <0>
+          idb_atr_offset <6>
+          uni_use_last_atom_value <idb_append_data>
+          man_change_context_relative <2>
+          de_get_data_pointer <>
+          uni_convert_last_atom_string <>
+          mt_flip_value <0>
+          idb_atr_offset <8>
+          uni_use_last_atom_value <idb_append_data>
+          man_change_context_relative <3>
+          de_get_data_pointer <>
+          uni_convert_last_atom_string <>
+          mt_flip_value <0>
+          idb_atr_offset <4>
+          uni_use_last_atom_value <idb_append_data>
+          man_change_context_relative <4>
+          de_get_data_pointer <>
+          uni_convert_last_atom_string <>
+          mt_flip_value <0>
+          idb_atr_offset <56>
+          uni_use_last_atom_value <idb_append_data>
+          man_change_context_relative <5>
+          de_get_data_pointer <>
+          uni_convert_last_atom_string <>
+          mt_flip_value <0>
+          idb_atr_offset <10>
+          uni_use_last_atom_value <idb_append_data>
+          man_change_context_relative <6>
+          de_get_data_pointer <>
+          idb_atr_offset <25>
+          uni_use_last_atom_string <idb_append_data>
+          man_change_context_relative <8>
+          de_get_data_pointer <>
+          idb_atr_offset <24>
+          uni_use_last_atom_string <idb_append_data>
+          man_change_context_relative <7>
+          de_get_data_pointer <>
+          uni_convert_last_atom_string <>
+          mt_flip_value <0>
+          idb_atr_offset <18>
+          uni_use_last_atom_value <idb_append_data>
+          man_change_context_relative <1>
+          de_get_data_pointer <>
+          uni_convert_last_atom_string <>
+          mt_flip_value <0>
+          idb_atr_offset <6>
+          uni_use_last_atom_value <idb_append_data>
+          man_change_context_relative <2>
+          de_get_data_pointer <>
+          uni_convert_last_atom_string <>
+          mt_flip_value <0>
+          idb_atr_offset <8>
+          uni_use_last_atom_value <idb_append_data>
+          man_change_context_relative <5>
+          de_get_data_pointer <>
+          uni_convert_last_atom_string <>
+          mt_flip_value <0>
+          idb_atr_offset <10>
+          uni_use_last_atom_value <idb_append_data>
+          man_end_context <>
+          idb_end_context <>
+          idb_start_obj <"t">
+          idb_atr_globalid <20-0-68>
+          man_set_context_relative <10>
+          de_get_data_pointer <>
+          uni_use_last_atom_string <idb_append_data>
+          man_end_context <>
+          idb_end_obj <>
+          de_end_extraction <>
+          man_close_update <>
+          async_alert <info, "Client version number has been updated. You must restart your client.">
+        uni_end_stream <>
+        >
+    	man_end_object <>
+    	man_update_display <>
+    	uni_wait_off <>
+  	uni_end_stream <00x>
+        >
+    man_end_object
+man_end_object
+    man_start_object <dss_list, "CL">
+    mat_title <"CL">
+    man_start_object <trigger, "AACCL">
+      act_replace_select_action
+        <
+        uni_start_stream_wait_on <00x>
+	sm_send_f1 <44-22276>
+        uni_end_stream
+        >
+     man_start_sibling <trigger, "ARC">
+      act_replace_select_action
+        <
+        uni_start_stream
+        sm_m_send_token_arg <"U3", 8-919>
+        >
+    man_start_sibling <trigger, "CLHQ">
+      act_replace_select_action
+        <
+        uni_start_stream
+        sm_m_send_token_arg <"U1", 0-134-98>
+        >
+    man_start_sibling <trigger, "CL Pager">
+      act_replace_select_action
+        <
+        uni_start_stream
+        sm_send_f1 <43-60944>
+        >
+    man_start_sibling <trigger, "CL Ref">
+      act_replace_select_action
+        <
+        uni_start_stream
+        sm_m_send_token_arg <"U3", 1-173-3340>
+        >
+    man_start_sibling <trigger, "CL Store">
+      act_replace_select_action
+        <
+        uni_start_stream
+        sm_send_f1 <41-37157>
+        >
+    man_start_sibling <trigger, "Simple">
+      act_replace_select_action
+        <
+        uni_start_stream
+        sm_send_f1 <40-411>
+        >
+    man_start_sibling <ornament, "">
+    man_start_sibling <trigger, "BPS File Library">
+      act_replace_select_action
+        <
+        uni_start_stream
+        sm_m_send_token_arg <"eB", 11107>
+        uni_end_stream
+        >
+    man_start_sibling <trigger, "BPS Hosting tools">
+      act_replace_select_action
+        <
+        uni_start_stream
+        sm_m_send_token_arg <"U1", 0-27-2101>
+        >
+    man_start_sibling <trigger, "CLHQ Message Board">
+      act_replace_select_action
+        <
+        uni_start_stream
+        sm_m_send_token_arg <"U1", 0-6-24729>
+        >
+    man_start_sibling <ornament, "">
+    man_end_object
+    man_start_object <dss_list, "Names">
+    man_start_object <trigger, "Current Prefixes">
+      act_replace_select_action
+        <
+        uni_start_stream_wait_on <00x>
+	sm_m_send_token_arg <"U3", 0-67-1854>
+        uni_end_stream
+        >
+    man_start_sibling <ornament, "">
+    man_start_sibling <trigger, "AAC Names">
+      act_replace_select_action
+        <
+        uni_start_stream_wait_on <00x>
+	sm_m_send_token_arg <"t1", 0-29-18641>
+        uni_end_stream
+        >
+    man_start_sibling <trigger, "AAC Scam Info">
+      act_replace_select_action
+        <
+        uni_start_stream_wait_on <00x>
+	sm_m_send_token_arg <"t1", 0-29-5885>
+        uni_end_stream
+        >
+    man_start_sibling <trigger, "COST ACI Reference">
+      act_replace_select_action
+        <
+        uni_start_stream_wait_on <00x>
+	sm_m_send_token_arg <"U3", 0-67-3420>
+        uni_end_stream
+        >
+    man_end_object
+    man_end_object
+    man_start_object <dss_list, "More">
+    man_start_object <trigger, "Black Voices">
+      act_replace_select_action
+        <
+        uni_start_stream
+        sm_m_send_token_arg <"U4", 0-29-2305>
+        >
+    man_start_sibling <trigger, "Chatroom Backdoors">
+      act_replace_select_action
+        <
+        uni_start_stream
+        sm_m_send_token_arg <"U3", 0-52-5>
+        >
+   man_start_sibling <trigger, "Community Leader Education">
+      act_replace_select_action
+        <
+        uni_start_stream
+        sm_m_send_token_arg <"U1", 150-6>
+        >
+
+   man_start_sibling <trigger, "Community Leader Recruitment">
+      act_replace_select_action
+        <
+        uni_start_stream
+        sm_m_send_token_arg <"U3", 1-173-140>
+        >
+
+   man_start_sibling <trigger, "COSTeam (keyword: ^52you)">
+      act_replace_select_action
+        <
+        uni_start_stream
+        sm_m_send_token_arg <"U3", 1-195-196>
+        >
+  man_start_sibling <trigger, "Digital City">
+      act_replace_select_action
+        <
+        uni_start_stream
+        sm_m_send_token_arg <"U4", 29-383>
+        >
+  man_start_sibling <trigger, "Digital City Admin">
+      act_replace_select_action
+        <
+        uni_start_stream
+        sm_m_send_token_arg <"U4", 2-29-847>
+        >
+  man_start_sibling <trigger, "Eat at Joes">
+      act_replace_select_action
+        <
+        uni_start_stream
+        sm_m_send_token_arg <"t1", 86-37571>
+        >
+  man_start_sibling <trigger, "Engage">
+      act_replace_select_action
+        <
+        uni_start_stream
+        sm_m_send_token_arg <"U1", 208-20729>
+        >
+  man_start_sibling <trigger, "Entertainment Asylum">
+      act_replace_select_action
+        <
+        uni_start_stream
+        sm_m_send_token_arg <"U2", 1-106-2753>
+        >
+  man_start_sibling <trigger, "Estar Staff">
+      act_replace_select_action
+        <
+        uni_start_stream
+        sm_m_send_token_arg <"t1", 0-102-429>
+        >
+man_start_sibling <trigger, "Hecklers Online">
+      act_replace_select_action
+        <
+        uni_start_stream
+        sm_m_send_token_arg <"t1", 0-53-15620>
+        >
+ man_start_sibling <trigger, "Member Support">
+      act_replace_select_action
+        <
+        uni_start_stream
+        sm_m_send_token_arg <"U3", 1-188-965>
+        >
+    man_start_sibling <trigger, "NetNoir">
+      act_replace_select_action
+        <
+        uni_start_stream
+        sm_m_send_token_arg <"t1", 0-46-24387>
+        > 
+  man_start_sibling <trigger, "People Connections - Roaide">
+      act_replace_select_action
+        <
+        uni_start_stream
+        sm_m_send_token_arg <"t1", 14-155>
+        >
+man_start_sibling <trigger, "Teen People">
+      act_replace_select_action
+        <
+        uni_start_stream
+        sm_m_send_token_arg <"U3", 1-173-212>
+        >
+man_start_sibling <trigger, "Thrive Online">
+      act_replace_select_action
+        <
+        uni_start_stream
+        sm_m_send_token_arg <"f1", 44-23931>
+        >
+  man_start_sibling <trigger, "TV Fan Favorites">
+      act_replace_select_action
+        <
+        uni_start_stream
+        sm_m_send_token_arg <"t1", 0-102-1630>
+        >
+ man_start_sibling <trigger, "VR1 Extreme Games">
+      act_replace_select_action
+        <
+        uni_start_stream
+        sm_m_send_token_arg <"U1", 6-37687>
+        >
+man_start_sibling <trigger, "Warner Brothers">
+      act_replace_select_action
+        <
+        uni_start_stream
+        sm_m_send_token_arg <"U1", 157-2560>
+        >
+ man_start_sibling <trigger, "WorkPlace">
+      act_replace_select_action
+        <
+        uni_start_stream
+        sm_m_send_token_arg <"t1", 94-5068>
+        >
+        man_end_object
+    man_end_object
+man_end_object
+    man_start_object <trigger, "OH Stuff">
+    man_start_object <trigger, "Partner Tools Space">
+      act_replace_select_action
+        <
+        uni_start_stream
+        sm_m_send_token_arg <"U1", 0-69-9935>
+        >
+    man_end_object
+man_end_object
+    man_start_object <trigger, "Beta Form">
+      act_replace_select_action
+        <
+        uni_start_stream
+  	uni_invoke_local <44-77777>
+	uni_end_stream
+        >
+    man_start_sibling <trigger, "About">
+      act_replace_select_action
+        <
+        uni_start_stream
+  	async_alert <info, "Menu made by viowatch.\n\nThanks go out to:\nKenton, Dolan, CIA, and others for there VPD help.">
+        >
+    man_start_sibling <trigger, "Greets">
+      act_replace_select_action
+        <
+       uni_start_stream_wait_on
+ 	man_set_context_globalid <1>
+  man_start_object <ind_group, "The Elite Team - Viowatch">
+    mat_orientation <vff>
+    mat_precise_width <400>
+    mat_precise_height <300>
+    mat_bool_precise <yes>
+    mat_bool_resize_vertical <no>
+    mat_bool_resize_horizontal <no>
+    man_start_object <view, "">
+      rich_manage
+      rich_set_static
+      mat_precise_width <394>
+      mat_precise_height <297>
+      mat_precise_x <2>
+      mat_precise_y <2>
+      mat_bool_vertical_scroll <no>
+      mat_relative_tag <1>
+    man_end_object
+  man_update_display
+  man_set_context_relative <1>
+  man_append_data <"<HTML></P><P ALIGN=CENTER>\n<B><h1><I>The Elite Team</I">
+  man_append_data <"></h1><BR><BR></P><P ALIGN=LEFT>\n<BR></P><P ALIGN=CENTE">
+  man_append_data <"R>\n<A HREF=\"mailto:viowatch@gosh.net\">viowatch</A>">
+  man_append_data <"<BR><BR>duckers x master x goten x flaw x kip<BR>i">
+  man_append_data <"nferno x irs x island x c i a x senate x xdaniel <">
+  man_append_data <"BR>seanx x knog x rich x motolov x glenda x kast<B">
+  man_append_data <"R>sopon x craig x brett x fuse x kittie x kickbut ">
+  man_append_data <"x delaware<BR>kenton x vrai17 x DvinEcHAOs x cult ">
+  man_append_data <"x gemini<BR> curley x juls x killa x gordy x chip ">
+  man_append_data <"from arise<BR>deep, minion, kasino from legion<BR>">
+  man_append_data <"and Storm from arise</B><BR><BR><BR></P></HTML>">
+  man_end_data
+  man_end_context
+man_update_woff_end_stream
+        >
+    man_start_sibling <trigger, "Kill Wait">
+      act_replace_select_action
+        <
+        uni_start_stream
+  	  sm_send_selection_code <27241>
+  	  uni_invoke_no_context <32-2618>
+        >
+    man_start_sibling <ornament, "">
+    man_start_sibling <trigger, "Sign Off">
+      act_replace_select_action
+        <
+        uni_start_stream
+        man_close_update
+        async_force_off <"<p align=center>Thank you for using AOHell.\x7f\x7fMenu made by <a href=mailto:viowatch@gosh.net>Viowatch</a>.">
+        uni_end_stream
+        >
+    man_start_sibling <trigger, "Close">
+      act_replace_select_action
+        <
+        uni_start_stream <00x>
+          man_set_context_globalid <44-8>
+          man_close_update
+        uni_end_stream
+        >
+    man_end_object
+  man_end_object
+man_update_display <2>
+uni_wait_off
+uni_end_stream
+

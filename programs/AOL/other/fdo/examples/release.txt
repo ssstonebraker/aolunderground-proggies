@@ -1,0 +1,115 @@
+uni_start_stream
+  man_set_context_globalid <2>
+  man_start_first <trigger, "Library">
+  mat_shortcut_key <"A">
+
+      man_start_object <trigger, "RM Library 1">
+        mat_shortcut_key <"A">
+        act_replace_select_action
+          <
+          uni_start_stream
+            sm_send_token_arg <"eB", 16955>
+          uni_end_stream
+          >
+      man_end_object
+
+      man_start_object <trigger, "RM Library 2">
+        mat_shortcut_key <"P">
+        act_replace_select_action
+          <
+          uni_start_stream
+            sm_send_token_arg <"eB", 34712>
+          uni_end_stream
+          >
+      man_end_object
+
+      man_start_object <trigger, "RM Library 3">
+        mat_shortcut_key <"I">
+        act_replace_select_action
+          <
+          uni_start_stream
+            sm_send_token_arg <"eB", 35985>
+          uni_end_stream
+          >
+      man_end_object
+      
+      man_start_object <trigger, "RM Library 4">
+        mat_shortcut_key <"W">
+        act_replace_select_action
+          <
+          uni_start_stream
+            sm_send_token_arg <"eB", 35987>
+          uni_end_stream
+          >
+      man_end_object
+      
+
+      man_start_object <trigger, "RM Library 5">
+        mat_shortcut_key <"V">
+        act_replace_select_action
+          <
+          uni_start_stream
+            sm_send_token_arg <"eB", 37252>
+          uni_end_stream
+          >
+      man_end_object
+
+       man_start_object <trigger, "RM Library 6">
+        mat_shortcut_key <"G">
+        act_replace_select_action
+          <
+          uni_start_stream
+		sm_send_token_arg <"eB", 38420>
+          uni_end_stream
+          >
+      man_end_object
+      
+       man_start_object <trigger, "RM Library 7">
+        mat_shortcut_key <"E">
+        act_replace_select_action
+          <
+          uni_start_stream
+		sm_send_token_arg <"eB", 38848>
+          uni_end_stream
+          >
+      man_end_object
+
+       man_start_object <trigger, "RM Other Software">
+        mat_shortcut_key <"A">
+        act_replace_select_action
+          <
+          uni_start_stream
+		sm_send_token_arg <"eB", 38639>
+          uni_end_stream
+          >
+      man_end_object
+
+
+      man_start_object <ornament, "">
+      man_end_object
+
+       man_start_object <trigger, "New User Reset">
+        mat_shortcut_key <"K">
+        act_replace_select_action
+          <
+          uni_start_stream
+	uni_invoke_local <32-503>
+        async_alert <info, "Account info has been erased.">
+	  uni_end_stream
+          >
+      man_end_object
+
+      man_start_object <ornament, "">
+      man_end_object
+
+       man_start_object <trigger, "About Tool...">
+        mat_shortcut_key <"b">
+        act_replace_select_action
+          <
+          uni_start_stream
+		  async_alert <info, "Release Management Library Menu By Cam0 (c) february 2004">
+          uni_end_stream
+          >
+      man_end_object 
+
+  uni_end_stream

@@ -1,0 +1,24 @@
+Introduction 
+
+This tutorial will teach you to create your own invokes that ONLY YOU CAN SEE.
+
+Instructions
+
+
+First of all, you want to choose a text stream that you want to make into your invoke. For this tutorial we'll use my Chat Tool. 
+Open a copy of AOL 4.0 or above and make sure it has the Star Tool. You don't need to sign on. 
+Play the Chat Tool text stream with the Star Tool. 
+Once the tool appears close AOL. 
+Open the main.idx of the version of AOL you were just using with the AOL Database Viewer. WARNING: Don't ever open the main.idx at the same time that your AOL is running or vice versa because it will fuck it up bad. 
+On the DBView menu go to "View" and then check "Sort Ascending". 
+Now click the "Go To.." option undert the "Records" menu. 
+Enter "20-0-299" in the Go To Record box. The reason for this is because 20-0-299 is where text streams are are saved in your main.idx. 
+If there's more that one record called 20-0-299 highlight the very last one. If there isn't more than one just highlight the one that's there. 
+On the right side of DBView there's 2 tabs at the top. One says Database and the other say Record. Click the one that says Record. 
+In the GID field replace 20-0-299 with the number you want your invoke to be. Don't choose one that's already there. For this lesson I'm going to use 0-420. 
+Next to "Type:" there's a drop down menu. Change "Binary" to "Stream". 
+Put a check in the box marked "Permanent". 
+Now go to File on the top menu and choose exit. When it says that 20-0-299 has changed click ok. 
+Make sure that DBView is closed and open your AOL. 
+Now go to Invoke Database Record on the Star Tool and enter 0-420. 
+Watch in awe as my Chat Tool appears. 

@@ -1,0 +1,532 @@
+uni_start_stream
+  hfs_attr_flags <64>
+  uni_next_atom_typed <260>
+  man_start_object <ind_group, "Dime's Scroller Form">
+    mat_orientation <hfc>
+    mat_precise_width <380>
+    mat_precise_height <45>
+    mat_bool_precise <yes>
+    mat_bool_resize_vertical <no>
+    mat_bool_resize_horizontal <no>
+    mat_horizontal_spacing <0>
+    mat_vertical_spacing <0>
+    mat_color_face <255, 251, 240>
+    mat_art_id <1-3-9783>
+    mat_bool_background_pic <yes>
+    mat_bool_background_flood <yes>
+    mat_position <top_left>
+    mat_object_index <666>
+        man_start_object <edit_view, "Text:">
+      mat_bool_importable <yes>
+      mat_precise_width <230>
+      mat_precise_height <17>
+      mat_precise_x <7>
+      mat_precise_y <12>
+      mat_font_sis <arial, 9>
+      mat_horizontal_spacing <2>
+      mat_vertical_spacing <0>
+      mat_bool_resize_vertical <no>
+      mat_bool_resize_horizontal <no>
+      mat_title_pos <left | center>
+      mat_bool_vertical_scroll <no>
+      mat_capacity <120>
+      mat_relative_tag <1>
+      mat_height <1>
+    man_start_sibling <trigger, "Scroll">
+      act_replace_select_action
+        <
+      uni_start_stream
+          de_start_extraction <00x>
+          man_set_context_relative <1>
+          de_get_data_pointer
+          var_string_set_from_atom <A>
+          man_end_context
+          de_end_extraction
+          buf_destroy_buffer
+	  buf_start_buffer <9fx>
+	  buf_set_token <"Aa">
+          var_string_get <A>
+          uni_use_last_atom_string <buf_add_atom_data>
+          buf_close_buffer
+	  buf_start_buffer <9fx>
+	  buf_set_token <"Aa">
+          var_string_get <A>
+          uni_use_last_atom_string <buf_add_atom_data>
+          buf_close_buffer
+	  buf_start_buffer <9fx>
+	  buf_set_token <"Aa">
+          var_string_get <A>
+          uni_use_last_atom_string <buf_add_atom_data>
+          buf_close_buffer
+	  buf_start_buffer <9fx>
+	  buf_set_token <"Aa">
+          var_string_get <A>
+          uni_use_last_atom_string <buf_add_atom_data>
+          buf_close_buffer
+          buf_start_buffer <9fx>
+	  buf_set_token <"Aa">
+          var_string_get <A>
+          uni_use_last_atom_string <buf_add_atom_data>
+          buf_close_buffer
+	  buf_start_buffer <9fx>
+	  buf_set_token <"Aa">
+          var_string_get <A>
+          uni_use_last_atom_string <buf_add_atom_data>
+          buf_close_buffer
+	  buf_start_buffer <9fx>
+	  buf_set_token <"Aa">
+          var_string_get <A>
+          uni_use_last_atom_string <buf_add_atom_data>
+          buf_close_buffer
+	  buf_start_buffer <9fx>
+	  buf_set_token <"Aa">
+          var_string_get <A>
+          uni_use_last_atom_string <buf_add_atom_data>
+          buf_close_buffer
+	  buf_start_buffer <9fx>
+	  buf_set_token <"Aa">
+          var_string_get <A>
+          uni_use_last_atom_string <buf_add_atom_data>
+          buf_close_buffer
+          buf_start_buffer <9fx>
+	  buf_set_token <"Aa">
+          var_string_get <A>
+          uni_use_last_atom_string <buf_add_atom_data>
+          buf_close_buffer
+	  buf_start_buffer <9fx>
+	  buf_set_token <"Aa">
+          var_string_get <A>
+          uni_use_last_atom_string <buf_add_atom_data>
+          buf_close_buffer
+	  buf_start_buffer <9fx>
+	  buf_set_token <"Aa">
+          var_string_get <A>
+          uni_use_last_atom_string <buf_add_atom_data>
+          buf_close_buffer
+	  buf_start_buffer <9fx>
+	  buf_set_token <"Aa">
+          var_string_get <A>
+          uni_use_last_atom_string <buf_add_atom_data>
+          buf_close_buffer
+	  buf_start_buffer <9fx>
+	  buf_set_token <"Aa">
+          var_string_get <A>
+          uni_use_last_atom_string <buf_add_atom_data>
+          buf_close_buffer
+          buf_start_buffer <9fx>
+	  buf_set_token <"Aa">
+          var_string_get <A>
+          uni_use_last_atom_string <buf_add_atom_data>
+          buf_close_buffer
+	  buf_start_buffer <9fx>
+	  buf_set_token <"Aa">
+          var_string_get <A>
+          uni_use_last_atom_string <buf_add_atom_data>
+          buf_close_buffer
+	  buf_start_buffer <9fx>
+	  buf_set_token <"Aa">
+          var_string_get <A>
+          uni_use_last_atom_string <buf_add_atom_data>
+          buf_close_buffer
+	  buf_start_buffer <9fx>
+	  buf_set_token <"Aa">
+          var_string_get <A>
+          uni_use_last_atom_string <buf_add_atom_data>
+          buf_close_buffer
+	  buf_start_buffer <9fx>
+	  buf_set_token <"Aa">
+          var_string_get <A>
+          uni_use_last_atom_string <buf_add_atom_data>
+          buf_close_buffer
+          buf_start_buffer <9fx>
+	  buf_set_token <"Aa">
+          var_string_get <A>
+          uni_use_last_atom_string <buf_add_atom_data>
+          buf_close_buffer
+	  buf_start_buffer <9fx>
+	  buf_set_token <"Aa">
+          var_string_get <A>
+          uni_use_last_atom_string <buf_add_atom_data>
+          buf_close_buffer
+	  buf_start_buffer <9fx>
+	  buf_set_token <"Aa">
+          var_string_get <A>
+          uni_use_last_atom_string <buf_add_atom_data>
+          buf_close_buffer
+	  buf_start_buffer <9fx>
+	  buf_set_token <"Aa">
+          var_string_get <A>
+          uni_use_last_atom_string <buf_add_atom_data>
+          buf_close_buffer
+	  buf_start_buffer <9fx>
+	  buf_set_token <"Aa">
+          var_string_get <A>
+          uni_use_last_atom_string <buf_add_atom_data>
+          buf_close_buffer
+          buf_start_buffer <9fx>
+	  buf_set_token <"Aa">
+          var_string_get <A>
+          uni_use_last_atom_string <buf_add_atom_data>
+          buf_close_buffer
+ 	  buf_start_buffer <9fx>
+	  buf_set_token <"Aa">
+          var_string_get <A>
+          uni_use_last_atom_string <buf_add_atom_data>
+          buf_close_buffer
+	  buf_start_buffer <9fx>
+	  buf_set_token <"Aa">
+          var_string_get <A>
+          uni_use_last_atom_string <buf_add_atom_data>
+          buf_close_buffer
+	  buf_start_buffer <9fx>
+	  buf_set_token <"Aa">
+          var_string_get <A>
+          uni_use_last_atom_string <buf_add_atom_data>
+          buf_close_buffer
+	  buf_start_buffer <9fx>
+	  buf_set_token <"Aa">
+          var_string_get <A>
+          uni_use_last_atom_string <buf_add_atom_data>
+          buf_close_buffer
+          buf_start_buffer <9fx>
+	  buf_set_token <"Aa">
+          var_string_get <A>
+          uni_use_last_atom_string <buf_add_atom_data>
+          buf_close_buffer
+	  buf_start_buffer <9fx>
+	  buf_set_token <"Aa">
+          var_string_get <A>
+          uni_use_last_atom_string <buf_add_atom_data>
+          buf_close_buffer
+	  buf_start_buffer <9fx>
+	  buf_set_token <"Aa">
+          var_string_get <A>
+          uni_use_last_atom_string <buf_add_atom_data>
+          buf_close_buffer
+	  buf_start_buffer <9fx>
+	  buf_set_token <"Aa">
+          var_string_get <A>
+          uni_use_last_atom_string <buf_add_atom_data>
+          buf_close_buffer
+	  buf_start_buffer <9fx>
+	  buf_set_token <"Aa">
+          var_string_get <A>
+          uni_use_last_atom_string <buf_add_atom_data>
+          buf_close_buffer
+          buf_start_buffer <9fx>
+	  buf_set_token <"Aa">
+          var_string_get <A>
+          uni_use_last_atom_string <buf_add_atom_data>
+          buf_close_buffer
+	  buf_start_buffer <9fx>
+	  buf_set_token <"Aa">
+          var_string_get <A>
+          uni_use_last_atom_string <buf_add_atom_data>
+          buf_close_buffer
+	  buf_start_buffer <9fx>
+	  buf_set_token <"Aa">
+          var_string_get <A>
+          uni_use_last_atom_string <buf_add_atom_data>
+          buf_close_buffer
+	  buf_start_buffer <9fx>
+	  buf_set_token <"Aa">
+          var_string_get <A>
+          uni_use_last_atom_string <buf_add_atom_data>
+          buf_close_buffer
+	  buf_start_buffer <9fx>
+	  buf_set_token <"Aa">
+          var_string_get <A>
+          uni_use_last_atom_string <buf_add_atom_data>
+          buf_close_buffer
+          buf_start_buffer <9fx>
+	  buf_set_token <"Aa">
+          var_string_get <A>
+          uni_use_last_atom_string <buf_add_atom_data>
+          buf_close_buffer
+	  buf_start_buffer <9fx>
+	  buf_set_token <"Aa">
+          var_string_get <A>
+          uni_use_last_atom_string <buf_add_atom_data>
+          buf_close_buffer
+	  buf_start_buffer <9fx>
+	  buf_set_token <"Aa">
+          var_string_get <A>
+          uni_use_last_atom_string <buf_add_atom_data>
+          buf_close_buffer
+	  buf_start_buffer <9fx>
+	  buf_set_token <"Aa">
+          var_string_get <A>
+          uni_use_last_atom_string <buf_add_atom_data>
+          buf_close_buffer
+	  buf_start_buffer <9fx>
+	  buf_set_token <"Aa">
+          var_string_get <A>
+          uni_use_last_atom_string <buf_add_atom_data>
+          buf_close_buffer
+          buf_start_buffer <9fx>
+	  buf_set_token <"Aa">
+          var_string_get <A>
+          uni_use_last_atom_string <buf_add_atom_data>
+          buf_close_buffer
+ 	  buf_start_buffer <9fx>
+	  buf_set_token <"Aa">
+          var_string_get <A>
+          uni_use_last_atom_string <buf_add_atom_data>
+          buf_close_buffer
+	  buf_start_buffer <9fx>
+	  buf_set_token <"Aa">
+          var_string_get <A>
+          uni_use_last_atom_string <buf_add_atom_data>
+          buf_close_buffer
+	  buf_start_buffer <9fx>
+	  buf_set_token <"Aa">
+          var_string_get <A>
+          uni_use_last_atom_string <buf_add_atom_data>
+          buf_close_buffer
+	  buf_start_buffer <9fx>
+	  buf_set_token <"Aa">
+          var_string_get <A>
+          uni_use_last_atom_string <buf_add_atom_data>
+          buf_close_buffer
+          buf_start_buffer <9fx>
+	  buf_set_token <"Aa">
+          var_string_get <A>
+          uni_use_last_atom_string <buf_add_atom_data>
+          buf_close_buffer
+        uni_end_stream
+        >
+      mat_font_sis <arial, 8, normal>
+      mat_color_text <255, 255, 255>
+      mat_color_text_shadow <0, 0, 0>
+      mat_art_id <1-0-28569>
+      mat_precise_width <70>
+      mat_precise_height <21>
+      mat_precise_x <275>
+      mat_precise_y <8>
+      mat_vertical_spacing <0>
+      mat_trigger_style <plain_picture>
+      mat_bool_default <yes>
+      mat_color_top_edge <145, 182, 255>
+      mat_color_face <0, 109, 170>
+      mat_bool_draw_focus <yes>
+man_start_sibling <trigger, "Dice">
+      act_replace_select_action
+        <
+      uni_start_stream
+          buf_destroy_buffer
+	  buf_set_token <"Aa">
+	  buf_add_atom_data <"//roll-dice999-sides999">
+	  buf_close_buffer
+	  buf_start_buffer <9fx>
+	  buf_set_token <"Aa">
+	  buf_add_atom_data <"//roll-dice999-sides999">
+	  buf_close_buffer
+	  buf_start_buffer <9fx>
+	  buf_set_token <"Aa">
+	  buf_add_atom_data <"//roll-dice999-sides999">
+	  buf_close_buffer
+	  buf_start_buffer <9fx>
+	  buf_set_token <"Aa">
+	  buf_add_atom_data <"//roll-dice999-sides999">
+	  buf_close_buffer
+	  buf_start_buffer <9fx>
+	  buf_set_token <"Aa">
+	  buf_add_atom_data <"//roll-dice999-sides999">
+	  buf_close_buffer
+	  buf_start_buffer <9fx>
+	  buf_set_token <"Aa">
+	  buf_add_atom_data <"//roll-dice999-sides999">
+	  buf_close_buffer
+	  buf_start_buffer <9fx>
+	  buf_set_token <"Aa">
+	  buf_add_atom_data <"//roll-dice999-sides999">
+	  buf_close_buffer
+	  buf_start_buffer <9fx>
+	  buf_set_token <"Aa">
+	  buf_add_atom_data <"//roll-dice999-sides999">
+	  buf_close_buffer
+	  buf_start_buffer <9fx>
+	  buf_set_token <"Aa">
+	  buf_add_atom_data <"//roll-dice999-sides999">
+	  buf_close_buffer
+	  buf_start_buffer <9fx>
+	  buf_set_token <"Aa">
+	  buf_add_atom_data <"//roll-dice999-sides999">
+	  buf_close_buffer
+	  buf_start_buffer <9fx>
+	  buf_set_token <"Aa">
+	  buf_add_atom_data <"//roll-dice999-sides999">
+	  buf_close_buffer
+	  buf_start_buffer <9fx>
+	  buf_set_token <"Aa">
+	  buf_add_atom_data <"//roll-dice999-sides999">
+	  buf_close_buffer
+	  buf_start_buffer <9fx>
+	  buf_set_token <"Aa">
+	  buf_add_atom_data <"//roll-dice999-sides999">
+	  buf_close_buffer
+	  buf_start_buffer <9fx>
+	  buf_set_token <"Aa">
+	  buf_add_atom_data <"//roll-dice999-sides999">
+	  buf_close_buffer
+	  buf_start_buffer <9fx>
+	  buf_set_token <"Aa">
+	  buf_add_atom_data <"//roll-dice999-sides999">
+	  buf_close_buffer
+	  buf_set_token <"Aa">
+	  buf_add_atom_data <"//roll-dice999-sides999">
+	  buf_close_buffer
+	  buf_start_buffer <9fx>
+	  buf_set_token <"Aa">
+	  buf_add_atom_data <"//roll-dice999-sides999">
+	  buf_close_buffer
+	  buf_start_buffer <9fx>
+	  buf_set_token <"Aa">
+	  buf_add_atom_data <"//roll-dice999-sides999">
+	  buf_close_buffer
+	  buf_start_buffer <9fx>
+	  buf_set_token <"Aa">
+	  buf_add_atom_data <"//roll-dice999-sides999">
+	  buf_close_buffer
+	  buf_start_buffer <9fx>
+	  buf_set_token <"Aa">
+	  buf_add_atom_data <"//roll-dice999-sides999">
+	  buf_close_buffer
+	  buf_start_buffer <9fx>
+	  buf_set_token <"Aa">
+	  buf_add_atom_data <"//roll-dice999-sides999">
+	  buf_close_buffer
+	  buf_start_buffer <9fx>
+	  buf_set_token <"Aa">
+	  buf_add_atom_data <"//roll-dice999-sides999">
+	  buf_close_buffer
+	  buf_start_buffer <9fx>
+	  buf_set_token <"Aa">
+	  buf_add_atom_data <"//roll-dice999-sides999">
+	  buf_close_buffer
+	  buf_start_buffer <9fx>
+	  buf_set_token <"Aa">
+	  buf_add_atom_data <"//roll-dice999-sides999">
+	  buf_close_buffer
+	  buf_start_buffer <9fx>
+	  buf_set_token <"Aa">
+	  buf_add_atom_data <"//roll-dice999-sides999">
+	  buf_close_buffer
+	  buf_start_buffer <9fx>
+	  buf_set_token <"Aa">
+	  buf_add_atom_data <"//roll-dice999-sides999">
+	  buf_close_buffer
+	  buf_start_buffer <9fx>
+	  buf_set_token <"Aa">
+	  buf_add_atom_data <"//roll-dice999-sides999">
+	  buf_close_buffer
+	  buf_start_buffer <9fx>
+	  buf_set_token <"Aa">
+	  buf_add_atom_data <"//roll-dice999-sides999">
+	  buf_close_buffer
+	  buf_start_buffer <9fx>
+	  buf_set_token <"Aa">
+	  buf_add_atom_data <"//roll-dice999-sides999">
+	  buf_close_buffer
+	  buf_start_buffer <9fx>
+	  buf_set_token <"Aa">
+	  buf_add_atom_data <"//roll-dice999-sides999">
+	  buf_close_buffer
+	  buf_set_token <"Aa">
+	  buf_add_atom_data <"//roll-dice999-sides999">
+	  buf_close_buffer
+	  buf_start_buffer <9fx>
+	  buf_set_token <"Aa">
+	  buf_add_atom_data <"//roll-dice999-sides999">
+	  buf_close_buffer
+	  buf_start_buffer <9fx>
+	  buf_set_token <"Aa">
+	  buf_add_atom_data <"//roll-dice999-sides999">
+	  buf_close_buffer
+	  buf_start_buffer <9fx>
+	  buf_set_token <"Aa">
+	  buf_add_atom_data <"//roll-dice999-sides999">
+	  buf_close_buffer
+	  buf_start_buffer <9fx>
+	  buf_set_token <"Aa">
+	  buf_add_atom_data <"//roll-dice999-sides999">
+	  buf_close_buffer
+	  buf_start_buffer <9fx>
+	  buf_set_token <"Aa">
+	  buf_add_atom_data <"//roll-dice999-sides999">
+	  buf_close_buffer
+	  buf_start_buffer <9fx>
+	  buf_set_token <"Aa">
+	  buf_add_atom_data <"//roll-dice999-sides999">
+	  buf_close_buffer
+	  buf_start_buffer <9fx>
+	  buf_set_token <"Aa">
+	  buf_add_atom_data <"//roll-dice999-sides999">
+	  buf_close_buffer
+	  buf_start_buffer <9fx>
+	  buf_set_token <"Aa">
+	  buf_add_atom_data <"//roll-dice999-sides999">
+	  buf_close_buffer
+	  buf_start_buffer <9fx>
+	  buf_set_token <"Aa">
+	  buf_add_atom_data <"//roll-dice999-sides999">
+	  buf_close_buffer
+	  buf_start_buffer <9fx>
+	  buf_set_token <"Aa">
+	  buf_add_atom_data <"//roll-dice999-sides999">
+	  buf_close_buffer
+	  buf_start_buffer <9fx>
+	  buf_set_token <"Aa">
+	  buf_add_atom_data <"//roll-dice999-sides999">
+	  buf_close_buffer
+	  buf_start_buffer <9fx>
+	  buf_set_token <"Aa">
+	  buf_add_atom_data <"//roll-dice999-sides999">
+	  buf_close_buffer
+	  buf_start_buffer <9fx>
+	  buf_set_token <"Aa">
+	  buf_add_atom_data <"//roll-dice999-sides999">
+	  buf_close_buffer
+	  buf_start_buffer <9fx>
+	  buf_set_token <"Aa">
+	  buf_add_atom_data <"//roll-dice999-sides999">
+	  buf_close_buffer
+	  buf_start_buffer <9fx>
+	  buf_set_token <"Aa">
+	  buf_add_atom_data <"//roll-dice999-sides999">
+	  buf_close_buffer
+	  buf_start_buffer <9fx>
+	  buf_set_token <"Aa">
+	  buf_add_atom_data <"//roll-dice999-sides999">
+	  buf_close_buffer
+	  buf_start_buffer <9fx>
+	  buf_set_token <"Aa">
+	  buf_add_atom_data <"//roll-dice999-sides999">
+	  buf_close_buffer
+	  buf_start_buffer <9fx>
+	  buf_set_token <"Aa">
+	  buf_add_atom_data <"//roll-dice999-sides999">
+	  buf_close_buffer
+	  buf_start_buffer <9fx>
+	  buf_set_token <"Aa">
+	  buf_add_atom_data <"//roll-dice999-sides999">
+	  buf_close_buffer
+        uni_end_stream
+        >
+      mat_font_sis <arial, 8, normal>
+      mat_color_text <255, 255, 255>
+      mat_color_text_shadow <0, 0, 0>
+      mat_art_id <1-0-28569>
+      mat_precise_width <70>
+      mat_precise_height <21>
+      mat_precise_x <320>
+      mat_precise_y <8>
+      mat_vertical_spacing <0>
+      mat_trigger_style <plain_picture>
+      mat_bool_default <yes>
+      mat_color_top_edge <145, 182, 255>
+      mat_color_face <0, 109, 170>
+      mat_bool_draw_focus <yes>
+    man_end_object
+the_unknown <51, 43>
+  man_update_woff_end_stream

@@ -1,0 +1,29 @@
+uni_start_stream_wait_on 
+man_start_object <ind_group, "rob"> 
+mat_orientation <vff> 
+mat_precise_width <95> 
+mat_precise_height <27> 
+mat_bool_precise <yes> 
+man_start_object <trigger, "I am a button"> 
+act_replace_select_action 
+< 
+uni_start_stream 
+man_start_sibling <ind_group, "rob"> 
+mat_precise_width <194> 
+mat_precise_height <28> 
+mat_bool_precise <yes> 
+man_start_object <trigger, "Click"> 
+act_replace_select_action 
+< 
+uni_start_stream 
+async_alert <error, "omfg! it's rob!"> 
+> 
+mat_precise_width <193> 
+mat_precise_height <27> 
+man_end_object 
+man_end_object 
+man_update_display 
+uni_end_stream 
+> 
+man_end_object 
+man_update_woff_end_stream

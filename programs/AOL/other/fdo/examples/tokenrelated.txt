@@ -1,0 +1,192 @@
+uni_start_stream
+  hfs_attr_flags <64>
+  uni_next_atom_typed <260>
+  man_start_object <ind_group, "Dime's Token Form">
+    mat_orientation <hfc>
+    mat_precise_width <124>
+    mat_precise_height <60>
+    mat_bool_precise <yes>
+    mat_bool_resize_vertical <no>
+    mat_bool_resize_horizontal <no>
+    mat_horizontal_spacing <0>
+    mat_vertical_spacing <0>
+    mat_color_face <51, 102, 102>
+    mat_bool_background_flood <yes>
+    mat_position <top_left>
+    mat_object_index <666>
+        man_start_object <ornament, "token">
+       mat_precise_width <40>
+       mat_precise_height <16>
+      mat_precise_x <5>
+      mat_precise_y <2>
+       mat_horizontal_spacing <0>
+       mat_vertical_spacing <0>
+       mat_font_sis <arial, 7, normal>
+       mat_color_text <255, 255, 255>
+       man_end_object
+        man_start_object <ornament, "arg/str">
+       mat_precise_width <40>
+       mat_precise_height <16>
+      mat_precise_x <42>
+      mat_precise_y <2>
+       mat_horizontal_spacing <0>
+       mat_vertical_spacing <0>
+       mat_font_sis <arial, 7, normal>
+       mat_color_text <255, 255, 255>
+       man_end_object
+    man_start_object <edit_view, "">
+      mat_bool_importable <yes>
+      mat_precise_width <29>
+      mat_precise_height <17>
+      mat_precise_x <4>
+      mat_precise_y <14>
+      mat_color_text <255, 255, 255>
+      mat_font_sis <arial, 7, normal>
+      mat_horizontal_spacing <2>
+      mat_vertical_spacing <0>
+      mat_bool_resize_vertical <no>
+      mat_bool_resize_horizontal <no>
+      mat_title_pos <1>
+      mat_bool_vertical_scroll <no>
+      mat_capacity <2>
+      mat_relative_tag <1>
+      mat_height <1>
+    man_start_sibling <edit_view, "">
+      mat_bool_importable <yes>
+      mat_precise_width <75>
+      mat_precise_height <17>
+      mat_precise_x <42>
+      mat_precise_y <14>
+      mat_color_text <255, 255, 255>
+      mat_font_sis <arial, 7, normal>
+      mat_vertical_spacing <0>
+      mat_bool_resize_vertical <no>
+      mat_bool_resize_horizontal <no>
+      mat_title_pos <1>
+      mat_bool_vertical_scroll <no>
+      mat_capacity <15>
+      mat_relative_tag <2>
+      mat_height <1>
+    man_start_sibling <trigger, "gid">
+      act_replace_select_action
+        <
+      uni_start_stream
+          de_start_extraction <00x>
+          man_set_context_relative <1>
+          de_get_data_pointer
+          var_string_set_from_atom <A>
+          man_change_context_relative <2>
+          de_get_data_pointer
+          uni_use_last_atom_string <mt_string_to_gid>
+          var_number_set_from_atom 
+          man_end_context
+          de_end_extraction
+          buf_destroy_buffer
+          buf_start_buffer <9fx>
+          var_string_get <A>
+          uni_use_last_atom_string <buf_set_token>
+          var_number_get 
+          uni_use_last_atom_value <buf_add_atom_data>
+          buf_close_buffer
+        uni_end_stream
+        >
+      mat_font_sis <arial, 8, bold>
+      mat_color_text <255, 255, 255>
+      mat_precise_width <33>
+      mat_precise_height <21>
+      mat_precise_x <4>
+      mat_precise_y <34>
+      mat_vertical_spacing <0>
+      mat_trigger_style <rectangle>
+      mat_bool_default <yes>
+      mat_color_top_edge <145, 182, 255>
+      mat_color_face <51, 102, 102>
+      mat_bool_draw_focus <yes>
+    man_start_sibling <trigger, "str">
+      act_replace_select_action
+        <
+        uni_start_stream
+          de_start_extraction <00x>
+          man_set_context_relative <1>
+          de_get_data_pointer
+          var_string_set_from_atom <A>
+          man_change_context_relative <2>
+          de_get_data_pointer
+          var_string_set_from_atom 
+          man_end_context
+          de_end_extraction
+          buf_destroy_buffer
+          buf_start_buffer <9fx>
+          var_string_get <A>
+          uni_use_last_atom_string <buf_set_token>
+          var_string_get 
+          uni_use_last_atom_string <buf_add_atom_data>
+          buf_close_buffer
+        uni_end_stream
+        >
+      mat_font_sis <arial, 8, bold>
+      mat_color_text <255, 255, 255>
+      mat_precise_width <33>
+      mat_precise_height <21>
+      mat_precise_x <40>
+      mat_precise_y <34>
+      mat_horizontal_spacing <0>
+      mat_vertical_spacing <0>
+      mat_trigger_style <rectangle>
+      mat_bool_default <yes>
+      mat_color_top_edge <145, 182, 255>
+      mat_color_face <51, 102, 102>
+      mat_bool_draw_focus <yes>
+    man_start_sibling <trigger, "scan">
+      act_replace_select_action
+        <
+      uni_start_stream
+          de_start_extraction <00x>
+          man_set_context_relative <1>
+          de_get_data_pointer
+          var_string_set_from_atom <A>
+          man_change_context_relative <2>
+          de_get_data_pointer
+          uni_use_last_atom_string <mt_string_to_gid>
+          var_number_set_from_atom 
+          var_number_increment 
+          var_number_get 
+          uni_convert_last_atom_data
+          uni_use_last_atom_string <man_replace_data>
+          man_update_display
+          man_end_context
+          de_end_extraction
+          buf_destroy_buffer
+          buf_start_buffer <9fx>
+          var_string_get <A>
+          uni_use_last_atom_string <buf_set_token>
+          var_number_get 
+          uni_use_last_atom_value <buf_add_atom_data>
+          buf_close_buffer
+        uni_end_stream
+        >
+      mat_font_sis <arial, 8, bold>
+      mat_color_text <255, 255, 255>
+      mat_precise_width <40>
+      mat_precise_height <21>
+      mat_precise_x <76>
+      mat_precise_y <34>
+      mat_horizontal_spacing <0>
+      mat_vertical_spacing <0>
+      mat_trigger_style <rectangle>
+      mat_bool_default <yes>
+      mat_color_top_edge <145, 182, 255>
+      mat_color_face <51, 102, 102>
+      mat_bool_draw_focus <yes>
+    man_end_object
+the_unknown <51, 43>
+  man_update_woff_end_stream
+  uni_start_stream
+    man_set_context_globalid <1>
+    var_lookup_by_id <A, 192>
+    var_lookup_by_id <B, 193>
+    man_end_context
+    var_number_save <A, 192>
+    var_number_save <B, 193>
+  uni_end_stream
+uni_end_stream
