@@ -1,0 +1,158 @@
+     - An api spy without all the bullshit -
+
+                 Version 1.0 Build 2
+
+  This program introduces the first ever
+Find Window Function EX. This utility
+allows the user to define the specific
+controls to search a parent window for
+verification.
+
+      For Example:
+
+  You could have the find window function
+only search for a listbox, and font combo
+box. Then define the parent as the window
+you need, simply by dragging the icon to
+the parent window, then the two controls.
+
+  Thus cutting back on needless code.
+(See my small code tutorial that came in
+the zip file.)
+
+                 - Possible Updates -
+
+  The enhanced version might check to
+make sure you get the last object of the
+class you selected with the ex function,
+It's pretty easy to do on your own, so I'm
+not sure I'll bother implementing an option
+that does so.
+
+                      - Utilization -
+
+  Once you have drug the 'capture box' 
+onto the desired window, you can then
+create a function to find a window that
+has children, or generate code for that
+function by right clicking the icon at the
+top left of the main screen.
+
+  You can also create a ready bas file,
+which generates 'needed api,' 'manip 
+codes,' and the 'ManipChild' function
+which is now required in your module to
+'gen code for function.'
+
+  This is because the ManipChild function
+cuts down on code (read the tutorial in the
+zip).
+
+  Or you can skip all of that and head
+straight for the extended tool.
+
+  When you select 'invert,' on the (ex)
+function, the caption up top will only notify
+you of possible conflicting children.
+
+  You can however add a class that does
+not show up.  For instance, if you defined
+your 'Sign On' screen with all 4 icons, you
+can select another icon on the tool bar to
+make sure there is not a 5th icon on the
+window it searches.
+
+  The find window function (non ex) still
+generates the least amount of WORKING
+lines than any other api spy I have seen.
+But the (ex) is even incredibly smaller.
+
+                          - About -
+
+  This program was created because of the
+poor find window function generators out
+there.  Mines far from perfect itself, there
+is one type of window you can't find
+because I was to bored to fix all the errors
+this type of window causes.
+
+  You can not find a window that has a
+child with the same class name.  YOU
+CAN, however, use the extended function
+to find the parent then a child of a different
+class.
+
+  It just doesn't occur enough for me to
+care to fix it.  The other code gens do not
+generate correct code for this either, so
+you have nothing to worry about.
+
+  At least this way it will let you know it
+wont work, keeping you from thinking it
+does, then tossing it in your code and
+blah blah blah, it's just a waste of time.
+
+                      - Thanks -
+  Special thanks goes to my girlfriend
+                      (psyclops)
+  for her patience and understanding.
+
+  Thanks to Wayne, Tripp, Tony, and 
+Ken of Static-X for their incredible hard
+work and awesome talent.  Without them
+and my g/f I'd go insane.
+
+                     - Known Issues -
+
+  Nothing major here, just a few kinks I
+might smooth out.
+1.  The child class problem mentioned
+     above.
+2.  Edit box in a chat room, The reason
+     this happens is due to aol's set up,
+     don't worry though, it doesn't happen
+     on any other apps and does not affect
+     your generated code.
+3.  That's it, heh.
+
+                      - Registration -
+
+No registration is required, but a donation
+would be nice.  :]
+
+                 - Contact Information -
+
+aim: psyfect
+@msn: psyfect
+
+Source code might cost $25.00 U.S.
+dollars.
+
+No refunds, exchanges or returns.  I
+reserve the right to refuse service to
+anyone for any reason.  Blah blah blah,
+call my lawyer.
+
+                      - Good Tips -
+
+  Check out my manip function, it can be
+used in conjunction with the api spy by
+checking the objects number in it's
+'classes line.'
+
+  Read the "Small Code.doc" file that
+came with this program.  In it, you will find
+the manip function, along with some
+interesting tips on keeping your code small
+and why that one function can save you
+tons of code.
+
+                       - Post Script -
+
+  If you find a bug you think I'm not aware
+of let me know, this program was only
+made off and on for a week.
+
+  I welcome any and all questions related
+to vb and/or this spy.  Just make sure you
+tried the corresponding help files first.
