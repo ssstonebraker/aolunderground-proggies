@@ -1,0 +1,7 @@
+Manip and About are needed for the application
+
+Manip codes are kept seperate so you can add to them.
+New version in the works has an option to keep 'needed
+api' seperate as well.
+
+It is an extremly good idea to read the "Small Code.doc" file.
