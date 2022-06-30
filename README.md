@@ -49,6 +49,10 @@ Tools compatible with Windows XP (many later versions are not)
 * WinCDEmu-4.1.exe - *Use this to mount ISO or IMGs*
 * winhex.zip - Hex editor
 
+# Other
+Items unrelated to programming/proggies or windows tools
+
+* nfos.zip - Old warez scene nfo files
 
 ## programming
 
