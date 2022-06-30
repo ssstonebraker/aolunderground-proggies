@@ -42,9 +42,12 @@ find . -not -path "./unsorted-zip/*" -exec gcommitfile.sh {} \;
 Tools compatible with Windows XP (many later versions are not)
 
 * 7zip - 7z2107.exe (decompression)
+* autoruns.exe - See what starts with system (Sysinternals tool)
 * TweakUiPowertoySetup.exe - *Awesome tool to tweak the GUI of Windows XP*
-* WinCDEmu-4.1.exe - *Use this to mount ISO or IMGs*
+* ProcessExplorerNT.zip - task manager on steroids (Sysinternal tool)
 * Notepad ++ - npp.7.9.2.Installer.exe
+* WinCDEmu-4.1.exe - *Use this to mount ISO or IMGs*
+* winhex.zip - Hex editor
 
 
 ## programming
