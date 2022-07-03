@@ -14,6 +14,14 @@ Thank you to:
 * https://github.com/darcfx/darcfx-submissions
 * https://github.com/raysuelzer/ProgzRescue
 
+# Missing Proggies
+Currently looking for these proggies
+
+* Guide Punt by Stoney  - A program I made, I'd really like to find this.  I believe it was guide.exe.
+* Magenta by ReDxKinG - Recently version 2.0 was found (in this archive), however we are still looking for the latest version
+* Reset 1.0 by skribe (TOSers/termer/account reseter)
+* 1-888'd by skribe (TOSers/termer/account reseter)
+
 ## commiting large amount of files
 
 FYI if you ever try to commit a lot of zip files you will probably run in to errors.
