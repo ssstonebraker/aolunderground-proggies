@@ -21,9 +21,10 @@ Currently looking for these proggies
 * Magenta by ReDxKinG - Recently version 2.0 was found (in this archive), however we are still looking for the latest version
 * Reset 1.0 by skribe (TOSers/termer/account reseter)
 * 1-888'd by skribe (TOSers/termer/account reseter)
-* Macro studio by i88i
+* Macro studio by i88i (level9.zip ?)
 * Gemini Macro by anubis
 * Macro house
+* Pup Tool by Pen (puptool.zip)
 
 ## commiting large amount of files
 
