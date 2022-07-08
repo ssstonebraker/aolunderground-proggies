@@ -1,0 +1,60 @@
+# Default to binary (no diff)
+
+* binary
+
+# VB6 source files (show diff + keep CRLF in zip download)
+
+.bas        text=auto eol=crlf
+.cls        text=auto eol=crlf
+.ctl        text=auto eol=crlf
+.dob        text=auto eol=crlf
+.dsr        text=auto eol=crlf
+.frm        text=auto eol=crlf
+.pag        text=auto eol=crlf
+.vbg        text=auto eol=crlf
+.vbl        text=auto eol=crlf
+.vbp        text=auto eol=crlf
+.vbr        text=auto eol=crlf
+.vbw        text=auto eol=crlf
+ 
+# Other source files (show diff + LF only in zip download)
+
+.asm        text=auto
+.asp        text=auto
+.bat        text=auto
+.c          text=auto
+.cpp        text=auto
+.dsp        text=auto
+.dsw        text=auto
+.h          text=auto
+.idl        text=auto
+.java       text=auto
+.js         text=auto
+.manifest   text=auto
+.odl        text=auto
+.php        text=auto
+.php3       text=auto
+.rc         text=auto
+.sln        text=auto
+.sql        text=auto
+.vb         text=auto
+.vbs        text=auto
+
+# Text files but keep as binary (no diff)
+
+# .cfg        text=auto
+# .conf       text=auto
+# .csi        text=auto
+# .css        text=auto
+# .csv        text=auto
+# .def        text=auto
+# .htm        text=auto
+# .html       text=auto
+# .inf        text=auto
+# .ini        text=auto
+# .log        text=auto
+# .reg        text=auto
+# .rtf        text=auto
+# .txt        text=auto
+# .url        text=auto
+# .xml        text=auto

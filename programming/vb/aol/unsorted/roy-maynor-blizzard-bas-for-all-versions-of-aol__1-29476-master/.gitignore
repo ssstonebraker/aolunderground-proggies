@@ -1,0 +1,6 @@
+*.scc
+*.dca
+*.oca
+*.obj
+vb*.tmp
+@PSC*
