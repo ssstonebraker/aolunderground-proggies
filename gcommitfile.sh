@@ -1,7 +1,7 @@
 #!/bin/bash
 
 function usage {
-    echo "Usage: $(basename $0) <filename> <commit_message>"    
+    echo "Usage: $(basename $0) <filename>"    
 }
 
 function die {
