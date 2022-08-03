@@ -5,6 +5,9 @@ Let's repopulate the Gibson!
 
 Please contribute your files to this repository!
 
+Brought to you by the AOL Underground Podcast:
+[AOL Underground Podcast](https://aolunderground.com)
+
 Thank you to:
 * Len from Lens Hell
 * https://web.archive.org/web/20220321112058/http://kadeklizem.com/AOL%20Progs%20ARCHIVE.rar
@@ -32,7 +35,7 @@ FYI if you ever try to commit a lot of zip files you will probably run in to err
 
 A way around that is to use the included file:
 ```
-gcommitfile.sh
+gcommitfile.sh <filename>
 ```
 
 ### Example Use
